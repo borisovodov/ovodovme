@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta property="og:title" content="Производственный календарь в iCal — Сайт Бориса Оводова">
+	<meta property="og:type" content="article">
+	<meta property="og:description" content="Производственный календарь в iCal">
+	<meta property="og:url" content="http://ovodov.me/">
+	<meta property="og:image" content=" {{ url_for('static', filename='avatar.png') }} ">
+
+	<!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114653965-1"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+  		gtag('config', 'UA-114653965-1');
+	</script>
+
+	<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter47818660 = new Ya.Metrika({ id:47818660, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/47818660" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='style.css') }} " />
+	<link rel="shortcut icon" type="image/png" href=" {{ url_for('static', filename='favicon.ico') }} "/>
+
+	<title>Этот, как его?</title>
+
+</head>
+<body class="light">
+	<a href="http://ovodov.me"><img src="{{ url_for('static', filename='avatar.png') }}" style="height: 3em;"></a>
+	<header>Производственный календарь в iCal</header>
+	<p>В интернете полно производственных календарей. Но все они предназначены для печати или же доступны на отдельном сайте.</p>
+	<p>Однако многие из нас пользуются приложениями-календарями (например Гугл Календарём или Аутлуком). Проблема в том, что для них не существует полноценного производственного календаря (а стандартные календари с праздниками путают нас событиями навроде «Масленицы» или «Дня войск специальных операций»).</p>
+	<p>Теперь вы можете воспользоваться производственным календарём в формате iCal.</p>
+	<p>Загрузить календарь: <a href="https://ovodov.me/trud.ics">https://ovodov.me/trud.ics</a></p>
+	<p>Инструкция по добавлению календаря в используемое вами приложение:</p>
+	<ul>
+		<li>Гугл Календарь</li>
+		<li>Майкрософт Аутлук</li>
+		<li>Эппл Календарь</li>
+	</ul>
+</body>
+</html>
