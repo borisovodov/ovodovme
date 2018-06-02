@@ -16,6 +16,3 @@ def trudics():
 @app.route('/id_rsa.pub')
 def idrsa():
 	return 'id_rsa.pub'
-
-if __name__ == '__main__':
-	app.run(host='0.0.0.0', port=5000)
