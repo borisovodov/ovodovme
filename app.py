@@ -11,11 +11,11 @@ def trud():
 
 @app.route('/trud.ics')
 def trudics():
-	return 'trud.ics'
+	return app.send_static_file('trud.ics')
 
 @app.route('/id_rsa.pub')
 def idrsa():
-	return 'id_rsa.pub'
+	return app.send_static_file('id_rsa.pub')
 
 if __name__ == '__main__':
 	app.run()
