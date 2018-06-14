@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import os
 app = Flask(__name__)
 
 @app.route('/')
@@ -15,9 +16,9 @@ def trudics():
 
 @app.route('/id_rsa.pub')
 def idrsa():
-	with open('/static/id_rsa.pub') as f:
+	with open(os.path.join(os.path.dirname(__file__), 'static/id_rsa.pub'), 'r') as f:
 		content = f.read()
-	return response(f.read(), mimetype='text/plain')
+	return response(content, mimetype='text/plain')
 
 if __name__ == '__main__':
 	app.run()
