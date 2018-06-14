@@ -18,7 +18,7 @@ def trudics():
 def idrsa():
 	with open(os.path.join(os.path.dirname(__file__), 'static/id_rsa.pub'), 'r') as f:
 		content = f.read()
-	return response(content, mimetype='text/plain')
+	return Response(content, mimetype='text/plain')
 
 if __name__ == '__main__':
 	app.run()
