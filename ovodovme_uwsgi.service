@@ -1,0 +1,8 @@
+[Unit]
+Description=uWSGI инстанс для работы ovodovme
+
+[Service]
+ExecStart=/usr/bin/bash -c 'cd /var/www/ovodovme; uwsgi --ini ovodovme_uwsgi.ini'
+
+[Install]
+WantedBy=multi-user.target
