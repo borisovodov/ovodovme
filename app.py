@@ -12,7 +12,9 @@ def trud():
 
 @app.route('/trud.ics')
 def trudics():
-	return app.send_static_file('trud.ics')
+	with open(os.path.join(os.path.dirname(__file__), 'static/trud.ics'), 'r') as f:
+		content = f.read()
+	return Response(content, mimetype='text/calendar')
 
 @app.route('/id_rsa.pub')
 def idrsa():
