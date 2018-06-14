@@ -15,11 +15,9 @@ def trudics():
 
 @app.route('/id_rsa.pub')
 def idrsa():
-	return app.send_static_file('id_rsa.pub')
-
-@app.errorhandler(404)
-def page_not_found(e):
-	return render_template('index.html'), 404
+	with open('/static/id_rsa.pub') as f:
+		content = f.read()
+	return response(f.read(), mimetype='text/plain')
 
 if __name__ == '__main__':
 	app.run()
