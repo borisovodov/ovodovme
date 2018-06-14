@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, render_template_string
 import os
 app = Flask(__name__)
 
@@ -18,7 +18,7 @@ def trudics():
 def idrsa():
 	with open(os.path.join(os.path.dirname(__file__), 'static/id_rsa.pub'), 'r') as f:
 		content = f.read()
-	return Response(content, mimetype='text/plain')
+	return render_template_string(content)
 
 if __name__ == '__main__':
 	app.run()
