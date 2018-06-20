@@ -1,17 +1,4 @@
 body {
-    background-color: #2d2d2d;
-    color: #ffffff;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1em;
-    line-height: 2em;
-    padding: 2em;
-    padding-right: 4em;
-    max-width: 700px;
-}
-
-body.light {
-	background-color: #dddddd;
-    color: #000000;
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
     line-height: 2em;
@@ -21,32 +8,39 @@ body.light {
 }
 
 header {
-	font-size: 1.5em;
-	margin-bottom: 1.5em;
-	margin-top: 1.3em;
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+    margin-top: 1.3em;
 }
 
 p {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
-p.mb {
-	margin-bottom: 1.5em;
+body.dark {
+    background-color: #2d2d2d;
+    color: #ffffff;
 }
 
-a:link {
+body.light {
+	background-color: #dddddd;
+    color: #000000;
+}
+
+p.margin-top {
+	margin-top: 1.5em;
+}
+
+a.dark {
 	color: #ffffff;
 }
 
-a:link.light {
+a.light {
 	color: #000000;
 }
 
-a:visited {
-	color: #ffffff;
-}
-
-a:visited.light {
-	color: #000000;
+.dashedlink {
+    text-decoration: none;
+    border-bottom: 1px dashed;
 }
