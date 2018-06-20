@@ -18,9 +18,7 @@ def trudics():
 
 @app.route('/id_rsa.pub')
 def idrsa():
-	with open(os.path.join(os.path.dirname(__file__), 'static/id_rsa.pub'), 'r') as f:
-		content = f.read()
-	return Response(content, mimetype='text/plain')
+	return render_template('id_rsa.html')
 
 if __name__ == '__main__':
 	app.run()
