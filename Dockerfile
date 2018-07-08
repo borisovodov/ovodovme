@@ -9,6 +9,6 @@ RUN pip install flask uwsgi
 
 EXPOSE 80
 
-CMD ["uwsgi", "--socket", "127.0.0.1:3031", \
+CMD ["uwsgi", "--socket", "0.0.0.0:3031", \
                "--wsgi-file", "ovodovme.py", \
                "--callable", "app"]
