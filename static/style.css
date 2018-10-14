@@ -18,26 +18,17 @@ p {
     margin-bottom: 0.5em;
 }
 
-body.dark {
+body {
     background-color: #2d2d2d;
     color: #ffffff;
-}
-
-body.light {
-	background-color: #dddddd;
-    color: #000000;
 }
 
 p.margin-top {
 	margin-top: 1.5em;
 }
 
-a.dark {
+a {
 	color: #ffffff;
-}
-
-a.light {
-	color: #000000;
 }
 
 .dashedlink {
