@@ -10,5 +10,10 @@ def index():
 def idrsa():
 	return render_template('id_rsa.html')
 
+@app.route('/astroege/')
+def astroege():
+	with open('../static/astroege.pdf', 'rb') as static_file:
+		return send_file(static_file, attachment_filename='astroege.pdf')
+
 if __name__ == '__main__':
 	app.run()
