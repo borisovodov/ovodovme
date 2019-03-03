@@ -1,4 +1,4 @@
-from flask import Flask, render_template, Response
+from flask import Flask, render_template, send_file, Response
 import os
 app = Flask(__name__)
 
@@ -12,8 +12,7 @@ def idrsa():
 
 @app.route('/astroege/')
 def astroege():
-	with open('../static/astroege.pdf', 'rb') as static_file:
-		return send_file(static_file, attachment_filename='astroege.pdf')
+	return send_file('static/astroege.pdf')
 
 if __name__ == '__main__':
 	app.run()
