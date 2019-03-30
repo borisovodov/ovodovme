@@ -14,5 +14,15 @@ def idrsa():
 def astroege():
 	return send_file('static/astroege.pdf')
 
+@app.route('/trud')
+def trud():
+	return render_template('trud.html')
+
+@app.route('/trud.ics')
+def trudics():
+	with open(os.path.join(os.path.dirname(__file__), 'static/trud.ics'), 'r') as f:
+		content = f.read()
+	return Response(content, mimetype='text/calendar')
+
 if __name__ == '__main__':
 	app.run()
