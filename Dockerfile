@@ -5,7 +5,7 @@ WORKDIR /ovodovme
 ADD . /ovodovme
 
 RUN pip install --upgrade pip
-RUN pip install flask==1.0 uwsgi==2.0
+RUN pip install flask==1.0 uwsgi==2.0.18
 
 EXPOSE 80
 
