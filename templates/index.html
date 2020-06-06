@@ -1,31 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
+	<!-- Meta -->
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<!-- Open Graph -->
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="Этот, как его?">
 	<meta property="og:title" content="Борькин хоумпэйдж">
 	<meta property="og:description" content="Собиратель газет со всего света, училка в 35-й, аналитик в Наумене">
 	<meta property="og:url" content="https://ovodov.me/">
+    <meta property="og:image" content="{{ url_for('static', filename='avatar.png') }}" />
+    <meta property="og:locale" content="ru_RU" />
 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<!-- Static -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
 
+	<script src="{{ url_for('static', filename='jquery-3.4.1.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+	
 	<title>Этот, как его?</title>
 </head>
 <body>
-	<img src="{{ url_for('static', filename='avatar.png') }}" style="height: 3em;">
-	<header>Всем привет от Бориса Оводова.</header>
-	<p>Занимаюсь бизнес-аналитикой в <a href="https://www.naumen.ru/">Наумене</a>, а по субботам преподаю астрономию в <nobr>35-й</nobr> екатеринбургской гимназии.</p>
-	<p>Подготовил <a href="https://ovodov.me/astroege/">методичку по астрономии</a> для успешной сдачи ЕГЭ по физике.
-	<p class="margin-top">Собираю газеты со всего света и веду об этом англоязычный <a href="http://www.papersaround.com/">сайт</a>. Также у проекта есть <a href="https://www.instagram.com/papersaround/">аккаунт</a> в Инстаграме.</p>
-	<p class="margin-top">Иногда выкладываю разноплановые лонгриды на <a href="https://medium.com/@borisovodov">Медиум</a>.</p>
-	<p>Веду умиротворённый <a href="https://www.instagram.com/ovodovboris/">Инстаграм</a>.</p>
-	<p>Сижу во <a href="https://vk.com/borisovodov">Вконтакте</a> и на <a href="https://www.facebook.com/borisovodov">Фэйсбуке</a>.</p>
-	<p>Кодю на <a href="https://github.com/borisovodov">Гитхабе</a>.</p>
-	<p>Резюме с боевыми заслугами разместил на <a href="https://moikrug.ru/borisovodov">Моём круге</a> и <a href="https://www.linkedin.com/in/borisovodov/">Линкедине</a>.</p>
-	<p class="margin-top">-- <br>
-	<a href="mailto:boris@ovodov.me">boris@ovodov.me</a></p>
+	<div class="container-fluid px-5">
+		<div class="row">
+			<div class="col-lg-7 mt-5">
+				<div>
+					<img src="{{ url_for('static', filename='avatar.png') }}" style="height: 3em;">
+				</div>
+				<div class="mt-5">
+					<h1>Всем привет от Бориса Оводова</h1>
+				</div>
+				<div class="mt-5">
+					<p>Занимаюсь бизнес-аналитикой в <a href="https://www.naumen.ru/">Наумене</a>, а по субботам преподаю астрономию в <nobr>35-й</nobr> екатеринбургской гимназии.</p>
+					<p>Резюме с боевыми заслугами разместил на <a href="https://career.habr.com/borisovodov">Хабр Карьере</a> и <a href="https://www.linkedin.com/in/borisovodov/">Линкедине</a>.</p>
+					<p>Подготовил <a href="{{ url_for('astroege') }}">методичку по астрономии</a> для успешной сдачи ЕГЭ по физике.</p>
+					<p>Собираю газеты со всего света и веду об этом англоязычный <a href="https://papersaround.com/">сайт</a>.</p>
+					<p>Поддерживаю <i>нормальный</i> <a href="{{ url_for('trud') }}">производственный календарь</a> в формате iCal.</p>
+					<p>С младшей сестрой придумали телеграм-канал <a href="https://t.me/s01e01">s01e01</a> — лучший способ перестать переживать из-за жизни, пролетающей за просмотром сериалов.</p>
+					<p>Веду умиротворённый <a href="https://www.instagram.com/ovodovboris/">инстаграм</a>.</p>
+					<!--<p>Фиксирую жизненный опыт в <a href="https://notes.ovodov.me">записках</a>.</p>-->
+				</div>
+			</div>
+			<div class="col-lg-1"></div>
+			<div class="col-sm-4 mt-5">
+				<div>
+					<p>В друзья</p>
+						<ul>
+							<li><a href="https://www.facebook.com/borisovodov">Facebook</a></li>
+							<li><a href="https://github.com/borisovodov">Github</a></li>
+							<li><a href="https://www.goodreads.com/borisovodov">GoodReads</a></li>
+							<li><a href="https://www.imdb.com/user/ur105749044/">IMDb</a></li>
+							<li><a href="https://medium.com/@borisovodov">Medium</a></li>
+							<li><a href="https://nomadmania.com/profile/21540">Nomad Mania</a></li>
+							<li><a href="https://vk.com/borisovodov">VK</a></li>
+							<li><a href="https://mykp.ru/borisovodov">Кинопоиск</a></li>
+						</ul>
+				</div>
+				<div>
+					<p><a data-toggle="collapse" href="#archive" class="dashedlink">Архив</a></p>
+					<p>
+						<div id="archive" class="collapse">
+							<ul>
+								<li>Вёл <a href="https://www.instagram.com/papersaround/">инстаграм</a> проекта Papers Around.</li>
+								<li>Писал статьи в <a href="https://vk.com/revmus">revmus</a>.</li>
+								<li>Разработал <a href="https://www.dropbox.com/s/owx6ddrix3gepcj/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5%20%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%B8%D0%B5%20Quantum%20GIS.zip?dl=0">методичку</a> для обучения студентов основам работы в ГИС.</li>
+								<li>Играл в <a href="https://cybico.bandcamp.com/music">КYБ и Ко</a>.</li>
+								<li>Писал стихи юности на «<a href="http://pisanina.su">Писанине</a>».</li>
+								<li>Снимал фильмы на <a href="{{ url_for('static', filename='28studio.png') }}">28-й студии</a>.</li>
+							</ul>
+						</div>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid px-5">
+		<div class="row">
+			<div class="col mt-4">
+				<p>-- <br>
+				<a href="mailto:boris@ovodov.me">boris@ovodov.me</a></p>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

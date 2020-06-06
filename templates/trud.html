@@ -1,47 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
+	<!-- Meta -->
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<!-- Open Graph -->
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="Этот, как его?">
 	<meta property="og:title" content="Производственный календарь в iCal">
 	<meta property="og:description" content="В интернете полно производственных календарей. Но все они предназначены для печати или же доступны на отдельном сайте...">
 	<meta property="og:url" content="https://ovodov.me/trud/">
+    <meta property="og:image" content="{{ url_for('static', filename='avatar.png') }}" />
+    <meta property="og:locale" content="ru_RU" />
 
-	<script type="text/javascript">
-		function openInstruction(id){
-			display = document.getElementById(id).style.display;
-			if(display=='none'){
-				document.getElementById(id).style.display='block';
-			}else{
-				document.getElementById(id).style.display='none';
-			}
-		}
-	</script>
-
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<!-- Static -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+
+	<script src="{{ url_for('static', filename='jquery-3.4.1.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
 
 	<title>Этот, как его?</title>
 </head>
 <body>
-	<a href="https://ovodov.me"><img src="{{ url_for('static', filename='avatar.png') }}" style="height: 3em;"></a>
-	<header>Производственный календарь в iCal</header>
-	<p>В интернете полно производственных календарей. Бери и пользуйся! Все они предназначены для печати или же доступны на как страница на отдельном сайте.</p>
-	<p class="margin-top">Однако многие из нас пользуются приложениями-календарями (например Гугл Календарём или Аутлуком). Проблема в том, что для них не существует полноценного производственного календаря (а стандартные календари с праздниками путают нас событиями навроде «Масленицы» или «Дня смеха».</p>
-	<p class="margin-top">Теперь вы можете воспользоваться производственным календарём в формате iCal, который понимает каждое приложение-календарь.</p>
-	<p>Загрузить календарь: <a href="https://ovodov.me/trud.ics">https://ovodov.me/trud.ics</a></p>
-	<p>Инструкция по добавлению календаря в используемое вами приложение:</p>
-	<ul>
-		<li><a class="dashedlink" href="#" onclick="openInstruction('gInstruction'); return false">Гугл Календарь</a></li>
-		<div id="gInstruction" style="display: none;">Главное меню — Добавить другие календари — Добавить по URL — В поле «URL календаря» вставьте «https://ovodov.me/trud.ics» после чего нажмите кнопку «Добавить календарь»</div>
-		<li><a class="dashedlink" href="#" onclick="openInstruction('mInstruction'); return false">Майкрософт Аутлук</a></li>
-		<div id="mInstruction" style="display: none;">Главная — Открыть календарь — Из Интернета — В поле вставьте «https://ovodov.me/trud.ics» после чего нажмите кнопку «ОК»</div>
-		<li><a class="dashedlink" href="#" onclick="openInstruction('aInstruction'); return false">Эппл Календарь</a></li>
-		<div id="aInstruction" style="display: none;">Файл — Новая подписка Календаря — В поле «URL-адрес календаря» вставьте «https://ovodov.me/trud.ics» после чего нажмите кнопку «Подписаться»</div>
-	</ul>
-	<p class="margin-top">-- <br>
-	<a href="mailto:boris@ovodov.me">boris@ovodov.me</a></p>
+	<div class="container-fluid px-5">
+		<div class="row">
+			<div class="col-lg-7 mt-5">
+				<div>
+					<a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='avatar.png') }}" style="height: 3em;"></a>
+				</div>
+				<div class="mt-5">
+					<h1>Производственный календарь в iCal</h1>
+				</div>
+				<div class="mt-5">
+					<p>В интернете полно производственных календарей. Бери и пользуйся! Все они предназначены для печати или же доступны на отдельном сайте.</p>
+					<p>Однако многие из нас пользуются приложениями-календарями (например Гугл Календарём или Аутлуком). Проблема в том, что для них не существует полноценного производственного календаря, а стандартные календари с праздниками путают нас событиями навроде «Масленицы» или «Дня смеха».</p>
+					<p>Теперь вы можете воспользоваться производственным календарём в формате iCal, который понимает каждое приложение-календарь и ежегодно обновляется.</p>
+					<p>Загрузить календарь: <a href="https://ovodov.me/trud.ics">https://ovodov.me/trud.ics</a></p>
+					<p>Инструкция по добавлению календаря в используемое вами приложение:</p>
+					<ul>
+						<li><a class="dashedlink" data-toggle="collapse" href="#gInstruction">Гугл Календарь</a></li>
+						<div id="gInstruction" class="collapse">Главное меню — Добавить другие календари — Добавить по URL — В поле «URL календаря» вставьте «https://ovodov.me/trud.ics» после чего нажмите кнопку «Добавить календарь»</div>
+						<li><a class="dashedlink" data-toggle="collapse" href="#mInstruction">Майкрософт Аутлук</a></li>
+						<div id="mInstruction" class="collapse">Главная — Открыть календарь — Из Интернета — В поле вставьте «https://ovodov.me/trud.ics» после чего нажмите кнопку «ОК»</div>
+						<li><a class="dashedlink" data-toggle="collapse" href="#aInstruction">Эппл Календарь</a></li>
+						<div id="aInstruction" class="collapse">Файл — Новая подписка Календаря — В поле «URL-адрес календаря» вставьте «https://ovodov.me/trud.ics» после чего нажмите кнопку «Подписаться»</div>
+						<li><a class="dashedlink" data-toggle="collapse" href="#iosInstruction">Эппл Календарь на iOS</a></li>
+						<div id="iosInstruction" class="collapse">Настройки — Пароли и учетные записи — Новая учетная запись — Другое — Подписной календарь — В поле «Сервер» вставьте «https://ovodov.me/trud.ics» после чего нажмите кнопку «Далее»</div>
+					</ul>
+					<div class="mt-5">
+						<blockquote class="p-2 border">
+							<p>«<i>Мне это нужно было всё время, что я работаю, но я не могла найти ничего подобного. Это было так странно — это же нужно всем, почему этого ещё никто не сделал?</i>»</p>
+							<small>— Виктория Длугопольская</small>
+						</blockquote>
+						<blockquote class="p-2 border">
+							<p>«<i>Реально нужная тема, я всегда все праздничные дни либо гуглю, либо в ЛСР присылали по мылу</i>»</p>
+							<small>— Кирилл Саламатов</small>
+						</blockquote>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-5"></div>
+		</div>
+	</div>
+	<div class="container-fluid px-5">
+		<div class="row">
+			<div class="col mt-4">
+				<p>-- <br>
+				<a href="mailto:boris@ovodov.me">boris@ovodov.me</a></p>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
