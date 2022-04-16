@@ -6,7 +6,7 @@ ADD . /ovodovme
 
 RUN apt-get update && \
 	apt-get install -y
-RUN pip install flask==1.1.1 uwsgi==2.0.18
+RUN pip install flask==2.1.0 uwsgi==2.0.18
 
 EXPOSE 3031 9191
 

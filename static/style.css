@@ -1,6 +1,8 @@
 body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #31004a;
+    font-family: 'PT Sans', sans-serif;
+    
+    background: rgb(41,0,62);
+    background: linear-gradient(144deg, rgba(41,0,62,1) 0%, rgba(49,0,74,1) 35%, rgba(117,0,177,1) 100%);
     color: #ffffff;
 }
 
@@ -28,7 +30,7 @@ a:hover {
 }
 
 blockquote {
-    background-color: #444343;
+    background-color: #411558;
 }
 
 .border {

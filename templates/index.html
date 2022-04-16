@@ -17,7 +17,7 @@
 	<!-- Static -->
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
 
 	<script src="{{ url_for('static', filename='jquery-3.4.1.min.js') }}"></script>
@@ -36,7 +36,7 @@
 					<h1>Всем привет от Бориса Оводова</h1>
 				</div>
 				<div class="mt-5">
-					<p>Занимаюсь бизнес-аналитикой в <a href="https://www.naumen.ru/">Наумене</a>.</p>
+					<p>Развиваю продукт в <a href="https://www.naumen.ru/">Наумене</a>.</p>
 					<p>Резюме с боевыми заслугами разместил на <a href="https://career.habr.com/borisovodov">Хабр Карьере</a> и <a href="https://www.linkedin.com/in/borisovodov/">Линкедине</a>.</p>
 					<p>Собираю газеты со всего света и веду об этом англоязычный <a href="https://papersaround.com/">сайт</a>.</p>
 					<p>Поддерживаю <i>нормальный</i> <a href="{{ url_for('trud') }}">производственный календарь</a> в формате iCal.</p>
@@ -52,6 +52,13 @@
 							<li><a href="https://t.me/toiletnotes">Туалетные записки</a> — главный мессенджер этого мира.</li>
 						</ul>
 					</div>
+					<p><del>Рассказывал истории в научпоп-подкасте «<a href="https://anchor.fm/sciencebitch">Сайнс, бич</a>».</del></p>
+					<p><del>Подготовил <a href="{{ url_for('astroege') }}">методичку по астрономии</a> для успешной сдачи ЕГЭ по физике.</del></p>
+					<p><del>Писал статьи в <a href="https://vk.com/revmus">revmus</a>.</del></p>
+					<p><del>Разработал <a href="https://www.dropbox.com/s/owx6ddrix3gepcj/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5%20%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%B8%D0%B5%20Quantum%20GIS.zip?dl=0">методичку</a> для обучения студентов основам работы в ГИС.</del></p>
+					<p><del>Играл в <a href="https://cybico.bandcamp.com/music">КYБ и Ко</a>.</del></p>
+					<p><del>Сочинял стихи юности на «<a href="http://pisanina.su">Писанине</a>».</del></p>
+					<p><del>Снимал фильмы на <a href="{{ url_for('static', filename='28studio.png') }}">28-й студии</a>.</del></p>
 				</div>
 			</div>
 			<div class="col-lg-1"></div>
@@ -70,22 +77,6 @@
 							<li><a href="https://mykp.ru/borisovodov">Кинопоиск</a></li>
 						</ul>
 				</div>
-				<div>
-					<p><a data-toggle="collapse" href="#archive" class="dashedlink">Архив</a></p>
-					<p>
-						<div id="archive" class="collapse">
-							<ul>
-								<li>Рассказывал истории в научпоп-подкасте «<a href="https://anchor.fm/sciencebitch">Сайнс, бич</a>».</li>
-								<li>Подготовил <a href="{{ url_for('astroege') }}">методичку по астрономии</a> для успешной сдачи ЕГЭ по физике.</li>
-								<li>Писал статьи в <a href="https://vk.com/revmus">revmus</a>.</li>
-								<li>Разработал <a href="https://www.dropbox.com/s/owx6ddrix3gepcj/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5%20%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%B8%D0%B5%20Quantum%20GIS.zip?dl=0">методичку</a> для обучения студентов основам работы в ГИС.</li>
-								<li>Играл в <a href="https://cybico.bandcamp.com/music">КYБ и Ко</a>.</li>
-								<li>Сочинял стихи юности на «<a href="http://pisanina.su">Писанине</a>».</li>
-								<li>Снимал фильмы на <a href="{{ url_for('static', filename='28studio.png') }}">28-й студии</a>.</li>
-							</ul>
-						</div>
-					</p>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -97,5 +88,6 @@
 			</div>
 		</div>
 	</div>
+	<div class="col mt-4"></div>
 </body>
 </html>
