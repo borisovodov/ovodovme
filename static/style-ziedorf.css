@@ -1,8 +1,0 @@
-@font-face {
-    font-family: 'PT Serif';
-    src: url('pt-serif_regular.woff2') format('woff2');
-}
-
-body {
-    font-family: 'PT Serif', serif;
-}
