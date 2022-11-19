@@ -3,7 +3,11 @@
     src: url('pt-sans-cyrillic-ext.woff2') format('woff2'),
          url('pt-sans-cyrillic.woff2') format('woff2'),
          url('pt-sans-latin-ext.woff2') format('woff2'),
-         url('pt-sans-latin.woff2') format('woff2');
+         url('pt-sans-latin.woff2') format('woff2'),
+         url('pt-sans-bold-italic.ttf') format('ttf'),
+         url('pt-sans-bold.ttf') format('ttf'),
+         url('pt-sans-italic.ttf') format('ttf'),
+         url('pt-sans-regular.ttf') format('ttf');
 }
 
 body {
