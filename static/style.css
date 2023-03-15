@@ -6,10 +6,6 @@
 
 body {
     font-family: 'PT Sans', sans-serif;
-    
-    background: rgb(41,0,62);
-    background: linear-gradient(144deg, rgba(41,0,62,1) 0%, rgba(49,0,74,1) 35%, rgba(117,0,177,1) 100%);
-    color: #ffffff;
 }
 
 h1 {
@@ -17,12 +13,7 @@ h1 {
 }
 
 a {
-    color: #ffffff;
     text-decoration: underline;
-}
-
-a:hover {
-    color: #b1b1b1;
 }
 
 .dashedlink {
@@ -35,10 +26,6 @@ a:hover {
     border-bottom: 1px dashed;
 }
 
-blockquote {
-    background-color: #411558;
-}
-
-.border {
-    border-color: #838486 !important;
+.text-tertiary {
+    color: #cdd4da;
 }
