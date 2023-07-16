@@ -2,6 +2,7 @@ function addToClipboard() {
   navigator.clipboard.writeText("https://ovodov.me/trud.ics");
 }
 
+/*
 var checkbox = document.getElementById('authSwitch')
 
 //var authOff = document.getElementsByClassName("authOff")
@@ -29,3 +30,4 @@ checker(this.checked)
 checkbox.addEventListener('change', function () {
   checker(this.checked)
 })
+*/
