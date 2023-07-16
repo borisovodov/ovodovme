@@ -3,7 +3,7 @@ function addToClipboard() {
 }
 
 function myFunction() {
-  var checkBox = document.getElementById("authSwitch");
+  var checkBox = document.getElementById("flexSwitchCheckDefault");
   var text = document.getElementById("authText");
   if (checkBox.checked == true){
     text.style.display = "block";
