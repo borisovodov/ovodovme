@@ -7,8 +7,14 @@ var checkbox = document.getElementById('authSwitch')
 var authOff = document.getElementsByClassName("authOff")
 var authOn = document.getElementsByClassName("authOn")
 
-function checker(checked) {
-  checked ? showAuth() : hideAuth()
+function checker() {
+  if ($("#authSwitch").is(":checked")) {
+    authOff[0].style.display = "none"
+    authOn[0].style.display = "inline-block"
+  } else {
+    authOff[0].style.display = "inline-block"
+    authOn[0].style.display = "none"
+  }
 }
 
 function showAuth() {
@@ -21,8 +27,8 @@ function hideAuth() {
   authOn[0].style.display = "none"
 }
 
-checker(this.checked)
+checker()
 
 checkbox.addEventListener('change', function () {
-  checker(this.checked)
+  checker()
 })
