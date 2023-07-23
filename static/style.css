@@ -54,3 +54,7 @@ a {
 .green:hover {
     color: #004e13;
 }
+
+.auth {
+    display: none;
+}
