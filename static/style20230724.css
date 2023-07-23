@@ -58,3 +58,8 @@ a {
 .auth {
     display: none;
 }
+
+.green-control-input:checked {
+    border-color: #007d1e !important;
+    background-color: #007d1e !important;
+}
