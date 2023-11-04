@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'PT Sans';
-    src: url('pt-sans-cyrillic.woff2') format('woff2'),
-         url('pt-sans-latin.woff2') format('woff2');
+    src: url('pt-sans_regular.woff2') format('woff2');
 }
 
 @font-face {
