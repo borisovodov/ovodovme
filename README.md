@@ -1,4 +1,4 @@
-# Борькин хоумпэйдж
-Смотрите: [ovodov.me](https://ovodov.me)
+# Boris's home page
+Look: [ovodov.me](https://ovodov.me)
 
-Пишите: [boris@ovodov.me](mailto:boris@ovodov.me)
+Write: [boris@ovodov.me](mailto:boris@ovodov.me)
