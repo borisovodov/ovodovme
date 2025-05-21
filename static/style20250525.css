@@ -67,3 +67,8 @@ a {
     display: none;
     font-size: xx-large;
 }
+
+#download-message {
+    display: none;
+    font-size: xx-large;
+}

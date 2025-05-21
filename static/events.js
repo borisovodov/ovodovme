@@ -70,7 +70,8 @@ END:VEVENT
 END:VCALENDAR`.trim();
 }
 
-function downloadICS(content) {
+function downloadICS() {
+    const content = generateICS()
     const blob = new Blob([content], { type: "text/calendar" });
     const url = URL.createObjectURL(blob);
 
@@ -86,7 +87,7 @@ window.addEventListener("DOMContentLoaded", () => {
     if (isTelegramInAppBrowser()) {
         document.getElementById("telegram-message").style.display = "block";
     } else {
-        const content = generateICS();
-        downloadICS(content);
+        downloadICS();
+        document.getElementById("download-message").style.display = "block";
     }
 });
