@@ -60,17 +60,22 @@
 			return date.replaceAll("-", "") + "T" + hours + minutes + "00";
 		}
 
+		function formatICSLocation(location) {
+			console.log(location);
+			return location.replaceAll(",", "\,");
+		}
+
 		function generateICS() {
 			const params = new URLSearchParams(window.location.search);
 			const now = new Date();
 			const event = {
 				uuid: crypto.randomUUID(),
 				summary: params.get("summary"),
-				location: params.get("location"),
-				start: params.get("start"),
-				end: params.get("end"),
+				location: formatICSLocation(params.get("location")),
+				start: formatICSDate(params.get("start")),
+				end: formatICSDate(params.get("end")),
 				url: params.get("url"),
-				timestamp: now.toISOString(),
+				timestamp: formatICSDate(now.toISOString()),
 			};
 
 			return `
@@ -92,9 +97,9 @@ END:VTIMEZONE
 
 BEGIN:VEVENT
 UID:${event.uuid}
-DTSTART;TZID=Asia/Yekaterinburg:${formatICSDate(event.start)}
-DTEND;TZID=Asia/Yekaterinburg:${formatICSDate(event.end)}
-DTSTAMP:${formatICSDate(event.timestamp)}
+DTSTART;TZID=Asia/Yekaterinburg:${event.start}
+DTEND;TZID=Asia/Yekaterинбург:${event.end}
+DTSTAMP:${event.timestamp}
 SUMMARY:${event.summary}
 LOCATION:${event.location}
 URL;VALUE=URI:${event.url}
