@@ -18,14 +18,14 @@
 	<link rel="stylesheet" type="text/css" href="static/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="static/style20231103.css">
 	<link rel="shortcut icon" href="static/favicon-20231123.png">
-	<style>
+	<!-- <style>
 		#telegram-message {
 			display: none;
 			font-size: 18px;
 			color: red;
 			margin: 20px;
 		}
-	</style>
+	</style> -->
 
 	<script src="static/bootstrap.min.js"></script>
 	
@@ -33,10 +33,23 @@
 </head>
 <body>
 	<div id="telegram-message">Пожалуйста, нажмите кнопку «Открыть в Safari», чтобы добавить событие в календарь.</div>
+	<div id="istelegram"><p>Это не телеграм</p></div>
 
 	<script>
-		function isTelegramInAppBrowser() {
+		function isTelegramInAppBrowserGPT() {
+			return /Telegram/i.test(navigator.userAgent);
+		}
+		function isTelegramInAppBrowserWebview() {
 			if (typeof window.TelegramWebview !== 'undefined') {
+				return true;
+			}
+			return false;
+		}
+		function isTelegramInAppBrowserWebviewWithProxy() {
+			if (navigator.userAgent.includes("Android") && typeof window.TelegramWebview !== 'undefined') {
+				return true;
+			}
+			if (navigator.userAgent.includes("iPhone") && typeof window.TelegramWebviewProxy !== 'undefined' && typeof window.TelegramWebviewProxyProto !== 'undefined') {
 				return true;
 			}
 			return false;
@@ -84,15 +97,24 @@ END:VCALENDAR`.trim();
 		}
 
 		window.addEventListener('DOMContentLoaded', () => {
-			if (isTelegramInAppBrowser()) {
-				document.getElementById('telegram-message').style.display = 'block';
-			} else {
-				const event = getEventParams();
-				if (event.start && event.end) {
-					const ics = generateICS(event);
-					downloadICS(ics);
-				}
+			if (isTelegramInAppBrowserGPT()) {
+				document.getElementById("istelegram").innerHTML = "isTelegramInAppBrowserGPT == true";
 			}
+			if (isTelegramInAppBrowserWebview()) {
+				document.getElementById("istelegram").innerHTML = "isTelegramInAppBrowserWebview == true";
+			}
+			if (isTelegramInAppBrowserWebviewWithProxy()) {
+				document.getElementById("istelegram").innerHTML = "isTelegramInAppBrowserWebviewWithProxy == true";
+			}
+			// if (isTelegramInAppBrowser()) {
+			// 	document.getElementById('telegram-message').style.display = 'block';
+			// } else {
+			// 	const event = getEventParams();
+			// 	if (event.start && event.end) {
+			// 		const ics = generateICS(event);
+			// 		downloadICS(ics);
+			// 	}
+			// }
 		});
 	</script>
 </body>
