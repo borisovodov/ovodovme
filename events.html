@@ -47,7 +47,10 @@
 		}
 
 		function formatICSDate(dateStr) {
-			return dateStr;
+			console.log(dateStr);
+			str = dateStr.replace(/[-:]/g, '');
+			console.log(str);
+			return str;
 		}
 
 		function generateICS() {
