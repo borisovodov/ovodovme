@@ -33,14 +33,10 @@
 </head>
 <body>
 	<div id="telegram-message">Пожалуйста, нажмите кнопку «Открыть в Safari», чтобы добавить событие в календарь.</div>
-	<p>Если вы видите это сообщение, значит вы открыли страницу в приложении Telegram. Чтобы скачать файл .ics, откройте его в браузере Safari или другом браузере.</p>
 
 	<script>
 		function isTelegramInAppBrowser() {
-			if (navigator.userAgent.includes("Android") && typeof window.TelegramWebview !== 'undefined') {
-				return true;
-			}
-			if (navigator.userAgent.includes("iPhone") && typeof window.TelegramWebviewProxy !== 'undefined' && typeof window.TelegramWebviewProxyProto !== 'undefined') {
+			if (typeof window.TelegramWebview !== 'undefined') {
 				return true;
 			}
 			return false;
