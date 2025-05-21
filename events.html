@@ -54,7 +54,7 @@
 			const params = new URLSearchParams(window.location.search);
 			const event = {
 				uuid: crypto.randomUUID(),
-				title: params.get("summary"),
+				summary: params.get("summary"),
 				location: params.get("location"),
 				start: params.get("start"),
 				end: params.get("end"),
