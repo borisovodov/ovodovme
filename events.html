@@ -37,7 +37,13 @@
 
 	<script>
 		function isTelegramInAppBrowser() {
-			return /Telegram/i.test(navigator.userAgent);
+			if (navigator.userAgent.includes("Android") && typeof window.TelegramWebview !== 'undefined') {
+				return true;
+			}
+			if (navigator.userAgent.includes("iPhone") && typeof window.TelegramWebviewProxy !== 'undefined' && typeof window.TelegramWebviewProxyProto !== 'undefined') {
+				return true;
+			}
+			return false;
 		}
 
 		function getEventParams() {
