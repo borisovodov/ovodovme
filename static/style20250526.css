@@ -63,7 +63,12 @@ a {
     background-color: #007d1e;
 }
 
-#telegram-message {
+#telegram-message-ios {
+    display: none;
+    font-size: xx-large;
+}
+
+#telegram-message-android {
     display: none;
     font-size: xx-large;
 }

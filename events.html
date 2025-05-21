@@ -16,7 +16,7 @@
 
 	<!-- Static -->
 	<link rel="stylesheet" type="text/css" href="static/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="static/style20250525.css">
+	<link rel="stylesheet" type="text/css" href="static/style20250526.css">
 	<link rel="shortcut icon" href="static/favicon-20231123.png">
 
 	<script src="static/bootstrap.min.js"></script>
@@ -25,13 +25,16 @@
 	<title>Глупая страничка для формирования событий календаря по URL</title>
 </head>
 <body class="d-flex justify-content-center align-items-center min-vh-100">
-	<div id="telegram-message" class="text-center p-5">
+	<div id="telegram-message-ios" class="text-center p-5">
 		<p>
 			<span>Тыкните по кнопке</span>
 			<img width="40pt" height="40pt" src="static/safari.jpeg" alt="Telegram">
 			<span>чтобы добавить событие в календарь.</span>
 		</p>
 		<img src="static/arrow.svg" alt="Arrow" style="display:block;margin:0 auto;">
+	</div>
+	<div id="telegram-message-android" class="text-center p-5">
+		<p>Откройте страницу в браузере, чтобы добавить событие в календарь.</span></p>
 	</div>
 	<div id="download-message" class="text-center p-5">
 		<p>Должен был скачаться файл для добавления события в календарь. Если не получилось, то тыкните по <a href="javascript:downloadICS()">ссылке</a>.</p>

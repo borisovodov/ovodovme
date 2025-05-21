@@ -1,8 +1,12 @@
-function isTelegramInAppBrowser() {
-    if (navigator.userAgent.includes("Android") && typeof window.TelegramWebview !== "undefined") {
+function isIOSTelegramInAppBrowser() {
+    if (navigator.userAgent.includes("iPhone") && typeof window.TelegramWebviewProxy !== "undefined" && typeof window.TelegramWebviewProxyProto !== "undefined") {
         return true;
     }
-    if (navigator.userAgent.includes("iPhone") && typeof window.TelegramWebviewProxy !== "undefined" && typeof window.TelegramWebviewProxyProto !== "undefined") {
+    return false;
+}
+
+function isAndroidTelegramInAppBrowser() {
+    if (navigator.userAgent.includes("Android") && typeof window.TelegramWebview !== "undefined") {
         return true;
     }
     return false;
@@ -84,8 +88,10 @@ function downloadICS() {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-    if (isTelegramInAppBrowser()) {
-        document.getElementById("telegram-message").style.display = "block";
+    if (isIOSTelegramInAppBrowser()) {
+        document.getElementById("telegram-message-ios").style.display = "block";
+    } else if (isAndroidTelegramInAppBrowser()) {
+        document.getElementById("telegram-message-android").style.display = "block";
     } else {
         downloadICS();
         document.getElementById("download-message").style.display = "block";
