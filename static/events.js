@@ -83,10 +83,10 @@ function downloadICS(content) {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-    // if (isTelegramInAppBrowser()) {
+    if (isTelegramInAppBrowser()) {
         document.getElementById("telegram-message").style.display = "block";
-    // } else {
-    //     const content = generateICS();
-    //     downloadICS(content);
-    // }
+    } else {
+        const content = generateICS();
+        downloadICS(content);
+    }
 });
