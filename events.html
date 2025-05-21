@@ -22,7 +22,6 @@
 		#telegram-message {
 			display: none;
 			font-size: 18px;
-			color: red;
 			margin: 20px;
 		}
 	</style>
@@ -32,27 +31,19 @@
 	<title>??? название страницы ???</title>
 </head>
 <body>
-	<div id="telegram-message"><p>Пожалуйста, нажмите кнопку «Открыть в Safari», чтобы добавить событие в календарь.</p></div>
+	<div id="telegram-message">
+		<p>Пожалуйста, нажмите кнопку «Открыть в Safari», чтобы добавить событие в календарь.</p>
+	</div>
 
 	<script>
 		function isTelegramInAppBrowser() {
-			if (navigator.userAgent.includes("Android") && typeof window.TelegramWebview !== 'undefined') {
+			if (navigator.userAgent.includes("Android") && typeof window.TelegramWebview !== "undefined") {
 				return true;
 			}
-			if (navigator.userAgent.includes("iPhone") && typeof window.TelegramWebviewProxy !== 'undefined' && typeof window.TelegramWebviewProxyProto !== 'undefined') {
+			if (navigator.userAgent.includes("iPhone") && typeof window.TelegramWebviewProxy !== "undefined" && typeof window.TelegramWebviewProxyProto !== "undefined") {
 				return true;
 			}
 			return false;
-		}
-
-		function getEventParams() {
-			const params = new URLSearchParams(window.location.search);
-			return {
-				title: params.get('title') || 'Без названия',
-				location: params.get('location') || '',
-				start: params.get('start'),
-				end: params.get('end'),
-			};
 		}
 
 		function formatICSDate(dateStr) {
@@ -60,45 +51,66 @@
 			return date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
 		}
 
-		function generateICS(event) {
+		function generateICS() {
+			const params = new URLSearchParams(window.location.search);
+			const event = {
+				uuid: crypto.randomUUID(),
+				title: params.get("summary"),
+				location: params.get("location"),
+				start: params.get("start"),
+				end: params.get("end"),
+				url: params.get("url"),
+			};
+
 			return `
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//example.com//Event
+CALSCALE:GREGORIAN
+PRODID:-//Apple Inc.//macOS 15.5//RU
+
+BEGIN:VTIMEZONE
+TZID:Asia/Yekaterinburg
+X-LIC-LOCATION:Asia/Yekaterinburg
+BEGIN:STANDARD
+TZOFFSETFROM:+0500
+TZOFFSETTO:+0500
+TZNAME:+05
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+
 BEGIN:VEVENT
-SUMMARY:${event.title}
+UID:${event.uuid}
+DTSTART;TZID=Asia/Yekaterinburg:${formatICSDate(event.start)}
+DTEND;TZID=Asia/Yekaterinburg:${formatICSDate(event.end)}
+DTSTAMP:20250101T010000
+SUMMARY:${event.summary}
 LOCATION:${event.location}
-DTSTART:${formatICSDate(event.start)}
-DTEND:${formatICSDate(event.end)}
+URL;VALUE=URI:${event.url}
 END:VEVENT
+
 END:VCALENDAR`.trim();
 		}
 
-		function downloadICS(icsContent) {
-			const blob = new Blob([icsContent], { type: 'text/calendar' });
+		function downloadICS(content) {
+			const blob = new Blob([content], { type: "text/calendar" });
 			const url = URL.createObjectURL(blob);
 
-			const a = document.createElement('a');
+			const a = document.createElement("a");
 			a.href = url;
-			a.download = 'event.ics';
+			a.download = "event.ics";
 			a.click();
 
 			URL.revokeObjectURL(url);
 		}
 
-		window.addEventListener('DOMContentLoaded', () => {
+		window.addEventListener("DOMContentLoaded", () => {
 			if (isTelegramInAppBrowser()) {
 				document.getElementById("telegram-message").style.display = "block";
+			} else {
+				const content = generateICS();
+				downloadICS(content);
 			}
-			// if (isTelegramInAppBrowser()) {
-			// 	document.getElementById('telegram-message').style.display = 'block';
-			// } else {
-			// 	const event = getEventParams();
-			// 	if (event.start && event.end) {
-			// 		const ics = generateICS(event);
-			// 		downloadICS(ics);
-			// 	}
-			// }
 		});
 	</script>
 </body>
