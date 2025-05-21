@@ -48,13 +48,17 @@
 
 		function formatICSDate(dateStr) {
 			console.log(dateStr);
-			str = dateStr.replace(/[-:]/g, '');
-			console.log(str);
-			return str;
+			const date = dateStr.split("T")[0];
+			const time = dateStr.split("T")[1].split("+")[0];
+			const hours = time.split(":")[0];
+			const minutes = time.split(":")[1];
+			console.log(date.replace("-", "") + hours + minutes + "00");
+			return date.replace("-", "") + hours + minutes + "00";
 		}
 
 		function generateICS() {
 			const params = new URLSearchParams(window.location.search);
+			const now = new Date();
 			const event = {
 				uuid: crypto.randomUUID(),
 				summary: params.get("summary"),
@@ -62,6 +66,7 @@
 				start: params.get("start"),
 				end: params.get("end"),
 				url: params.get("url"),
+				timestamp: now.toISOString(),
 			};
 
 			return `
@@ -85,7 +90,7 @@ BEGIN:VEVENT
 UID:${event.uuid}
 DTSTART;TZID=Asia/Yekaterinburg:${formatICSDate(event.start)}
 DTEND;TZID=Asia/Yekaterinburg:${formatICSDate(event.end)}
-DTSTAMP:20250101T010000
+DTSTAMP:${formatICSDate(event.timestamp)}
 SUMMARY:${event.summary}
 LOCATION:${event.location}
 URL;VALUE=URI:${event.url}
