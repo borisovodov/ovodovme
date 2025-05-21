@@ -47,8 +47,7 @@
 		}
 
 		function formatICSDate(dateStr) {
-			const date = new Date(dateStr);
-			return date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+			return dateStr.replace(/[-:]/g, '').split('.')[0] + 'Z';
 		}
 
 		function generateICS() {
