@@ -62,3 +62,9 @@ a {
     border-color: #007d1e;
     background-color: #007d1e;
 }
+
+#telegram-message {
+    display: none;
+    font-size: 18px;
+    margin: 20px;
+}
