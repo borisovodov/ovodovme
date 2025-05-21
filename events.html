@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Борин хоумпэйдж">
+	<meta property="og:title" content="??? Страничка с календарями ???">
+	<meta property="og:description" content="??? описание ???">
+	<meta property="og:url" content="https://ovodov.me/events">
+	<meta property="og:image" content="static/favicon-20231123.png" />
+	<meta property="og:locale" content="ru_RU" />
+
+	<!-- Static -->
+	<link rel="stylesheet" type="text/css" href="static/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="static/style20231103.css">
+	<link rel="shortcut icon" href="static/favicon-20231123.png">
+	<style>
+		#telegram-message {
+			display: none;
+			font-size: 18px;
+			color: red;
+			margin: 20px;
+		}
+	</style>
+
+	<script src="static/bootstrap.min.js"></script>
+	
+	<title>??? название страницы ???</title>
+</head>
+<body>
+	<div id="telegram-message">
+		Пожалуйста, нажмите кнопку «Открыть в Safari», чтобы добавить событие в календарь.
+	</div>
+
+	<script>
+		function isTelegramInAppBrowser() {
+			return /Telegram/i.test(navigator.userAgent);
+		}
+
+		function getEventParams() {
+			const params = new URLSearchParams(window.location.search);
+			return {
+				title: params.get('title') || 'Без названия',
+				location: params.get('location') || '',
+				start: params.get('start'),
+				end: params.get('end'),
+			};
+		}
+
+		function formatICSDate(dateStr) {
+			const date = new Date(dateStr);
+			return date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+		}
+
+		function generateICS(event) {
+			return `
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//example.com//Event
+BEGIN:VEVENT
+SUMMARY:${event.title}
+LOCATION:${event.location}
+DTSTART:${formatICSDate(event.start)}
+DTEND:${formatICSDate(event.end)}
+END:VEVENT
+END:VCALENDAR`.trim();
+		}
+
+		function downloadICS(icsContent) {
+			const blob = new Blob([icsContent], { type: 'text/calendar' });
+			const url = URL.createObjectURL(blob);
+
+			const a = document.createElement('a');
+			a.href = url;
+			a.download = 'event.ics';
+			a.click();
+
+			URL.revokeObjectURL(url);
+		}
+
+		window.addEventListener('DOMContentLoaded', () => {
+			if (isTelegramInAppBrowser()) {
+				document.getElementById('telegram-message').style.display = 'block';
+			} else {
+				const event = getEventParams();
+				if (event.start && event.end) {
+					const ics = generateICS(event);
+					downloadICS(ics);
+				}
+			}
+		});
+	</script>
+</body>
+</html>
