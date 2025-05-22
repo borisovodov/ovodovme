@@ -27,7 +27,7 @@ function formatICSDate(dateStr, isEndDate = false) {
         return `TZID=Asia/Yekaterinburg:${year}${month}${day}T${hours}${minutes}${seconds}`;
     } else {
         if (isEndDate) {
-            const nextDate = new Date().setDate(date.getDate() + 1).getDate();
+            const nextDate = new Date(date).setDate(date.getDate() + 1);
             const nextYear = nextDate.getFullYear();
             const nextMonth = String(nextDate.getMonth() + 1).padStart(2, "0");
             const nextDay = String(nextDate.getDate()).padStart(2, "0");
