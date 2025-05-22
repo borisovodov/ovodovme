@@ -12,9 +12,9 @@ function isAndroidTelegramInAppBrowser() {
     return false;
 }
 
-function formatICSDate(dateStr, isEndDate = false) {
-    console.log(dateStr);
-    const dateStr = dateStr.replaceAll(" ", "+");
+function formatICSDate(str, isEndDate = false) {
+    console.log(str);
+    const dateStr = str.replaceAll(" ", "+");
     const isDateWithTime = dateStr.includes("T");
     const date = new Date(dateStr);
     console.log(date);
