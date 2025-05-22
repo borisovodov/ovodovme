@@ -13,12 +13,9 @@ function isAndroidTelegramInAppBrowser() {
 }
 
 function formatICSDate(str, isEndDate = false) {
-    console.log(str);
     const dateStr = str.replaceAll(" ", "+");
     const isDateWithTime = dateStr.includes("T");
     const date = new Date(dateStr);
-    console.log(date);
-    console.log(date.toISOString());
     date.setSeconds(0);
     const year = date.getFullYear();
     const month = String(date.getMonth() + 1).padStart(2, "0");
@@ -44,7 +41,6 @@ function formatICSDate(str, isEndDate = false) {
 }
 
 function formatICSLocation(location) {
-    console.log(location);
     return location.replaceAll(",", "\\,");
 }
 
