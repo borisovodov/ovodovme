@@ -15,7 +15,9 @@ function isAndroidTelegramInAppBrowser() {
 function formatICSDate(dateStr, isEndDate = false) {
     console.log(dateStr);
     const isDateWithTime = dateStr.includes("T");
-    const date = Date.parse(dateStr);
+    const date = new Date(dateStr);
+    console.log(date);
+    console.log(date.toISOString());
     date.setSeconds(0);
     const year = date.getFullYear();
     const month = String(date.getMonth() + 1).padStart(2, "0");
