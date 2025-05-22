@@ -12,18 +12,30 @@ function isAndroidTelegramInAppBrowser() {
     return false;
 }
 
-function formatICSDate(dateStr) {
+function formatICSDate(dateStr, isEndDate = false) {
     console.log(dateStr);
-    const date = dateStr.split("T")[0];
-    const time = dateStr.split("T")[1].split("+")[0];
-    const hours = time.split(":")[0];
-    const minutes = time.split(":")[1];
-    console.log("date: " + date);
-    console.log("time: " + time);
-    console.log("hours: " + hours);
-    console.log("minutes: " + minutes);
-    console.log(date.replaceAll("-", "") + "T" + hours + minutes + "00");
-    return date.replaceAll("-", "") + "T" + hours + minutes + "00";
+    const isDateWithTime = dateStr.includes("T");
+    const date = new Date(dateStr).setSeconds(0);
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+    const hours = String(date.getHours()).padStart(2, "0");
+    const minutes = String(date.getMinutes()).padStart(2, "0");
+    const seconds = String(date.getSeconds()).padStart(2, "0");
+    
+    if (isDateWithTime) {
+        return `TZID=Asia/Yekaterinburg:${year}${month}${day}T${hours}${minutes}${seconds}`;
+    } else {
+        if (isEndDate) {
+            const nextDate = new Date().setDate(date.getDate() + 1).getDate();
+            const nextYear = nextDate.getFullYear();
+            const nextMonth = String(nextDate.getMonth() + 1).padStart(2, "0");
+            const nextDay = String(nextDate.getDate()).padStart(2, "0");
+            return `VALUE=DATE:${nextYear}${nextMonth}${nextDay}`;
+        } else {
+            return `VALUE=DATE:${year}${month}${day}`;
+        }
+    }
 }
 
 function formatICSLocation(location) {
@@ -39,7 +51,7 @@ function generateICS() {
         summary: params.get("summary"),
         location: formatICSLocation(params.get("location")),
         start: formatICSDate(params.get("start")),
-        end: formatICSDate(params.get("end")),
+        end: formatICSDate(params.get("end"), true),
         url: params.get("url"),
         timestamp: formatICSDate(now.toISOString()),
     };
@@ -63,8 +75,8 @@ END:VTIMEZONE
 
 BEGIN:VEVENT
 UID:${event.uuid}
-DTSTART;TZID=Asia/Yekaterinburg:${event.start}
-DTEND;TZID=Asia/Yekaterinburg:${event.end}
+DTSTART;${event.start}
+DTEND;${event.end}
 DTSTAMP:${event.timestamp}
 SUMMARY:${event.summary}
 LOCATION:${event.location}
