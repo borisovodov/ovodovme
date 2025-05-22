@@ -63,6 +63,10 @@ a {
     background-color: #007d1e;
 }
 
+.rotate-270 {
+    transform: rotate(270deg);
+}
+
 #telegram-message-ios {
     display: none;
     font-size: xx-large;
