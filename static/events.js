@@ -15,7 +15,8 @@ function isAndroidTelegramInAppBrowser() {
 function formatICSDate(dateStr, isEndDate = false) {
     console.log(dateStr);
     const isDateWithTime = dateStr.includes("T");
-    const date = new Date(dateStr).setSeconds(0);
+    const date = new Date(dateStr);
+    date.setSeconds(0);
     const year = date.getFullYear();
     const month = String(date.getMonth() + 1).padStart(2, "0");
     const day = String(date.getDate()).padStart(2, "0");
@@ -27,7 +28,8 @@ function formatICSDate(dateStr, isEndDate = false) {
         return `TZID=Asia/Yekaterinburg:${year}${month}${day}T${hours}${minutes}${seconds}`;
     } else {
         if (isEndDate) {
-            const nextDate = new Date(date).setDate(date.getDate() + 1);
+            const nextDate = new Date(date);
+            nextDate.setDate(date.getDate() + 1);
             const nextYear = nextDate.getFullYear();
             const nextMonth = String(nextDate.getMonth() + 1).padStart(2, "0");
             const nextDay = String(nextDate.getDate()).padStart(2, "0");
