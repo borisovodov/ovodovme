@@ -88,12 +88,12 @@ function downloadICS() {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-    // if (isIOSTelegramInAppBrowser()) {
-    //     document.getElementById("telegram-message-ios").style.display = "block";
-    // } else if (isAndroidTelegramInAppBrowser()) {
+    if (isIOSTelegramInAppBrowser()) {
+        document.getElementById("telegram-message-ios").style.display = "block";
+    } else if (isAndroidTelegramInAppBrowser()) {
         document.getElementById("telegram-message-android").style.display = "block";
-    // } else {
-    //     downloadICS();
-    //     document.getElementById("download-message").style.display = "block";
-    // }
+    } else {
+        downloadICS();
+        document.getElementById("download-message").style.display = "block";
+    }
 });
