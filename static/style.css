@@ -20,6 +20,7 @@ body.ye {
 
 a.ye {
     color: #D2E4D6;
+    cursor: pointer;
 }
 
 a.ye:hover {
@@ -64,6 +65,10 @@ a {
     border-color: white;
     background-color: #006732;
     border-width: 2px;
+}
+
+.modal-content {
+    color: black;
 }
 
 .rotate-270 {
