@@ -14,6 +14,16 @@ body {
 
 body.ye {
     font-family: 'PT Serif', serif;
+    background-color: #007d1e;
+    color: white;
+}
+
+a.ye {
+    color: #DCF9D7;
+}
+
+a.ye:hover {
+    color: white;
 }
 
 h1 {
@@ -46,21 +56,14 @@ a {
     color: #cdd4da;
 }
 
-.green {
-    color: #007d1e;
-}
-
-.green:hover {
-    color: #004e13;
-}
-
 .auth {
     display: none;
 }
 
 .green-control-input:checked {
-    border-color: #007d1e;
+    border-color: white;
     background-color: #007d1e;
+    border-width: 2px;
 }
 
 .rotate-270 {
