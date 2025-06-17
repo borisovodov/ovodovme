@@ -14,12 +14,12 @@ body {
 
 body.ye {
     font-family: 'PT Serif', serif;
-    background-color: #007d1e;
+    background-color: #006732;
     color: white;
 }
 
 a.ye {
-    color: #DCF9D7;
+    color: #D2E4D6;
 }
 
 a.ye:hover {
@@ -62,7 +62,7 @@ a {
 
 .green-control-input:checked {
     border-color: white;
-    background-color: #007d1e;
+    background-color: #006732;
     border-width: 2px;
 }
 
