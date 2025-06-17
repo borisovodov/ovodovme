@@ -27,6 +27,20 @@ a.ye:hover {
     color: white;
 }
 
+a.ye-dark {
+    color: #006732;
+    cursor: pointer;
+}
+
+a.ye-dark:hover {
+    color: #004e13;
+}
+
+ul.ye {
+    list-style-type: none;
+    line-height: 26pt;
+}
+
 h1 {
     font-size: 1.5em;
 }
