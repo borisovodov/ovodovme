@@ -36,9 +36,9 @@ function updateMaps(latitude, longitude, zoom) {
 
 	maplibreGLMap.setCenter([longitude, latitude]);
 	maplibreGLMap.setZoom(zoom);
-	leafletMap.setView([latitude, longitude], zoom);
-	olMap.getView().setCenter([longitude, latitude]);
-	olMap.getView().setZoom(zoom);
+	// leafletMap.setView([latitude, longitude], zoom);
+	// olMap.getView().setCenter([longitude, latitude]);
+	// olMap.getView().setZoom(zoom);
 	updatingMaps = false;
 	updateDisplay();
 }
@@ -47,8 +47,8 @@ function updateStyle() {
 	mapStyle = getStyle();
 
 	maplibreGLMap.setStyle(mapStyle);
-	leafletLayer.getMaplibreMap().setStyle(mapStyle);
-	olms.apply(olMap, mapStyle);
+	// leafletLayer.getMaplibreMap().setStyle(mapStyle);
+	// olms.apply(olMap, mapStyle);
 }
 
 function getStyle() {
