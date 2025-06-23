@@ -52,7 +52,7 @@ function updateStyle() {
 }
 
 function getStyle() {
-	return `https://maps.familio.org/styles/${styleElement.value}.json`;
+	return `https://betamaps.familio.org/styles/${styleElement.value}.json`;
 }
 
 styleElement.addEventListener("change", (event) => {
