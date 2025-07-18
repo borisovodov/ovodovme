@@ -12,29 +12,8 @@ function isAndroidTelegramInAppBrowser() {
     return false;
 }
 
-function getTimeZone(dateStr) {
-    const isoTzMatch = dateStr.match(/([+-]\d{2}:?\d{2}|Z)$/);
-    let tzid = null;
-    let date;
-    if (isoTzMatch) {
-        if (isoTzMatch[1] === "Z") {
-            tzid = "UTC";
-            date = new Date(dateStr);
-        } else {
-            // Convert "+03:00" or "+0300" to "+03:00"
-            let offset = isoTzMatch[1].replace(/(\d{2})(\d{2})$/, "$1:$2");
-            tzid = `UTC${offset}`;
-            // Date constructor parses ISO 8601 with offset correctly
-            date = new Date(dateStr);
-        }
-    } else {
-        // No timezone info, use UTC
-        tzid = "UTC";
-        date = new Date(dateStr + "Z");
-    }
-}
-
-function formatICSDate(dateStr, isEndDate = false) {
+function formatICSDate(str, isEndDate = false) {
+    const dateStr = str.replaceAll(" ", "+");
     const isDateWithTime = dateStr.includes("T");
     const date = new Date(dateStr);
     date.setSeconds(0);
@@ -46,7 +25,7 @@ function formatICSDate(dateStr, isEndDate = false) {
     const seconds = String(date.getSeconds()).padStart(2, "0");
     
     if (isDateWithTime) {
-        return `TZID=${tzid}:${year}${month}${day}T${hours}${minutes}${seconds}`;
+        return `TZID=Asia/Yekaterinburg:${year}${month}${day}T${hours}${minutes}${seconds}`;
     } else {
         if (isEndDate) {
             const nextDate = new Date(date);
@@ -78,27 +57,34 @@ function generateICS() {
         timestamp: formatICSDate(now.toISOString()),
     };
 
-    // Определяем TZID из DTSTART
-    let tzid = null;
-    const tzidMatch = event.start.match(/TZID=([^:]+):/);
-    if (tzidMatch) {
-        tzid = tzidMatch[1];
-    }
+    return `
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:-//Apple Inc.//macOS 15.5//RU
 
-    let vtimezone = "";
-    if (tzid && tzid !== "UTC") {
-        // Ожидается формат UTC+03:00 или UTC-05:00
-        const offsetMatch = tzid.match(/^UTC([+-])(\d{2}):(\d{2})$/);
-        if (offsetMatch) {
-            const sign = offsetMatch[1];
-            const hours = offsetMatch[2];
-            const minutes = offsetMatch[3];
-            const offset = `${sign}${hours}${minutes}`;
-            vtimezone = `\nBEGIN:VTIMEZONE\nTZID:${tzid}\nBEGIN:STANDARD\nTZOFFSETFROM:${offset}\nTZOFFSETTO:${offset}\nTZNAME:${tzid}\nDTSTART:19700101T000000\nEND:STANDARD\nEND:VTIMEZONE`;
-        }
-    }
+BEGIN:VTIMEZONE
+TZID:Asia/Yekaterinburg
+X-LIC-LOCATION:Asia/Yekaterinburg
+BEGIN:STANDARD
+TZOFFSETFROM:+0500
+TZOFFSETTO:+0500
+TZNAME:+05
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
 
-    return `\nBEGIN:VCALENDAR\nVERSION:2.0\nCALSCALE:GREGORIAN\nPRODID:-//Apple Inc.//macOS 15.5//RU${vtimezone}\n\nBEGIN:VEVENT\nUID:${event.uuid}\nDTSTART;${event.start}\nDTEND;${event.end}\nDTSTAMP:${event.timestamp}\nSUMMARY:${event.summary}\nLOCATION:${event.location}\nURL;VALUE=URI:${event.url}\nEND:VEVENT\n\nEND:VCALENDAR`.trim();
+BEGIN:VEVENT
+UID:${event.uuid}
+DTSTART;${event.start}
+DTEND;${event.end}
+DTSTAMP:${event.timestamp}
+SUMMARY:${event.summary}
+LOCATION:${event.location}
+URL;VALUE=URI:${event.url}
+END:VEVENT
+
+END:VCALENDAR`.trim();
 }
 
 function downloadICS() {
@@ -115,12 +101,12 @@ function downloadICS() {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-    // if (isIOSTelegramInAppBrowser()) {
-    //     document.getElementById("telegram-message-ios").style.display = "block";
-    // } else if (isAndroidTelegramInAppBrowser()) {
-    //     document.getElementById("telegram-message-android").style.display = "block";
-    // } else {
+    if (isIOSTelegramInAppBrowser()) {
+        document.getElementById("telegram-message-ios").style.display = "block";
+    } else if (isAndroidTelegramInAppBrowser()) {
+        document.getElementById("telegram-message-android").style.display = "block";
+    } else {
         downloadICS();
-    //     document.getElementById("download-message").style.display = "block";
-    // }
+        document.getElementById("download-message").style.display = "block";
+    }
 });
