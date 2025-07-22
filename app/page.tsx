@@ -36,6 +36,7 @@ export default function HomePage() {
 								<ul className="list-disc list-inside">
 									<li className="mb-2"><a className="text-blue-600 hover:text-blue-700 underline" href="https://t.me/safariBookmarks">Борины закладки в Сафари</a> — про разное и анонсы проектов.</li>
 									<li className="mb-2"><a className="text-blue-600 hover:text-blue-700 underline" href="https://t.me/itevents_ekb">Айтишные ивенты Екатеринбурга</a> — агрегатор оффлайновых мероприятий для айтишников: митапов, конференций, лекций.</li>
+									<li className="mb-2"><a className="text-blue-600 hover:text-blue-700 underline" href="https://t.me/tastyCoffeeFilters">Фильтры Tasty Coffee</a> — впечатления от фильтров Тэйсти кофе и других обжарщиков.</li>
 									<li className="mb-2"><a className="text-blue-600 hover:text-blue-700 underline" href="https://t.me/toiletnotes">Туалетные записки</a> — многогранность народного творчества из уборных всего мира в мультифорах формата A4.</li>
 									<li className="mb-2"><a className="text-blue-600 hover:text-blue-700 underline" href="https://t.me/hermannapp">Hermann</a> — новости лучшего тайм-трекера на этой планете.</li>
 								</ul>
