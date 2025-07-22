@@ -1,25 +1,3 @@
-declare global {
-    interface Window {
-        TelegramWebviewProxy?: unknown;
-        TelegramWebviewProxyProto?: unknown;
-        TelegramWebview?: unknown;
-    }
-}
-
-export function isIOSTelegramInAppBrowser() {
-    if (navigator.userAgent.includes("iPhone") && typeof window.TelegramWebviewProxy !== "undefined" && typeof window.TelegramWebviewProxyProto !== "undefined") {
-        return true;
-    }
-    return false;
-}
-
-export function isAndroidTelegramInAppBrowser() {
-    if (navigator.userAgent.includes("Android") && typeof window.TelegramWebview !== "undefined") {
-        return true;
-    }
-    return false;
-}
-
 export function downloadICS() {
     const content = generateICS()
     const blob = new Blob([content], { type: "text/calendar" });
