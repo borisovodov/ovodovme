@@ -1,18 +1,18 @@
-"use client";
+// "use client";
 
 import Image from "next/image";
 
 import {
 	isIOSTelegramInAppBrowser,
 	isAndroidTelegramInAppBrowser,
-	downloadICS
+	// downloadICS
 } from "@/lib/event";
 
 export default function EventPage() {
 	return (
 		<div className="flex flex-col items-center justify-center min-h-screen text-center p-8">
 			{isIOSTelegramInAppBrowser() ? (
-				<div className="">
+				<div>
 					<p className="text-4xl">
 						<span>Тыкните по кнопке</span>
 						<Image
@@ -33,7 +33,7 @@ export default function EventPage() {
 					/>
 				</div>
 			) : isAndroidTelegramInAppBrowser() ? (
-				<div className="">
+				<div>
 					<Image
 						width="300"
 						height="300"
@@ -44,8 +44,8 @@ export default function EventPage() {
 					<p className="text-4xl">Откройте страницу в браузере, чтобы добавить событие в календарь.</p>
 				</div>
 			) : (
-				<div className="">
-					<p className="text-4xl">Должен был скачаться файл для добавления события в календарь. Если не получилось, то тыкните по <a className="text-blue-600 hover:text-blue-700 underline cursor-pointer" onClick={downloadICS}>ссылке</a>.</p>
+				<div>
+					{/* <p className="text-4xl">Должен был скачаться файл для добавления события в календарь. Если не получилось, то тыкните по <a className="text-blue-600 hover:text-blue-700 underline cursor-pointer" onClick={downloadICS}>ссылке</a>.</p> */}
 				</div>
 			)}
 		</div>
