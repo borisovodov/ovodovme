@@ -27,6 +27,7 @@ export default function EventPage() {
 		) {
 			setUserAgent("android-telegram-preview");
 		} else {
+			downloadICS();
 			setUserAgent("browser");
 		}
 	}, []);
