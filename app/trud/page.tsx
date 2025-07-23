@@ -7,7 +7,7 @@ import { Code } from "@heroui/code";
 import { Card, CardBody } from "@heroui/card";
 
 import Avatar from "@/components/avatar";
-import Signature from "@/components/signature";
+import { Signature } from "@/components/signature";
 
 export default function TrudPage() {
 	function addToClipboard() {
