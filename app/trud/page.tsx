@@ -1,10 +1,14 @@
 "use client";
 
 import { ClipboardDocumentIcon } from "@heroicons/react/24/outline";
-import { Accordion, AccordionItem } from "@heroui/accordion";
-import { Button } from "@heroui/button";
-import { Code } from "@heroui/code";
-import { Card, CardBody } from "@heroui/card";
+import {
+	Accordion,
+	AccordionItem,
+	Button,
+	Card,
+	CardBody,
+	Code
+} from "@heroui/react";
 
 import Avatar from "@/components/avatar";
 import { Signature } from "@/components/signature";

@@ -1,7 +1,6 @@
 "use client";
 
-import { Switch } from "@heroui/switch";
-import { useDisclosure } from "@heroui/modal";
+import { Switch, useDisclosure } from "@heroui/react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -41,7 +40,7 @@ export default function YePage() {
 				</div>
 			</div>
 			<div className="max-w-2xl">
-				<p className="text-lg mt-8">От <Link className="ye" href="/">автора</Link></p>
+				<p className="text-lg mt-8">От <Link href="/">автора</Link></p>
 				<p className="mt-4">Живу в Екатеринбурге всю свою жизнь и люблю его. Хочется поделиться своим взглядом на город для ребят, которые оказались тут проездом.</p>
 				<p className="mt-4">Путеводитель очень субъективный и не ставит своей целью охватить все классные точки на карте. Он только про точку зрения автора. Путеводитель не для жителей. У каждого из нас свой Екатеринбург и вы лучше меня знаете <i>те самые</i> ваши места.</p>
 				<p className="mt-4">А теперь просто выбирайте понравившиеся вам места, вбивайте адрес в карты на телефоне и идите туда пешком. Город у нас маленький, тем более центр.</p>
