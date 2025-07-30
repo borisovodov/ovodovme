@@ -1,4 +1,4 @@
-import "@/app/globals.css";
+import "@/globals.css";
 
 import type { Metadata } from "next";
 import { PT_Sans } from "next/font/google";
@@ -30,7 +30,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html lang="en" suppressHydrationWarning>
 			<head />
 			<body
 				className={`${sans.className} text-black dark:text-white`}
