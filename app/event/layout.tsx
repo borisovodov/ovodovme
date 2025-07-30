@@ -8,7 +8,6 @@ export const metadata: Metadata = {
 		description: "Только для часового пояса Екатеринбурга",
 		url: "https://ovodov.me/event",
 		siteName: "Борины проектики",
-		images: "/avatar.png",
 		locale: "ru_RU",
 	},
 };

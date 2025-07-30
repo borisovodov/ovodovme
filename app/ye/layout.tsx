@@ -9,7 +9,6 @@ export const metadata: Metadata = {
         description: "Живу в Екатеринбурге всю свою жизнь и люблю его. Хочется поделиться своим взглядом на город для ребят, которые оказались тут проездом.",
         url: "https://ovodov.me/ye",
         siteName: "Борины проектики",
-        images: "/ekb-logo-simple.png",
         locale: "ru_RU",
     },
 };

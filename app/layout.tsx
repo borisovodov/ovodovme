@@ -14,7 +14,6 @@ export const metadata: Metadata = {
 		description: "Тут про всё расписано",
 		url: "https://ovodov.me/",
 		siteName: "Борины проектики",
-		images: "/avatar.png",
 		locale: "ru_RU",
 	},
 };

@@ -29,7 +29,7 @@ export default function HomePage() {
 								<li className="mt-2">Доклад «<a className="text-blue-600 hover:text-blue-700 underline" href="https://www.youtube.com/watch?v=YJRmndQbBG8">Почему аналитикам стоит делать пет-проекты</a>» для ютуб-канала Наумена, 2023. Его же <a className="text-blue-600 hover:text-blue-700 underline" href="https://youtube.com/watch?v=zeOJ6WIpv78">рассказывал</a> на екатеринбургском ДАМПе в том же году.</li>
 								<li className="mt-2">«<a className="text-blue-600 hover:text-blue-700 underline" href="https://youtube.com/watch?v=PHwiIUsUvgQ">Барный аналитик</a>» на Контуровской конференции аналитиков, 2021.</li>
 							</ul>
-							<p className="mt-6">Веду несколько уютных Телеграм-каналов:</p>
+							<p className="mt-8">Веду несколько уютных Телеграм-каналов:</p>
 							<ul className="list-disc list-inside">
 								<li className="mt-2"><a className="text-blue-600 hover:text-blue-700 underline" href="https://t.me/safariBookmarks">Борины закладки в Сафари</a> — про разное и анонсы проектов.</li>
 								<li className="mt-2"><a className="text-blue-600 hover:text-blue-700 underline" href="https://t.me/itevents_ekb">Айтишные ивенты Екатеринбурга</a> — агрегатор оффлайновых мероприятий для айтишников: митапов, конференций, лекций.</li>
