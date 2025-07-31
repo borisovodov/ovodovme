@@ -32,7 +32,7 @@ export default function RootLayout({
 		<html lang="en" suppressHydrationWarning>
 			<head />
 			<body
-				className={`${sans.className} bg-[#f6f5e9] dark:bg-slate-800 text-black dark:text-white`}
+				className={`${sans.className} bg-white dark:bg-slate-800 text-black dark:text-white`}
 			>
 				<Provider>
 					{children}
