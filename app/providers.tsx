@@ -7,7 +7,7 @@ import { HeroUIProvider } from "@heroui/react";
 export function Provider({ children }: { children: ReactNode }) {
     return (
         <HeroUIProvider>
-            <ThemeProvider attribute="class">
+            <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
                 {children}
             </ThemeProvider>
         </HeroUIProvider>

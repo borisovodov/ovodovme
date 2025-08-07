@@ -1,7 +1,7 @@
 import { Link } from "@heroui/link";
 
 type LocationProps = {
-    children: React.ReactNode,
+    children: React.ReactNode;
     name: string;
     onNameChange: (name: string) => void;
     yandex: string;
