@@ -19,7 +19,7 @@ export default function HomePage() {
 						<p className="mt-4">Собираю газеты со всего света и веду об этом англоязычный <a className="text-blue-600 hover:text-blue-700 underline" href="https://papersaround.com/">вебсайт</a>.</p>
 						<p className="mt-4">Поддерживаю <i>нормальный</i> <a className="text-blue-600 hover:text-blue-700 underline" href="/trud">производственный календарь</a> в формате айкол.</p>
 						<p className="mt-4">Пишу субъективный <a className="text-blue-600 hover:text-blue-700 underline" href="/ye">путеводитель</a> по культовым местам Екатеринбурга.</p>
-						<p className="mt-4">Ищу корни в проекте <a className="text-blue-600 hover:text-blue-700 underline" href="https://ziedor.ovodov.me/">Зиедор(?)</a>.</p>
+						<p className="mt-4">Опубликовал <a className="text-blue-600 hover:text-blue-700 underline" href="/diary">письмо</a> двоюродного деда.</p>
 						<p className="mt-4">Рассказываю истории про науку, общество и прочие щщи в подкастах студии «<a className="text-blue-600 hover:text-blue-700 underline" href="https://podcasts.apple.com/ru/channel/%D0%B1%D0%BE%D1%80%D1%8F-%D0%B8-%D1%80%D0%B5%D0%B1%D1%8F%D1%82%D0%B0/id6445257341?l=en">Боря и ребята</a>».</p>
 						<p className="mt-8">Иногда публично говорю ртом:</p>
 						<ul className="list-disc list-inside">

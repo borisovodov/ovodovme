@@ -1,7 +1,6 @@
 "use client";
 
-import { Switch, useDisclosure } from "@heroui/react";
-import Link from "next/link";
+import { Link, Switch, useDisclosure } from "@heroui/react";
 import { useState } from "react";
 
 import Avatar from "@/components/avatar";

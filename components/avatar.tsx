@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@heroui/react";
 
 export default function Avatar() {
     return (

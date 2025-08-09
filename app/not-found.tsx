@@ -1,6 +1,8 @@
+"use client";
+
 import "@/globals.css";
 
-import Link from "next/link";
+import { Link } from "@heroui/react";
 
 export default function NotFound() {
     return (
