@@ -1,3 +1,16 @@
+export enum Mode {
+    MAIN,
+    IOS_TELEGRAM_PREVIEW,
+    ANDROID_TELEGRAM_PREVIEW,
+    DOWNLOAD,
+    EMPTY,
+}
+
+export function isMainPage() {
+    const params = new URLSearchParams(window.location.search);
+    return !(params.has("summary") || params.has("start") || params.has("end") || params.has("location") || params.has("url"));
+}
+
 export function downloadICS() {
     const content = generateICS()
     const blob = new Blob([content], { type: "text/calendar" });
