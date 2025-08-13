@@ -1,5 +1,6 @@
 "use client";
 
+import { Code } from "@heroui/react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
@@ -37,7 +38,7 @@ export default function EventPage() {
 	}, []);
 
 	return (
-		<div className="flex flex-col items-center justify-center min-h-screen text-center p-8">
+		<>
 			{ mode === Mode.MAIN ?
 				<MainPage />
 			: mode === Mode.IOS_TELEGRAM_PREVIEW ?
@@ -47,35 +48,34 @@ export default function EventPage() {
 			: mode === Mode.DOWNLOAD ?
 				<DownloadPage />
 			: null}
-		</div>
+		</>
 	);
 }
 
 function MainPage() {
 	return (
-		<div className="max-w-2xl">
-			<Avatar />
-			<p className="text-xl">Генератор iCal (ics) файлов из параметров URL</p>
-			<p><i>Поддерживается с 2019-го, обновлён на 2025-й</i></p>
-			<p className="mt-8 mb-2">В интернете полно производственных календарей. Бери и пользуйся! Все они предназначены для печати или же доступны на отдельном сайте.</p>
-			<p className="mb-2">Однако многие из нас пользуются приложениями-календарями (например Гугл Календарём или Аутлуком). Проблема в том, что для них не существует полноценного производственного календаря, а стандартные календари с праздниками путают нас событиями навроде «Масленицы» или «Дня смеха».</p>
-			<p className="mb-2">Теперь вы можете воспользоваться производственным календарём в формате iCal (ics), который понимает каждое приложение-календарь и ежегодно обновляется.</p>
-			{/* <p className="mb-2 inline-flex flex-none gap-2">
-				<span>Подписаться на календарь:</span>
-				<Code className="h-8">https://ovodov.me/trud.ics</Code>
-				<Button onPress={addToClipboard} className="bg-default/40 h-8 px-0 rounded-small">
-					<ClipboardDocumentIcon className="size-6" />
-				</Button>
-			</p> */}
-			<p className="mb-2">Инструкция по добавлению календаря в используемое вами приложение:</p>
-			<Signature />
+		<div className="p-8">
+			<div className="max-w-2xl">
+				<Avatar />
+				<p className="text-xl">Генератор файлов с календарными событиями из параметров URL</p>
+				<p className="mt-8 mb-2">Страничка пригодится, если нужно кинуть кому-нибудь ссылку на скачивание файла с событием для календаря (iCal, ics), а поднимать свой свой CalDAV-сервер для этого дофига делов.</p>
+				<p className="mt-8">Ссылка формируется следующим образом:</p>
+				<p className="mt-2"><Code size="sm">https://ovodov.me/event?summary=</Code>название события в URL-кодировке</p>
+				<p className="mt-2"><Code size="sm">&location=</Code>место проведения в URL-кодировке (не обязательно?)</p>
+				<p className="mt-2"><Code size="sm">&start=</Code>дата и время (можно без времени) начала события в формате ISO 8601</p>
+				<p className="mt-2"><Code size="sm">&end=</Code>дата и время (можно без времени) окончания события в формате ISO 8601</p>
+				<p className="mt-2"><Code size="sm">&url=</Code>URL на страницу события в URL-кодировке (не обязательно?)</p>
+				<p className="mt-8">Например:</p>
+				<p className="mt-2"><Code size="sm">https://ovodov.me/event?summary=Саша_погнали_в_бар&location=Коллектив&start=2025-08-13T20:00:00Z&end=2025-08-13T23:00:00Z&url=https://klktv91.ru</Code></p>
+				<Signature />
+			</div>
 		</div>
 	);
 }
 
 function IOSPage() {
 	return (
-		<div>
+		<div className="flex flex-col items-center justify-center min-h-screen text-center p-8">
 			<p className="text-4xl">
 				<span>Тыкните по кнопке</span>
 				<Image
@@ -100,7 +100,7 @@ function IOSPage() {
 
 function AndroidPage() {
 	return (
-		<div>
+		<div className="flex flex-col items-center justify-center min-h-screen text-center p-8">
 			<Image
 				width="300"
 				height="300"
@@ -115,7 +115,7 @@ function AndroidPage() {
 
 function DownloadPage() {
 	return (
-		<div>
+		<div className="flex flex-col items-center justify-center min-h-screen text-center p-8">
 			<p className="text-4xl">Должен был скачаться файл для добавления события в календарь. Если не получилось, то тыкните по <a className="text-blue-600 hover:text-blue-700 underline cursor-pointer" onClick={downloadICS}>ссылке</a>.</p>
 		</div>
 	);
