@@ -1,6 +1,6 @@
 "use client";
 
-import { Code } from "@heroui/react";
+import { Code, Link, ScrollShadow } from "@heroui/react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
@@ -57,16 +57,23 @@ function MainPage() {
 		<div className="p-8">
 			<div className="max-w-2xl">
 				<Avatar />
-				<p className="text-xl">Генератор файлов с календарными событиями из параметров URL</p>
+				<p className="text-xl">Генератор файлов с календарными событиями из URL</p>
 				<p className="mt-8 mb-2">Страничка пригодится, если нужно кинуть кому-нибудь ссылку на скачивание файла с событием для календаря (iCal, ics), а поднимать свой свой CalDAV-сервер для этого дофига делов.</p>
-				<p className="mt-8">Ссылка формируется следующим образом:</p>
-				<p className="mt-2"><Code size="sm">https://ovodov.me/event?summary=</Code>название события в URL-кодировке</p>
-				<p className="mt-2"><Code size="sm">&location=</Code>место проведения в URL-кодировке (не обязательно?)</p>
-				<p className="mt-2"><Code size="sm">&start=</Code>дата и время (можно без времени) начала события в формате ISO 8601</p>
-				<p className="mt-2"><Code size="sm">&end=</Code>дата и время (можно без времени) окончания события в формате ISO 8601</p>
-				<p className="mt-2"><Code size="sm">&url=</Code>URL на страницу события в URL-кодировке (не обязательно?)</p>
+				<p className="mt-8">Ссылка на скачивание формируется следующим образом:</p>
+				<p className="mt-2"><Code size="md">https://ovodov.me/event?summary=</Code> — название события в <Link href="https://en.wikipedia.org/wiki/Percent-encoding">URL-кодировке</Link></p>
+				<p className="mt-2"><Code size="md">&start=</Code> — дата и время начала события в формате <Link href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</Link> в <Link href="https://en.wikipedia.org/wiki/Percent-encoding">URL-кодировке</Link>. Если часовой пояс не указан, то используется UTC. Для событий на несколько дней указываем дату без времени и часового пояса.</p>
+				<p className="mt-2"><Code size="md">&end=</Code> — дата и время окончания события в формате <Link href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</Link> в <Link href="https://en.wikipedia.org/wiki/Percent-encoding">URL-кодировке</Link>. Если часовой пояс не указан, то используется UTC. Для событий на несколько дней указываем дату без времени и часового пояса.</p>
+				<p className="mt-2"><Code size="md">&location=</Code> — место проведения события в <Link href="https://en.wikipedia.org/wiki/Percent-encoding">URL-кодировке</Link>. Не обязательно указывать.</p>
+				<p className="mt-2"><Code size="md">&url=</Code> — URL события в <Link href="https://en.wikipedia.org/wiki/Percent-encoding">URL-кодировке</Link>. Не обязательно указывать.</p>
 				<p className="mt-8">Например:</p>
-				<p className="mt-2"><Code size="sm">https://ovodov.me/event?summary=Саша_погнали_в_бар&location=Коллектив&start=2025-08-13T20:00:00Z&end=2025-08-13T23:00:00Z&url=https://klktv91.ru</Code></p>
+				<ScrollShadow className="w-2xl mt-2">
+					<Code size="md">https://ovodov.me/event?summary=Meeting%20with%20friends&location=Kollektiv%20bar&start=2025-08-13T20:00:00Z%2B05:00&end=2025-08-13T23:00:00Z%2B05:00&url=https://klktv91.ru</Code>
+				</ScrollShadow>
+				<p className="mt-2">Или на несколько дней:</p>
+				<ScrollShadow className="w-2xl mt-2">
+					<Code size="md">https://ovodov.me/event?summary=Trekking&location=Taganay&start=2025-08-13&end=2025-08-16</Code>
+				</ScrollShadow>
+				<p className="mt-8">Переходите по ссылке и скачается файл с указанным наполнением в формате iCal (расширение .ics).</p>
 				<Signature />
 			</div>
 		</div>

@@ -30,7 +30,7 @@ export default function HomePage() {
 						</ul>
 						<p className="mt-8">Веду несколько уютных Телеграм-каналов:</p>
 						<ul className="list-disc list-inside">
-							<li className="mt-2"><a className="text-blue-600 hover:text-blue-700 underline" href="https://t.me/safariBookmarks">Борины закладки в Сафари</a> — про разное и анонсы проектов.</li>
+							<li className="mt-2"><a className="text-blue-600 hover:text-blue-700 underline" href="https://t.me/safariBookmarks">Борины закладки в Сафари</a> — перфомансы и анонсы проектов.</li>
 							<li className="mt-2"><a className="text-blue-600 hover:text-blue-700 underline" href="https://t.me/itevents_ekb">Айтишные ивенты Екатеринбурга</a> — агрегатор оффлайновых мероприятий для айтишников: митапов, конференций, лекций.</li>
 							<li className="mt-2"><a className="text-blue-600 hover:text-blue-700 underline" href="https://t.me/tastyCoffeeFilters">Фильтры Tasty Coffee</a> — впечатления от фильтров Тэйсти кофе и других обжарщиков.</li>
 							<li className="mt-2"><a className="text-blue-600 hover:text-blue-700 underline" href="https://t.me/toiletnotes">Туалетные записки</a> — многогранность народного творчества из уборных всего мира в мультифорах формата A4.</li>
