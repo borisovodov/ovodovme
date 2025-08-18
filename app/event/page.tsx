@@ -22,14 +22,9 @@ export default function EventPage() {
 	useEffect(() => {
 		if (isMainPage()) {
 			setMode(Mode.MAIN);
-		} else if (navigator.userAgent.includes("iPhone") && 
-			typeof window.TelegramWebviewProxy !== "undefined" && 
-			typeof window.TelegramWebviewProxyProto !== "undefined"
-		) {
+		} else if (navigator.userAgent.includes("iPhone") && typeof window.TelegramWebviewProxy !== "undefined" && typeof window.TelegramWebviewProxyProto !== "undefined") {
 			setMode(Mode.IOS_TELEGRAM_PREVIEW);
-		} else if (navigator.userAgent.includes("Android") && 
-			typeof window.TelegramWebview !== "undefined"
-		) {
+		} else if (navigator.userAgent.includes("Android") && typeof window.TelegramWebview !== "undefined") {
 			setMode(Mode.ANDROID_TELEGRAM_PREVIEW);
 		} else {
 			downloadICS();
