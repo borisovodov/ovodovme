@@ -62,7 +62,7 @@ function MainPage() {
 				<p className="mt-2"><Code size="md">&url=</Code> — URL события в <Link href="https://en.wikipedia.org/wiki/Percent-encoding">URL-кодировке</Link>. Не обязательно указывать.</p>
 				<p className="mt-8">Например:</p>
 				<ScrollShadow className="w-full mt-2">
-					<Code size="md">https://ovodov.me/event?summary=Meeting%20with%20friends&location=Kollektiv%20bar&start=2025-08-13T20:00:00Z%2B05:00&end=2025-08-13T23:00:00Z%2B05:00&url=https://klktv91.ru</Code>
+					<Code size="md">https://ovodov.me/event?summary=Meeting%20with%20friends&location=Kollektiv%20bar&start=2025-08-13T20:00:00%2B05:00&end=2025-08-13T23:00:00%2B05:00&url=https://klktv91.ru</Code>
 				</ScrollShadow>
 				<p className="mt-2">Или на несколько дней:</p>
 				<ScrollShadow className="w-full mt-2">
