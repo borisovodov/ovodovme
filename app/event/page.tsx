@@ -2,7 +2,7 @@
 
 import { Button, Code, Link, ScrollShadow } from "@heroui/react";
 import Image from "next/image";
-import { useRouter } from "next/router";
+import { redirect } from "next/navigation";
 import { useState, useEffect } from "react";
 
 import Avatar from "@/components/avatar";
@@ -134,14 +134,12 @@ function DownloadPage() {
 }
 
 function ErrorPage({ message }: { message: string }) {
-	const router = useRouter()
-
 	return (
 		<div className="flex flex-col items-center justify-center min-h-screen text-center p-8">
 			<p className="text-4xl">Упс, чёт какая-то трабла.</p>
 			<p className="mt-4">{message}</p>
 			<Button
-				onPress={() => router.push("/event")}
+				onPress={() => redirect("/event")}
 			>
 				Вернуть всё как было
 			</Button>
