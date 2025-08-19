@@ -4,6 +4,7 @@ export enum Mode {
     ANDROID_TELEGRAM_PREVIEW,
     DOWNLOAD,
     EMPTY,
+    ERROR,
 }
 
 export function isMainPage() {
@@ -79,7 +80,7 @@ LOCATION:${event.location}
 URL;VALUE=URI:${event.url}
 END:VEVENT
 
-END:VCALENDAR`; //////////////////////////////////////////////////////////////
+END:VCALENDAR`;
 }
 
 function checkURL(url: string | null): string {

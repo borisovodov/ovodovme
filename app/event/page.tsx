@@ -1,7 +1,8 @@
 "use client";
 
-import { Code, Link, ScrollShadow } from "@heroui/react";
+import { Button, Code, Link, ScrollShadow } from "@heroui/react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 
 import Avatar from "@/components/avatar";
@@ -18,17 +19,24 @@ declare global {
 
 export default function EventPage() {
 	const [mode, setMode] = useState<Mode>(Mode.EMPTY);
+	const [errorMessage, setErrorMessage] = useState<string>("");
 
 	useEffect(() => {
-		if (isMainPage()) {
-			setMode(Mode.MAIN);
-		} else if (navigator.userAgent.includes("iPhone") && typeof window.TelegramWebviewProxy !== "undefined" && typeof window.TelegramWebviewProxyProto !== "undefined") {
-			setMode(Mode.IOS_TELEGRAM_PREVIEW);
-		} else if (navigator.userAgent.includes("Android") && typeof window.TelegramWebview !== "undefined") {
-			setMode(Mode.ANDROID_TELEGRAM_PREVIEW);
-		} else {
-			downloadICS();
-			setMode(Mode.DOWNLOAD);
+		try {
+			if (isMainPage()) {
+				setMode(Mode.MAIN);
+			} else if (navigator.userAgent.includes("iPhone") && typeof window.TelegramWebviewProxy !== "undefined" && typeof window.TelegramWebviewProxyProto !== "undefined") {
+				setMode(Mode.IOS_TELEGRAM_PREVIEW);
+			} else if (navigator.userAgent.includes("Android") && typeof window.TelegramWebview !== "undefined") {
+				setMode(Mode.ANDROID_TELEGRAM_PREVIEW);
+			} else {
+				downloadICS();
+				setMode(Mode.DOWNLOAD);
+			}
+		} catch(error) {
+			const message = error instanceof Error ? error.message : "Неизвестная ошибка";
+			setErrorMessage(message);
+			setMode(Mode.ERROR);
 		}
 	}, []);
 
@@ -42,6 +50,8 @@ export default function EventPage() {
 				<AndroidPage />
 			: mode === Mode.DOWNLOAD ?
 				<DownloadPage />
+			: mode === Mode.ERROR ?
+				<ErrorPage message={errorMessage} />
 			: null}
 		</>
 	);
@@ -119,6 +129,22 @@ function DownloadPage() {
 	return (
 		<div className="flex flex-col items-center justify-center min-h-screen text-center p-8">
 			<p className="text-4xl">Должен был скачаться файл для добавления события в календарь. Если не получилось, то тыкните по <a className="text-blue-600 hover:text-blue-700 underline cursor-pointer" onClick={downloadICS}>ссылке</a>.</p>
+		</div>
+	);
+}
+
+function ErrorPage({ message }: { message: string }) {
+	const router = useRouter()
+
+	return (
+		<div className="flex flex-col items-center justify-center min-h-screen text-center p-8">
+			<p className="text-4xl">Упс, чёт какая-то трабла.</p>
+			<p className="mt-4">{message}</p>
+			<Button
+				onPress={() => router.push("/event")}
+			>
+				Вернуть всё как было
+			</Button>
 		</div>
 	);
 }
