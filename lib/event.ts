@@ -25,16 +25,32 @@ export function downloadICS() {
 }
 
 function generateICS() {
-    const params = new URLSearchParams(window.location.search);
     const now = new Date();
+    const params = new URLSearchParams(window.location.search);
+    const summary = params.get("summary");
+    const start = params.get("start");
+    const end = params.get("end");
+    const location = params.get("location");
+    const url = params.get("url");
+
+    if (!summary) {
+        throw new Error("Не хватает названия события");
+    }
+    if (!start) {
+        throw new Error("Не хватает времени начала события");
+    }
+    if (!end) {
+        throw new Error("Не хватает времени окончания события");
+    }
+
     const event = {
         uuid: crypto.randomUUID(),
-        summary: params.get("summary"),
-        start: formatICSDate(params.get("start") || now.toISOString()), // тут нужно добавить проверку на наличие и в случае чего прокидывать ошибку
-        end: formatICSDate(params.get("end") || now.toISOString(), true), // тут нужно добавить проверку на наличие и в случае чего прокидывать ошибку
-        tz: getTZ(params.get("start") || now.toISOString()), // тут нужно добавить проверку на наличие и в случае чего прокидывать ошибку
-        location: formatICSLocation(params.get("location") || ""),
-        url: params.get("url"),
+        summary: summary,
+        start: formatICSDate(start),
+        end: formatICSDate(end, true),
+        tz: getTZ(start),
+        location: formatICSLocation(location),
+        url: checkURL(url),
         timestamp: formatICSDate(now.toISOString()),
     };
 
@@ -63,41 +79,60 @@ LOCATION:${event.location}
 URL;VALUE=URI:${event.url}
 END:VEVENT
 
-END:VCALENDAR`.trim();
+END:VCALENDAR`.trim(); //////////////////////////////////////////////////////////////
 }
 
-function formatICSLocation(location: string) {
-    return location.replaceAll(",", "\\,");
+function checkURL(url: string | null): string {
+    try {
+        if (!url) return "";
+        const urlObject = new URL(url);
+        return urlObject.toString();
+    } catch {
+        throw new Error("Передана битая ссылка на событие");
+    }
+}
+
+function formatICSLocation(location: string | null): string {
+    return location ? location.replaceAll(",", "\\,") : "";
 }
 
 function formatICSDate(str: string, isEndDate: boolean = false) {
     // Иногда символ `+` может заменяться на пробел. Эта строка решает эту проблему.
     const dateStr = str.replaceAll(" ", "+");
-    const isDateWithTime = dateStr.includes("T");
-    const date = new Date(dateStr);
-    date.setSeconds(0);
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, "0");
-    const day = String(date.getDate()).padStart(2, "0");
 
-    if (isDateWithTime) {
-        const hours = String(date.getHours()).padStart(2, "0");
-        const minutes = String(date.getMinutes()).padStart(2, "0");
-        const seconds = String(date.getSeconds()).padStart(2, "0");
-        const tz = getTZ(dateStr);
-
-        return `TZID=${tz.id}:${year}${month}${day}T${hours}${minutes}${seconds}`;
-    } else {
-        if (isEndDate) {
-            const nextDate = new Date(date);
-            nextDate.setDate(date.getDate() + 1);
-            const nextYear = nextDate.getFullYear();
-            const nextMonth = String(nextDate.getMonth() + 1).padStart(2, "0");
-            const nextDay = String(nextDate.getDate()).padStart(2, "0");
-            return `VALUE=DATE:${nextYear}${nextMonth}${nextDay}`;
-        } else {
-            return `VALUE=DATE:${year}${month}${day}`;
+    try {
+        const date = new Date(dateStr);
+        if (isNaN(date.getTime())) {
+            throw new Error("Передана битая дата");
         }
+
+        date.setSeconds(0);
+        const isDateWithTime = dateStr.includes("T");
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, "0");
+        const day = String(date.getDate()).padStart(2, "0");
+
+        if (isDateWithTime) {
+            const hours = String(date.getHours()).padStart(2, "0");
+            const minutes = String(date.getMinutes()).padStart(2, "0");
+            const seconds = String(date.getSeconds()).padStart(2, "0");
+            const tz = getTZ(dateStr);
+
+            return `TZID=${tz.id}:${year}${month}${day}T${hours}${minutes}${seconds}`;
+        } else {
+            if (isEndDate) {
+                const nextDate = new Date(date);
+                nextDate.setDate(date.getDate() + 1);
+                const nextYear = nextDate.getFullYear();
+                const nextMonth = String(nextDate.getMonth() + 1).padStart(2, "0");
+                const nextDay = String(nextDate.getDate()).padStart(2, "0");
+                return `VALUE=DATE:${nextYear}${nextMonth}${nextDay}`;
+            } else {
+                return `VALUE=DATE:${year}${month}${day}`;
+            }
+        }
+    } catch {
+        throw new Error(`Передана битая дата: ${dateStr}`);
     }
 }
 
