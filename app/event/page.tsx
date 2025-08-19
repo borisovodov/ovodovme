@@ -65,7 +65,7 @@ function MainPage() {
 				<p className="text-xl">Генератор файлов с календарными событиями из URL</p>
 				<p className="mt-8 mb-2">Страничка пригодится, если нужно кинуть кому-нибудь ссылку на скачивание файла с событием для календаря (iCal, ics), а поднимать свой свой CalDAV-сервер для этого дофига делов.</p>
 				<p className="mt-8">Ссылка на скачивание формируется следующим образом:</p>
-				<p className="mt-2"><Code size="md">https://ovodov.me/event?summary=</Code> — название события в <Link href="https://en.wikipedia.org/wiki/Percent-encoding">URL-кодировке</Link></p>
+				<p className="mt-2"><Code size="md">https://ovodov.me/event?summary=</Code> — название события в <Link href="https://en.wikipedia.org/wiki/Percent-encoding">URL-кодировке</Link>.</p>
 				<p className="mt-2"><Code size="md">&start=</Code> — дата и время начала события в формате <Link href="https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date-time-string-format">ISO 8601</Link> в <Link href="https://en.wikipedia.org/wiki/Percent-encoding">URL-кодировке</Link>. Если часовой пояс не указан, то используется UTC. Для событий на несколько дней указываем дату без времени и часового пояса.</p>
 				<p className="mt-2"><Code size="md">&end=</Code> — дата и время окончания события в формате <Link href="https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date-time-string-format">ISO 8601</Link> в <Link href="https://en.wikipedia.org/wiki/Percent-encoding">URL-кодировке</Link>. Если часовой пояс не указан, то используется UTC. Для событий на несколько дней указываем дату без времени и часового пояса.</p>
 				<p className="mt-2"><Code size="md">&location=</Code> — место проведения события в <Link href="https://en.wikipedia.org/wiki/Percent-encoding">URL-кодировке</Link>. Не обязательно указывать.</p>
@@ -78,7 +78,7 @@ function MainPage() {
 				<ScrollShadow className="w-full mt-2">
 					<Code size="md">https://ovodov.me/event?summary=Trekking&location=Taganay&start=2025-08-13&end=2025-08-16</Code>
 				</ScrollShadow>
-				<p className="mt-8">Переходите по ссылке и скачается файл с указанным наполнением в формате iCal (расширение .ics).</p>
+				<p className="mt-8">Переходите по ссылке и скачается файл с указанным наполнением в формате iCal.</p>
 				<Signature />
 			</div>
 		</div>
