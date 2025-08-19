@@ -51,7 +51,7 @@ export default function EventPage() {
 			: mode === Mode.DOWNLOAD ?
 				<DownloadPage />
 			: mode === Mode.ERROR ?
-				<ErrorPage message={errorMessage} />
+				<ErrorPage message={errorMessage} setMode={setMode} />
 			: null}
 		</>
 	);
@@ -133,13 +133,17 @@ function DownloadPage() {
 	);
 }
 
-function ErrorPage({ message }: { message: string }) {
+function ErrorPage({ message, setMode }: { message: string, setMode: (mode: Mode) => void }) {
 	return (
 		<div className="flex flex-col items-center justify-center min-h-screen text-center p-8">
 			<p className="text-4xl">Упс, чёт какая-то трабла.</p>
 			<p className="mt-4">{message}</p>
 			<Button
-				onPress={() => redirect("/event")}
+				className="mt-4"
+				onPress={() => {
+					setMode(Mode.MAIN)
+					redirect("/event")
+				}}
 			>
 				Вернуть всё как было
 			</Button>
