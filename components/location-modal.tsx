@@ -30,9 +30,9 @@ export function LocationModal({
                 <ModalHeader>{name}</ModalHeader>
                 <ModalBody>
                     <ul className="list-disc list-inside">
-                        <li className="mb-2"><Link className="text-[#006732] hover:text-[#004e13]" href={website}>Сайт</Link></li>
-                        <li className="mb-2"><Link className="text-[#006732] hover:text-[#004e13]" href={yandex}>Яндекс</Link></li>
-                        <li className="mb-2"><Link className="text-[#006732] hover:text-[#004e13]" href={doublegis}>2ГИС</Link></li>
+                        <li className="mb-2"><Link className="text-[#006732]" href={website}>Сайт</Link></li>
+                        <li className="mb-2"><Link className="text-[#006732]" href={yandex}>Яндекс</Link></li>
+                        <li className="mb-2"><Link className="text-[#006732]" href={doublegis}>2ГИС</Link></li>
                     </ul>
                 </ModalBody>
             </ModalContent>
