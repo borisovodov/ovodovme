@@ -5,6 +5,7 @@ import {
 
 export function Link(props: LinkProps) {
     // props.className = (props.className ?? "") + " text-blue-600 hover:text-blue-700 underline";
+    props.className = (props.className ?? "") + " cursor-pointer";
     props.underline = "always";
 
     return (
