@@ -1,12 +1,20 @@
 import {
     Link as HeroUILink,
-    LinkProps
+    LinkProps as HeroUILinkProps
 } from "@heroui/react";
+
+interface LinkProps extends HeroUILinkProps {
+    variant?: "default" | "yekaterinburg";
+}
 
 export function Link(props: LinkProps) {
     // props.className = (props.className ?? "") + " text-blue-600 hover:text-blue-700 underline";
     // props.className = (props.className ?? "") + " cursor-pointer";
     props.underline = "always";
+
+    if (props.variant === "yekaterinburg") {
+        props.className = (props.className ?? "") + " text-[#D2E4D6] hover:text-white";
+    }
 
     return (
         <HeroUILink {...props}>{props.children}</HeroUILink>

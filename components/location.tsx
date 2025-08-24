@@ -34,8 +34,7 @@ export function Location({
                 onWebsiteChange(website);
                 onOpen();
             }}
-            underline="always"
-            className="text-[#D2E4D6] hover:text-white cursor-pointer"
+            variant="yekaterinburg"
         >
             {children}
         </Link>
