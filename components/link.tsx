@@ -8,15 +8,16 @@ interface LinkProps extends HeroUILinkProps {
 }
 
 export function Link(props: LinkProps) {
-    // props.className = (props.className ?? "") + " text-blue-600 hover:text-blue-700 underline";
-    props.underline = "always";
     props.className = (props.className ?? "") + " cursor-pointer";
 
     if (props.variant === "yekaterinburg") {
         props.className = props.className + " text-[#D2E4D6]";
-    }
-    if (props.variant === "ref") {
+        props.underline = "always";
+    } else if (props.variant === "ref") {
         props.className = props.className + " text-[0.75rem]";
+        props.underline = "none";
+    } else {
+        props.underline = "always";
     }
 
     return (
