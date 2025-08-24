@@ -1,10 +1,14 @@
-import { Link as HeroUILink } from "@heroui/react";
+import {
+    Link as HeroUILink,
+    LinkProps
+} from "@heroui/react";
 
-export function Link() {
+export function Link(props: LinkProps) {
+    // props.className = (props.className ?? "") + " text-blue-600 hover:text-blue-700 underline";
+    props.underline = "always";
+
     return (
-        <div className="py-8">
-            <HeroUILink href="/"></HeroUILink>
-        </div>
+        <HeroUILink {...props}>{props.children}</HeroUILink>
     );
 }
 

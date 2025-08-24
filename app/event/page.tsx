@@ -1,11 +1,11 @@
 "use client";
 
-import { Button, Code, Link, ScrollShadow } from "@heroui/react";
+import { Button, Code, ScrollShadow } from "@heroui/react";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import { useState, useEffect } from "react";
 
-import { Avatar, Signature } from "@/components";
+import { Avatar, Link, Signature } from "@/components";
 import { Mode, isMainPage, downloadICS } from "@/lib/event";
 
 declare global {
@@ -127,7 +127,7 @@ function AndroidPage() {
 function DownloadPage() {
 	return (
 		<div className="flex flex-col items-center justify-center min-h-screen text-center p-8">
-			<p className="text-4xl">Должен был скачаться файл для добавления события в календарь. Если не получилось, то тыкните по <a className="text-blue-600 hover:text-blue-700 underline cursor-pointer" onClick={downloadICS}>ссылке</a>.</p>
+			<p className="text-4xl">Должен был скачаться файл для добавления события в календарь. Если не получилось, то тыкните по <Link onClick={downloadICS}>ссылке</Link>.</p>
 		</div>
 	);
 }

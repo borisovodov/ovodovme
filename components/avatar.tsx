@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Link } from "@heroui/react";
+import { Link } from "@/components";
 
 export function Avatar() {
     return (

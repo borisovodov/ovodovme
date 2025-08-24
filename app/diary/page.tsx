@@ -1,8 +1,11 @@
 "use client";
 
-import { Link } from "@heroui/react"
-
-import { Avatar, DiaryImage, Signature } from "@/components";
+import {
+	Avatar,
+	DiaryImage,
+	Link,
+	Signature
+} from "@/components";
 
 export default function DiaryPage() {
 	return (

@@ -1,4 +1,4 @@
-import { Link } from "@heroui/link";
+import { Link } from "@/components";
 
 type LocationProps = {
     children: React.ReactNode;
