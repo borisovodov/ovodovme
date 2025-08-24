@@ -127,7 +127,7 @@ function AndroidPage() {
 function DownloadPage() {
 	return (
 		<div className="flex flex-col items-center justify-center min-h-screen text-center p-8">
-			<p className="text-4xl">Должен был скачаться файл для добавления события в календарь. Если не получилось, то тыкните по <Link onClick={downloadICS}>ссылке</Link>.</p>
+			<p className="text-4xl">Должен был скачаться файл для добавления события в календарь. Если не получилось, то тыкните по <Link className="text-4xl" onClick={downloadICS}>ссылке</Link>.</p>
 		</div>
 	);
 }
