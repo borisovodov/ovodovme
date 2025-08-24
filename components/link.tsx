@@ -4,7 +4,7 @@ import {
 } from "@heroui/react";
 
 interface LinkProps extends HeroUILinkProps {
-    variant?: "default" | "yekaterinburg";
+    variant?: "default" | "yekaterinburg" | "ref";
 }
 
 export function Link(props: LinkProps) {
@@ -14,6 +14,9 @@ export function Link(props: LinkProps) {
 
     if (props.variant === "yekaterinburg") {
         props.className = props.className + " text-[#D2E4D6]";
+    }
+    if (props.variant === "ref") {
+        props.className = props.className + " text-[0.75rem]";
     }
 
     return (
