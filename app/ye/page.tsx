@@ -1212,7 +1212,7 @@ export default function YePage() {
 				<p className="mt-4">Хотите побольше истории? Налейте чаю с жжёным «Свердловским» кексом и прочитайте «<Link variant="yekaterinburg" href="https://www.goodreads.com/book/show/22031637">Ёбург</Link>» Алексея Иванова.</p>
 				<p className="mt-4">А вообще, расслабьтесь относительно ожиданий. Если вам слащаво и уютно, значит что-то идёт не так. Как говорила легендарная <Link variant="yekaterinburg" href="https://t.me/ekbprogulki">Васильева</Link>: «Урал — место не для жизни, а для работы».</p>
 				<p className="mt-4">За помощь в составлении путеводителя и редактуру спасибо Ане, Саше и Маше.</p>
-				<Signature />
+				<Signature variant="yekaterinburg" />
 				<LocationModal
 					isOpen={isOpen}
 					onOpenChange={onOpenChange}
