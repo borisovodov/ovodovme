@@ -5,6 +5,8 @@ import {
     ModalBody
 } from "@heroui/modal";
 
+import { Link } from "@/components";
+
 type LocationModalProps = {
     isOpen: boolean;
     onOpenChange: () => void;
@@ -28,9 +30,9 @@ export function LocationModal({
                 <ModalHeader>{name}</ModalHeader>
                 <ModalBody>
                     <ul className="list-disc list-inside">
-                        <li className="mb-2"><a className="text-[#006732] hover:text-[#004e13] underline" href={website}>Сайт</a></li>
-                        <li className="mb-2"><a className="text-[#006732] hover:text-[#004e13] underline" href={yandex}>Яндекс</a></li>
-                        <li className="mb-2"><a className="text-[#006732] hover:text-[#004e13] underline" href={doublegis}>2ГИС</a></li>
+                        <li className="mb-2"><Link className="text-[#006732] hover:text-[#004e13]" href={website}>Сайт</Link></li>
+                        <li className="mb-2"><Link className="text-[#006732] hover:text-[#004e13]" href={yandex}>Яндекс</Link></li>
+                        <li className="mb-2"><Link className="text-[#006732] hover:text-[#004e13]" href={doublegis}>2ГИС</Link></li>
                     </ul>
                 </ModalBody>
             </ModalContent>
