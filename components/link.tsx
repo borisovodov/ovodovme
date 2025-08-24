@@ -13,7 +13,7 @@ export function Link(props: LinkProps) {
     props.className = (props.className ?? "") + " cursor-pointer";
 
     if (props.variant === "yekaterinburg") {
-        props.className = props.className + " text-[#D2E4D6] hover:text-white";
+        props.className = props.className + " text-[#D2E4D6]";
     }
 
     return (
