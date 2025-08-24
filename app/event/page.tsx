@@ -5,8 +5,7 @@ import Image from "next/image";
 import { redirect } from "next/navigation";
 import { useState, useEffect } from "react";
 
-import Avatar from "@/components/avatar";
-import { Signature } from "@/components/signature";
+import { Avatar, Signature } from "@/components";
 import { Mode, isMainPage, downloadICS } from "@/lib/event";
 
 declare global {

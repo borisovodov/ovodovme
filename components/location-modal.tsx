@@ -14,7 +14,7 @@ type LocationModalProps = {
     website: string;
 };
 
-export default function LocationModal({
+export function LocationModal({
     isOpen,
     onOpenChange,
     name,

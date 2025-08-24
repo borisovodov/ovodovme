@@ -13,7 +13,7 @@ type LocationProps = {
     onOpen: () => void;
 };
 
-export default function Location({
+export function Location({
     children,
     name,
     onNameChange,

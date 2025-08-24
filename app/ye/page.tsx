@@ -3,11 +3,13 @@
 import { Link, Switch, useDisclosure } from "@heroui/react";
 import { useState } from "react";
 
-import Avatar from "@/components/avatar";
-import Location from "@/components/location";
-import LocationModal from "@/components/location-modal";
-import { YeSignature } from "@/components/signature";
-import OriginaledTitle from "@/components/originaled-title";
+import {
+	Avatar,
+	Location,
+	LocationModal,
+	Signature,
+	OriginaledTitle
+} from "@/components";
 
 export default function YePage() {
 	const [isOriginal, setIsOriginal] = useState(false);
@@ -1209,7 +1211,7 @@ export default function YePage() {
 				<p className="mt-4">Хотите побольше истории? Налейте чаю с жжёным «Свердловским» кексом и прочитайте «<a className="text-[#D2E4D6] hover:text-white cursor-pointer underline" href="https://www.goodreads.com/book/show/22031637">Ёбург</a>» Алексея Иванова.</p>
 				<p className="mt-4">А вообще, расслабьтесь относительно ожиданий. Если вам слащаво и уютно, значит что-то идёт не так. Как говорила легендарная <a className="text-[#D2E4D6] hover:text-white cursor-pointer underline" href="https://t.me/ekbprogulki">Васильева</a>: «Урал — место не для жизни, а для работы».</p>
 				<p className="mt-4">За помощь в составлении путеводителя и редактуру спасибо Ане, Саше и Маше.</p>
-				<YeSignature />
+				<Signature />
 				<LocationModal
 					isOpen={isOpen}
 					onOpenChange={onOpenChange}

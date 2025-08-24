@@ -1,5 +1,4 @@
-import Avatar from "@/components/avatar"
-import { Signature } from "@/components/signature"
+import { Avatar, Signature } from "@/components"
 
 export default function HomePage() {
 	return (

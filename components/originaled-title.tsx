@@ -4,7 +4,7 @@ type OriginaledTitleProps = {
     isOriginal: boolean;
 };
 
-export default function OriginaledTitle({ modern, original, isOriginal }: OriginaledTitleProps) {
+export function OriginaledTitle({ modern, original, isOriginal }: OriginaledTitleProps) {
     if (isOriginal) {
         return <span>{original}</span>;
     } else {

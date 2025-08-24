@@ -6,7 +6,7 @@ type DiaryImageProps = {
     caption: React.ReactNode;
 };
 
-export default function DiaryImage({
+export function DiaryImage({
     src,
     alt,
     caption

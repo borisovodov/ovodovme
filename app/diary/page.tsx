@@ -2,9 +2,7 @@
 
 import { Link } from "@heroui/react"
 
-import Avatar from "@/components/avatar";
-import DiaryImage from "@/components/diary-image";
-import { Signature } from "@/components/signature";
+import { Avatar, DiaryImage, Signature } from "@/components";
 
 export default function DiaryPage() {
 	return (
