@@ -100,7 +100,7 @@ function IOSPage() {
 				height="300"
 				src="/arrow.svg"
 				alt="Arrow"
-				className="mx-auto"
+				className="mx-auto dark:invert"
 			/>
 		</div>
 	);
@@ -114,7 +114,7 @@ function AndroidPage() {
 				height="300"
 				src="/arrow.svg"
 				alt="Arrow"
-				className="rotate-270 mx-auto"
+				className="rotate-270 mx-auto dark:invert"
 			/>
 			<p className="text-4xl">Откройте страницу в браузере, чтобы добавить событие в календарь.</p>
 		</div>
