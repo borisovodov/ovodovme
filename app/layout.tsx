@@ -32,7 +32,7 @@ export default function RootLayout({
 		<html lang="en" suppressHydrationWarning>
 			<head />
 			<body
-				className={sans.className}
+				className={`${sans.className} p-8`}
 			>
 				<Provider>
 					{children}

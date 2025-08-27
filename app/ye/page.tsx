@@ -4,12 +4,13 @@ import { Switch, useDisclosure } from "@heroui/react";
 import { useState } from "react";
 
 import {
-	Avatar,
+	Heading,
 	Link,
 	Location,
 	LocationModal,
+	OriginaledTitle,
+	PageHeader,
 	Signature,
-	OriginaledTitle
 } from "@/components";
 
 export default function YePage() {
@@ -21,13 +22,14 @@ export default function YePage() {
 	const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
 	return (
-		<div className="p-8">
+		<>
 			<div className="flex flex-col lg:flex-row">
 				<div className="flex-[2] pb-4">
 					<div className="max-w-2xl">
-						<Avatar />
-						<p className="text-xl">Субъективный путеводитель по культовым местам Екатеринбурга</p>
-						<p><i>Последнее обновление: 17 июня 2025-го</i></p>
+						<PageHeader
+							title="Субъективный путеводитель по культовым местам Екатеринбурга"
+							description="Последнее обновление: 17 июня 2025-го"
+						/>
 					</div>
 				</div>
 				<div className="flex-[1] mt-8">
@@ -42,7 +44,7 @@ export default function YePage() {
 				</div>
 			</div>
 			<div className="max-w-2xl">
-				<p className="text-lg mt-8">От <Link variant="yekaterinburg" className="text-lg" href="/">автора</Link></p>
+				<Heading>От <Link variant="yekaterinburg" className="text-lg font-bold" href="/">автора</Link></Heading>
 				<p className="mt-4">Живу в Екатеринбурге всю свою жизнь и люблю его. Хочется поделиться своим взглядом на город для ребят, которые оказались тут проездом.</p>
 				<p className="mt-4">Путеводитель очень субъективный и не ставит своей целью охватить все классные точки на карте. Он только про точку зрения автора. Путеводитель не для жителей. У каждого из нас свой Екатеринбург и вы лучше меня знаете <i>те самые</i> ваши места.</p>
 				<p className="mt-4">А теперь просто выбирайте понравившиеся вам места, вбивайте адрес в карты на телефоне и идите туда пешком. Город у нас маленький, тем более центр.</p>
@@ -51,7 +53,7 @@ export default function YePage() {
 				<p>Свою сделать</p>
 				<p>Тут карта районов и где тусич, а где нет. https://hoodmaps.com/yekaterinburg-neighborhood-map</p>
 				*/}
-				<p className="text-lg mt-8">Где позавтракать? Где выпить кофе?</p>
+				<Heading>Где позавтракать? Где выпить кофе?</Heading>
 				<p className="font-bold mt-4">
 					<Location
 						name="Эспрессо Сизон"
@@ -158,7 +160,7 @@ export default function YePage() {
 			<p className="font-bold mt-4"><Link variant="yekaterinburg" href="https://1991.rest/">1991</Link> в Ельцин Центре на <span className="modern">Ельцина</span><span className="auth">Фетисовской</span>, 3</p>
 			<p>Самая недооценённая екатеринбуржцами кафешка. Про неё всегда забывают, но когда в других центровых местах полная посадка — там тебя ждут с распростёртыми объятиями. Заведение делает та же команда, что и «Барборис», поэтому кухня на высоком уровне.</p>
 			*/}
-				<p className="text-lg mt-8">Где <i>файн дайнинг</i>? В каких ресторанах поужинать?</p>
+				<Heading>Где <i>файн дайнинг</i>? В каких ресторанах поужинать?</Heading>
 				<p className="font-bold mt-4">
 					<Location
 						name="Гастроли"
@@ -288,7 +290,7 @@ export default function YePage() {
 			<h3>Троекуров ???</p>
 			<p></p>
 			*/}
-				<p className="text-lg mt-8">Где выпить? Какие барчики культовые?</p>
+				<Heading>Где выпить? Какие барчики культовые?</Heading>
 				<p className="font-bold mt-4">
 					<Location
 						name="Коллектив"
@@ -405,7 +407,7 @@ export default function YePage() {
 			<p className="font-bold mt-4"><Link variant="yekaterinburg" href="http://new-bar.ru">Нью бар</Link> на <span className="modern">8 марта</span><span className="auth">Уктусской</span>, 8д</p>
 			<p>Самый старожильский бар из перечисленных. Много различных мероприятий: и лекции, и диджей-сеты, и киношка, и живые выступления. Но на некоторые ивенты приходит по паре человек, не угадаешь заранее будет ли тусовка.</p>
 			*/}
-				<p className="text-lg mt-8">Где отведать хрючева?</p>
+				<Heading>Где отведать хрючева?</Heading>
 				<p className="font-bold mt-4">
 					<Location
 						name="Жизньмарт"
@@ -485,7 +487,7 @@ export default function YePage() {
 					</Location>
 				</p>
 				<p className="mt-4">Их запах — это запах детства. Их вкус — это вкус первой влюблённости в детском саду. Их вид — это красота уральских гор с верхней Таганайской тропы. Заходите в «Кировский» и забирайте одноимённые свежие тёплые булочки с собой в дорогу.</p>
-				<p className="text-lg mt-8">Где прогуляться? Где на пробежку выйти?</p>
+				<Heading>Где прогуляться? Где на пробежку выйти?</Heading>
 				<p className="font-bold mt-4">Набережная <Location
 						name="Городской пруд"
 						onNameChange={setName}
@@ -685,7 +687,7 @@ export default function YePage() {
 					</Location>
 				</p>
 				<p className="mt-4">Зимой здесь единственное место в городе, где можно покататься на сноубордах. Летом — очень приятный лесной массив в глуши. Для длительных прогулок, если свободен весь день.</p>
-				<p className="text-lg mt-8">Что посмотреть?</p>
+				<Heading>Что посмотреть?</Heading>
 				<p className="font-bold mt-4">
 					<Location
 						name="Плотинка"
@@ -862,7 +864,7 @@ export default function YePage() {
 			<p><Link variant="yekaterinburg" href="https://ru.wikipedia.org/wiki/Храм_на_Крови_(Екатеринбург)">Храм на Крови ???</Link></p>
 			<p></p>
 			*/}
-				<p className="text-lg mt-8">Куда сходить?</p>
+				<Heading>Куда сходить?</Heading>
 				<p className="font-bold mt-4">
 					<Location
 						name="Ельцин Центр"
@@ -1068,7 +1070,7 @@ export default function YePage() {
 			<p className="font-bold mt-4"><Link variant="yekaterinburg" href="https://i-z-o.art/constitutor/centr-ermitazh-ural/">Эрмитаж-Урал</Link> на <span className="modern">Вайнера</span><span className="auth">Успенской</span>, 11</p>
 			<p>Продолжение музея изобразительных искусств, на Вайнера выставляют зарубежных авторов. На последнем этаже есть увлекательная экспозиция про хранение в этом здании в годы войны работ из Эрмитажа.</p>
 			*/}
-				<p className="text-lg mt-8">Где развлечься?</p>
+				<Heading>Где развлечься?</Heading>
 				<p className="font-bold mt-4">Местный стрит-арт</p>
 				<p className="mt-4">Про бесчисленное количество работ в городе можно рассказывать бесконечно, просто сходите на одну из экскурсий <Link variant="yekaterinburg" href="https://www.instagram.com/shakhov_hell/">Лёши Шахова</Link> или прогуляйтесь по карте фестиваля «<Link variant="yekaterinburg" href="https://stenograffia.ru">Стенограффия</Link>».</p>
 				<p className="font-bold mt-4">
@@ -1143,7 +1145,7 @@ export default function YePage() {
 			<p><Link variant="yekaterinburg" href="https://tele-club.ru/fabrika">Фабрика ???</Link></p>
 			<p>Пошутить про Нирвану и Артхаус, про Свободу, про Кельман???</p>
 			*/}
-				<p className="text-lg mt-8">Где пошопиться?</p>
+				<Heading>Где пошопиться?</Heading>
 				<p className="font-bold mt-4">
 					<Location
 						name="Ель"
@@ -1208,7 +1210,7 @@ export default function YePage() {
 					</Location> в Ельцин Центре на <OriginaledTitle modern="Ельцина" original="Фетисовской" isOriginal={isOriginal} />, 3
 				</p>
 				<p className="mt-4">Наш крутейший книжный. Как «Фаланстер» и «Подписные издания», только «Пиотровский».</p>
-				<p className="text-lg mt-8">На прощание</p>
+				<Heading>На прощание</Heading>
 				<p className="mt-4">Хотите побольше истории? Налейте чаю с жжёным «Свердловским» кексом и прочитайте «<Link variant="yekaterinburg" href="https://www.goodreads.com/book/show/22031637">Ёбург</Link>» Алексея Иванова.</p>
 				<p className="mt-4">А вообще, расслабьтесь относительно ожиданий. Если вам слащаво и уютно, значит что-то идёт не так. Как говорила легендарная <Link variant="yekaterinburg" href="https://t.me/ekbprogulki">Васильева</Link>: «Урал — место не для жизни, а для работы».</p>
 				<p className="mt-4">За помощь в составлении путеводителя и редактуру спасибо Ане, Саше и Маше.</p>
@@ -1222,6 +1224,6 @@ export default function YePage() {
 					website={website}
 				/>
 			</div>
-		</div>
+		</>
 	);
 }

@@ -1,3 +1,5 @@
+import "./local.css";
+
 import type { Metadata } from "next";
 import { PT_Serif } from "next/font/google";
 

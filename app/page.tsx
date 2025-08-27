@@ -1,14 +1,13 @@
-import { Avatar, Link, Signature } from "@/components"
+import { Link, PageHeader, Signature } from "@/components"
 
 export default function HomePage() {
 	return (
-		<div className="p-8">
+		<>
 			<div className="flex flex-col lg:flex-row">
 				<div className="flex-[2]">
 					<div className="max-w-2xl">
-						<Avatar />
-						<p className="text-xl">Всем привет от Бориса Оводова 👋🏻</p>
-						<p className="mt-8"><del>Снимал фильмы на <Link href="/28studio.png">28-й студии</Link>.</del></p>
+						<PageHeader title="Всем привет от Бориса Оводова 👋🏻" />
+						<p className="mt-4"><del>Снимал фильмы на <Link href="/28studio.png">28-й студии</Link>.</del></p>
 						<p className="mt-4"><del>Сочинял стихи юности на «<Link href="http://pisanina.su">Писанине</Link>».</del></p>
 						<p className="mt-4"><del>Играл в <Link href="https://cybico.bandcamp.com/music">КYБ и Ко</Link>.</del></p>
 						<p className="mt-4"><del>Разработал <Link href="https://www.dropbox.com/s/owx6ddrix3gepcj/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5%20%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%B8%D0%B5%20Quantum%20GIS.zip?dl=0">методичку</Link> для обучения студентов основам работы в ГИС.</del></p>
@@ -61,6 +60,6 @@ export default function HomePage() {
 				</div>
 			</div>
 			<Signature />
-		</div>
+		</>
 	);
 }
