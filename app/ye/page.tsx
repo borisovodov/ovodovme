@@ -1030,7 +1030,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Карла Либкнехта" original="Вознесенском проспекте" isOriginal={isOriginal} />, 36
 				</p>
 				<p className="mt-4">Фотографический музей в котором всегда отличные выставки.</p>
-				<p className="font-bold mt-4">
+				<p className="font-bold mt-4" id="gcsi">
 					<Location
 						name="Центр современного искусства"
 						onNameChange={setName}
