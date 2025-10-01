@@ -26,9 +26,9 @@ export default function TrudPage() {
 			/>
 			<p className="mb-2">В интернете полно производственных календарей. Бери и пользуйся! Все они предназначены для печати или же доступны на отдельном сайте.</p>
 			<p className="mb-2">Однако многие из нас пользуются приложениями-календарями (например Гугл Календарём или Аутлуком). Проблема в том, что для них не существует полноценного производственного календаря, а стандартные календари с праздниками путают нас событиями навроде «Масленицы» или «Дня смеха».</p>
-			<p className="mb-2">Теперь вы можете воспользоваться производственным календарём в формате iCal (ics), который понимает каждое приложение-календарь и ежегодно обновляется.</p>
+			<p className="mb-2">Теперь вы можете подписаться на производственный календарь в формате iCal (ics), который понимает каждое приложение-календарь и ежегодно обновляется.</p>
 			<p className="mb-2">Подписаться на календарь:</p>
-			<ScrollShadow className="mb-2">
+			<ScrollShadow className="mb-4">
 				<Code size="lg" className="inline-flex items-center">
 					<span>https://ovodov.me/trud.ics</span>
 					<Button onPress={addToClipboard} className="min-w-6 bg-default/40 bg-opacity-0">
@@ -36,7 +36,7 @@ export default function TrudPage() {
 					</Button>
 				</Code>
 			</ScrollShadow>
-			<p className="mb-2">Инструкция по добавлению календаря в используемое вами приложение:</p>
+			<p className="mb-2">Инструкция по добавлению подписки на календарь:</p>
 			<Accordion>
 				<AccordionItem key="gInstruction" title="Гугл Календарь">
 					<p>Главное меню — Добавить другие календари — Добавить по URL — В поле «URL календаря» вставьте «https://ovodov.me/trud.ics» после чего нажмите кнопку «Добавить календарь»</p>
@@ -44,10 +44,10 @@ export default function TrudPage() {
 				<AccordionItem key="mInstruction" title="Майкрософт Аутлук">
 					<p>Главная — Открыть календарь — Из Интернета — В поле вставьте «https://ovodov.me/trud.ics» после чего нажмите кнопку «ОК»</p>
 				</AccordionItem>
-				<AccordionItem key="aInstruction" title="Эппл Календарь">
+				<AccordionItem key="aInstruction" title="Эппл Календарь на маке">
 					<p>Файл — Новая подписка Календаря — В поле «URL-адрес календаря» вставьте «https://ovodov.me/trud.ics» после чего нажмите кнопку «Подписаться»</p>
 				</AccordionItem>
-				<AccordionItem key="iosInstruction" title="Эппл Календарь на iOS">
+				<AccordionItem key="iosInstruction" title="Эппл Календарь на айфоне">
 					<p>Настройки — Пароли и учетные записи — Новая учетная запись — Другое — Подписной календарь — В поле «Сервер» вставьте «https://ovodov.me/trud.ics» после чего нажмите кнопку «Далее»</p>
 				</AccordionItem>
 			</Accordion>
