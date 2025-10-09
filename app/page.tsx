@@ -17,7 +17,7 @@ export default function HomePage() {
 		<div className="max-w-2xl">
 			<PageHeader title="Всем привет от Бориса Оводова 👋🏻" />
 			{/* <PersonalInfo /> */}
-			<Tabs fullWidth aria-label="Сферы" size="lg" className="mt-8">
+			<Tabs fullWidth aria-label="Сферы" size="lg" className="mt-4">
 				<Tab key="projects" title="Проекты">
 					<p className="mt-4">Разрабатываю «<Link href="https://hermann.ovodov.me/">Германн</Link>» — тайм-трекер без трения.</p>
 					<p className="mt-4">Собираю газеты со всего света и веду об этом англоязычный <Link href="https://papersaround.com/">вебсайт</Link>.</p>
