@@ -32,10 +32,10 @@ export default function HomePage() {
 					<p className="mt-4">Поддерживаю <i>нормальный</i> <Link href="/trud">производственный календарь</Link> в формате айкол.</p>
 					<p className="mt-4">Пишу субъективный <Link href="/ye">путеводитель</Link> по культовым местам Екатеринбурга.</p>
 					<p className="mt-4">Сделал <Link href="/event">генератор</Link> iCal-файлов с календарными событиями из URL.</p>
+					<p className="mt-4">Опубликовал <Link href="/diary">письмо</Link> двоюродного деда.</p>
 				</Tab>
 				<Tab key="media" title="Медийка">
 					<p className="mt-4">Рассказываю истории про науку, общество и прочие щщи в подкастах студии «<Link href="https://podcasts.apple.com/ru/channel/%D0%B1%D0%BE%D1%80%D0%B8%D1%8F-%D0%B8-%D1%80%D0%B5%D0%B1%D1%8F%D1%82%D0%B0/id6445257341?l=en">Боря и ребята</Link>».</p>
-					<p className="mt-4">Опубликовал <Link href="/diary">письмо</Link> двоюродного деда.</p>
 					<p className="mt-8">Веду несколько уютных Телеграм-каналов:</p>
 					<ul className="list-disc list-inside">
 						<li className="mt-2"><Link href="https://t.me/safariBookmarks">Борины закладки в Сафари</Link> — перфомансы и анонсы проектов.</li>
