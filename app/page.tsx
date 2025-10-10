@@ -6,11 +6,11 @@ import {
 	Tab,
 	Tabs
 } from "@heroui/react"
-import { fetchWeatherApi } from "openmeteo";
 import { useState, useEffect } from "react"
 
-import { data } from "@/data"
 import { Link, PageHeader, Signature } from "@/components"
+import { data } from "@/data"
+import { fetchWeather, Weather } from "@/lib/weather";
 
 export default function HomePage() {
 	return (
@@ -18,7 +18,7 @@ export default function HomePage() {
 			<PageHeader title="Всем привет от Бориса Оводова 👋🏻" />
 			<Card shadow="sm">
 				<CardBody className="text-gray-400 text-sm">
-					<p>{data.city}, <LocalTime /><Weather /></p>
+					<p>{data.city}<LocalTime /><LocalWeather /></p>
 					<p className="mt-1">R1a-M417 (R1a1a1) • Z1a1a</p>
 					{/* <p>D80B 2855 595A 0BAF FE09  0DC1 03D4 F66F D856 A100</p>
 					<p>FQKf8ftw4JTgHeyhzFyL8yj5F64Z4bC7+DJFWuzUn4s</p> */}
@@ -84,12 +84,16 @@ export default function HomePage() {
 
 function LocalTime() {
 	const { timeZone } = data
-	const [time, setTime] = useState(new Date())
+	const [time, setTime] = useState<Date | null>(null)
 
 	useEffect(() => {
 		const interval = setInterval(() => setTime(new Date()), 1000)
 		return () => clearInterval(interval)
 	}, [])
+
+	if (!time) {
+		return <></>
+	}
 
 	const timeString = time.toLocaleTimeString("ru-RU", {
 		hour12: false,
@@ -97,62 +101,15 @@ function LocalTime() {
 	})
 
 	return (
-		<>{timeString}</>
+		<>, {timeString}</>
 	);
 }
 
-const weatherEmoji: Record<number, string> = {
-	0: "☀️",
-	1: "🌤️",
-	2: "🌥️",
-	3: "☁️",
-	45: "🌫️",
-	48: "🌫️",
-	51: "🌧️",
-	53: "🌧️",
-	55: "🌧️",
-	56: "🌨️",
-	57: "🌨️",
-	61: "🌦️",
-	63: "🌧️",
-	65: "🌧️",
-	66: "🌧️",
-	67: "🌧️",
-	71: "🌨️",
-	73: "🌨️",
-	75: "🌨️",
-	77: "🌨️",
-	80: "🌦️",
-	81: "🌧️",
-	82: "🌧️",
-	85: "🌨️",
-	86: "🌨️",
-	95: "🌩️",
-	96: "⛈️",
-	99: "⛈️",
-}
-
-function Weather() {
-	const [weather, setWeather] = useState<{ temperature: number; condition: string } | null>(null);
+function LocalWeather() {
+	const [weather, setWeather] = useState<Weather | null>(null);
 
 	useEffect(() => {
-		async function fetchWeather() {
-			const params = {
-				latitude: data.latitude,
-				longitude: data.longitude,
-				current: ["weather_code", "temperature_2m"],
-			};
-			const url = "https://api.open-meteo.com/v1/forecast";
-			const responses = await fetchWeatherApi(url, params);
-			const fbCurrent = responses[0].current();
-			if (fbCurrent) {
-				const condition = weatherEmoji[fbCurrent.variables(0)?.value() ?? 0] || "❓";
-				const temperature = Math.round(fbCurrent.variables(1)?.value() ?? 0);
-				setWeather({ condition, temperature });
-			}
-		}
-
-		fetchWeather();
+		fetchWeather(data.latitude, data.longitude, setWeather);
 	}, []);
 
 	if (!weather) {
