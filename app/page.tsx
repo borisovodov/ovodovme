@@ -3,6 +3,7 @@
 import {
 	Card,
 	CardBody,
+	Image,
 	Tab,
 	Tabs
 } from "@heroui/react"
@@ -27,15 +28,51 @@ export default function HomePage() {
 			</Card>
 			<Tabs fullWidth aria-label="Сферы" size="lg" className="mt-8">
 				<Tab key="projects" title="Проекты">
-					<p className="mt-4">Разрабатываю «<Link href="https://hermann.ovodov.me/">Германн</Link>» — тайм-трекер без трения.</p>
-					<p className="mt-4">Собираю газеты со всего света и веду об этом англоязычный <Link href="https://papersaround.com/">вебсайт</Link>.</p>
-					<p className="mt-4">Поддерживаю <i>нормальный</i> <Link href="/trud">производственный календарь</Link> в формате айкол.</p>
-					<p className="mt-4">Пишу субъективный <Link href="/ye">путеводитель</Link> по культовым местам Екатеринбурга.</p>
-					<p className="mt-4">Сделал <Link href="/event">генератор</Link> iCal-файлов с календарными событиями из URL.</p>
-					<p className="mt-4">Опубликовал <Link href="/diary">письмо</Link> двоюродного деда.</p>
+					<a href="https://hermann.ovodov.me/">
+						<Card shadow="sm" className="mt-4">
+							<CardBody>
+								<div className="flex items-center">
+									<Image src="/hermann.png" alt="Hermann Logo" className="w-12 h-12 mr-4" />
+									<div>
+										<p className="font-semibold underline">Hermann</p>
+										<p>Тайм-трекер без трения для мака, айфона и эппл вотч.</p>
+									</div>
+								</div>
+							</CardBody>
+						</Card>
+					</a>
+					<a href="/trud">
+						<Card shadow="sm" className="mt-4">
+							<CardBody>
+								<p className="font-semibold underline">Производственный календарь в формате iCal</p>
+								<p>Ежегодно обновляемый производственный календарь для приложений-календарей.</p>
+							</CardBody>
+						</Card>
+					</a>
+					<a href="/ye">
+						<Card shadow="sm" className="mt-4">
+							<CardBody>
+								<div className="flex items-center">
+									<Image src="/ekb.png" alt="Hermann Logo" className="w-12 h-12 mr-4" />
+									<div>
+										<p className="font-semibold underline">Субъективный путеводитель по культовым местам Екатеринбурга</p>
+										<p></p>
+									</div>
+								</div>
+							</CardBody>
+						</Card>
+					</a>
+					<a href="/event">
+						<Card shadow="sm" className="mt-4">
+							<CardBody>
+								<p className="font-semibold underline">Генератор iCal-файлов с календарными событиями из URL</p>
+							</CardBody>
+						</Card>
+					</a>
 				</Tab>
 				<Tab key="media" title="Медийка">
 					<p className="mt-4">Рассказываю истории про науку, общество и прочие щщи в подкастах студии «<Link href="https://podcasts.apple.com/ru/channel/%D0%B1%D0%BE%D1%80%D0%B8%D1%8F-%D0%B8-%D1%80%D0%B5%D0%B1%D1%8F%D1%82%D0%B0/id6445257341?l=en">Боря и ребята</Link>».</p>
+					<p className="mt-4">Опубликовал <Link href="/">письмо</Link> двоюродного деда.</p>
 					<p className="mt-8">Веду несколько уютных Телеграм-каналов:</p>
 					<ul className="list-disc list-inside">
 						<li className="mt-2"><Link href="https://t.me/safariBookmarks">Борины закладки в Сафари</Link> — перфомансы и анонсы проектов.</li>
@@ -66,6 +103,7 @@ export default function HomePage() {
 					<p className="mt-4"><Link href="https://www.youtube.com/@borisovodovlive">Ютуб</Link></p>
 				</Tab>
 				<Tab key="past" title="Позади">
+					<p className="mt-4">Собирал <Link href="https://papersaround.com/">газеты со всего света</Link>.</p>
 					<p className="mt-4">Преподавал астрономию в екатеринбургской <Link href="https://xn--35-6kclvec3aj7p.xn--80acgfbsl1azdqr.xn--p1ai/">35-й гимназии</Link>. В это время подготовил <Link href="/astroege.pdf">методичку по астрономии</Link> для успешной сдачи ЕГЭ по физике.</p>
 					<p className="mt-4">Писал статьи в <Link href="https://vk.com/revmus">Ревмузе</Link>.</p>
 					<p className="mt-4">Разработал <Link href="https://www.dropbox.com/s/owx6ddrix3gepcj/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5%20%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%B8%D0%B5%20Quantum%20GIS.zip?dl=0">методичку</Link> для обучения студентов основам работы в ГИС.</p>
@@ -139,5 +177,5 @@ function RemainingYears() {
 		else if (mod10 >= 2 && mod10 <= 4) noun = "года";
 		else noun = "лет";
 	}
-	return <>~ {formatted} {noun}</>;
+	return <>Осталось ~ {formatted} {noun}</>;
 }
