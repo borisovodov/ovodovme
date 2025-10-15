@@ -74,15 +74,41 @@ export default function HomePage() {
 					>
 						«Сайнс, бич» — это шоу, в котором двое ребят пытаются разобраться в научных щщах. Мы глуповаты для науки, но всё равно её любим. Периодически копаемся в научных статьях, сёрфим Википедию и консультируемся у друзей. Раз в неделю мы собираемся обсудить очередную околонаучную тему, потравить байки и рассказать друг другу свои открытия во время рисёрча.
 					</ProjectCard>
+					<ProjectCard
+						name="Борины закладки в Сафари"
+						url="https://t.me/safariBookmarks"
+						imageSrc="/safariBookmarks.jpeg"
+					>
+						Перфомансы и анонсы проектов.
+					</ProjectCard>
+					<ProjectCard
+						name="Айтишные ивенты Екатеринбурга"
+						url="https://t.me/itevents_ekb"
+						imageSrc="/itevents_ekb.jpeg"
+					>
+						Агрегатор оффлайновых мероприятий для айтишников: митапов, конференций, лекций, хакатонов.
+					</ProjectCard>
+					<ProjectCard
+						name="Туалетные записки"
+						url="https://t.me/toiletnotes"
+						imageSrc="/toiletnotes.jpeg"
+					>
+						Многогранность народного творчества из уборных всего мира в мультифорах формата A4.
+					</ProjectCard>
+					<ProjectCard
+						name="Фильтры Tasty Coffee"
+						url="https://t.me/tastyCoffeeFilters"
+						imageSrc="/tastyCoffeeFilters.jpeg"
+					>
+						Впечатления от фильтров Тэйсти кофе и других обжарщиков.
+					</ProjectCard>
+					<ProjectCard
+						name="Дневник Николая Неганова"
+						url="/diary"
+					>
+						Письмо Николая Поликарповича Неганова, отправленное из станицы Кавказской его матери Агнии Ильиничне Негановой (Веселицкой) в Свердловск
+					</ProjectCard>
 					<p className="mt-4">Опубликовал <Link href="/">письмо</Link> двоюродного деда.</p>
-					<p className="mt-8">Веду несколько уютных Телеграм-каналов:</p>
-					<ul className="list-disc list-inside">
-						<li className="mt-2"><Link href="https://t.me/safariBookmarks">Борины закладки в Сафари</Link> — перфомансы и анонсы проектов.</li>
-						<li className="mt-2"><Link href="https://t.me/itevents_ekb">Айтишные ивенты Екатеринбурга</Link> — агрегатор оффлайновых мероприятий для айтишников: митапов, конференций, лекций, хакатонов.</li>
-						<li className="mt-2"><Link href="https://t.me/tastyCoffeeFilters">Фильтры Tasty Coffee</Link> — впечатления от фильтров Тэйсти кофе и других обжарщиков.</li>
-						<li className="mt-2"><Link href="https://t.me/toiletnotes">Туалетные записки</Link> — многогранность народного творчества из уборных всего мира в мультифорах формата A4.</li>
-						<li className="mt-2"><Link href="https://t.me/hermannapp">Hermann</Link> — новости лучшего тайм-трекера на этой планете.</li>
-					</ul>
 				</Tab>
 				<Tab key="talks" title="Паблик токи">
 					<p className="mt-4"><Link href="https://www.youtube.com/watch?v=A6u0JiTCYpc">Интервью</Link> для IT-подкаста Саши Торбека, 2025.</p>
