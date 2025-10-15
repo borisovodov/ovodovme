@@ -5,4 +5,5 @@ export { LocationModal } from "./location-modal";
 export { Location } from "./location";
 export { OriginaledTitle } from "./originaled-title";
 export { PageHeader } from "./page-header";
+export { ProjectCard } from "./project-card";
 export { Signature } from "./signature";

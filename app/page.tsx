@@ -3,13 +3,17 @@
 import {
 	Card,
 	CardBody,
-	Image,
 	Tab,
-	Tabs
+	Tabs,
 } from "@heroui/react"
 import { useState, useEffect } from "react"
 
-import { Link, PageHeader, Signature } from "@/components"
+import {
+	Link,
+	PageHeader,
+	ProjectCard,
+	Signature,
+} from "@/components"
 import { data } from "@/data"
 import { fetchWeather, Weather } from "@/lib/weather";
 
@@ -28,50 +32,48 @@ export default function HomePage() {
 			</Card>
 			<Tabs fullWidth aria-label="Сферы" size="lg" className="mt-8">
 				<Tab key="projects" title="Проекты">
-					<a href="https://hermann.ovodov.me/">
-						<Card shadow="sm" className="mt-4">
-							<CardBody>
-								<div className="flex items-center">
-									<Image src="/hermann.png" alt="Hermann Logo" className="w-12 h-12 mr-4" />
-									<div>
-										<p className="font-semibold underline">Hermann</p>
-										<p>Тайм-трекер без трения для мака, айфона и эппл вотч.</p>
-									</div>
-								</div>
-							</CardBody>
-						</Card>
-					</a>
-					<a href="/trud">
-						<Card shadow="sm" className="mt-4">
-							<CardBody>
-								<p className="font-semibold underline">Производственный календарь в формате iCal</p>
-								<p>Ежегодно обновляемый производственный календарь для приложений-календарей.</p>
-							</CardBody>
-						</Card>
-					</a>
-					<a href="/ye">
-						<Card shadow="sm" className="mt-4">
-							<CardBody>
-								<div className="flex items-center">
-									<Image src="/ekb.png" alt="Hermann Logo" className="w-12 h-12 mr-4" />
-									<div>
-										<p className="font-semibold underline">Субъективный путеводитель по культовым местам Екатеринбурга</p>
-										<p></p>
-									</div>
-								</div>
-							</CardBody>
-						</Card>
-					</a>
-					<a href="/event">
-						<Card shadow="sm" className="mt-4">
-							<CardBody>
-								<p className="font-semibold underline">Генератор iCal-файлов с календарными событиями из URL</p>
-							</CardBody>
-						</Card>
-					</a>
+					<ProjectCard
+						name="Hermann"
+						url="https://hermann.ovodov.me/"
+						imageSrc="/hermann.png"
+					>
+						Тайм-трекер без трения для мака, айфона и эппл вотч.
+					</ProjectCard>
+					<ProjectCard
+						name="Производственный календарь в формате iCal"
+						url="/trud"
+					>
+						Ежегодно обновляемый производственный календарь для приложений-календарей.
+					</ProjectCard>
+					<ProjectCard
+						name="Субъективный путеводитель по культовым местам Екатеринбурга"
+						url="/ye"
+						imageSrc="/ekb.png"
+					>
+						<i>Love letter</i> родному городу.
+					</ProjectCard>
+					<ProjectCard
+						name="Генератор iCal-файлов с календарными событиями из URL"
+						url="/event"
+					>
+						Полезная штучка для ваших автоматизаций.
+					</ProjectCard>
 				</Tab>
 				<Tab key="media" title="Медийка">
-					<p className="mt-4">Рассказываю истории про науку, общество и прочие щщи в подкастах студии «<Link href="https://podcasts.apple.com/ru/channel/%D0%B1%D0%BE%D1%80%D0%B8%D1%8F-%D0%B8-%D1%80%D0%B5%D0%B1%D1%8F%D1%82%D0%B0/id6445257341?l=en">Боря и ребята</Link>».</p>
+					<ProjectCard
+						name="Срединный путь"
+						url="https://middleway.mave.digital"
+						imageSrc="/middleway.jpg"
+					>
+						Саша и Боря разговаривают о том, что происходит вокруг. Как выбрать сторону, на которой хочется быть? Как сделать мир, или хотя бы себя, лучше? Как не сойти с ума в этом безумном мире?
+					</ProjectCard>
+					<ProjectCard
+						name="Сайнс, бич"
+						url="https://sciencebitch.mave.digital/"
+						imageSrc="/sciencebitch.jpg"
+					>
+						«Сайнс, бич» — это шоу, в котором двое ребят пытаются разобраться в научных щщах. Мы глуповаты для науки, но всё равно её любим. Периодически копаемся в научных статьях, сёрфим Википедию и консультируемся у друзей. Раз в неделю мы собираемся обсудить очередную околонаучную тему, потравить байки и рассказать друг другу свои открытия во время рисёрча.
+					</ProjectCard>
 					<p className="mt-4">Опубликовал <Link href="/">письмо</Link> двоюродного деда.</p>
 					<p className="mt-8">Веду несколько уютных Телеграм-каналов:</p>
 					<ul className="list-disc list-inside">
