@@ -108,7 +108,6 @@ export default function HomePage() {
 					>
 						Письмо Николая Поликарповича Неганова, отправленное из станицы Кавказской его матери Агнии Ильиничне Негановой (Веселицкой) в Свердловск
 					</ProjectCard>
-					<p className="mt-4">Опубликовал <Link href="/">письмо</Link> двоюродного деда.</p>
 				</Tab>
 				<Tab key="talks" title="Паблик токи">
 					<p className="mt-4"><Link href="https://www.youtube.com/watch?v=A6u0JiTCYpc">Интервью</Link> для IT-подкаста Саши Торбека, 2025.</p>
