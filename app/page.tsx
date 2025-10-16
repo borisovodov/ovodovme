@@ -25,8 +25,8 @@ export default function HomePage() {
 			<Card shadow="sm">
 				<CardBody className="text-gray-400 text-sm">
 					<p>{data.city}<LocalTime /><LocalWeather /></p>
-					<p className="mt-1">R1a-M417 (R1a1a1) • Z1a1a</p>
-					{/* <p>D80B 2855 595A 0BAF FE09  0DC1 03D4 F66F D856 A100</p>
+					{/* <p className="mt-1">R1a-M417 (R1a1a1) • Z1a1a</p>
+					<p>D80B 2855 595A 0BAF FE09  0DC1 03D4 F66F D856 A100</p>
 					<p>FQKf8ftw4JTgHeyhzFyL8yj5F64Z4bC7+DJFWuzUn4s</p> */}
 					<p className="mt-1"><RemainingYears /></p>
 				</CardBody>
