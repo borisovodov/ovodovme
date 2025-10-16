@@ -7,3 +7,4 @@ export { OriginaledTitle } from "./originaled-title";
 export { PageHeader } from "./page-header";
 export { ProjectCard } from "./project-card";
 export { Signature } from "./signature";
+export { TalkCard } from "./talk-card";

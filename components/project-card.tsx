@@ -36,7 +36,7 @@ export function ProjectCard({
                     )}
                     <div className="flex-1 min-w-0">
                         <Link href={url} className="font-semibold">{name}</Link>
-                        <p className="break-words">{children}</p>
+                        <div className="break-words mt-2">{children}</div>
                     </div>
                 </div>
             </CardBody>

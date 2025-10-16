@@ -13,6 +13,7 @@ import {
 	PageHeader,
 	ProjectCard,
 	Signature,
+	TalkCard,
 } from "@/components"
 import { data } from "@/data"
 import { fetchWeather, Weather } from "@/lib/weather";
@@ -110,10 +111,60 @@ export default function HomePage() {
 					</ProjectCard>
 				</Tab>
 				<Tab key="talks" title="Паблик токи">
-					<p className="mt-4"><Link href="https://www.youtube.com/watch?v=A6u0JiTCYpc">Интервью</Link> для IT-подкаста Саши Торбека, 2025.</p>
-					<p className="mt-4">Кейс-клубы с экспертами на Контуровской конференции аналитиков в <Link href="https://www.youtube.com/live/vJi1IsFgQqU?si=Jg2TI6bCQ0PqM98Z&t=7450">2023-м</Link> и <Link href="https://youtu.be/6ex2IZJ6CCw?t=5669">2024-м</Link> годах.</p>
-					<p className="mt-4">Доклад «<Link href="https://www.youtube.com/watch?v=YJRmndQbBG8">Почему аналитикам стоит делать пет-проекты</Link>» для ютуб-канала Наумена, 2023. Его же <Link href="https://youtube.com/watch?v=zeOJ6WIpv78">рассказывал</Link> на екатеринбургском ДАМПе в том же году.</p>
-					<p className="mt-4">«<Link href="https://youtube.com/watch?v=PHwiIUsUvgQ">Барный аналитик</Link>» на Контуровской конференции аналитиков, 2021.</p>
+					<TalkCard
+						name="Интервью для IT-подкаста Саши Торбека"
+						url="https://www.youtube.com/watch?v=A6u0JiTCYpc"
+						imageSrc="torbek.jpeg"
+						year="2025"
+						duration="1 час 27 минут"
+					>
+						<p>Как решиться на карьерный даунгрейд ради ментального комфорта. Зачем создавать свой инструмент, если есть готовые решения. Почему Боря считает время самым ценным ресурсом.</p>
+					</TalkCard>
+					<TalkCard
+						name="Кейс-клуб с экспертами на Контуровской конференции аналитиков"
+						url="https://youtu.be/6ex2IZJ6CCw?t=5669"
+						imageSrc="kontur2024.jpeg"
+						year="2024"
+						duration="44 минуты"
+					>
+						<p>???</p>
+					</TalkCard>
+					<TalkCard
+						name="Доклад «Почему аналитикам стоит делать пет-проекты» для ютуб-канала Наумена"
+						url="https://www.youtube.com/watch?v=YJRmndQbBG8"
+						imageSrc="pet-naumen.jpeg"
+						year="2023"
+						duration="26 минут"
+					>
+						<p>???</p>
+					</TalkCard>
+					<TalkCard
+						name="Кейс-клуб с экспертами на Контуровской конференции аналитиков"
+						url="https://www.youtube.com/live/vJi1IsFgQqU?t=7454"
+						imageSrc="kontur2023.jpg"
+						year="2023"
+						duration="46 минут"
+					>
+						<p>???</p>
+					</TalkCard>
+					<TalkCard
+						name="Доклад «Почему аналитикам стоит делать пет-проекты» на ДАМПе"
+						url="https://youtube.com/watch?v=zeOJ6WIpv78"
+						imageSrc="dump2023.jpeg"
+						year="2023"
+						duration="37 минут"
+					>
+						<p>???</p>
+					</TalkCard>
+					<TalkCard
+						name="«Барный аналитик» на Контуровской конференции аналитиков"
+						url="https://youtube.com/watch?v=PHwiIUsUvgQ"
+						imageSrc="kontur2021.jpeg"
+						year="2021"
+						duration="29 минут"
+					>
+						<p>???</p>
+					</TalkCard>
 				</Tab>
 				<Tab key="social" title="Соцсети">
 					<p className="mt-4"><Link href="https://vas3k.club/user/borisovodov/">Вастрик.Клуб</Link></p>
