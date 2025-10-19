@@ -47,6 +47,13 @@ export default function HomePage() {
 						Ежегодно обновляемый производственный календарь для приложений-календарей.
 					</ProjectCard>
 					<ProjectCard
+						name="Айтишные ивенты Екатеринбурга"
+						url="https://t.me/itevents_ekb"
+						imageSrc="/itevents_ekb.jpeg"
+					>
+						Агрегатор оффлайновых мероприятий для айтишников: митапов, конференций, лекций, хакатонов.
+					</ProjectCard>
+					<ProjectCard
 						name="Субъективный путеводитель по культовым местам Екатеринбурга"
 						url="/ye"
 						imageSrc="/ekb.png"
@@ -62,6 +69,13 @@ export default function HomePage() {
 				</Tab>
 				<Tab key="media" title="Медийка">
 					<ProjectCard
+						name="Борины закладки в Сафари"
+						url="https://t.me/safariBookmarks"
+						imageSrc="/safariBookmarks.jpeg"
+					>
+						Перфомансы и анонсы проектов.
+					</ProjectCard>
+					<ProjectCard
 						name="Срединный путь"
 						url="https://middleway.mave.digital"
 						imageSrc="/middleway.jpg"
@@ -74,20 +88,6 @@ export default function HomePage() {
 						imageSrc="/sciencebitch.jpg"
 					>
 						«Сайнс, бич» — это шоу, в котором двое ребят пытаются разобраться в научных щщах. Мы глуповаты для науки, но всё равно её любим. Периодически копаемся в научных статьях, сёрфим Википедию и консультируемся у друзей. Раз в неделю мы собираемся обсудить очередную околонаучную тему, потравить байки и рассказать друг другу свои открытия во время рисёрча.
-					</ProjectCard>
-					<ProjectCard
-						name="Борины закладки в Сафари"
-						url="https://t.me/safariBookmarks"
-						imageSrc="/safariBookmarks.jpeg"
-					>
-						Перфомансы и анонсы проектов.
-					</ProjectCard>
-					<ProjectCard
-						name="Айтишные ивенты Екатеринбурга"
-						url="https://t.me/itevents_ekb"
-						imageSrc="/itevents_ekb.jpeg"
-					>
-						Агрегатор оффлайновых мероприятий для айтишников: митапов, конференций, лекций, хакатонов.
 					</ProjectCard>
 					<ProjectCard
 						name="Туалетные записки"
@@ -122,8 +122,8 @@ export default function HomePage() {
 					</TalkCard>
 					<TalkCard
 						name="Кейс-клуб с экспертами на Контуровской конференции аналитиков"
-						url="https://youtu.be/6ex2IZJ6CCw?t=5669"
-						imageSrc="kontur2024.jpeg"
+						url="https://www.youtube.com/watch?v=6ex2IZJ6CCw?t=5669"
+						imageSrc="kontur2024.jpg"
 						year="2024"
 						duration="44 минуты"
 					>
@@ -181,13 +181,53 @@ export default function HomePage() {
 					<p className="mt-4"><Link href="https://www.youtube.com/@borisovodovlive">Ютуб</Link></p>
 				</Tab>
 				<Tab key="past" title="Позади">
-					<p className="mt-4">Собирал <Link href="https://papersaround.com/">газеты со всего света</Link>.</p>
-					<p className="mt-4">Преподавал астрономию в екатеринбургской <Link href="https://xn--35-6kclvec3aj7p.xn--80acgfbsl1azdqr.xn--p1ai/">35-й гимназии</Link>. В это время подготовил <Link href="/astroege.pdf">методичку по астрономии</Link> для успешной сдачи ЕГЭ по физике.</p>
-					<p className="mt-4">Писал статьи в <Link href="https://vk.com/revmus">Ревмузе</Link>.</p>
-					<p className="mt-4">Разработал <Link href="https://www.dropbox.com/s/owx6ddrix3gepcj/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5%20%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%B8%D0%B5%20Quantum%20GIS.zip?dl=0">методичку</Link> для обучения студентов основам работы в ГИС.</p>
-					<p className="mt-4">Играл в <Link href="https://cybico.bandcamp.com/music">КYБ и Ко</Link>.</p>
-					<p className="mt-4">Сочинял стихи юности на «<Link href="http://pisanina.su">Писанине</Link>».</p>
-					<p className="mt-4">Снимал фильмы на <Link href="/28studio.png">28-й студии</Link>.</p>
+					<ProjectCard
+						name="Papers Around"
+						url="https://papersaround.com/"
+						imageSrc="/papersaround.png"
+					>
+						Собирал газеты со всего света.
+					</ProjectCard>
+					<ProjectCard
+						name="Методичка по астрономии для успешной сдачи ЕГЭ по физике"
+						url="/astroege.pdf"
+					>
+						Подготовил методичку пока преподавал астрономию в екатеринбургской <Link href="https://xn--35-6kclvec3aj7p.xn--80acgfbsl1azdqr.xn--p1ai/">35-й гимназии</Link>.
+					</ProjectCard>
+					<ProjectCard
+						name="revmus"
+						url="https://vk.com/revmus"
+						imageSrc="/revmus.jpg"
+					>
+						???
+					</ProjectCard>
+					<ProjectCard
+						name="Методичка для обучения студентов основам работы в ГИС"
+						url="https://www.dropbox.com/s/owx6ddrix3gepcj/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5%20%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%B8%D0%B5%20Quantum%20GIS.zip?dl=0"
+					>
+						???
+					</ProjectCard>
+					<ProjectCard
+						name="КYБ и Ко"
+						url="https://cybico.bandcamp.com/music"
+						imageSrc="/cubeandco.jpg"
+					>
+						???
+					</ProjectCard>
+					<ProjectCard
+						name="Писанина"
+						url="https://pisanina.su"
+						imageSrc="/pisanina.png"
+					>
+						Сочинял стихи юности.
+					</ProjectCard>
+					<ProjectCard
+						name="28-я студия"
+						url="/28studio.png"
+						imageSrc="/28studio_thumbnail.jpg"
+					>
+						???
+					</ProjectCard>
 				</Tab>
 				<Tab key="future" title="Впереди">
 					<p className="mt-4">Проживу жизнь, наполненную до краёв.</p>
