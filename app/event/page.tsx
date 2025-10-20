@@ -60,7 +60,7 @@ function MainPage() {
 	return (
 		<div className="max-w-2xl">
 			<PageHeader title="Генератор файлов с календарными событиями из URL" />
-			<p className="mb-2">Страничка пригодится, если нужно кинуть кому-нибудь ссылку на скачивание файла с событием для календаря (iCal, ics), а поднимать свой свой CalDAV-сервер для этого дофига делов.</p>
+			<p className="mb-2">Страничка пригодится, если нужно кинуть кому-нибудь ссылку на скачивание файла с событием для календаря (iCal, ics), а поднимать свой CalDAV-сервер для этого дофига делов.</p>
 			<p className="mt-8">Ссылка на скачивание формируется следующим образом:</p>
 			<p className="mt-2"><Code size="md">https://ovodov.me/event?summary=</Code> — название события в <Link href="https://en.wikipedia.org/wiki/Percent-encoding">URL-кодировке</Link>.</p>
 			<p className="mt-2"><Code size="md">&start=</Code> — дата и время начала события в формате <Link href="https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date-time-string-format">ISO 8601</Link> в <Link href="https://en.wikipedia.org/wiki/Percent-encoding">URL-кодировке</Link>. Если часовой пояс не указан, то используется UTC. Для событий на несколько дней указываем дату без времени и часового пояса.</p>
