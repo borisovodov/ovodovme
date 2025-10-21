@@ -62,13 +62,13 @@ export default function HomePage() {
 					</ProjectCard>
 					<ProjectCard
 						name="SemanticColorPicker"
-						url="https://github.com/borisovodov/SemanticColorPicker"
+						url="https://swiftpackageindex.com/borisovodov/SemanticColorPicker"
 					>
 						Компонент SwiftUI, который позволяет выбирать семантические цветовые токены — пользовательские идентификаторы, сопоставленные с адаптивными, зависящими от темы значениями Color, — вместо выбора обычных RGB-цветов.
 					</ProjectCard>
 					<ProjectCard
 						name="TreePicker"
-						url="https://github.com/borisovodov/TreePicker"
+						url="https://swiftpackageindex.com/borisovodov/TreePicker"
 					>
 						Компонент SwiftUI для выбора вариантов из иерархических данных в виде древовидного списка.
 					</ProjectCard>
