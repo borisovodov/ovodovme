@@ -61,6 +61,18 @@ export default function HomePage() {
 						<i>Love letter</i> родному городу.
 					</ProjectCard>
 					<ProjectCard
+						name="SemanticColorPicker"
+						url="https://github.com/borisovodov/SemanticColorPicker"
+					>
+						Компонент SwiftUI, который позволяет выбирать семантические цветовые токены — пользовательские идентификаторы, сопоставленные с адаптивными, зависящими от темы значениями Color, — вместо выбора обычных RGB-цветов.
+					</ProjectCard>
+					<ProjectCard
+						name="TreePicker"
+						url="https://github.com/borisovodov/TreePicker"
+					>
+						Компонент SwiftUI для выбора вариантов из иерархических данных в виде древовидного списка.
+					</ProjectCard>
+					<ProjectCard
 						name="Генератор iCal-файлов с календарными событиями из URL"
 						url="/event"
 					>
