@@ -1,6 +1,6 @@
 export const data = {
     city: "Екатеринбург",
-    latitude: 52.52,
-    longitude: 13.41,
+    latitude: 56.8519,
+    longitude: 60.6122,
     timeZone: "Asia/Yekaterinburg",
 }
