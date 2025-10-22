@@ -26,14 +26,14 @@ export function TalkCard({
     return (
         <Card shadow="sm" className="mt-4">
             <CardBody>
-                <div className="flex items-start">
+                <div className="flex flex-col sm:flex-row sm:items-start">
                     {imageSrc && (
-                        <Link href={url} className="mr-4 flex-shrink-0">
+                        <Link href={url} className="mb-3 sm:mb-0 sm:mr-4 flex-shrink-0">
                             <Image
                                 src={imageSrc}
                                 alt={`${name} превью`}
-                                width={128}
-                                height={64}
+                                width={160}
+                                height={90}
                                 className="object-contain"
                             />
                         </Link>
