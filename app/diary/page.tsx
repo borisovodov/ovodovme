@@ -10,7 +10,7 @@ import {
 
 export default function DiaryPage() {
 	return (
-		<div className="max-w-2xl">
+		<div className="max-w-3xl">
 			<PageHeader
 				title="Дневник Николая Неганова"
 				description="Письмо Николая Поликарповича Неганова, отправленное из станицы Кавказской его матери Агнии Ильиничне Негановой (Веселицкой) в Свердловск"

@@ -20,7 +20,7 @@ import { fetchWeather, Weather } from "@/lib/weather";
 
 export default function HomePage() {
 	return (
-		<div className="max-w-2xl">
+		<div className="max-w-3xl">
 			<PageHeader title="Всем привет от Бориса Оводова 👋🏻" />
 			<Card shadow="sm">
 				<CardBody className="text-gray-400 text-sm">
@@ -212,7 +212,7 @@ export default function HomePage() {
 						name="Писанина"
 						url="https://pisanina.su"
 						imageSrc="/pisanina.png"
-						years="2011–2015"
+						years="2011–2014"
 					>
 						Вместе с Ильёй сочиняли наивные стихи о юношеских влюблённостях и блюзовом настроении.
 					</ProjectCard>

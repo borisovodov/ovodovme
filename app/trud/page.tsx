@@ -19,7 +19,7 @@ export default function TrudPage() {
 	}
 	
 	return (
-		<div className="max-w-2xl">
+		<div className="max-w-3xl">
 			<PageHeader
 				title="Производственный календарь в формате iCal (ics)"
 				description="Поддерживается с 2019-го, обновлён на 2026-й"

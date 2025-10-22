@@ -58,7 +58,7 @@ export default function EventPage() {
 
 function MainPage() {
 	return (
-		<div className="max-w-2xl">
+		<div className="max-w-3xl">
 			<PageHeader title="Генератор файлов с календарными событиями из URL" />
 			<p className="mb-2">Страничка пригодится, если нужно кинуть кому-нибудь ссылку на скачивание файла с событием для календаря (iCal, ics), а поднимать свой CalDAV-сервер для этого дофига делов.</p>
 			<p className="mt-8">Ссылка на скачивание формируется следующим образом:</p>

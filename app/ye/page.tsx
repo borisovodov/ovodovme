@@ -25,7 +25,7 @@ export default function YePage() {
 		<>
 			<div className="flex flex-col lg:flex-row">
 				<div className="flex-[2] pb-4">
-					<div className="max-w-2xl">
+					<div className="max-w-3xl">
 						<PageHeader
 							title="Субъективный путеводитель по культовым местам Екатеринбурга"
 							description="Последнее обновление: 17 июня 2025-го"
@@ -43,7 +43,7 @@ export default function YePage() {
 					</Switch>
 				</div>
 			</div>
-			<div className="max-w-2xl">
+			<div className="max-w-3xl">
 				<Heading>От <Link variant="yekaterinburg" className="text-lg font-bold" href="/">автора</Link></Heading>
 				<p className="mt-4">Живу в Екатеринбурге всю свою жизнь и люблю его. Хочется поделиться своим взглядом на город для ребят, которые оказались тут проездом.</p>
 				<p className="mt-4">Путеводитель очень субъективный и не ставит своей целью охватить все классные точки на карте. Он только про точку зрения автора. Путеводитель не для жителей. У каждого из нас свой Екатеринбург и вы лучше меня знаете <i>те самые</i> ваши места.</p>
