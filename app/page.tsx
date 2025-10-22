@@ -197,48 +197,55 @@ export default function HomePage() {
 						name="Papers Around"
 						url="https://papersaround.com/"
 						imageSrc="/papersaround.png"
+						years="2014–2025"
 					>
-						Собирал газеты со всего света.
+						Собирал коллекцию газет со всего света.
 					</ProjectCard>
 					<ProjectCard
 						name="Методичка по астрономии для успешной сдачи ЕГЭ по физике"
 						url="/astroege.pdf"
+						years="2019–2021"
 					>
-						Подготовил методичку пока преподавал астрономию в екатеринбургской <Link href="https://xn--35-6kclvec3aj7p.xn--80acgfbsl1azdqr.xn--p1ai/">35-й гимназии</Link>.
-					</ProjectCard>
-					<ProjectCard
-						name="revmus"
-						url="https://vk.com/revmus"
-						imageSrc="/revmus.jpg"
-					>
-						???
-					</ProjectCard>
-					<ProjectCard
-						name="Методичка для обучения студентов основам работы в ГИС"
-						url="https://www.dropbox.com/s/owx6ddrix3gepcj/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5%20%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%B8%D0%B5%20Quantum%20GIS.zip?dl=0"
-					>
-						Курсач, который зашёл слишком далеко.
-					</ProjectCard>
-					<ProjectCard
-						name="КYБ и Ко"
-						url="https://cybico.bandcamp.com/music"
-						imageSrc="/cubeandco.jpg"
-					>
-						Играли с Костей блюз и рок-н-ролл в старших классах школы.
+						Подготовил методичку для своих учеников пока преподавал астрономию в екатеринбургской <Link href="https://xn--35-6kclvec3aj7p.xn--80acgfbsl1azdqr.xn--p1ai/">35-й гимназии</Link>. Сейчас, скорее всего, неактуальна.
 					</ProjectCard>
 					<ProjectCard
 						name="Писанина"
 						url="https://pisanina.su"
 						imageSrc="/pisanina.png"
+						years="2011–2015"
 					>
 						Вместе с Ильёй сочиняли наивные стихи о юношеских влюблённостях и блюзовом настроении.
+					</ProjectCard>
+					<ProjectCard
+						name="Методичка для обучения студентов основам работы в ГИС"
+						url="https://www.dropbox.com/s/owx6ddrix3gepcj/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5%20%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%B8%D0%B5%20Quantum%20GIS.zip?dl=0"
+						years="2013"
+					>
+						Курсач, который зашёл слишком далеко.
+					</ProjectCard>
+					<ProjectCard
+						name="revmus"
+						url="https://vk.com/revmus"
+						imageSrc="/revmus.jpg"
+						years="2012–2013"
+					>
+						???
+					</ProjectCard>
+					<ProjectCard
+						name="КYБ и Ко"
+						url="https://cybico.bandcamp.com/music"
+						imageSrc="/cubeandco.jpg"
+						years="2009–2013"
+					>
+						Играли с Костей блюз и рок-н-ролл в старших классах школы.
 					</ProjectCard>
 					<ProjectCard
 						name="28-я студия"
 						url="/28studio.png"
 						imageSrc="/28studio_thumbnail.jpg"
+						years="2005–2009"
 					>
-						Снимали с Костей документальные фильмы про школу. Камера Панасоник, монтаж в Муви-мейкере, пиратский саундтрек. Студию назвали в честь 28-й комнаты общежития интерната, где мы жили.
+						Снимали с Костей документальные фильмы про школу. Камера Джэй-Ви-Си, монтаж в Муви-мейкере, рисунки в Пэинте, пиратский саундтрек. Студию назвали в честь 28-й комнаты общежития интерната, где мы жили.
 					</ProjectCard>
 				</Tab>
 				<Tab key="future" title="Впереди">

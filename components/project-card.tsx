@@ -10,13 +10,15 @@ type ProjectCardProps = {
     name: string;
     url: string;
     imageSrc?: string;
-    children?: React.ReactNode;
+    years?: string;
+    children: React.ReactNode;
 };
 
 export function ProjectCard({
     name,
     url,
     imageSrc,
+    years,
     children,
 }: ProjectCardProps) {
     return (
@@ -36,7 +38,12 @@ export function ProjectCard({
                     )}
                     <div className="flex-1 min-w-0">
                         <Link href={url} className="font-semibold">{name}</Link>
-                        <div className="break-words mt-2">{children}</div>
+                        <div className="break-words">
+                            {years && (
+                                <p className="text-xs mt-2">{years}</p>
+                            )}
+                            <div className="mt-2">{children}</div>
+                        </div>
                     </div>
                 </div>
             </CardBody>
