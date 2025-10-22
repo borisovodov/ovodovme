@@ -217,28 +217,28 @@ export default function HomePage() {
 						name="Методичка для обучения студентов основам работы в ГИС"
 						url="https://www.dropbox.com/s/owx6ddrix3gepcj/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5%20%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%B8%D0%B5%20Quantum%20GIS.zip?dl=0"
 					>
-						???
+						Курсач, который зашёл слишком далеко.
 					</ProjectCard>
 					<ProjectCard
 						name="КYБ и Ко"
 						url="https://cybico.bandcamp.com/music"
 						imageSrc="/cubeandco.jpg"
 					>
-						???
+						Играли с Костей блюз и рок-н-ролл в старших классах школы.
 					</ProjectCard>
 					<ProjectCard
 						name="Писанина"
 						url="https://pisanina.su"
 						imageSrc="/pisanina.png"
 					>
-						Сочинял стихи юности.
+						Вместе с Ильёй сочиняли наивные стихи о юношеских влюблённостях и блюзовом настроении.
 					</ProjectCard>
 					<ProjectCard
 						name="28-я студия"
 						url="/28studio.png"
 						imageSrc="/28studio_thumbnail.jpg"
 					>
-						???
+						Снимали с Костей документальные фильмы про школу. Камера Панасоник, монтаж в Муви-мейкере, пиратский саундтрек. Студию назвали в честь 28-й комнаты общежития интерната, где мы жили.
 					</ProjectCard>
 				</Tab>
 				<Tab key="future" title="Впереди">
@@ -295,7 +295,7 @@ function RemainingYears() {
 	const msPerYear = 1000 * 60 * 60 * 24 * 365.2425;
 	const diff = target.getTime() - now.getTime();
 	const years = diff / msPerYear;
-	const formatted = years.toLocaleString("ru-RU", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+	const formatted = years.toLocaleString("ru-RU", { minimumFractionDigits: 1, maximumFractionDigits: 4 });
 	const intPart = Math.floor(years);
 	let noun;
 	const mod100 = intPart % 100;
