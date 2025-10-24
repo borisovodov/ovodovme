@@ -185,12 +185,13 @@ export default function HomePage() {
 					</TalkCard>
 				</Tab>
 				<Tab key="social" title="Соцсети">
+					<p className="mt-4"><Link href="https://www.imdb.com/user/ur105749044/">АйЭмДиБи</Link></p>
 					<p className="mt-4"><Link href="https://vas3k.club/user/borisovodov/">Вастрик.Клуб</Link></p>
 					<p className="mt-4"><Link href="https://vk.com/borisovodov">ВК</Link></p>
 					<p className="mt-4"><Link href="https://github.com/borisovodov">Гитхаб</Link></p>
 					<p className="mt-4"><Link href="https://www.goodreads.com/borisovodov">Гудридс</Link></p>
 					<p className="mt-4"><Link href="https://www.instagram.com/ovodovboris/">Инстаграм</Link></p>
-					<p className="mt-4"><Link href="https://mykp.ru/borisovodov">Кинопоиск</Link></p>
+					{/* <p className="mt-4"><Link href="https://mykp.ru/borisovodov">Кинопоиск</Link></p> */}
 					<p className="mt-4"><Link href="https://www.linkedin.com/in/borisovodov/">Линкедин</Link></p>
 					{/* <p className="mt-4"><Link href="https://mastodon.social/@borisovodov">Мастодон</Link></p> */}
 					<p className="mt-4"><Link href="https://nomadmania.com/profile/21540/nm/un/by/2024">Номад мания</Link></p>
@@ -205,7 +206,8 @@ export default function HomePage() {
 						imageSrc="/papersaround.png"
 						years="2014–2025"
 					>
-						Собирал коллекцию газет со всего света.
+						<p>Летом 2013-го года моя младшая сестрёнка Саша на почте увидела бесполезный кусок газеты, который ранее служил упаковкой для товаров из Китая. Саша не смогла удержаться и принесла этот крохотный кусочек другой культуры домой. Немного позже ей пришло в голову, что газеты с их уникальным языком, типографикой, изображениями и дизайном идеально подойдут коллекционерам, мечтающим о далеких путешествиях. Так друзья начали привозить нам газеты со всего мира, а эта идея превратилась в отдельный вебсайт.</p>
+						<p className="mt-4">По итогу 370 газет из 215 городов (и 51 страны) на 74 языках привезли 78 прекрасных человек. Спасибо вам за этот труд!</p>
 					</ProjectCard>
 					<ProjectCard
 						name="Методичка по астрономии для успешной сдачи ЕГЭ по физике"
@@ -220,7 +222,7 @@ export default function HomePage() {
 						imageSrc="/pisanina.png"
 						years="2011–2014"
 					>
-						Вместе с Ильёй сочиняли наивные стихи о юношеских влюблённостях и блюзовом настроении.
+						Вместе с Ильёй сочиняли наивные стихи о юношеских влюблённостях, мальчишеской дружбе и блюзовом настроении. Выкладывали их на вордпрессовский сайт.
 					</ProjectCard>
 					<ProjectCard
 						name="Методичка для обучения студентов основам работы в ГИС"
@@ -243,7 +245,7 @@ export default function HomePage() {
 						imageSrc="/cubeandco.jpg"
 						years="2009–2013"
 					>
-						Играли с Костей блюз и рок-н-ролл в старших классах школы.
+						Играли с Костей блюз и рок-н-ролл в старших классах школы. Играли на квартирниках, в андеграундных клубах и на больших сценах. Выпустили 2 лонгплея и один сингл. Приятно провели время. Ещё спасибо Илье и Данилу за лайвы.
 					</ProjectCard>
 					<ProjectCard
 						name="28-я студия"
