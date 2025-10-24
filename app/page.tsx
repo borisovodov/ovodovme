@@ -17,6 +17,7 @@ import {
 } from "@/components"
 import { data } from "@/data"
 import { fetchWeather, Weather } from "@/lib/weather";
+import { calculateRemainingTime, RemainingTime } from "@/lib/years";
 
 export default function HomePage() {
 	return (
@@ -25,9 +26,6 @@ export default function HomePage() {
 			<Card shadow="sm">
 				<CardBody className="text-gray-400 text-sm">
 					<p>{data.city}<LocalTime /><LocalWeather /></p>
-					{/* <p className="mt-1">R1a-M417 (R1a1a1) • Z1a1a</p>
-					<p>D80B 2855 595A 0BAF FE09  0DC1 03D4 F66F D856 A100</p>
-					<p>FQKf8ftw4JTgHeyhzFyL8yj5F64Z4bC7+DJFWuzUn4s</p> */}
 					<p className="mt-1"><RemainingYears /></p>
 				</CardBody>
 			</Card>
@@ -299,22 +297,16 @@ function LocalWeather() {
 }
 
 function RemainingYears() {
-	const now = new Date();
-	const target = new Date("2071-07-29");
-	const msPerYear = 1000 * 60 * 60 * 24 * 365.2425;
-	const diff = target.getTime() - now.getTime();
-	const years = diff / msPerYear;
-	const formatted = years.toLocaleString("ru-RU", { minimumFractionDigits: 1, maximumFractionDigits: 4 });
-	const intPart = Math.floor(years);
-	let noun;
-	const mod100 = intPart % 100;
-	if (mod100 >= 11 && mod100 <= 14) {
-		noun = "лет";
-	} else {
-		const mod10 = intPart % 10;
-		if (mod10 === 1) noun = "год";
-		else if (mod10 >= 2 && mod10 <= 4) noun = "года";
-		else noun = "лет";
+	const [remainingTime, setRemainingTime] = useState<RemainingTime | null>(null);
+
+	useEffect(() => {
+		const interval = setInterval(() => setRemainingTime(calculateRemainingTime()), 1000);
+		return () => clearInterval(interval);
+	}, []);
+
+	if (!remainingTime) {
+		return <></>;
 	}
-	return <>Осталось ~ {formatted} {noun}</>;
+
+	return <>Осталось ~ {remainingTime.wholeYears} {remainingTime.yearsNoun} {remainingTime.remainingSeconds.toLocaleString("ru-RU")} {remainingTime.secondsNoun}</>;
 }
