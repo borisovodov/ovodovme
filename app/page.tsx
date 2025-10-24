@@ -36,7 +36,7 @@ export default function HomePage() {
 						url="https://hermann.ovodov.me/"
 						imageSrc="/hermann.png"
 					>
-						Тайм-трекер без трения для мака, айфона и эппл вотч.
+						Тайм-трекер, который помогает понять, на что уходит жизнь. Заточен не на учёт почасовой ставки работы фрилансера, а на личное счастье и осознанность. Помогает ответить на вопрос: «занимаюсь ли я тем, что даёт мне силы?». Работает на маке, айфоне и эппл вотч.
 					</ProjectCard>
 					<ProjectCard
 						name="Айтишные ивенты Екатеринбурга"
@@ -97,7 +97,7 @@ export default function HomePage() {
 						url="https://sciencebitch.mave.digital/"
 						imageSrc="/sciencebitch.jpg"
 					>
-						«Сайнс, бич» — это шоу, в котором двое ребят пытаются разобраться в научных щщах. Мы глуповаты для науки, но всё равно её любим. Периодически копаемся в научных статьях, сёрфим Википедию и консультируемся у друзей. Раз в неделю мы собираемся обсудить очередную околонаучную тему, потравить байки и рассказать друг другу свои открытия во время рисёрча.
+						«Сайнс, бич» — это подкаст, в котором мы с Лёшей пытались разобраться в научных щщах. <i>Элевейтор спич</i> такой: «Мы глуповаты для науки, но всё равно её любим. Периодически копаемся в научных статьях, сёрфим Википедию и консультируемся у друзей. Раз в неделю мы собираемся обсудить очередную околонаучную тему, потравить байки и рассказать друг другу свои открытия во время рисёрча».
 					</ProjectCard>
 					<ProjectCard
 						name="Туалетные записки"
@@ -229,7 +229,7 @@ export default function HomePage() {
 						imageSrc="/revmus.jpg"
 						years="2012–2013"
 					>
-						???
+						Пока сил нет, распишу попозже, что мы учудили с Ильёй, Максимом и Сашей в 2012-м.
 					</ProjectCard>
 					<ProjectCard
 						name="КYБ и Ко"
@@ -305,8 +305,8 @@ function RemainingYears() {
 	}, []);
 
 	if (!remainingTime) {
-		return <></>;
+		return <>~</>;
 	}
 
-	return <>Осталось ~ {remainingTime.wholeYears} {remainingTime.yearsNoun} {remainingTime.remainingSeconds.toLocaleString("ru-RU")} {remainingTime.secondsNoun}</>;
+	return <>~ {remainingTime.wholeYears} {remainingTime.yearsNoun} {remainingTime.remainingSeconds.toLocaleString("ru-RU")} {remainingTime.secondsNoun}</>;
 }
