@@ -41,12 +41,6 @@ export default function HomePage() {
 						Тайм-трекер без трения для мака, айфона и эппл вотч.
 					</ProjectCard>
 					<ProjectCard
-						name="Производственный календарь в формате iCal"
-						url="/trud"
-					>
-						Ежегодно обновляемый производственный календарь для приложений-календарей.
-					</ProjectCard>
-					<ProjectCard
 						name="Айтишные ивенты Екатеринбурга"
 						url="https://t.me/itevents_ekb"
 						imageSrc="/itevents_ekb.jpeg"
@@ -61,22 +55,28 @@ export default function HomePage() {
 						<i>Love letter</i> родному городу.
 					</ProjectCard>
 					<ProjectCard
+						name="Производственный календарь в формате iCal"
+						url="/trud"
+					>
+						Ежегодно обновляемый производственный календарь для приложений-календарей.
+					</ProjectCard>
+					<ProjectCard
 						name="SemanticColorPicker"
 						url="https://swiftpackageindex.com/borisovodov/SemanticColorPicker"
 					>
-						Компонент SwiftUI, который позволяет выбирать семантические цветовые токены — пользовательские идентификаторы, сопоставленные с адаптивными, зависящими от темы значениями Color, — вместо выбора обычных RGB-цветов.
+						Контрол SwiftUI, который позволяет выбирать из ряда семантических цветов, вместо конкретных значений RGBa. Семантические цвета могут адаптироваться под тёмную или светлую тему в отличие от прибитых гвоздями значений цвета в дефолтном <Link href="https://developer.apple.com/documentation/swiftui/colorpicker">ColorPicker</Link>.
 					</ProjectCard>
 					<ProjectCard
 						name="TreePicker"
 						url="https://swiftpackageindex.com/borisovodov/TreePicker"
 					>
-						Компонент SwiftUI для выбора вариантов из иерархических данных в виде древовидного списка.
+						Контрол SwiftUI для выбора элементов из древовидного списка. Как <Link href="https://developer.apple.com/documentation/swiftui/picker">Picker</Link>, но с иерархией.
 					</ProjectCard>
 					<ProjectCard
 						name="Генератор iCal-файлов с календарными событиями из URL"
 						url="/event"
 					>
-						Полезная штучка для ваших автоматизаций.
+						Пригодится, если нужно кинуть кому-нибудь ссылку на скачивание файла с событием для календаря (iCal, ics), а поднимать свой CalDAV-сервер для этого дофига делов.
 					</ProjectCard>
 				</Tab>
 				<Tab key="media" title="Медийка">
