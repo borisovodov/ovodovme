@@ -13,7 +13,8 @@ export function calculateRemainingTime(): RemainingTime {
 	const totalYears = diff / msPerYear;
 	const wholeYears = Math.floor(totalYears);
 	const remainingMs = diff - (wholeYears * msPerYear);
-	const remainingSeconds = Math.floor(remainingMs / 1000);
+	// Добавляю одну секунду, чтобы результат коррелировал с часами выше
+	const remainingSeconds = Math.floor(remainingMs / 1000) + 1;
 	
 	let yearsNoun;
 	const mod100 = wholeYears % 100;
