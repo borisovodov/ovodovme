@@ -53,7 +53,7 @@ export default function YePage() {
 				<p>Свою сделать</p>
 				<p>Тут карта районов и где тусич, а где нет. https://hoodmaps.com/yekaterinburg-neighborhood-map</p>
 				*/}
-				<Heading>Где позавтракать? Где выпить кофе?</Heading>
+				<Heading>Где позавтракать? Где выпить спешалти кофе?</Heading>
 				<p className="font-bold mt-4" id="es">
 					<Location
 						name="Эспрессо Сизон"
