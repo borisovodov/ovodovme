@@ -54,13 +54,13 @@ export default function TrudPage() {
 			<div className="mt-5">
 				<Card shadow="sm" className="mt-4">
 					<CardBody>
-						<p>«<i>Спасибо за https://ovodov.me/trud — легко импортировался в Сonfluence</i>»</p>
+						<p>«<i>Легко импортировался в Сonfluence</i>»</p>
 						<small>— Александр Шабельский</small>
 					</CardBody>
 				</Card>
 				<Card shadow="sm" className="mt-4">
 					<CardBody>
-						<p>«<i>Спасибо за https://ovodov.me/trud — полжизни такое искал</i>»</p>
+						<p>«<i>Полжизни такое искал</i>»</p>
 						<small>— Антон</small>
 					</CardBody>
 				</Card>
