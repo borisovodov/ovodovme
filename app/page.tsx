@@ -59,6 +59,12 @@ export default function HomePage() {
 						Ежегодно обновляемый производственный календарь для приложений-календарей.
 					</ProjectCard>
 					<ProjectCard
+						name="Генератор iCal-файлов с календарными событиями из URL"
+						url="/event"
+					>
+						Пригодится, если нужно кинуть кому-нибудь ссылку на скачивание файла с событием для календаря (iCal, ics), а поднимать свой CalDAV-сервер для этого дофига делов.
+					</ProjectCard>
+					<ProjectCard
 						name="SemanticColorPicker"
 						url="https://swiftpackageindex.com/borisovodov/SemanticColorPicker"
 					>
@@ -69,12 +75,6 @@ export default function HomePage() {
 						url="https://swiftpackageindex.com/borisovodov/TreePicker"
 					>
 						Контрол SwiftUI для выбора элементов из древовидного списка. Как <Link href="https://developer.apple.com/documentation/swiftui/picker">Picker</Link>, но с иерархией.
-					</ProjectCard>
-					<ProjectCard
-						name="Генератор iCal-файлов с календарными событиями из URL"
-						url="/event"
-					>
-						Пригодится, если нужно кинуть кому-нибудь ссылку на скачивание файла с событием для календаря (iCal, ics), а поднимать свой CalDAV-сервер для этого дофига делов.
 					</ProjectCard>
 				</Tab>
 				<Tab key="media" title="Медийка">
