@@ -97,7 +97,7 @@ export default function HomePage() {
 						url="https://sciencebitch.mave.digital/"
 						imageSrc="/sciencebitch.jpg"
 					>
-						Подкаст, в котором мы с Лёшей разбирались в научных щщах. Очень крутой продакшн, приглашённые гости, фичеринг на ряде платформ. Много вложенных сил.
+						Подкаст, в котором мы с Лёшей разбирались в научных щщах. Очень крутой продакшн, приглашённые гости, фичеринг на ряде платформ, много вложенных сил. Любимый подкаст моей мамы.
 					</ProjectCard>
 					<ProjectCard
 						name="Туалетные записки"
@@ -183,7 +183,6 @@ export default function HomePage() {
 					<p className="mt-4"><Link href="https://github.com/borisovodov">Гитхаб</Link></p>
 					<p className="mt-4"><Link href="https://www.goodreads.com/borisovodov">Гудридс</Link></p>
 					<p className="mt-4"><Link href="https://www.instagram.com/ovodovboris/">Инстаграм</Link></p>
-					{/* <p className="mt-4"><Link href="https://mykp.ru/borisovodov">Кинопоиск</Link></p> */}
 					<p className="mt-4"><Link href="https://www.linkedin.com/in/borisovodov/">Линкедин</Link></p>
 					{/* <p className="mt-4"><Link href="https://mastodon.social/@borisovodov">Мастодон</Link></p> */}
 					<p className="mt-4"><Link href="https://nomadmania.com/profile/21540/nm/un/by/2024">Номад мания</Link></p>
