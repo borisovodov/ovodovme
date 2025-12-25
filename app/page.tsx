@@ -46,17 +46,17 @@ export default function HomePage() {
 						Агрегатор оффлайновых мероприятий для айтишников: митапов, конференций, лекций, хакатонов.
 					</ProjectCard>
 					<ProjectCard
+						name="Производственный календарь в формате iCal"
+						url="/trud"
+					>
+						Ежегодно обновляемый производственный календарь для приложений-календарей.
+					</ProjectCard>
+					<ProjectCard
 						name="Субъективный путеводитель по Екатеринбургу"
 						url="/ye"
 						imageSrc="/ekb.png"
 					>
 						<i>Love letter</i> родному городу.
-					</ProjectCard>
-					<ProjectCard
-						name="Производственный календарь в формате iCal"
-						url="/trud"
-					>
-						Ежегодно обновляемый производственный календарь для приложений-календарей.
 					</ProjectCard>
 					<ProjectCard
 						name="Генератор iCal-файлов с календарными событиями из URL"
@@ -185,7 +185,7 @@ export default function HomePage() {
 					<p className="mt-4"><Link href="https://www.instagram.com/ovodovboris/">Инстаграм</Link></p>
 					<p className="mt-4"><Link href="https://www.linkedin.com/in/borisovodov/">Линкедин</Link></p>
 					{/* <p className="mt-4"><Link href="https://mastodon.social/@borisovodov">Мастодон</Link></p> */}
-					<p className="mt-4"><Link href="https://nomadmania.com/profile/21540/nm/un/by/2024">Номад мания</Link></p>
+					<p className="mt-4"><Link href="https://nomadmania.com/profile/21540/nm/un/by/2024">Номад Мания</Link></p>
 					<p className="mt-4"><Link href="https://t.me/safariBookmarks">Телеграм</Link></p>
 					{/* <p className="mt-4"><Link href="https://www.facebook.com/borisovodov">Фэйсбук</Link></p> */}
 					<p className="mt-4"><Link href="https://www.youtube.com/@borisovodovlive">Ютуб</Link></p>
