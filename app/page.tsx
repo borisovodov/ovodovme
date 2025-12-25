@@ -48,13 +48,14 @@ export default function HomePage() {
 					<ProjectCard
 						name="Производственный календарь в формате iCal"
 						url="/trud"
+						imageSrc="/trud.jpg"
 					>
 						Ежегодно обновляемый производственный календарь для приложений-календарей.
 					</ProjectCard>
 					<ProjectCard
 						name="Субъективный путеводитель по Екатеринбургу"
 						url="/ye"
-						imageSrc="/ekb.png"
+						imageSrc="/ekb.jpg"
 					>
 						<i>Love letter</i> родному городу.
 					</ProjectCard>
