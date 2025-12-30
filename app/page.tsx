@@ -30,7 +30,7 @@ export default function HomePage() {
 				</CardBody>
 			</Card>
 			<Tabs fullWidth aria-label="Сферы" size="lg" className="mt-8">
-				<Tab key="projects" title="Проекты">
+				<Tab key="projects" title="Польза">
 					<ProjectCard
 						name="Hermann"
 						url="https://hermann.ovodov.me/"
