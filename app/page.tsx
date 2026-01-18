@@ -108,11 +108,11 @@ export default function HomePage() {
 						Коллекция народного творчества из уборных всего мира в мультифорах формата A4.
 					</ProjectCard>
 					<ProjectCard
-						name="Фильтры Tasty Coffee"
-						url="https://t.me/tastyCoffeeFilters"
+						name="Мамкины капперы"
+						url="https://t.me/momsCuppers"
 						imageSrc="/tastyCoffeeFilters.jpeg"
 					>
-						Телеграм-канал с впечатлениями о фильтрах Тэйсти кофе и других обжарщиков.
+						С Лёшей и Лёшей веду телеграм-канал с впечатлениями от кофейного зерна российских обжарщиков
 					</ProjectCard>
 					<ProjectCard
 						name="Дневник Николая Неганова"
