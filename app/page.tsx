@@ -34,28 +34,28 @@ export default function HomePage() {
 					<ProjectCard
 						name="Hermann"
 						url="https://hermann.ovodov.me/"
-						imageSrc="/hermann.png"
+						imageSrc="hermann.png"
 					>
 						Тайм-трекер, который помогает понять, на что уходит жизнь. Заточен не на учёт почасовой ставки работы фрилансера, а на личное счастье и осознанность. Помогает ответить на вопрос: «занимаюсь ли я тем, что даёт мне силы?» Работает на маке, айфоне и эппл вотч.
 					</ProjectCard>
 					<ProjectCard
 						name="Айтишные ивенты Екатеринбурга"
 						url="https://t.me/itevents_ekb"
-						imageSrc="/itevents_ekb.jpeg"
+						imageSrc="itevents_ekb.jpeg"
 					>
 						Агрегатор оффлайновых мероприятий для айтишников: митапов, конференций, лекций, хакатонов.
 					</ProjectCard>
 					<ProjectCard
 						name="Производственный календарь в формате iCal"
 						url="/trud"
-						imageSrc="/trud.jpg"
+						imageSrc="trud.jpg"
 					>
 						Ежегодно обновляемый производственный календарь для приложений-календарей.
 					</ProjectCard>
 					<ProjectCard
 						name="Субъективный путеводитель по Екатеринбургу"
 						url="/ye"
-						imageSrc="/ekb.jpg"
+						imageSrc="ekb.jpg"
 					>
 						<i>Love letter</i> родному городу.
 					</ProjectCard>
@@ -82,43 +82,51 @@ export default function HomePage() {
 					<ProjectCard
 						name="Борины закладки в Сафари"
 						url="https://t.me/safariBookmarks"
-						imageSrc="/safariBookmarks.jpeg"
+						imageSrc="safariBookmarks.jpeg"
 					>
 						Основной телеграм-канал с клоунадой и анонсами проектов.
 					</ProjectCard>
 					<ProjectCard
 						name="Срединный путь"
 						url="https://middleway.mave.digital"
-						imageSrc="/middleway.jpg"
+						imageSrc="middleway.jpg"
 					>
 						С Сашей ведём разговорный подкаст, где пытаемся понять как жить эту жизнь, когда ты маленький человек, который просто пытается жить лучшую жизнь из возможных, а вокруг творится невообразимый ужас. Это про вечный поиск баланса, отсутствие простых решений и однозначных истин.
 					</ProjectCard>
 					<ProjectCard
 						name="Сайнс, бич"
 						url="https://sciencebitch.mave.digital/"
-						imageSrc="/sciencebitch.jpg"
+						imageSrc="sciencebitch.jpg"
 					>
 						Подкаст, в котором мы с Лёшей разбирались в научных щщах. Очень крутой продакшн, приглашённые гости, фичеринг на ряде платформ, много вложенных сил. Любимый подкаст моей мамы.
 					</ProjectCard>
 					<ProjectCard
 						name="Туалетные записки"
 						url="https://t.me/toiletnotes"
-						imageSrc="/toiletnotes.jpeg"
+						imageSrc="toiletnotes.jpeg"
 					>
 						Коллекция народного творчества из уборных всего мира в мультифорах формата A4.
 					</ProjectCard>
 					<ProjectCard
 						name="Мамкины капперы"
 						url="https://t.me/momsCuppers"
-						imageSrc="/tastyCoffeeFilters.jpeg"
+						imageSrc="tastyCoffeeFilters.jpeg"
 					>
 						С Лёшей и Лёшей веду телеграм-канал с впечатлениями от кофейного зерна российских обжарщиков
 					</ProjectCard>
 					<ProjectCard
 						name="Дневник Николая Неганова"
-						url="/diary"
+						url="diary"
 					>
 						Оцифрованное письмо моего двоюродного деда Николая Поликарповича Неганова, отправленное его матери Агнии Ильиничне Веселицкой в 1953-м году. Описание путешествия из Свердловска к родственникам в Краснодарский край через вятские попутки, волжские пароходы, кавказские поезда, каспийские волны и туркменские пустыни в послевоенной стране.
+					</ProjectCard>
+					<ProjectCard
+						name="365"
+						url="https://www.instagram.com/ovodovboris/reel/COInlUFDEGy/"
+						imageSrc="365.jpg"
+					>
+						<p>Видео с секундными кусочками каждого дня года. «365» начинался как забавный проект, который должен был помочь мне потихоньку выходить из зоны комфорта, из уютной интровертной комнаты. Хотелось приучить себя меньше бояться людей вокруг и быть открытым к новым коммуникациям. Ну и немного развлечься на время карантина, ага.</p>
+						<p className="mt-4">Но «365» стал совсем другим. В итоге получилось полотно о жизни маленького человека за год, в который произошло всё: переезд в новый дом, запуск публичных проектов, бесконечный локдаун, хронический рефлюкс-гастрит, смерть отца, защита на первую категорию, помолвка и открытие в себе новых страстей и талантов. Жизнь как перфоманс, ёпта.</p>
 					</ProjectCard>
 				</Tab>
 				<Tab key="talks" title="Паблик токи">
@@ -166,6 +174,15 @@ export default function HomePage() {
 						duration="37 минут"
 					>
 						Рассказал о том, как пет-проекты могут помочь в карьерном и личном развитии системного аналитика.
+					</TalkCard>
+					<TalkCard
+						name="Лайв про опыт 6-и лет преподавания астрономии в гимназии"
+						url="https://www.instagram.com/tv/CTXZGWCj6zX/"
+						imageSrc="astrolive2021.jpeg"
+						year="2021"
+						duration="1 час"
+					>
+						Лайв про опыт 6-и лет преподавания астрономии в гимназии
 					</TalkCard>
 					<TalkCard
 						name="Интервью в рамках «Барного аналитика» на Контуровской конференции аналитиков"
