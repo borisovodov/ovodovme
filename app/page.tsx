@@ -112,7 +112,7 @@ export default function HomePage() {
 						url="https://t.me/momsCuppers"
 						imageSrc="tastyCoffeeFilters.jpeg"
 					>
-						С Лёшей и Лёшей веду телеграм-канал с впечатлениями от кофейного зерна российских обжарщиков
+						С Лёшей и Лёшей веду телеграм-канал с впечатлениями от кофейного зерна российских обжарщиков.
 					</ProjectCard>
 					<ProjectCard
 						name="Дневник Николая Неганова"
