@@ -140,6 +140,15 @@ export default function HomePage() {
 						Поговорили с Сашей про мотивацию, стоящую за созданием «Германна», ценность времени как ресурса, про то, как делать подкасты, и решиться на карьерный даунгрейд.
 					</TalkCard>
 					<TalkCard
+						name="Как перенести древо с MyHeritage на Familio?"
+						url="https://vkvideo.ru/video-199876969_456239078"
+						imageSrc="mh2familio.jpeg"
+						year="2025"
+						duration="5 минут"
+					>
+						Как перенести древо с MyHeritage на Familio?
+					</TalkCard>
+					<TalkCard
 						name="Кейс-клуб с экспертами на Контуровской конференции аналитиков"
 						url="https://youtu.be/6ex2IZJ6CCw?t=5669"
 						imageSrc="kontur2024.jpg"
@@ -147,6 +156,24 @@ export default function HomePage() {
 						duration="44 минуты"
 					>
 						С Олей, Таней и Ромой обсудили, как отвечать на давление авторитета и разделять зоны ответственности.
+					</TalkCard>
+					<TalkCard
+						name="Релиз Naumen SMP 4.18"
+						url="https://www.youtube.com/watch?v=l1lVNIyy4Zo"
+						imageSrc="smp418.jpeg"
+						year="2024"
+						duration="38 минут"
+					>
+						Релиз Naumen SMP 4.18
+					</TalkCard>
+					<TalkCard
+						name="Релиз Naumen SMP 4.17"
+						url="https://www.youtube.com/watch?v=Q4Nw4xpcqDw"
+						imageSrc="smp417.jpeg"
+						year="2023"
+						duration="48 минут"
+					>
+						Релиз Naumen SMP 4.17
 					</TalkCard>
 					<TalkCard
 						name="Доклад «Почему аналитикам стоит делать пет-проекты» для ютуб-канала Наумена"
@@ -167,6 +194,15 @@ export default function HomePage() {
 						Обсудили с Аней, Олей и Дашей как перестать быть мамой-уткой, справляться со сложностью, попросить больше ответственности и находить время на стратегическое развитие.
 					</TalkCard>
 					<TalkCard
+						name="Релиз Naumen SMP 4.16"
+						url="https://www.youtube.com/watch?v=yxvGS1NSfS4"
+						imageSrc="smp416.jpeg"
+						year="2023"
+						duration="52 минуты"
+					>
+						Релиз Naumen SMP 4.16
+					</TalkCard>
+					<TalkCard
 						name="Доклад «Почему аналитикам стоит делать пет-проекты» на ДАМПе"
 						url="https://youtube.com/watch?v=zeOJ6WIpv78"
 						imageSrc="dump2023.jpeg"
@@ -174,6 +210,15 @@ export default function HomePage() {
 						duration="37 минут"
 					>
 						Рассказал о том, как пет-проекты могут помочь в карьерном и личном развитии системного аналитика.
+					</TalkCard>
+					<TalkCard
+						name="Релиз Naumen SMP 4.15"
+						url="https://www.youtube.com/watch?v=Ek-lmxg1GE8"
+						imageSrc="smp415.jpeg"
+						year="2022"
+						duration="46 минут"
+					>
+						Релиз Naumen SMP 4.15
 					</TalkCard>
 					<TalkCard
 						name="Лайв про опыт преподавания астрономии"
