@@ -194,15 +194,6 @@ export default function HomePage() {
 						Обсудили с Аней, Олей и Дашей как перестать быть мамой-уткой, справляться со сложностью, попросить больше ответственности и находить время на стратегическое развитие.
 					</TalkCard>
 					<TalkCard
-						name="Релиз Naumen SMP 4.16"
-						url="https://www.youtube.com/watch?v=yxvGS1NSfS4"
-						imageSrc="smp416.jpeg"
-						year="2023"
-						duration="52 минуты"
-					>
-						Релиз Naumen SMP 4.16
-					</TalkCard>
-					<TalkCard
 						name="Доклад «Почему аналитикам стоит делать пет-проекты» на ДАМПе"
 						url="https://youtube.com/watch?v=zeOJ6WIpv78"
 						imageSrc="dump2023.jpeg"
@@ -210,6 +201,15 @@ export default function HomePage() {
 						duration="37 минут"
 					>
 						Рассказал о том, как пет-проекты могут помочь в карьерном и личном развитии системного аналитика.
+					</TalkCard>
+					<TalkCard
+						name="Релиз Naumen SMP 4.16"
+						url="https://www.youtube.com/watch?v=yxvGS1NSfS4"
+						imageSrc="smp416.jpeg"
+						year="2023"
+						duration="52 минуты"
+					>
+						Релиз Naumen SMP 4.16
 					</TalkCard>
 					<TalkCard
 						name="Релиз Naumen SMP 4.15"
