@@ -5,6 +5,7 @@ import {
 	CardBody,
 	Tab,
 	Tabs,
+	Switch,
 } from "@heroui/react"
 import { useState, useEffect } from "react"
 
@@ -20,6 +21,8 @@ import { fetchWeather, Weather } from "@/lib/weather";
 import { calculateRemainingTime, RemainingTime } from "@/lib/years";
 
 export default function HomePage() {
+	const [isWork, setIsWork] = useState(false);
+
 	return (
 		<div className="max-w-3xl">
 			<PageHeader title="Всем привет от Бориса Оводова 👋🏻" />
@@ -130,6 +133,15 @@ export default function HomePage() {
 					</ProjectCard>
 				</Tab>
 				<Tab key="talks" title="Паблик токи">
+					<Switch
+						isSelected={isWork}
+						onValueChange={setIsWork}
+						size="sm"
+						color="warning"
+					>
+						Болтовня по работе
+					</Switch>
+
 					<TalkCard
 						name="Интервью для IT-подкаста Саши Торбека"
 						url="https://www.youtube.com/watch?v=A6u0JiTCYpc"
@@ -139,15 +151,17 @@ export default function HomePage() {
 					>
 						Поговорили с Сашей про мотивацию, стоящую за созданием «Германна», ценность времени как ресурса, про то, как делать подкасты, и решиться на карьерный даунгрейд.
 					</TalkCard>
-					<TalkCard
-						name="Как перенести древо с MyHeritage на Familio?"
-						url="https://vkvideo.ru/video-199876969_456239078"
-						imageSrc="mh2familio.jpeg"
-						year="2025"
-						duration="5 минут"
-					>
-						Как перенести древо с MyHeritage на Familio?
-					</TalkCard>
+					{isWork && (
+						<TalkCard
+							name="Как перенести древо с MyHeritage на Familio?"
+							url="https://vkvideo.ru/video-199876969_456239078"
+							imageSrc="mh2familio.jpeg"
+							year="2025"
+							duration="5 минут"
+						>
+							Инструкция для беженцев.
+						</TalkCard>
+					)}
 					<TalkCard
 						name="Кейс-клуб с экспертами на Контуровской конференции аналитиков"
 						url="https://youtu.be/6ex2IZJ6CCw?t=5669"
@@ -157,24 +171,28 @@ export default function HomePage() {
 					>
 						С Олей, Таней и Ромой обсудили, как отвечать на давление авторитета и разделять зоны ответственности.
 					</TalkCard>
-					<TalkCard
-						name="Релиз Naumen SMP 4.18"
-						url="https://www.youtube.com/watch?v=l1lVNIyy4Zo"
-						imageSrc="smp418.jpeg"
-						year="2024"
-						duration="38 минут"
-					>
-						Релиз Naumen SMP 4.18
-					</TalkCard>
-					<TalkCard
-						name="Релиз Naumen SMP 4.17"
-						url="https://www.youtube.com/watch?v=Q4Nw4xpcqDw"
-						imageSrc="smp417.jpeg"
-						year="2023"
-						duration="48 минут"
-					>
-						Релиз Naumen SMP 4.17
-					</TalkCard>
+					{isWork && (
+						<TalkCard
+							name="Релиз Naumen SMP 4.18"
+							url="https://www.youtube.com/watch?v=l1lVNIyy4Zo"
+							imageSrc="smp418.jpeg"
+							year="2024"
+							duration="38 минут"
+						>
+							Поболтал бритый.
+						</TalkCard>
+					)}
+					{isWork && (
+						<TalkCard
+							name="Релиз Naumen SMP 4.17"
+							url="https://www.youtube.com/watch?v=Q4Nw4xpcqDw"
+							imageSrc="smp417.jpeg"
+							year="2023"
+							duration="48 минут"
+						>
+							Поболтал бородатый.
+						</TalkCard>
+					)}
 					<TalkCard
 						name="Доклад «Почему аналитикам стоит делать пет-проекты» для ютуб-канала Наумена"
 						url="https://www.youtube.com/watch?v=YJRmndQbBG8"
@@ -202,24 +220,28 @@ export default function HomePage() {
 					>
 						Рассказал о том, как пет-проекты могут помочь в карьерном и личном развитии системного аналитика.
 					</TalkCard>
-					<TalkCard
-						name="Релиз Naumen SMP 4.16"
-						url="https://www.youtube.com/watch?v=yxvGS1NSfS4"
-						imageSrc="smp416.jpeg"
-						year="2023"
-						duration="52 минуты"
-					>
-						Релиз Naumen SMP 4.16
-					</TalkCard>
-					<TalkCard
-						name="Релиз Naumen SMP 4.15"
-						url="https://www.youtube.com/watch?v=Ek-lmxg1GE8"
-						imageSrc="smp415.jpeg"
-						year="2022"
-						duration="46 минут"
-					>
-						Релиз Naumen SMP 4.15
-					</TalkCard>
+					{isWork && (
+						<TalkCard
+							name="Релиз Naumen SMP 4.16"
+							url="https://www.youtube.com/watch?v=yxvGS1NSfS4"
+							imageSrc="smp416.jpeg"
+							year="2023"
+							duration="52 минуты"
+						>
+							Поболтал щетинистый.
+						</TalkCard>
+					)}
+					{isWork && (
+						<TalkCard
+							name="Релиз Naumen SMP 4.15"
+							url="https://www.youtube.com/watch?v=Ek-lmxg1GE8"
+							imageSrc="smp415.jpeg"
+							year="2022"
+							duration="46 минут"
+						>
+							Поболтал обросший.
+						</TalkCard>
+					)}
 					<TalkCard
 						name="Лайв про опыт преподавания астрономии"
 						url="https://www.instagram.com/tv/CTXZGWCj6zX/"
