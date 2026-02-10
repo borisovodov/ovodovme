@@ -311,12 +311,8 @@ function LocalWeather() {
 		return <></>;
 	}
 
-	const tempDisplay = weather.temperature < 0 
-		? `−${Math.abs(weather.temperature)}` 
-		: weather.temperature;
-
 	return (
-		<>, {weather.condition} {tempDisplay}°C</>
+		<>, {weather.condition} {weather.temperature} °C</>
 	);
 }
 

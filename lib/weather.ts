@@ -1,7 +1,7 @@
 import { fetchWeatherApi } from "openmeteo";
 
 export interface Weather {
-    temperature: number;
+    temperature: string;
     condition: string;
 }
 
@@ -48,6 +48,9 @@ export async function fetchWeather(latitude: number, longitude: number, onChange
     if (current) {
         const condition = weatherEmoji[current.variables(0)?.value() ?? 0] || "❓";
         const temperature = Math.round(current.variables(1)?.value() ?? 0);
-        onChange({ condition, temperature });
+        const tempDisplay = temperature < 0
+            ? `−${Math.abs(temperature)}`
+            : `${temperature}`;
+        onChange({ condition, temperature: tempDisplay });
     }
 }
