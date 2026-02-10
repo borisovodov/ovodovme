@@ -159,7 +159,7 @@ export default function HomePage() {
 							year="2025"
 							duration="5 минут"
 						>
-							Инструкция для беженцев.
+							Записал инструкцию для беженцев.
 						</TalkCard>
 					)}
 					<TalkCard
@@ -179,7 +179,7 @@ export default function HomePage() {
 							year="2024"
 							duration="38 минут"
 						>
-							Поболтал бритый.
+							Бритым презентовал новую версию продукта.
 						</TalkCard>
 					)}
 					{isWork && (
@@ -190,7 +190,7 @@ export default function HomePage() {
 							year="2023"
 							duration="48 минут"
 						>
-							Поболтал бородатый.
+							Бородатым презентовал новую версию продукта.
 						</TalkCard>
 					)}
 					<TalkCard
@@ -228,7 +228,7 @@ export default function HomePage() {
 							year="2023"
 							duration="52 минуты"
 						>
-							Поболтал щетинистый.
+							Щетинистым презентовал новую версию продукта.
 						</TalkCard>
 					)}
 					{isWork && (
@@ -239,7 +239,7 @@ export default function HomePage() {
 							year="2022"
 							duration="46 минут"
 						>
-							Поболтал обросший.
+							Обросшим презентовал новую версию продукта.
 						</TalkCard>
 					)}
 					<TalkCard
