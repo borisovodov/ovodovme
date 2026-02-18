@@ -169,7 +169,7 @@ export default function YePage() {
 						onYandexChange={setYandex}
 						doublegis="https://2gis.ru/ekaterinburg/firm/70000001022545173"
 						onDoublegisChange={setDoublegis}
-						website="https://gastroli.pub"
+						website="https://гастролирест.рф/"
 						onWebsiteChange={setWebsite}
 						onOpen={onOpen}
 					>
