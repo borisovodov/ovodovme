@@ -1,9 +1,9 @@
 export const data = {
     current: {
-        city: "Москва",
-        latitude: 55.7558,
-        longitude: 37.6173,
-        timeZone: "Europe/Moscow",
+        city: "Екатеринбург",
+        latitude: 56.8519,
+        longitude: 60.6122,
+        timeZone: "Asia/Yekaterinburg",
     },
     all: [
         {
