@@ -51,7 +51,9 @@ export default function EventPage() {
 				<DownloadPage />
 			: mode === Mode.ERROR ?
 				<ErrorPage message={errorMessage} setMode={setMode} />
-			: <ErrorPage message={"Ай эм сорри, но ваш браузер говно ебаное"} setMode={setMode} />}
+			: mode === Mode.EMPTY ? 
+				<ErrorPage message={"Ай эм сорри, но ваш браузер говно ебаное. Скрипт не отработал."} setMode={setMode} />
+			: <ErrorPage message={"Ай эм сорри, но ваш браузер говно ебаное. Не бывает такого статуса."} setMode={setMode} />}
 		</>
 	);
 }
