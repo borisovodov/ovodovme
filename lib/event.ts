@@ -50,25 +50,28 @@ function generateICS() {
         start: formatICSDate(start),
         end: formatICSDate(end, true),
         tz: getTZ(start),
+        isDateOnly: !start.includes("T"),
         location: formatICSLocation(location),
         url: checkURL(url),
         timestamp: formatICSTimestamp(now),
     };
 
+    const timezoneBlock = event.isDateOnly ? "" : `
+BEGIN:VTIMEZONE
+TZID:${event.tz.id}
+BEGIN:STANDARD
+TZOFFSETFROM:${event.tz.offset.replace(':', '')}
+TZOFFSETTO:${event.tz.offset.replace(':', '')}
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+`;
+
     return `BEGIN:VCALENDAR
 VERSION:2.0
 CALSCALE:GREGORIAN
 PRODID:-//Apple Inc.//macOS 15.5//RU
-
-BEGIN:VTIMEZONE
-TZID:${event.tz.id}
-BEGIN:STANDARD
-TZOFFSETFROM:${event.tz.offset}
-TZOFFSETTO:${event.tz.offset}
-DTSTART:19700101T000000
-END:STANDARD
-END:VTIMEZONE
-
+${timezoneBlock}
 BEGIN:VEVENT
 UID:${event.uuid}
 DTSTART;${event.start}
@@ -149,7 +152,15 @@ function getTZ(str: string): TZ {
     const tzRegex = /(Z|[+-]\d{2}:?\d{2})$/;
     const tzMatch = str.match(tzRegex);
     if (tzMatch) {
-        const tz = tzMatch[1];
+        let tz = tzMatch[1];
+        // Нормализуем формат: добавляем двоеточие, если его нет
+        if (tz !== 'Z' && !tz.includes(':')) {
+            tz = tz.slice(0, 3) + ':' + tz.slice(3);
+        }
+        // Для Z используем +00:00
+        if (tz === 'Z') {
+            tz = '+00:00';
+        }
         return timeZones.find(zone => zone.offset === tz) || defaultTimeZone;
     }
     return defaultTimeZone;
