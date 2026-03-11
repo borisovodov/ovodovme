@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Code, ScrollShadow } from "@heroui/react";
+import { Button, Code, ScrollShadow, Spinner } from "@heroui/react";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -51,9 +51,7 @@ export default function EventPage() {
 				<DownloadPage />
 			: mode === Mode.ERROR ?
 				<ErrorPage message={errorMessage} setMode={setMode} />
-			: mode === Mode.EMPTY ? 
-				<ErrorPage message={"Ай эм сорри, но ваш браузер говно ебаное. Скрипт не отработал."} setMode={setMode} />
-			: <ErrorPage message={"Ай эм сорри, но ваш браузер говно ебаное. Не бывает такого статуса."} setMode={setMode} />}
+			: <Spinner />}
 		</>
 	);
 }
