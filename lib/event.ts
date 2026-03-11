@@ -52,11 +52,10 @@ function generateICS() {
         tz: getTZ(start),
         location: formatICSLocation(location),
         url: checkURL(url),
-        timestamp: formatICSDate(now.toISOString()),
+        timestamp: formatICSTimestamp(now),
     };
 
-    return `
-BEGIN:VCALENDAR
+    return `BEGIN:VCALENDAR
 VERSION:2.0
 CALSCALE:GREGORIAN
 PRODID:-//Apple Inc.//macOS 15.5//RU
@@ -75,9 +74,7 @@ UID:${event.uuid}
 DTSTART;${event.start}
 DTEND;${event.end}
 DTSTAMP:${event.timestamp}
-SUMMARY:${event.summary}
-LOCATION:${event.location}
-URL;VALUE=URI:${event.url}
+SUMMARY:${event.summary}${event.location ? `\nLOCATION:${event.location}` : ""}${event.url ? `\nURL;VALUE=URI:${event.url}` : ""}
 END:VEVENT
 
 END:VCALENDAR`;
@@ -95,6 +92,17 @@ function checkURL(url: string | null): string {
 
 function formatICSLocation(location: string | null): string {
     return location ? location.replaceAll(",", "\\,") : "";
+}
+
+function formatICSTimestamp(date: Date): string {
+    const year = date.getUTCFullYear();
+    const month = String(date.getUTCMonth() + 1).padStart(2, "0");
+    const day = String(date.getUTCDate()).padStart(2, "0");
+    const hours = String(date.getUTCHours()).padStart(2, "0");
+    const minutes = String(date.getUTCMinutes()).padStart(2, "0");
+    const seconds = String(date.getUTCSeconds()).padStart(2, "0");
+
+    return `${year}${month}${day}T${hours}${minutes}${seconds}Z`;
 }
 
 function formatICSDate(str: string, isEndDate: boolean = false) {
