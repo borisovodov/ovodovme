@@ -51,7 +51,7 @@ export default function EventPage() {
 				<DownloadPage />
 			: mode === Mode.ERROR ?
 				<ErrorPage message={errorMessage} setMode={setMode} />
-			: <div>хуйня какая-то, статусы не проходят</div>}
+			: <ErrorPage message={"Ай эм сорри, но ваш браузер говно ебаное"} setMode={setMode} />}
 		</>
 	);
 }
