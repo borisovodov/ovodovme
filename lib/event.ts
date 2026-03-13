@@ -56,8 +56,7 @@ function generateICS() {
         timestamp: formatICSTimestamp(now),
     };
 
-    const timezoneBlock = event.isDateOnly ? "" : `
-BEGIN:VTIMEZONE
+    const timezoneBlock = event.isDateOnly ? "" : `BEGIN:VTIMEZONE
 TZID:${event.tz.id}
 BEGIN:STANDARD
 TZOFFSETFROM:${event.tz.offset.replace(':', '')}
