@@ -71,16 +71,14 @@ END:VTIMEZONE
 VERSION:2.0
 CALSCALE:GREGORIAN
 PRODID:-//Apple Inc.//macOS 15.5//RU
-${timezoneBlock}
-BEGIN:VEVENT
+${timezoneBlock}BEGIN:VEVENT
 UID:${event.uuid}
 DTSTART;${event.start}
 DTEND;${event.end}
 DTSTAMP:${event.timestamp}
 SUMMARY:${event.summary}${event.location ? `\nLOCATION:${event.location}` : ""}${event.url ? `\nURL;VALUE=URI:${event.url}` : ""}
 END:VEVENT
-
-END:VCALENDAR`;
+END:VCALENDAR`.replace(/\n/g, '\r\n');
 }
 
 function checkURL(url: string | null): string {
