@@ -142,6 +142,17 @@ export default function HomePage() {
 						Болтовня по работе
 					</Switch>
 
+					{isWork && (
+						<TalkCard
+							name="Familio Index. Краткий обзор"
+							url="https://vkvideo.ru/video-199876969_456239093"
+							imageSrc="familio-index.jpeg"
+							year="2026"
+							duration="8 минут"
+						>
+							Провёл демо для анонса сервиса Familio Index.
+						</TalkCard>
+					)}
 					<TalkCard
 						name="Интервью для IT-подкаста Саши Торбека"
 						url="https://www.youtube.com/watch?v=A6u0JiTCYpc"
