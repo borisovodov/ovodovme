@@ -1,9 +1,9 @@
 export const data = {
     current: {
-            city: "Нижний Новгород",
-            latitude: 56.2965,
-            longitude: 43.9361,
-            timeZone: "Europe/Moscow",
+		city: "Екатеринбург",
+		latitude: 56.8519,
+		longitude: 60.6122,
+		timeZone: "Asia/Yekaterinburg",
 	},
     all: [
         {
