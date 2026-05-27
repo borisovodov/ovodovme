@@ -284,7 +284,7 @@ export default function HomePage() {
 					<p className="mt-4"><Link href="https://app.thestorygraph.com/profile/borisovodov">Сториграф</Link></p>
 					<p className="mt-4"><Link href="https://t.me/safariBookmarks">Телеграм</Link></p>
 					{/* <p className="mt-4"><Link href="https://www.facebook.com/borisovodov">Фэйсбук</Link></p> */}
-					<p className="mt-4"><Link href="https://www.youtube.com/@borisovodovlive">Ютуб</Link></p>
+					<p className="mt-4"><Link href="https://www.youtube.com/@ovodov">Ютуб</Link></p>
 				</Tab>
 				<Tab key="past" title="Позади">
 					<ProjectCard
