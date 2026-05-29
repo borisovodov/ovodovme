@@ -145,11 +145,11 @@ export default function HomePage() {
 					<TalkCard
 						name="Доклад «Как развернуть карты на весь мир за три копейки» на ДАМПе"
 						url="https://www.youtube.com/watch?v=mCJFqzjJYnA"
-						imageSrc="dump2026.png"
+						imageSrc="dump2026.jpg"
 						year="2026"
 						duration="39 минут"
 					>
-						????
+						Рассказал как мы в Familio задёшево развернули свою картографическую подложку на весь мир.
 					</TalkCard>
 					{isWork && (
 						<TalkCard
