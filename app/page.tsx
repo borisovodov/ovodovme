@@ -142,6 +142,15 @@ export default function HomePage() {
 						Болтовня по работе
 					</Switch>
 
+					<TalkCard
+						name="Доклад «Как развернуть карты на весь мир за три копейки» на ДАМПе"
+						url="https://www.youtube.com/watch?v=mCJFqzjJYnA"
+						imageSrc="dump2026.png"
+						year="2026"
+						duration="39 минут"
+					>
+						????
+					</TalkCard>
 					{isWork && (
 						<TalkCard
 							name="Familio Index. Краткий обзор"
