@@ -145,7 +145,7 @@ export default function HomePage() {
 					<TalkCard
 						name="Доклад «Как развернуть карты на весь мир за три копейки» на ДАМПе"
 						url="https://www.youtube.com/watch?v=mCJFqzjJYnA"
-						imageSrc="dump2026.jpg"
+						imageSrc="dump2026.jpeg"
 						year="2026"
 						duration="39 минут"
 					>
