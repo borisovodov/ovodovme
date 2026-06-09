@@ -179,6 +179,22 @@ export default function YePage() {
 				<p className="mt-4">Это основа. Это, так сказать, база. Приехали в Екатеринбург и не знаете где поужинать? Идите в «Гастроли»! Это одно из самых титулованных заведений в городе.</p>
 				<p className="font-bold mt-4">
 					<Location
+						name="Китчен"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/kitchen/244683453796/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/firm/70000001028797770"
+						onDoublegisChange={setDoublegis}
+						website="https://kitchen23.org"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Китчен
+					</Location> на <OriginaledTitle modern="Ткачей" original="Расторгуевской" isOriginal={isOriginal} />, 23
+				</p>
+				<p className="mt-4">Фешенебельная уральская кухня; коктейли, названные в честь местных городов; вид на город, как в московском «Уайт рэббите». Шеф ресторана, Сергей Мирошников — один из создателей объединения «<Link variant="yekaterinburg" href="http://auc.rest">Аутентичная Уральская Кухня</Link>». Это легендарные ребята, которые продвигают любовь к местной кухне. В общем тупо да.</p>
+				<p className="font-bold mt-4">
+					<Location
 						name="Момо"
 						onNameChange={setName}
 						yandex="https://yandex.ru/maps/org/momo/1193772782/"
@@ -209,7 +225,7 @@ export default function YePage() {
 					</Location> в Ельцин Центре на <OriginaledTitle modern="Ельцина" original="Фетисовской" isOriginal={isOriginal} />, 3
 				</p>
 				<p className="mt-4">Представьте, что вы Владимир Познер в командировке в Екатеринбурге. Куда вы пойдёте на ужин? Конечно же в «Барборис»! Это тот самый ресторан, где ты развалившись в кресле и держа меню без картинок представляешь себя героем бондианы. Лучшая русская кухня в городе.</p>
-				<p className="font-bold mt-4">
+				{/* <p className="font-bold mt-4">
 					<Location
 						name="Зверобой"
 						onNameChange={setName}
@@ -225,7 +241,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Посадской" original="Посадской" isOriginal={isOriginal} />, 28а
 				</p>
 				<p className="mt-4" id="auk">Русская кухня это конечно хорошо, но в «Зверобое» можно испробовать именно <i>уральской</i> кухни. Ну там медвежатинки, оленины, грибов, зелени и рыбы с неизвестными названиями, всяких  коми-пермяцких, мансийских и хантыйских национальных блюд. Шеф ресторана — один из создателей объединения «<Link variant="yekaterinburg" href="http://auc.rest">Аутентичная Уральская Кухня</Link>», легендарные ребята, которые продвигают любовь к местной кухне. А ещё там лучшие вареники с картофелем, что автор пробовал в жизни (<i>Даша, Ваня, простите</i>).</p>
-				<p className="mt-4">Дисклеймер: ресторан находится в родном для автора спальном Юго-Западном районе. Атмофсеру спальника из интерьера ресторана не выветрили, будьте готовы.</p>
+				<p className="mt-4">Дисклеймер: ресторан находится в родном для автора спальном Юго-Западном районе. Атмофсеру спальника из интерьера ресторана не выветрили, будьте готовы.</p> */}
 				<p className="font-bold mt-4">
 					<Location
 						name="Культа"
@@ -339,7 +355,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Малышева" original="Покровском проспекте" isOriginal={isOriginal} />, 29а
 				</p>
 				<p className="mt-4">Очень атмосферное и популярное заведение. Всё время всякие движухи проходят. ЧГК пизже, чем по Первому.</p>
-				<p className="font-bold mt-4">
+				{/* <p className="font-bold mt-4">
 					<Location
 						name="Секта"
 						onNameChange={setName}
@@ -354,7 +370,7 @@ export default function YePage() {
 						Секта
 					</Location> в Синара Центре на <OriginaledTitle modern="Верх-Исетском бульваре" original="Верх-Исетском бульваре" isOriginal={isOriginal} />, 15/4
 				</p>
-				<p className="mt-4">Шикосный винный бар, где всё написано на богатом. Очень изысканная кухня, очень профессиональный персонал.</p>
+				<p className="mt-4">Шикосный винный бар, где всё написано на богатом. Очень изысканная кухня, очень профессиональный персонал.</p> */}
 				<p className="font-bold mt-4">
 					<Location
 						name="Био Шмио"
@@ -363,7 +379,7 @@ export default function YePage() {
 						onYandexChange={setYandex}
 						doublegis="https://2gis.ru/ekaterinburg/firm/70000001032042722"
 						onDoublegisChange={setDoublegis}
-						website="https://sekta.rest"
+						website="https://bioshmiobar.ru"
 						onWebsiteChange={setWebsite}
 						onOpen={onOpen}
 					>
@@ -424,7 +440,7 @@ export default function YePage() {
 					</Location>
 				</p>
 				<p className="mt-4">Легендарный городской продуктовый, из-за которого тут никак не может закрепиться «Вкусвилл». Обязательно посетите, оливье с говядиной там божественный. И онигири тоже. И блинчики с творогом. Ну вы поняли, да?</p>
-				<p className="font-bold mt-4">
+				{/* <p className="font-bold mt-4">
 					<Location
 						name="Уральская шаньга"
 						onNameChange={setName}
@@ -439,7 +455,7 @@ export default function YePage() {
 						Уральская шаньга
 					</Location> на <OriginaledTitle modern="Воеводина" original="Воеводина" isOriginal={isOriginal} />, 2
 				</p>
-				<p className="mt-4">Сергей Мирошников, ещё один из идеологов «Аутентичной Уральской Кухни», решил открыть не файн дайнинг, а настоящий уральский стритфуд. За основу взял шаньгу — блюдо очень понятное для местных и экзотичное для приезжих. И докрутил открытый пирожок до мишленовского уровня. С собой не берите, кушайте стоя прямо там пока горячая.</p>
+				<p className="mt-4">Сергей Мирошников, ещё один из идеологов «Аутентичной Уральской Кухни», решил открыть не файн дайнинг, а настоящий уральский стритфуд. За основу взял шаньгу — блюдо очень понятное для местных и экзотичное для приезжих. И докрутил открытый пирожок до мишленовского уровня. С собой не берите, кушайте стоя прямо там пока горячая.</p> */}
 				<p className="font-bold mt-4">
 					<Location
 						name="Пицца Мия"
@@ -536,7 +552,7 @@ export default function YePage() {
 					</Location>
 				</p>
 				<p className="mt-4">Он же «Октябрьская площадь». Он же «на Драме». Он же «#сквернаш». Тот самый сквер, который отстояли горожане в противоборстве с крупнейшими промышленниками и областными властями. От этого зелень в парке ещё ценнее нашим сердечкам.</p>
-				<p className="font-bold mt-4">
+				{/* <p className="font-bold mt-4">
 					<Location
 						name="Дендропарк"
 						onNameChange={setName}
@@ -563,7 +579,7 @@ export default function YePage() {
 						Втузгородок
 					</Location>
 				</p>
-				<p className="mt-4">Милый парк в стороне от центра с прудиками, утками и кучей дивных растений. Вокруг Втузгородок — уютный, старый и спокойный район при крупнейшем университете. Гулять там одно удовольствие.</p>
+				<p className="mt-4">Милый парк в стороне от центра с прудиками, утками и кучей дивных растений. Вокруг Втузгородок — уютный, старый и спокойный район при крупнейшем университете. Гулять там одно удовольствие.</p> */}
 				<p className="font-bold mt-4">
 					<Location
 						name="Улица Горького"
@@ -640,7 +656,7 @@ export default function YePage() {
 					</Location>
 				</p>
 				<p className="mt-4">Типичный парк культуры и отдыха. Несколько лет назад его причесала и привела в порядок команда <Link variant="yekaterinburg" href="https://keylman.ru">Кейльман</Link>, с тех пор сильно не плохел. Рядом <i>очень собянинская</i> набережная у Клевер Парка, там тоже стоит погулять.</p>
-				<p className="font-bold mt-4">
+				{/* <p className="font-bold mt-4">
 					<Location
 						name="Озеро Шарташ"
 						onNameChange={setName}
@@ -655,7 +671,7 @@ export default function YePage() {
 						Озеро Шарташ
 					</Location>
 				</p>
-				<p className="mt-4">Крупнейшее озеро в округе городской черты (<i>стон зависти в сторону челябинцев</i>). Хорошая инфраструктура, велосипедные дорожки почти опоясывают водоём, много беседок. Тупо кайф. Также недалеко от южной стороны есть Каменные палатки — небольшие скалы, по которым приятно полазать.</p>
+				<p className="mt-4">Крупнейшее озеро в округе городской черты (<i>стон зависти в сторону челябинцев</i>). Хорошая инфраструктура, велосипедные дорожки почти опоясывают водоём, много беседок. Тупо кайф. Также недалеко от южной стороны есть Каменные палатки — небольшие скалы, по которым приятно полазать.</p> */}
 				<p className="font-bold mt-4">Набережная <Location
 						name="Верх-Исетский пруд"
 						onNameChange={setName}
@@ -663,7 +679,7 @@ export default function YePage() {
 						onYandexChange={setYandex}
 						doublegis="https://2gis.ru/ekaterinburg/geo/1267324615997893"
 						onDoublegisChange={setDoublegis}
-						website="https://ru.wikipedia.org/wiki/Верх-Исетский_пруд"
+						website="https://ru.wikipedia.org/wiki/Верх-Исетское_водохранилище"
 						onWebsiteChange={setWebsite}
 						onOpen={onOpen}
 					>
@@ -671,7 +687,7 @@ export default function YePage() {
 					</Location>
 				</p>
 				<p className="mt-4">Вид на пруд и мартеновские печи одного из крупнейших уральских заводов. Включайте в наушниках «<Link variant="yekaterinburg" href="https://www.youtube.com/watch?v=HrNmLWtlWtY">Екатеринбюргер</Link>» Курары и чувствуйте дух нашего сурового края.</p>
-				<p className="font-bold mt-4">
+				{/* <p className="font-bold mt-4">
 					<Location
 						name="Уктусские горы"
 						onNameChange={setName}
@@ -686,7 +702,7 @@ export default function YePage() {
 						Уктусские горы
 					</Location>
 				</p>
-				<p className="mt-4">Зимой здесь единственное место в городе, где можно покататься на сноубордах. Летом — очень приятный лесной массив в глуши. Для длительных прогулок, если свободен весь день.</p>
+				<p className="mt-4">Зимой здесь единственное место в городе, где можно покататься на сноубордах. Летом — очень приятный лесной массив в глуши. Для длительных прогулок, если свободен весь день.</p> */}
 				<Heading>Что посмотреть?</Heading>
 				<p className="font-bold mt-4">
 					<Location
@@ -779,7 +795,7 @@ export default function YePage() {
 						Белая башня
 					</Location> на <OriginaledTitle modern="Бакинских комиссаров" original="Бакинских комиссаров" isOriginal={isOriginal} />, 2а
 				</p>
-				<p className="mt-4">Самое потрясающее конструктивистское здание города, <i>ин май хамбл опинион</i>. Стоит приехать на Уралмаш не ради духа Уралмаша, а ради него. А лучше запишитесь на <Link variant="yekaterinburg" href="https://tower1929.ru/#rec107922777">экскурсию</Link>.</p>
+				<p className="mt-4">Самое потрясающее конструктивистское здание города, <i>ин май хамбл опинион</i>. Зерно, из которого вырос дух Уралмаша. Ах да, обязательно запишитесь на <Link variant="yekaterinburg" href="https://tower1929.ru/#rec107922777">экскурсию</Link>.</p>
 				<p className="font-bold mt-4">
 					<Location
 						name="Дом связи"
@@ -848,16 +864,16 @@ export default function YePage() {
 					<Location
 						name="Телевизионная башня"
 						onNameChange={setName}
-						yandex="https://ru.wikipedia.org/wiki/Телевизионная_башня"
+						yandex="https://yandex.ru/maps/org/mesto_yekaterinburgskoy_telebashni/137582633584/"
 						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/firm/1267165676505511"
+						doublegis="https://2gis.ru/ekaterinburg"
 						onDoublegisChange={setDoublegis}
-						website="https://ru.wikipedia.org/wiki/Телевизионная_башня"
+						website="https://ru.wikipedia.org/wiki/Екатеринбургская_телебашня"
 						onWebsiteChange={setWebsite}
 						onOpen={onOpen}
 					>
-						Телевизионная башня
-					</Location> на <OriginaledTitle modern="Степана Разина" original="Спасской" isOriginal={isOriginal} />, 17
+						<s>Телевизионная башня</s>
+					</Location> <s>на <OriginaledTitle modern="Степана Разина" original="Спасской" isOriginal={isOriginal} />, 17</s>
 				</p>
 				<p className="mt-4"><s>💔</s></p>
 				{/* 
@@ -953,7 +969,7 @@ export default function YePage() {
 						onYandexChange={setYandex}
 						doublegis="https://2gis.ru/ekaterinburg/firm/1267166676349471"
 						onDoublegisChange={setDoublegis}
-						website="https://uole-museum.ru/museums/hudozhestvennyj-muzej-ernsta-neizвестного/"
+						website="https://uole-museum.ru/museums/hudozhestvennyj-muzej-ernsta-neizvestnogo/"
 						onWebsiteChange={setWebsite}
 						onOpen={onOpen}
 					>
@@ -1030,7 +1046,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Карла Либкнехта" original="Вознесенском проспекте" isOriginal={isOriginal} />, 36
 				</p>
 				<p className="mt-4">Фотографический музей в котором всегда отличные выставки.</p>
-				<p className="font-bold mt-4" id="gcsi">
+				{/* <p className="font-bold mt-4" id="gcsi">
 					<Location
 						name="Центр современного искусства"
 						onNameChange={setName}
@@ -1045,7 +1061,7 @@ export default function YePage() {
 						Центр современного искусства
 					</Location> (ГЦСИ) на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 50
 				</p>
-				<p className="mt-4">Здесь выставляется <i>то самое</i> современное искусство, которое не понимают твои родители. Культовая институция, которая одной из первых начала прокачивать в городе тему уличного искусства и приучать жителей к современному. Честь и хвала ребятам.</p>
+				<p className="mt-4">Здесь выставляется <i>то самое</i> современное искусство, которое не понимают твои родители. Культовая институция, которая одной из первых начала прокачивать в городе тему уличного искусства и приучать жителей к современному. Честь и хвала ребятам.</p> */}
 				<p className="font-bold mt-4">
 					<Location
 						name="Уральский геологический музей"
@@ -1097,7 +1113,7 @@ export default function YePage() {
 						onYandexChange={setYandex}
 						doublegis="https://2gis.ru/ekaterinburg/firm/1267165676594548"
 						onDoublegisChange={setDoublegis}
-						website="https://uralcsd.ru"
+						website="https://uralcsd.com"
 						onWebsiteChange={setWebsite}
 						onOpen={onOpen}
 					>
@@ -1213,7 +1229,8 @@ export default function YePage() {
 				<Heading>На прощание</Heading>
 				<p className="mt-4">Хотите побольше истории? Налейте чаю с жжёным «Свердловским» кексом и прочитайте «<Link variant="yekaterinburg" href="https://www.goodreads.com/book/show/22031637">Ёбург</Link>» Алексея Иванова.</p>
 				<p className="mt-4">А вообще, расслабьтесь относительно ожиданий. Если вам слащаво и уютно, значит что-то идёт не так. Как говорила легендарная <Link variant="yekaterinburg" href="https://t.me/ekbprogulki">Васильева</Link>: «Урал — место не для жизни, а для работы».</p>
-				<p className="mt-4">За помощь в составлении путеводителя и редактуру спасибо Ане, Саше и Маше.</p>
+				<p className="mt-4">За помощь в составлении путеводителя и редактуру спасибо Ане, Саше, Маше и всему завтракашному чату.</p>
+				<p className="mt-4">P.S. <Link variant="yekaterinburg" href="https://ura.news/news/1052201581">Роберт Куитта</Link>, иди нахуй.</p>
 				<Signature variant="yekaterinburg" />
 				<LocationModal
 					isOpen={isOpen}
