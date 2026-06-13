@@ -73,22 +73,6 @@ export default function YePage() {
 				<p className="mt-2">А ещё владелец кофейни однажды захотел создать самые крутые кофейные чашки в мире. На сысертском фарфоровом заводе (Сысерть — пригород Екатеринбурга) ему реально сделали такие. Прикупите себе в подарок, продаются в разных цветах.</p>
 				<p className="font-bold mt-8">
 					<Location
-						name="Симпл Кофи"
-						onNameChange={setName}
-						yandex="https://yandex.ru/maps/org/simple_coffee/60340261928/"
-						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/simple/firm/70000001019645756"
-						onDoublegisChange={setDoublegis}
-						website="https://simplecoffee.ru"
-						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
-					>
-						Симпл Кофи
-					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 46
-				</p>
-				<p className="mt-2">Местная гордость: самая большая городская сетёвка кофеен местная, а не федеральная. Завтраки дешёвые и вкусные. Для завтраков запомните как мантру: 3-й, рисовая, малиновое, да, сметана, фильтр. Несмотря на то, что сетёвка, вполне себе спешалти-кофейня с лофтовым оформлением. Можно заходить в любую (благо они уже не только в центре), но каноничная — на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />. Рядом альма-матер автора этих строк, поэтому внутри дух студенчества.</p>
-				<p className="font-bold mt-8">
-					<Location
 						name="Энгельс"
 						onNameChange={setName}
 						yandex="https://yandex.ru/maps/org/engels/1700874439/"
@@ -105,20 +89,20 @@ export default function YePage() {
 				<p className="mt-2">Первое место, открывшееся с прицелом на завтраки. Правильно произносить не «Энджелс», а «Энгельс», потому что первое кафе бренда находилось на улице <OriginaledTitle modern="Энгельса" original="Малаховской (позже Энгельса)" isOriginal={isOriginal} />. Но его там уже нет, а вот на <OriginaledTitle modern="Малышева" original="Покровском проспекте" isOriginal={isOriginal} /> посидеть — отлично, когда никуда с утра не торопишься. Основа меню — вафли — правда кайфовые.</p>
 				<p className="font-bold mt-8">
 					<Location
-						name="Брэдвэй"
+						name="Симпл Кофи"
 						onNameChange={setName}
-						yandex="https://yandex.ru/maps/org/breadway/114337144368/"
+						yandex="https://yandex.ru/maps/org/simple_coffee/60340261928/"
 						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/firm/70000001040400946"
+						doublegis="https://2gis.ru/ekaterinburg/simple/firm/70000001019645756"
 						onDoublegisChange={setDoublegis}
-						website="https://breadway.rest/"
+						website="https://simplecoffee.ru"
 						onWebsiteChange={setWebsite}
 						onOpen={onOpen}
 					>
-						Брэдвэй
-					</Location> на <OriginaledTitle modern="Ельцина" original="Фетисовской" isOriginal={isOriginal} />, 6
+						Симпл Кофи
+					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 46
 				</p>
-				<p className="mt-2">Сомневался куда относить «Брэдвэй» и «Горожане» — в ужины или завтраки. Отнёс сюда, потому что работают с утра. Еда потрясающая и не только на завтраки, интерьер в стиле «дорого-богато, но без приторности». Нормальный такой ресторан, инстаграмабельно.</p>
+				<p className="mt-2">Местная гордость: самая большая городская сетёвка кофеен местная, а не федеральная. Завтраки дешёвые и вкусные. Для завтраков запомните как мантру: 3-й, рисовая, малиновое, да, сметана, фильтр. Несмотря на то, что сетёвка, вполне себе спешалти-кофейня с лофтовым оформлением. Можно заходить в любую (благо они уже не только в центре), но каноничная — на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />. Рядом альма-матер автора этих строк, поэтому внутри дух студенчества.</p>
 				<p className="font-bold mt-8">
 					<Location
 						name="Горожане"
@@ -136,6 +120,22 @@ export default function YePage() {
 				</p>
 				<p className="mt-2">Тоже ресторан с хорошей кухней, но работает с 8:30, что делает его идеальным местом для завтраков. Если на улице лето, то на десерт заказывайте «Митькину радость» — чувствами улетите в деревню к бабушке, как от <Link variant="yekaterinburg" href="https://ru.wikipedia.org/wiki/Мадлен_(печенье)#«Мадленка»_Пруста">«Мадленки» Пруста</Link>.</p>
 				<p className="mt-2">Внимание: так как место прекрасное, по утрам туда набивается толпа народа и бывает, что столики на завтраки забронированы на пару дней вперёд. Запаривайтесь заранее.</p>
+				<p className="font-bold mt-8">
+					<Location
+						name="Брэдвэй"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/breadway/114337144368/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/firm/70000001040400946"
+						onDoublegisChange={setDoublegis}
+						website="https://breadway.rest/"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Брэдвэй
+					</Location> на <OriginaledTitle modern="Ельцина" original="Фетисовской" isOriginal={isOriginal} />, 6
+				</p>
+				<p className="mt-2">Сомневался куда относить «Брэдвэй» и «Горожане» — в ужины или завтраки. Отнёс сюда, потому что работают с утра. Еда потрясающая и не только на завтраки, интерьер в стиле «дорого-богато, но без приторности». Нормальный такой ресторан, инстаграмабельно.</p>
 				<p className="font-bold mt-8">
 					<Location
 						name="Муру"
@@ -211,6 +211,22 @@ export default function YePage() {
 				<p className="mt-2">Вечный конкурент «Гастролей» за право самого награждённого екатеринбургского ресторана. Прекрасная пан-азиатская кухня. Но самое главное... местные вагаси моти. Обязательно возьмите их на десерт. И с собой ещё захватите порцию.</p>
 				<p className="font-bold mt-8">
 					<Location
+						name="Культа"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/culta_bistronomic/45478165114/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/firm/70000001063120386"
+						onDoublegisChange={setDoublegis}
+						website="https://cultabistronomic.ru"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Культа
+					</Location> на <OriginaledTitle modern="Радищева" original="Отрясихинской" isOriginal={isOriginal} />, 24
+				</p>
+				<p className="mt-2">Средиземноморский ресторан с заявкой на одну звезду Мишлена. Души мало, но выебонисто и претенциозно. Если вы москвич, что не выходит за границы Садового кольца, — вам только сюда.</p>
+				<p className="font-bold mt-8">
+					<Location
 						name="Барборис"
 						onNameChange={setName}
 						yandex="https://yandex.ru/maps/org/barboris/215059089842/"
@@ -242,22 +258,6 @@ export default function YePage() {
 				</p>
 				<p className="mt-2" id="auk">Русская кухня это конечно хорошо, но в «Зверобое» можно испробовать именно <i>уральской</i> кухни. Ну там медвежатинки, оленины, грибов, зелени и рыбы с неизвестными названиями, всяких  коми-пермяцких, мансийских и хантыйских национальных блюд. Шеф ресторана — один из создателей объединения «<Link variant="yekaterinburg" href="http://auc.rest">Аутентичная Уральская Кухня</Link>», легендарные ребята, которые продвигают любовь к местной кухне. А ещё там лучшие вареники с картофелем, что автор пробовал в жизни (<i>Даша, Ваня, простите</i>).</p>
 				<p className="mt-2">Дисклеймер: ресторан находится в родном для автора спальном Юго-Западном районе. Атмофсеру спальника из интерьера ресторана не выветрили, будьте готовы.</p> */}
-				<p className="font-bold mt-8">
-					<Location
-						name="Культа"
-						onNameChange={setName}
-						yandex="https://yandex.ru/maps/org/culta_bistronomic/45478165114/"
-						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/firm/70000001063120386"
-						onDoublegisChange={setDoublegis}
-						website="https://cultabistronomic.ru"
-						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
-					>
-						Культа
-					</Location> на <OriginaledTitle modern="Радищева" original="Отрясихинской" isOriginal={isOriginal} />, 24
-				</p>
-				<p className="mt-2">Средиземноморский ресторан с заявкой на одну звезду Мишлена. Души мало, но выебонисто и претенциозно. Если вы москвич, что не выходит за границы Садового кольца, — вам только сюда.</p>
 				<p className="font-bold mt-8">
 					<Location
 						name="Чаща"
@@ -352,7 +352,7 @@ export default function YePage() {
 						Самоцвет
 					</Location> на <OriginaledTitle modern="Малышева" original="Покровском проспекте" isOriginal={isOriginal} />, 29а
 				</p>
-				<p className="mt-2">Очень атмосферное и популярное заведение. Всё время всякие движухи проходят. ЧГК пизже, чем по Первому.</p>
+				<p className="mt-2">Очень атмосферное и популярное заведение. Всё время всякие движухи проходят. ЧГК пизже, чем по Первому. Когда идёте по святой тропинке «Самоцвет» → «Коллектив» → «Мелодия» по традиции начинать нужно именно с «Самоцвета».</p>
 				{/* <p className="font-bold mt-8">
 					<Location
 						name="Секта"
@@ -456,22 +456,6 @@ export default function YePage() {
 				<p className="mt-2">Сергей Мирошников, ещё один из идеологов «Аутентичной Уральской Кухни», решил открыть не файн дайнинг, а настоящий уральский стритфуд. За основу взял шаньгу — блюдо очень понятное для местных и экзотичное для приезжих. И докрутил открытый пирожок до мишленовского уровня. С собой не берите, кушайте стоя прямо там пока горячая.</p> */}
 				<p className="font-bold mt-8">
 					<Location
-						name="Пицца Мия"
-						onNameChange={setName}
-						yandex="https://yandex.ru/maps/org/pizza_mia/1141398804/"
-						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/firm/1267165676428475"
-						onDoublegisChange={setDoublegis}
-						website="https://pizzamia.ru"
-						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
-					>
-						Пицца Мия
-					</Location> на <OriginaledTitle modern="Карла Либкнехта" original="Вознесенском проспекте" isOriginal={isOriginal} />, 18
-				</p>
-				<p className="mt-2">Пицца Мия (в девичестве «Фридей») открылась, когда в городе ещё не было ни одного Макдоналдса. И что же теперь — Макдоналдса <i>уже</i> нет, а Пицца Мия всё равно на месте. Если хотите вкусить настоящее уральское студенчество, закажите пиццу «Фридей», соус «Уральский» и Балтику тройку.</p>
-				<p className="font-bold mt-8">
-					<Location
 						name="Нигора"
 						onNameChange={setName}
 						yandex="https://yandex.ru/maps/org/nigora/65190196619/"
@@ -486,6 +470,22 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Куйбышева" original="Сибирском проспекте" isOriginal={isOriginal} />, 47
 				</p>
 				<p className="mt-2">Узбечка, про которую наслышаны даже москвичи. Порции размером с голову, жир плавает в жире, меню не менялось с момента открытия (и слава богу). Узбечка же, ну.</p>
+				<p className="font-bold mt-8">
+					<Location
+						name="Пицца Мия"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/pizza_mia/1141398804/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/firm/1267165676428475"
+						onDoublegisChange={setDoublegis}
+						website="https://pizzamia.ru"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Пицца Мия
+					</Location> на <OriginaledTitle modern="Карла Либкнехта" original="Вознесенском проспекте" isOriginal={isOriginal} />, 18
+				</p>
+				<p className="mt-2">Пицца Мия (в девичестве «Фридей») открылась, когда в городе ещё не было ни одного Макдоналдса. И что же теперь — Макдоналдса <i>уже</i> нет, а Пицца Мия всё равно на месте. Если хотите вкусить настоящее уральское студенчество, закажите пиццу «Фридей», соус «Уральский» и Балтику тройку.</p>
 				<p className="font-bold mt-8">Кировские булочки с корицей в <Location
 						name="Кировский"
 						onNameChange={setName}
@@ -518,6 +518,22 @@ export default function YePage() {
 				</p>
 				<p className="mt-2">Квинтэссенция Екатеринбурга, обязательно погуляйте там. Летом стоит прокатиться на катере по пруду (<i>лучше на закате, лучше без планов после, лучше быть пьяным, молодым и влюблённым</i>).</p>
 				<p className="mt-2">У бегунов там есть любимый маршрут под названием «Подкова»: от <OriginaledTitle modern="Макаровского" original="Кривцовского" isOriginal={isOriginal} /> моста (<OriginaledTitle modern="улица Челюскинцев" original="улица Северная" isOriginal={isOriginal} />) со стороны спорткомплекса «Динамо», через ротонды на Плотинке и потом обратно к <OriginaledTitle modern="Макаровскому" original="Кривцовскому" isOriginal={isOriginal} /> мосту, но уже у Ельцин Центра. Собственно по этому маршруту бегают ребята по <Link variant="yekaterinburg" href="https://www.e1.ru/text/gorod/2023/06/16/72404033/">субботам с Ройзманом</Link>.</p>
+				<p className="font-bold mt-8">
+					<Location
+						name="Улица Горького"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/54/yekaterinburg/geo/ulitsa_gorkogo/8013833/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/geo/1267376129574760"
+						onDoublegisChange={setDoublegis}
+						website="https://ru.wikipedia.org/wiki/Улица_Максима_Горького_(Екатеринбург)"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						<OriginaledTitle modern="Улица Горького" original="Тарасовская набережная" isOriginal={isOriginal} />
+					</Location>
+				</p>
+				<p className="mt-2">Ребята из «Русской медной компании» сначала построили здесь свою штаб-квартиру по проекту Нормана Фостера, а потом причесали и всю улицу вокруг. Теперь это любимое место для прогулок многих горожан. Стоит пройтись по ней от <s>Бивиса и Баттхеда</s> Татищева и де Генина до <Link variant="yekaterinburg" href="https://ru.wikipedia.org/wiki/Сплавной_мост">сплавного моста</Link>.</p>
 				<p className="font-bold mt-8">
 					<Location
 						name="Харитоновский сад"
@@ -578,22 +594,6 @@ export default function YePage() {
 					</Location>
 				</p>
 				<p className="mt-2">Милый парк в стороне от центра с прудиками, утками и кучей дивных растений. Вокруг Втузгородок — уютный, старый и спокойный район при крупнейшем университете. Гулять там одно удовольствие.</p> */}
-				<p className="font-bold mt-8">
-					<Location
-						name="Улица Горького"
-						onNameChange={setName}
-						yandex="https://yandex.ru/maps/54/yekaterinburg/geo/ulitsa_gorkogo/8013833/"
-						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/geo/1267376129574760"
-						onDoublegisChange={setDoublegis}
-						website="https://ru.wikipedia.org/wiki/Улица_Максима_Горького_(Екатеринбург)"
-						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
-					>
-						<OriginaledTitle modern="Улица Горького" original="Тарасовская набережная" isOriginal={isOriginal} />
-					</Location>
-				</p>
-				<p className="mt-2">Ребята из «Русской медной компании» сначала построили здесь свою штаб-квартиру по проекту Нормана Фостера, а потом причесали и всю улицу вокруг. Теперь это любимое место для прогулок многих горожан. Стоит пройтись по ней от <s>Бивиса и Баттхеда</s> Татищева и де Генина до <Link variant="yekaterinburg" href="https://ru.wikipedia.org/wiki/Сплавной_мост">сплавного моста</Link>.</p>
 				<p className="font-bold mt-8">
 					<Location
 						name="Парк на Верх-Исетском бульваре"
@@ -780,38 +780,6 @@ export default function YePage() {
 				<p className="mt-2">Когда говорят про екатеринбургский конструктивизм, то первым делом вспоминают про эту группу зданий. Десять Ле Корбюзье из десяти. Уже только ради этого архитектурного ансамбля стоит приехать в город.</p>
 				<p className="font-bold mt-8">
 					<Location
-						name="Белая башня"
-						onNameChange={setName}
-						yandex="https://yandex.ru/maps/org/belaya_bashnya/28375256561/"
-						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/firm/70000001024360704"
-						onDoublegisChange={setDoublegis}
-						website="https://tower1929.ru"
-						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
-					>
-						Белая башня
-					</Location> на <OriginaledTitle modern="Бакинских комиссаров" original="Бакинских комиссаров" isOriginal={isOriginal} />, 2а
-				</p>
-				<p className="mt-2">Самое потрясающее конструктивистское здание города, <i>ин май хамбл опинион</i>. Зерно, из которого вырос дух Уралмаша. Ах да, обязательно запишитесь на <Link variant="yekaterinburg" href="https://tower1929.ru/#rec107922777">экскурсию</Link>.</p>
-				<p className="font-bold mt-8">
-					<Location
-						name="Дом связи"
-						onNameChange={setName}
-						yandex="https://yandex.ru/maps/org/dom_svyazi/213427775425/"
-						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/firm/1267165676489964"
-						onDoublegisChange={setDoublegis}
-						website="https://ru.wikipedia.org/wiki/Дом_связи_(Екатеринбург)"
-						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
-					>
-						Дом связи
-					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 39
-				</p>
-				<p className="mt-2">Он же главпочтамт. Недавно отреставрированное конструктивистское здание, очень характерное для городской застройки 20–30-х годов.</p>
-				<p className="font-bold mt-8">
-					<Location
 						name="Театр оперы и балета"
 						onNameChange={setName}
 						yandex="https://yandex.ru/maps/org/yekaterinburgskiy_gosudarstvenny_akademicheskiy_teatr_opery_i_baleta/1226929807/"
@@ -842,6 +810,38 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Ерёмина" original="Ключевской" isOriginal={isOriginal} />, 12
 				</p>
 				<p className="mt-2">Уже упоминался в рамках прогулки по набережной. Обратите внимание на главное здание — то ли детище конструктивизма 30-х, то ли не существовавшего тогда капрома 90-х. Красота неземная.</p>
+				<p className="font-bold mt-8">
+					<Location
+						name="Белая башня"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/belaya_bashnya/28375256561/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/firm/70000001024360704"
+						onDoublegisChange={setDoublegis}
+						website="https://tower1929.ru"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Белая башня
+					</Location> на <OriginaledTitle modern="Бакинских комиссаров" original="Бакинских комиссаров" isOriginal={isOriginal} />, 2а
+				</p>
+				<p className="mt-2">Самое потрясающее конструктивистское здание города, <i>ин май хамбл опинион</i>. Зерно, из которого вырос дух Уралмаша. Ах да, обязательно запишитесь на <Link variant="yekaterinburg" href="https://tower1929.ru/#rec107922777">экскурсию</Link>.</p>
+				<p className="font-bold mt-8">
+					<Location
+						name="Дом связи"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/dom_svyazi/213427775425/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/firm/1267165676489964"
+						onDoublegisChange={setDoublegis}
+						website="https://ru.wikipedia.org/wiki/Дом_связи_(Екатеринбург)"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Дом связи
+					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 39
+				</p>
+				<p className="mt-2">Он же главпочтамт. Недавно отреставрированное конструктивистское здание, очень характерное для городской застройки 20–30-х годов.</p>
 				<p className="font-bold mt-8">
 					<Location
 						name="Городская администрация"
@@ -897,22 +897,6 @@ export default function YePage() {
 				<p className="mt-2">Самое известное в стране (в основном скандалами) екатеринбургское учреждение. На деле же для екатеринбуржцев это: одна из лучших городских арт-галерей; место где проходит добрая половина всех приличных ивентов; самый изысканный кинотеатр; самый стильный и современный городской музей (конечно он будет выставлять Ельцина в хорошем свете, это же музей персонально про него, просто делите на два) и прочее, прочее, прочее. В общем, это наше место силы. Федералы — руки прочь от него.</p>
 				<p className="font-bold mt-8">
 					<Location
-						name="Музей природы Урала"
-						onNameChange={setName}
-						yandex="https://yandex.ru/maps/org/muzey_prirody_urala/1039847339/"
-						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/firm/1267165676562387"
-						onDoublegisChange={setDoublegis}
-						website="https://uole-museum.ru/museums/muzej-prirody-urala/"
-						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
-					>
-						Музей природы Урала
-					</Location> на <OriginaledTitle modern="Горького" original="Тарасовской набережной" isOriginal={isOriginal} />, 4
-				</p>
-				<p className="mt-2">Казалось бы очередной краеведческий музей, который однако умудряется через устаревшие подходы к музейным нарративам невероятно иммерсивно погрузить в эстетику уральских гор и окружающей природы. Хотите побывать на Конжаковском камне не взбираясь на него — сходите сюда.</p>
-				<p className="font-bold mt-8">
-					<Location
 						name="Музей Невьянской иконы"
 						onNameChange={setName}
 						yandex="https://yandex.ru/maps/org/muzey_nevyanskoy_ikony/54224074602/"
@@ -943,22 +927,6 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Розы Люксембург" original="Златоустовской" isOriginal={isOriginal} />, 18
 				</p>
 				<p className="mt-2">Ещё одна коллекция Ройзмана, которую он передал городским властям. Уютный приятный музей близкого нам с вами искусства.</p>
-				<p className="font-bold mt-8">
-					<Location
-						name="Синара Центр"
-						onNameChange={setName}
-						yandex="https://yandex.ru/maps/org/galereya_sinara_art/42246831959/"
-						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/firm/1267165676182260"
-						onDoublegisChange={setDoublegis}
-						website="https://sinara-center.com"
-						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
-					>
-						Синара Центр
-					</Location> на <OriginaledTitle modern="Верх-Исетском бульваре" original="Верх-Исетском бульваре" isOriginal={isOriginal} />, 15/4
-				</p>
-				<p className="mt-2">Одна из первых в городе галерей современного искусства, которая ранее размещалась в другом здании, а в 2019-м переехала в этот прекрасно отреставрированный бывший госпиталь Верх-Исетского завода. Хорошая коллекция, постоянные разноплановые выставки.</p>
 				<p className="font-bold mt-8">
 					<Location
 						name="Музей Эрнста Неизвестного"
@@ -1007,27 +975,27 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 69/10
 				</p>
 				<p className="mt-2">В целом посредственный краеведческий музей, хоть и крупнейший в городе, если бы не три но.</p>
-				<ol>
+				<ol className="list-decimal list-inside">
 					<li>Там находится <Link variant="yekaterinburg" href="https://ru.wikipedia.org/wiki/Шигирский_идол">Шигирский идол</Link> — самая древняя в мире деревянная скульптура. 12 000 лет деревяшке.</li>
 					<li>Классный последний этаж с экспозицией, рассказывающей про археологические поиски тел семьи Романовых, расстрелянных в Екатеринбурге.</li>
 					<li>Само здание времён конструктивистских построек с невероятной красоты винтовой лестницей. То самое место для вашей новой аватарки.</li>
 				</ol>
 				<p className="font-bold mt-8">
 					<Location
-						name="Музей изобразительных искусств"
+						name="Музей природы Урала"
 						onNameChange={setName}
-						yandex="https://yandex.ru/maps/org/yekaterinburgskiy_muzey_izobrazitelnykh_iskusstv/1088062553/"
+						yandex="https://yandex.ru/maps/org/muzey_prirody_urala/1039847339/"
 						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/firm/1267165676605511"
+						doublegis="https://2gis.ru/ekaterinburg/firm/1267165676562387"
 						onDoublegisChange={setDoublegis}
-						website="https://i-z-o.art/constitutor/muzei-na-plotinke/"
+						website="https://uole-museum.ru/museums/muzej-prirody-urala/"
 						onWebsiteChange={setWebsite}
 						onOpen={onOpen}
 					>
-						Музей изобразительных искусств
-					</Location> на <OriginaledTitle modern="Воеводина" original="Воеводина" isOriginal={isOriginal} />, 5
+						Музей природы Урала
+					</Location> на <OriginaledTitle modern="Горького" original="Тарасовской набережной" isOriginal={isOriginal} />, 4
 				</p>
-				<p className="mt-2">Наш главный художественный музей. На Воеводина только русское искусство.</p>
+				<p className="mt-2">Казалось бы очередной краеведческий музей, который однако умудряется через устаревшие подходы к музейным нарративам невероятно иммерсивно погрузить в эстетику уральских гор и окружающей природы. Хотите побывать на Конжаковском камне не взбираясь на него — сходите сюда.</p>
 				<p className="font-bold mt-8">
 					<Location
 						name="Дом Метенкова"
@@ -1044,6 +1012,38 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Карла Либкнехта" original="Вознесенском проспекте" isOriginal={isOriginal} />, 36
 				</p>
 				<p className="mt-2">Фотографический музей в котором всегда отличные выставки.</p>
+				<p className="font-bold mt-8">
+					<Location
+						name="Синара Центр"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/galereya_sinara_art/42246831959/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/firm/1267165676182260"
+						onDoublegisChange={setDoublegis}
+						website="https://sinara-center.com"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Синара Центр
+					</Location> на <OriginaledTitle modern="Верх-Исетском бульваре" original="Верх-Исетском бульваре" isOriginal={isOriginal} />, 15/4
+				</p>
+				<p className="mt-2">Одна из первых в городе галерей современного искусства, которая ранее размещалась в другом здании, а в 2019-м переехала в этот прекрасно отреставрированный бывший госпиталь Верх-Исетского завода. Хорошая коллекция, постоянные разноплановые выставки.</p>
+				<p className="font-bold mt-8">
+					<Location
+						name="Музей изобразительных искусств"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/yekaterinburgskiy_muzey_izobrazitelnykh_iskusstv/1088062553/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/firm/1267165676605511"
+						onDoublegisChange={setDoublegis}
+						website="https://i-z-o.art/constitutor/muzei-na-plotinke/"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Музей изобразительных искусств
+					</Location> на <OriginaledTitle modern="Воеводина" original="Воеводина" isOriginal={isOriginal} />, 5
+				</p>
+				<p className="mt-2">Наш главный художественный музей. На Воеводина только русское искусство.</p>
 				{/* <p className="font-bold mt-8" id="gcsi">
 					<Location
 						name="Центр современного искусства"
@@ -1228,7 +1228,7 @@ export default function YePage() {
 				<p className="mt-2">Хотите побольше истории? Налейте чаю с жжёным «Свердловским» кексом и прочитайте «<Link variant="yekaterinburg" href="https://www.goodreads.com/book/show/22031637">Ёбург</Link>» Алексея Иванова.</p>
 				<p className="mt-2">А вообще, расслабьтесь относительно ожиданий. Если вам слащаво и уютно, значит что-то идёт не так. Как говорила легендарная <Link variant="yekaterinburg" href="https://t.me/ekbprogulki">Васильева</Link>: «Урал — место не для жизни, а для работы».</p>
 				<p className="mt-2">За помощь в составлении путеводителя и редактуру спасибо Ане, Саше, Маше и всему завтракашному чату.</p>
-				<p className="mt-2">P.S. <Link variant="yekaterinburg" href="https://ura.news/news/1052201581">Роберт Куитта</Link>, иди нахуй.</p>
+				{/* <p className="mt-2">P.S. <Link variant="yekaterinburg" href="https://ura.news/news/1052201581">Роберт Куитта</Link>, иди нахуй.</p> */}
 				<Signature variant="yekaterinburg" />
 				<LocationModal
 					isOpen={isOpen}
