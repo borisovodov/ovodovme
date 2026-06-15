@@ -607,7 +607,7 @@ export default function YePage() {
 						метеогорка
 					</Location>
 				</p>
-				<p className="mt-2">Самая недооценённая горожанами прогулочная улица — <OriginaledTitle modern="Бажова" original="Обсерваторская" isOriginal={isOriginal} />. Тенистые деревья, провинциальная тишина и никакой суеты. Улица начинается из центра города, а заканчивается упираясь в метеогорку — одну из самых высоких точек. С метеогорки открывается отличный вид на центр. За лучшими восходами сюда.</p>
+				<p className="mt-2">Самая недооценённая горожанами прогулочная улица — <OriginaledTitle modern="Бажова" original="Обсерваторская" isOriginal={isOriginal} />. Тенистые деревья, провинциальная тишина и никакой суеты. Улица начинается из центра города, а заканчивается упираясь в метеогорку — одну из самых высоких точек. С метеогорки открывается отличный вид на центр (хотя сама обзорная площадку убита более, чем полностью). Туда за лучшими восходами, но пусть в наушниках играет «<Link variant="yekaterinburg" href="https://www.youtube.com/watch?v=HrNmLWtlWtY">Екатеринбюргер</Link>» Курары.</p>
 				<p className="font-bold mt-8">
 					<Location
 						name="Парк Маяковского"
@@ -624,7 +624,7 @@ export default function YePage() {
 					</Location>
 				</p>
 				<p className="mt-2">Типичный парк культуры и отдыха. Несколько лет назад его причесала и привела в порядок команда <Link variant="yekaterinburg" href="https://keylman.ru">Кейльман</Link>, с тех пор сильно не плохел. Рядом <i>очень собянинская</i> набережная у Клевер Парка, там тоже стоит погулять.</p>
-				<p className="font-bold mt-8">Набережная <Location
+				{/* <p className="font-bold mt-8">Набережная <Location
 						name="Верх-Исетский пруд"
 						onNameChange={setName}
 						yandex="https://yandex.ru/maps/54/yekaterinburg/geo/verkh_isetskoye_vodokhranilishche/171392160/"
@@ -639,7 +639,7 @@ export default function YePage() {
 					</Location>
 				</p>
 				<p className="mt-2">Вид на пруд и мартеновские печи одного из крупнейших уральских заводов. Включайте в наушниках «<Link variant="yekaterinburg" href="https://www.youtube.com/watch?v=HrNmLWtlWtY">Екатеринбюргер</Link>» Курары и чувствуйте дух нашего сурового края.</p>
-				{/* <p className="font-bold mt-8">
+				<p className="font-bold mt-8">
 					<Location
 						name="Дендропарк"
 						onNameChange={setName}
@@ -826,6 +826,22 @@ export default function YePage() {
 				<p className="mt-2">Самое потрясающее конструктивистское здание города, <i>ин май хамбл опинион</i>. Зерно, из которого вырос дух Уралмаша. Ах да, обязательно запишитесь на <Link variant="yekaterinburg" href="https://tower1929.ru/#rec107922777">экскурсию</Link>.</p>
 				<p className="font-bold mt-8">
 					<Location
+						name="Телевизионная башня"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/mesto_yekaterinburgskoy_telebashni/137582633584/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg"
+						onDoublegisChange={setDoublegis}
+						website="https://ru.wikipedia.org/wiki/Екатеринбургская_телебашня"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						<s>Телевизионная башня</s>
+					</Location> <s>на <OriginaledTitle modern="Степана Разина" original="Спасской" isOriginal={isOriginal} />, 17</s>
+				</p>
+				<p className="mt-2"><s>💔</s></p>
+				{/* <p className="font-bold mt-8">
+					<Location
 						name="Дом связи"
 						onNameChange={setName}
 						yandex="https://yandex.ru/maps/org/dom_svyazi/213427775425/"
@@ -855,27 +871,10 @@ export default function YePage() {
 						Городская администрация
 					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 24а
 				</p>
-				<p className="mt-2">Вообще не люблю это здание в его нынешнем сталинско-ампирском обличии. Но помню, что под капотом у него <Link variant="yekaterinburg" href="/190617_original.jpg">вот такая</Link> конструктивистская красота.</p>
-				<p className="font-bold mt-8">
-					<Location
-						name="Телевизионная башня"
-						onNameChange={setName}
-						yandex="https://yandex.ru/maps/org/mesto_yekaterinburgskoy_telebashni/137582633584/"
-						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg"
-						onDoublegisChange={setDoublegis}
-						website="https://ru.wikipedia.org/wiki/Екатеринбургская_телебашня"
-						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
-					>
-						<s>Телевизионная башня</s>
-					</Location> <s>на <OriginaledTitle modern="Степана Разина" original="Спасской" isOriginal={isOriginal} />, 17</s>
-				</p>
-				<p className="mt-2"><s>💔</s></p>
-				{/* 
-			<p><Link variant="yekaterinburg" href="https://ru.wikipedia.org/wiki/Храм_на_Крови_(Екатеринбург)">Храм на Крови ???</Link></p>
-			<p></p>
-			*/}
+				<p className="mt-2">Вообще не люблю это здание в его нынешнем сталинско-ампирском обличии. Но помню, что под капотом у него <Link variant="yekaterinburg" href="/190617_original.jpg">вот такая</Link> конструктивистская красота.</p> 
+				<p><Link variant="yekaterinburg" href="https://ru.wikipedia.org/wiki/Храм_на_Крови_(Екатеринбург)">Храм на Крови ???</Link></p>
+				<p></p>
+				*/}
 				<Heading>Куда сходить?</Heading>
 				<p className="font-bold mt-4">
 					<Location
@@ -1012,6 +1011,22 @@ export default function YePage() {
 				<p className="mt-2">Фотографический музей в котором всегда отличные выставки.</p>
 				<p className="font-bold mt-8">
 					<Location
+						name="Уральский геологический музей"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/uralskiy_geologicheskiy_muzey/173341286675/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/firm/1267165676192815"
+						onDoublegisChange={setDoublegis}
+						website="https://ursmu.ru/geologiceskii-muzei-uggu"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Уральский геологический музей
+					</Location> на <OriginaledTitle modern="Куйбышева" original="Сибирском проспекте" isOriginal={isOriginal} />, 39
+				</p>
+				<p className="mt-2">Никита Корытин, директор музея ИЗО, однажды <Link variant="yekaterinburg" href="https://podcasts.apple.com/ru/podcast/%D0%BC%D0%B5%D1%81%D1%82%D0%BD%D1%8B%D0%B5/id1550641240?i=1000575333935">высказал мнение</Link>, что екатеринбуржцам в поискам самости не надо себя обманывать и притворяться теми, кем мы не являемся. Идентичность Екатеринубрга — это камень, геология и металлургия. И всё, не надо больше ничего выдумывать. Музей при Уральском горном университете — это 4 этажа кристаллизованной идентичности.</p>
+				{/* <p className="font-bold mt-8">
+					<Location
 						name="Синара Центр"
 						onNameChange={setName}
 						yandex="https://yandex.ru/maps/org/galereya_sinara_art/42246831959/"
@@ -1042,23 +1057,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Воеводина" original="Воеводина" isOriginal={isOriginal} />, 5
 				</p>
 				<p className="mt-2">Наш главный художественный музей. На Воеводина только русское искусство.</p>
-				<p className="font-bold mt-8">
-					<Location
-						name="Уральский геологический музей"
-						onNameChange={setName}
-						yandex="https://yandex.ru/maps/org/uralskiy_geologicheskiy_muzey/173341286675/"
-						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/firm/1267165676192815"
-						onDoublegisChange={setDoublegis}
-						website="https://ursmu.ru/geologiceskii-muzei-uggu"
-						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
-					>
-						Уральский геологический музей
-					</Location> на <OriginaledTitle modern="Куйбышева" original="Сибирском проспекте" isOriginal={isOriginal} />, 39
-				</p>
-				<p className="mt-2">Никита Корытин, директор музея ИЗО, однажды <Link variant="yekaterinburg" href="https://podcasts.apple.com/ru/podcast/%D0%BC%D0%B5%D1%81%D1%82%D0%BD%D1%8B%D0%B5/id1550641240?i=1000575333935">высказал мнение</Link>, что екатеринбуржцам в поискам самости не надо себя обманывать и притворяться теми, кем мы не являемся. Идентичность Екатеринубрга — это камень, геология и металлургия. И всё, не надо больше ничего выдумывать. Музей при Уральском горном университете — это 4 этажа кристаллизованной идентичности.</p>
-				{/* <p className="font-bold mt-8" id="gcsi">
+				<p className="font-bold mt-8" id="gcsi">
 					<Location
 						name="Центр современного искусства"
 						onNameChange={setName}
