@@ -1167,6 +1167,22 @@ export default function YePage() {
 				<p className="mt-2">Очень андеграундные ребята. Находятся в пикулях и чтобы понять где на этой промзоне театр, у них на сайте есть большая инструкция. Но этот поиск стоит того, постановки прекрасные.</p>
 				<p className="font-bold mt-8">
 					<Location
+						name="Театр «Провинциальные танцы»"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/provintsialnyye_tantsy/172611675038/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/firm/1267165676396414"
+						onDoublegisChange={setDoublegis}
+						website="https://provincialdances.ru"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Театр «Провинциальные танцы»
+					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 43
+				</p>
+				<p className="mt-2">В здании самого старого кинотеатра города — «Колизее» — располагается один из лучших в России театров современной хореографии. Ребята могут до слёз доводить своими постановками. Без шуток, вы вот были когда-нибудь на балете, который вас растрогал?</p>
+				<p className="font-bold mt-8">
+					<Location
 						name="Эвер Джаз"
 						onNameChange={setName}
 						yandex="https://yandex.ru/maps/org/everjazz/1093531764/"
@@ -1250,7 +1266,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 50
 				</p>
 				<p className="mt-2">Наши независимые книжные. Есть всё, что нужно.</p>
-				<p className="font-bold mt-4">
+				<p className="font-bold mt-8">
 					<Location
 						name="Двоеточие"
 						onNameChange={setName}
@@ -1284,20 +1300,20 @@ export default function YePage() {
 				<p className="mt-2">Лучший в городе цветочный магазин. То самое место, чтобы порадовать дорогих сердцу людей.</p>
 				<p className="font-bold mt-8">
 					<Location
-						name="Золотое яблоко"
+						name="Большой"
 						onNameChange={setName}
-						yandex="https://yandex.ru/maps/org/zolotoye_yabloko/1062258892/"
+						yandex="https://yandex.ru/maps/org/bolshoy/54838458077/"
 						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/firm/70000001024788230"
+						doublegis="https://2gis.ru/ekaterinburg/firm/70000001027467036"
 						onDoublegisChange={setDoublegis}
-						website="https://goldapple.ru"
+						website="https://bolshoy.me"
 						onWebsiteChange={setWebsite}
 						onOpen={onOpen}
 					>
-						Золотое яблоко
+						Большой
 					</Location> на <OriginaledTitle modern="Малышева" original="Покровском проспекте" isOriginal={isOriginal} />, 71
 				</p>
-				<p className="mt-2">Самый крутой в стране магазин парфюмерии и косметики вообще-то родом из Екатеринбурга. Загляните в штаб.</p>
+				<p className="mt-2">Универмаг с кучей локальных брендов одежды. На первом этаже «Золотое яблоко» — тот самый магазин парфюмерии и косметики, что родом из Еката.</p>
 				<Heading>На прощание</Heading>
 				<p className="mt-2">Хотите побольше истории? Налейте чаю с жжёным «Свердловским» кексом и прочитайте «<Link variant="yekaterinburg" href="https://www.goodreads.com/book/show/22031637">Ёбург</Link>» Алексея Иванова.</p>
 				<p className="mt-2">А вообще, расслабьтесь относительно ожиданий. Если вам слащаво и уютно, значит что-то идёт не так. Как говорила легендарная <Link variant="yekaterinburg" href="https://t.me/ekbprogulki">Васильева</Link>: «Урал — место не для жизни, а для работы».</p>
