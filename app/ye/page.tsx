@@ -471,6 +471,23 @@ export default function YePage() {
 				<p className="mt-2">Узбечка, про которую наслышаны даже москвичи. Порции размером с голову, жир плавает в жире, меню не менялось с момента открытия (и слава богу). Узбечка же, ну.</p>
 				<p className="font-bold mt-8">
 					<Location
+						name="ПШК"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/pyshechnaya_p_shk_/238369099827/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/firm/70000001074758846"
+						onDoublegisChange={setDoublegis}
+						website="https://www.п-шк.рф"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						ПШК
+					</Location> на <OriginaledTitle modern="Толмачёва" original="Ко́лобовской" isOriginal={isOriginal} />, 16
+				</p>
+				<p className="mt-2">Изумительные пышки от которых будет измазюкано всё лицо. Кофе лучше у них не брать, берите в «Скворечнике» напротив. И вперёд гулять вдоль набережной.</p>
+				<p className="mt-2">Хочется отдельно проговорить огромное спасибо Буркову за всё, что он сделал для ресторанной сферы Еката. Редакция снимает шляпу.</p>
+				<p className="font-bold mt-8">
+					<Location
 						name="Пицца Мия"
 						onNameChange={setName}
 						yandex="https://yandex.ru/maps/org/pizza_mia/1141398804/"
@@ -956,7 +973,7 @@ export default function YePage() {
 						Музей Эрнста Неизвестного
 					</Location> на <OriginaledTitle modern="Добролюбова" original="Госпитальной" isOriginal={isOriginal} />, 14
 				</p>
-				<p className="mt-2">Всем ценителям брутализма посвящается.</p>
+				<p className="mt-2">Кстати, Неизвестный тоже родом из Екатеринбурга. Всем ценителям брутализма посвящается.</p>
 				<p className="font-bold mt-8">
 					<Location
 						name="Музей Андеграунда"
@@ -1028,6 +1045,22 @@ export default function YePage() {
 				<p className="mt-2">Фотографический музей в котором всегда отличные выставки.</p>
 				<p className="font-bold mt-8">
 					<Location
+						name="Минералогический музей «Планета»"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/planeta/156693074461/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/firm/70000001047681231"
+						onDoublegisChange={setDoublegis}
+						website="https://museum-planeta.ru"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Минералогический музей «Планета»
+					</Location> на <OriginaledTitle modern="Чернышевского" original="Дубровинская" isOriginal={isOriginal} />, 7
+				</p>
+				<p className="mt-2">Никита Корытин, директор музея ИЗО, однажды <Link variant="yekaterinburg" href="https://podcasts.apple.com/ru/podcast/%D0%BC%D0%B5%D1%81%D1%82%D0%BD%D1%8B%D0%B5/id1550641240?i=1000575333935">высказал мнение</Link>, что екатеринбуржцам в поискам самости не надо себя обманывать и притворяться теми, кем мы не являемся. Идентичность Екатеринубрга — это камень, геология и металлургия. И всё, не надо больше ничего выдумывать. Этот частный музей камня полон такой идентичности.</p>
+				{/* <p className="font-bold mt-8">
+					<Location
 						name="Уральский геологический музей"
 						onNameChange={setName}
 						yandex="https://yandex.ru/maps/org/uralskiy_geologicheskiy_muzey/173341286675/"
@@ -1042,7 +1075,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Куйбышева" original="Сибирском проспекте" isOriginal={isOriginal} />, 39
 				</p>
 				<p className="mt-2">Никита Корытин, директор музея ИЗО, однажды <Link variant="yekaterinburg" href="https://podcasts.apple.com/ru/podcast/%D0%BC%D0%B5%D1%81%D1%82%D0%BD%D1%8B%D0%B5/id1550641240?i=1000575333935">высказал мнение</Link>, что екатеринбуржцам в поискам самости не надо себя обманывать и притворяться теми, кем мы не являемся. Идентичность Екатеринубрга — это камень, геология и металлургия. И всё, не надо больше ничего выдумывать. Музей при Уральском горном университете — это 4 этажа кристаллизованной идентичности.</p>
-				{/* <p className="font-bold mt-8">
+				<p className="font-bold mt-8">
 					<Location
 						name="Синара Центр"
 						onNameChange={setName}
@@ -1191,20 +1224,48 @@ export default function YePage() {
 				<p className="mt-2">За сувенирами с Урала сюда. Куча приятных памятных штучек, особенно ценно варенье из кедровых шишек.</p>
 				<p className="font-bold mt-8">
 					<Location
-						name="Золотое яблоко"
+						name="Пиотровский"
 						onNameChange={setName}
-						yandex="https://yandex.ru/maps/org/zolotoye_yabloko/1062258892/"
+						yandex="https://yandex.ru/maps/org/piotrovskiy/25039843189/"
 						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/firm/70000001024788230"
+						doublegis="https://2gis.ru/ekaterinburg/firm/70000001021294170"
 						onDoublegisChange={setDoublegis}
-						website="https://goldapple.ru"
+						website="https://piotrovsky.store"
 						onWebsiteChange={setWebsite}
 						onOpen={onOpen}
 					>
-						Золотое яблоко
-					</Location> на <OriginaledTitle modern="Малышева" original="Покровском проспекте" isOriginal={isOriginal} />, 71
+						Пиотровский
+					</Location> в Ельцин Центре на <OriginaledTitle modern="Ельцина" original="Фетисовской" isOriginal={isOriginal} />, 3 и <Location
+						name="Буквально"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/bukvalno/155237691624/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/firm/70000001082832514/"
+						onDoublegisChange={setDoublegis}
+						website="https://taplink.cc/bookvalno.bookshop"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Буквально
+					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 50
 				</p>
-				<p className="mt-2">Самый крутой в стране магазин парфюмерии и косметики вообще-то родом из Екатеринбурга. Загляните в штаб.</p>
+				<p className="mt-2">Наши независимые книжные. Есть всё, что нужно.</p>
+				<p className="font-bold mt-4">
+					<Location
+						name="Двоеточие"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/dvoyetochiye/156606966171/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/firm/70000001090741907"
+						onDoublegisChange={setDoublegis}
+						website="https://t.me/dvoeshop"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Двоеточие
+					</Location> на <OriginaledTitle modern="Пушкина" original="Пушкинская" isOriginal={isOriginal} />, 14
+				</p>
+				<p className="mt-2">Крутейший магазин кофе и чая. Из последнего много «Нитки», а за кофе в основном отвечает местный обжарщик «Фолк».</p>
 				<p className="font-bold mt-8">
 					<Location
 						name="Инжир"
@@ -1223,20 +1284,20 @@ export default function YePage() {
 				<p className="mt-2">Лучший в городе цветочный магазин. То самое место, чтобы порадовать дорогих сердцу людей.</p>
 				<p className="font-bold mt-8">
 					<Location
-						name="Пиотровский"
+						name="Золотое яблоко"
 						onNameChange={setName}
-						yandex="https://yandex.ru/maps/org/piotrovskiy/25039843189/"
+						yandex="https://yandex.ru/maps/org/zolotoye_yabloko/1062258892/"
 						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/firm/70000001021294170"
+						doublegis="https://2gis.ru/ekaterinburg/firm/70000001024788230"
 						onDoublegisChange={setDoublegis}
-						website="https://piotrovsky.store"
+						website="https://goldapple.ru"
 						onWebsiteChange={setWebsite}
 						onOpen={onOpen}
 					>
-						Пиотровский
-					</Location> в Ельцин Центре на <OriginaledTitle modern="Ельцина" original="Фетисовской" isOriginal={isOriginal} />, 3
+						Золотое яблоко
+					</Location> на <OriginaledTitle modern="Малышева" original="Покровском проспекте" isOriginal={isOriginal} />, 71
 				</p>
-				<p className="mt-2">Наш крутейший книжный. Как «Фаланстер» и «Подписные издания», только «Пиотровский».</p>
+				<p className="mt-2">Самый крутой в стране магазин парфюмерии и косметики вообще-то родом из Екатеринбурга. Загляните в штаб.</p>
 				<Heading>На прощание</Heading>
 				<p className="mt-2">Хотите побольше истории? Налейте чаю с жжёным «Свердловским» кексом и прочитайте «<Link variant="yekaterinburg" href="https://www.goodreads.com/book/show/22031637">Ёбург</Link>» Алексея Иванова.</p>
 				<p className="mt-2">А вообще, расслабьтесь относительно ожиданий. Если вам слащаво и уютно, значит что-то идёт не так. Как говорила легендарная <Link variant="yekaterinburg" href="https://t.me/ekbprogulki">Васильева</Link>: «Урал — место не для жизни, а для работы».</p>
