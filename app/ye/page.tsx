@@ -86,7 +86,7 @@ export default function YePage() {
 						Энгельс
 					</Location> на <OriginaledTitle modern="Малышева" original="Покровском проспекте" isOriginal={isOriginal} />, 21/4
 				</p>
-				<p className="mt-2">Первое место, открывшееся с прицелом на завтраки. Правильно произносить не «Энджелс», а «Энгельс», потому что первое кафе бренда находилось на улице <OriginaledTitle modern="Энгельса" original="Малаховской (позже Энгельса)" isOriginal={isOriginal} />. Но его там уже нет, а вот на <OriginaledTitle modern="Малышева" original="Покровском проспекте" isOriginal={isOriginal} /> посидеть — отлично, когда никуда с утра не торопишься. Основа меню — вафли — правда кайфовые.</p>
+				<p className="mt-2">Первое место, открывшееся с прицелом на завтраки. Правильно произносить не «Энджелс», а «Энгельс», потому что первое кафе бренда находилось на улице <OriginaledTitle modern="Энгельса" original="Малаховской (позже Энгельса)" isOriginal={isOriginal} />. Но его там уже нет, зато есть куча точек в центре. Самая тихая из них на <OriginaledTitle modern="Малышева" original="Покровском проспекте" isOriginal={isOriginal} />. Основа меню — вафли — правда кайфовые.</p>
 				<p className="font-bold mt-8">
 					<Location
 						name="Симпл Кофи"
@@ -105,39 +105,6 @@ export default function YePage() {
 				<p className="mt-2">Местная гордость: самая большая городская сетёвка кофеен местная, а не федеральная. Завтраки дешёвые и вкусные. Для завтраков запомните как мантру: 3-й, рисовая, малиновое, да, сметана, фильтр. Несмотря на то, что сетёвка, вполне себе спешалти-кофейня с лофтовым оформлением. Можно заходить в любую (благо они уже не только в центре), но каноничная — на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />. Рядом альма-матер автора этих строк, поэтому внутри дух студенчества.</p>
 				<p className="font-bold mt-8">
 					<Location
-						name="Горожане"
-						onNameChange={setName}
-						yandex="https://yandex.ru/maps/org/gorozhane/8195413293/"
-						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/firm/70000001038526762"
-						onDoublegisChange={setDoublegis}
-						website="https://gorozhane.me"
-						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
-					>
-						Горожане
-					</Location> на <OriginaledTitle modern="Добролюбова" original="Госпитальной" isOriginal={isOriginal} />, 6
-				</p>
-				<p className="mt-2">Тоже ресторан с хорошей кухней, но работает с 8:30, что делает его идеальным местом для завтраков. Если на улице лето, то на десерт заказывайте «Митькину радость» — чувствами улетите в деревню к бабушке, как от <Link variant="yekaterinburg" href="https://ru.wikipedia.org/wiki/Мадлен_(печенье)#«Мадленка»_Пруста">«Мадленки» Пруста</Link>.</p>
-				<p className="mt-2">Внимание: так как место прекрасное, по утрам туда набивается толпа народа и бывает, что столики на завтраки забронированы на пару дней вперёд. Запаривайтесь заранее.</p>
-				<p className="font-bold mt-8">
-					<Location
-						name="Брэдвэй"
-						onNameChange={setName}
-						yandex="https://yandex.ru/maps/org/breadway/114337144368/"
-						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/firm/70000001040400946"
-						onDoublegisChange={setDoublegis}
-						website="https://breadway.rest/"
-						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
-					>
-						Брэдвэй
-					</Location> на <OriginaledTitle modern="Ельцина" original="Фетисовской" isOriginal={isOriginal} />, 6
-				</p>
-				<p className="mt-2">Сомневался куда относить «Брэдвэй» и «Горожане» — в ужины или завтраки. Отнёс сюда, потому что работают с утра. Еда потрясающая и не только на завтраки, интерьер в стиле «дорого-богато, но без приторности». Нормальный такой ресторан, инстаграмабельно.</p>
-				<p className="font-bold mt-8">
-					<Location
 						name="Муру"
 						onNameChange={setName}
 						yandex="https://yandex.ru/maps/org/muru/205036364220/"
@@ -152,14 +119,30 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Розы Люксембург" original="Златоустовской" isOriginal={isOriginal} />, 27
 				</p>
 				<p className="mt-2">Прекрасные десерты, знаменитые на весь город. Многие закупают у них на перепродажу. Но мест очень мало, редко так везёт, что удастся в выходные посидеть. Можете попытать счастья и приехать пораньше.</p>
+				<p className="font-bold mt-8">
+					<Location
+						name="Фрэнчи"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/frenchi/180362521989/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/firm/70000001083562549"
+						onDoublegisChange={setDoublegis}
+						website="https://frenchiecafe.ru"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Фрэнчи
+					</Location> на <OriginaledTitle modern="Попова" original="Сима́новской" isOriginal={isOriginal} />, 18
+				</p>
+				<p className="mt-2">Кафе для поздних завтраков, где в меню всё написано на богатом.</p>
 				{/* 
-			<p className="font-bold mt-4"><Link variant="yekaterinburg" href="https://www.instagram.com/papacarlocoffee/">Папа Карло</Link> на <OriginaledTitle modern="Малышева" original="Покровском проспекте" isOriginal={isOriginal} />, 47а</p>
-			<p>Любимая спешалти-кофейня многих местных. В наличии офигенная сезонная кухня, которая скорее ресторанам соответствует, а не кофейне.</p>
-			<p className="font-bold mt-4"><Link variant="yekaterinburg" href="https://breakfastunit.one">Брэкфэст Юнит</Link> на <span className="modern">Банковском</span><span className="auth">Торговой</span>, 8</p>
-			<p>Ещё одно крохотное место для завтраков. Внутри всё классно, находится в самом центре, но сложно найти посадочные места.</p>
-			<p className="font-bold mt-4"><Link variant="yekaterinburg" href="https://1991.rest/">1991</Link> в Ельцин Центре на <span className="modern">Ельцина</span><span className="auth">Фетисовской</span>, 3</p>
-			<p>Самая недооценённая екатеринбуржцами кафешка. Про неё всегда забывают, но когда в других центровых местах полная посадка — там тебя ждут с распростёртыми объятиями. Заведение делает та же команда, что и «Барборис», поэтому кухня на высоком уровне.</p>
-			*/}
+				<p className="font-bold mt-4"><Link variant="yekaterinburg" href="https://www.instagram.com/papacarlocoffee/">Папа Карло</Link> на <OriginaledTitle modern="Малышева" original="Покровском проспекте" isOriginal={isOriginal} />, 47а</p>
+				<p>Любимая спешалти-кофейня многих местных. В наличии офигенная сезонная кухня, которая скорее ресторанам соответствует, а не кофейне.</p>
+				<p className="font-bold mt-4"><Link variant="yekaterinburg" href="https://breakfastunit.one">Брэкфэст Юнит</Link> на <span className="modern">Банковском</span><span className="auth">Торговой</span>, 8</p>
+				<p>Ещё одно крохотное место для завтраков. Внутри всё классно, находится в самом центре, но сложно найти посадочные места.</p>
+				<p className="font-bold mt-4"><Link variant="yekaterinburg" href="https://1991.rest/">1991</Link> в Ельцин Центре на <span className="modern">Ельцина</span><span className="auth">Фетисовской</span>, 3</p>
+				<p>Самая недооценённая екатеринбуржцами кафешка. Про неё всегда забывают, но когда в других центровых местах полная посадка — там тебя ждут с распростёртыми объятиями. Заведение делает та же команда, что и «Барборис», поэтому кухня на высоком уровне.</p>
+				*/}
 				<Heading>Где <i>файн дайнинг</i>? В каких ресторанах поужинать?</Heading>
 				<p className="font-bold mt-4">
 					<Location
@@ -241,6 +224,38 @@ export default function YePage() {
 					</Location> в Ельцин Центре на <OriginaledTitle modern="Ельцина" original="Фетисовской" isOriginal={isOriginal} />, 3
 				</p>
 				<p className="mt-2">Представьте, что вы Владимир Познер в командировке в Екатеринбурге. Куда вы пойдёте на ужин? Конечно же в «Барборис»! Это тот самый ресторан, где ты развалившись в кресле и держа меню без картинок представляешь себя героем бондианы. Лучшая русская кухня в городе.</p>
+				<p className="font-bold mt-8">
+					<Location
+						name="Горожане"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/gorozhane/8195413293/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/firm/70000001038526762"
+						onDoublegisChange={setDoublegis}
+						website="https://gorozhane.me"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Горожане
+					</Location> на <OriginaledTitle modern="Добролюбова" original="Госпитальной" isOriginal={isOriginal} />, 6
+				</p>
+				<p className="mt-2">Хорошая кухня и потрясающий маркетинг, из-за чего места надо бронить на обязаловке. Если на улице лето, то на десерт заказывайте «Митькину радость» — чувствами улетите в деревню к бабушке, как от <Link variant="yekaterinburg" href="https://ru.wikipedia.org/wiki/Мадлен_(печенье)#«Мадленка»_Пруста">«Мадленки» Пруста</Link>.</p>
+				<p className="font-bold mt-8">
+					<Location
+						name="Брэдвэй"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/breadway/114337144368/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/firm/70000001040400946"
+						onDoublegisChange={setDoublegis}
+						website="https://breadway.rest/"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Брэдвэй
+					</Location> на <OriginaledTitle modern="Ельцина" original="Фетисовской" isOriginal={isOriginal} />, 6
+				</p>
+				<p className="mt-2">Еда отличная, выпечка вообще топ, интерьер в стиле «дорого-богато, но без приторности». Нормальный такой ресторан, инстаграмабельно.</p>
 				<p className="font-bold mt-8">
 					<Location
 						name="Чаща"
@@ -1223,7 +1238,7 @@ export default function YePage() {
 				<Heading>На прощание</Heading>
 				<p className="mt-2">Хотите побольше истории? Налейте чаю с жжёным «Свердловским» кексом и прочитайте «<Link variant="yekaterinburg" href="https://www.goodreads.com/book/show/22031637">Ёбург</Link>» Алексея Иванова.</p>
 				<p className="mt-2">А вообще, расслабьтесь относительно ожиданий. Если вам слащаво и уютно, значит что-то идёт не так. Как говорила легендарная <Link variant="yekaterinburg" href="https://t.me/ekbprogulki">Васильева</Link>: «Урал — место не для жизни, а для работы».</p>
-				<p className="mt-2">За помощь в составлении путеводителя и редактуру спасибо Ане, Саше, Маше и всему завтракашному чату.</p>
+				<p className="mt-2">За помощь в составлении путеводителя и редактуру спасибо Ане, Саше, Маше. За движ спасибо всему завтракашному чату.</p>
 				{/* <p className="mt-2">P.S. <Link variant="yekaterinburg" href="https://ura.news/news/1052201581">Роберт Куитта</Link>, иди нахуй.</p> */}
 				<Signature variant="yekaterinburg" />
 				<LocationModal
