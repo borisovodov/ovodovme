@@ -24,7 +24,7 @@ export default function YePage() {
 	return (
 		<>
 			<div className="flex flex-col lg:flex-row">
-				<div className="flex-[2] pb-4">
+				<div className="flex-[2]">
 					<div className="max-w-3xl">
 						<PageHeader
 							title="Субъективный путеводитель по Екатеринбургу"
@@ -47,7 +47,7 @@ export default function YePage() {
 				<Heading>От <Link variant="yekaterinburg" className="text-2xl font-bold" href="/">автора</Link></Heading>
 				<p className="mt-2">Живу в Екатеринбурге всю свою жизнь и люблю его. Хочется поделиться своим взглядом на город для ребят, которые оказались тут проездом.</p>
 				<p className="mt-2">Путеводитель очень субъективный и не ставит своей целью охватить все классные точки на карте. Он только про точку зрения автора. Путеводитель не для жителей. У каждого из нас свой Екатеринбург и вы лучше меня знаете <i>те самые</i> ваши места.</p>
-				<p className="mt-2">А теперь просто выбирайте понравившиеся вам места, вбивайте адрес в карты на телефоне и идите туда пешком. Город у нас маленький, тем более центр.</p>
+				<p className="mt-2">А теперь просто выбирайте понравившиеся вам места и идите туда пешком. Город у нас маленький, тем более центр.</p>
 				{/*
 				<h2>Как устроен город? Где жить? Какая карта?</h2>
 				<p>Свою сделать</p>
@@ -241,23 +241,6 @@ export default function YePage() {
 					</Location> в Ельцин Центре на <OriginaledTitle modern="Ельцина" original="Фетисовской" isOriginal={isOriginal} />, 3
 				</p>
 				<p className="mt-2">Представьте, что вы Владимир Познер в командировке в Екатеринбурге. Куда вы пойдёте на ужин? Конечно же в «Барборис»! Это тот самый ресторан, где ты развалившись в кресле и держа меню без картинок представляешь себя героем бондианы. Лучшая русская кухня в городе.</p>
-				{/* <p className="font-bold mt-4">
-					<Location
-						name="Зверобой"
-						onNameChange={setName}
-						yandex="https://yandex.ru/maps/org/zveroboy/208366690383/"
-						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/firm/70000001044921655"
-						onDoublegisChange={setDoublegis}
-						website="https://zveroboyrest.ru"
-						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
-					>
-						Зверобой
-					</Location> на <OriginaledTitle modern="Посадской" original="Посадской" isOriginal={isOriginal} />, 28а
-				</p>
-				<p className="mt-2" id="auk">Русская кухня это конечно хорошо, но в «Зверобое» можно испробовать именно <i>уральской</i> кухни. Ну там медвежатинки, оленины, грибов, зелени и рыбы с неизвестными названиями, всяких  коми-пермяцких, мансийских и хантыйских национальных блюд. Шеф ресторана — один из создателей объединения «<Link variant="yekaterinburg" href="http://auc.rest">Аутентичная Уральская Кухня</Link>», легендарные ребята, которые продвигают любовь к местной кухне. А ещё там лучшие вареники с картофелем, что автор пробовал в жизни (<i>Даша, Ваня, простите</i>).</p>
-				<p className="mt-2">Дисклеймер: ресторан находится в родном для автора спальном Юго-Западном районе. Атмофсеру спальника из интерьера ресторана не выветрили, будьте готовы.</p> */}
 				<p className="font-bold mt-8">
 					<Location
 						name="Чаща"
@@ -290,20 +273,36 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Боевых Дружин" original="Щипановском переулке" isOriginal={isOriginal} />, 20
 				</p>
 				<p className="mt-2">Единственный приличный гастромолл. Там нет посредственных заведений, сплошной восторг. Недельную командировку можно там провести не вылазя и пробуя всё время что-то новое. Всех резидентов перечислять не буду, выбирайте сердцем.</p>
-				{/*
-			<p className="font-bold mt-4"><Link variant="yekaterinburg" href="https://креветкибургеры.рф">Креветки и Бургеры</Link> на <span className="modern">Хохрякова</span><span className="auth">Тихвинской</span>, 25</p>
-			<p>Лучшие бургеры в городе по мнению автора.</p>
-			<p className="font-bold mt-4"><Link variant="yekaterinburg" href="https://vk.com/pushkina4neobistro">Пушкина 4</Link> на <i><span className="modern">Пушкина</span><span className="auth">Пушкинской</span>, 4</i></p>
-			<p>Раньше заведение называлось «Хачапури для Пушкина» и там прямо в зале было место шефа для приготовления выпечки. Учитывая, что заведение крохотное, мука от твоего будущего хачапури летела прямо тебе на волосы. А жар нагревал вино в бокале. Сейчас ребята сделали ребрендинг, подают добротную европейскую кухню и всё так же хорошее вино, но в зале уже не готовят. Всё равно люблю это место. Столиков мало, броньте заранее.</p>
-			<h3><Link variant="yekaterinburg" href="https://hmeli.ru">Хмели-Сунели</Link> на Ленина, 69/10</p>
-			<p></p>
-			<h3>Крабы, гады и вино</p>
-			<p></p>
-			<h3>Сойка</p>
-			<p></p>
-			<h3>Троекуров ???</p>
-			<p></p>
-			*/}
+				{/* <p className="font-bold mt-4">
+					<Location
+						name="Зверобой"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/zveroboy/208366690383/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/firm/70000001044921655"
+						onDoublegisChange={setDoublegis}
+						website="https://zveroboyrest.ru"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Зверобой
+					</Location> на <OriginaledTitle modern="Посадской" original="Посадской" isOriginal={isOriginal} />, 28а
+				</p>
+				<p className="mt-2" id="auk">Русская кухня это конечно хорошо, но в «Зверобое» можно испробовать именно <i>уральской</i> кухни. Ну там медвежатинки, оленины, грибов, зелени и рыбы с неизвестными названиями, всяких  коми-пермяцких, мансийских и хантыйских национальных блюд. Шеф ресторана — один из создателей объединения «<Link variant="yekaterinburg" href="http://auc.rest">Аутентичная Уральская Кухня</Link>», легендарные ребята, которые продвигают любовь к местной кухне. А ещё там лучшие вареники с картофелем, что автор пробовал в жизни (<i>Даша, Ваня, простите</i>).</p>
+				<p className="mt-2">Дисклеймер: ресторан находится в родном для автора спальном Юго-Западном районе. Атмофсеру спальника из интерьера ресторана не выветрили, будьте готовы.</p>
+				<p className="font-bold mt-4"><Link variant="yekaterinburg" href="https://креветкибургеры.рф">Креветки и Бургеры</Link> на <span className="modern">Хохрякова</span><span className="auth">Тихвинской</span>, 25</p>
+				<p>Лучшие бургеры в городе по мнению автора.</p>
+				<p className="font-bold mt-4"><Link variant="yekaterinburg" href="https://vk.com/pushkina4neobistro">Пушкина 4</Link> на <i><span className="modern">Пушкина</span><span className="auth">Пушкинской</span>, 4</i></p>
+				<p>Раньше заведение называлось «Хачапури для Пушкина» и там прямо в зале было место шефа для приготовления выпечки. Учитывая, что заведение крохотное, мука от твоего будущего хачапури летела прямо тебе на волосы. А жар нагревал вино в бокале. Сейчас ребята сделали ребрендинг, подают добротную европейскую кухню и всё так же хорошее вино, но в зале уже не готовят. Всё равно люблю это место. Столиков мало, броньте заранее.</p>
+				<h3><Link variant="yekaterinburg" href="https://hmeli.ru">Хмели-Сунели</Link> на Ленина, 69/10</p>
+				<p></p>
+				<h3>Крабы, гады и вино</p>
+				<p></p>
+				<h3>Сойка</p>
+				<p></p>
+				<h3>Троекуров ???</p>
+				<p></p>
+				*/}
 				<Heading>Где выпить? Какие барчики культовые?</Heading>
 				<p className="font-bold mt-4">
 					<Location
@@ -353,22 +352,6 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Малышева" original="Покровском проспекте" isOriginal={isOriginal} />, 29а
 				</p>
 				<p className="mt-2">Очень атмосферное и популярное заведение. Всё время всякие движухи проходят. ЧГК пизже, чем по Первому. Когда идёте по святой тропинке «Самоцвет» → «Коллектив» → «Мелодия» по традиции начинать нужно именно с «Самоцвета».</p>
-				{/* <p className="font-bold mt-8">
-					<Location
-						name="Секта"
-						onNameChange={setName}
-						yandex="https://yandex.ru/maps/org/sekta_organic_wine_bar/3422373513/"
-						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/firm/70000001040757065"
-						onDoublegisChange={setDoublegis}
-						website="https://sekta.rest"
-						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
-					>
-						Секта
-					</Location> в Синара Центре на <OriginaledTitle modern="Верх-Исетском бульваре" original="Верх-Исетском бульваре" isOriginal={isOriginal} />, 15/4
-				</p>
-				<p className="mt-2">Шикосный винный бар, где всё написано на богатом. Очень изысканная кухня, очень профессиональный персонал.</p> */}
 				<p className="font-bold mt-8">
 					<Location
 						name="Био Шмио"
@@ -417,10 +400,25 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Тургенева" original="Верхне-Вознесенской" isOriginal={isOriginal} />, 3
 				</p>
 				<p className="mt-2">В пригороде Екатеринбурга — атомном городе Заречном — много лет назад несколько ребят решили варить пиво. <i>Вай нот</i> как говорится. Сняли здание бывшей прачечной, оборудовали производство и за несколько лет создали один из самых известных в стране крафтовых пивных брендов. Первый бар под их крылом открыли, разумеется, в Екатеринбурге. Внутри приятная студенческая атмосфера, ибо напротив университет.</p>
-				{/*
-			<p className="font-bold mt-8"><Link variant="yekaterinburg" href="http://new-bar.ru">Нью бар</Link> на <span className="modern">8 марта</span><span className="auth">Уктусской</span>, 8д</p>
-			<p>Самый старожильский бар из перечисленных. Много различных мероприятий: и лекции, и диджей-сеты, и киношка, и живые выступления. Но на некоторые ивенты приходит по паре человек, не угадаешь заранее будет ли тусовка.</p>
-			*/}
+				{/* <p className="font-bold mt-8">
+					<Location
+						name="Секта"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/sekta_organic_wine_bar/3422373513/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/firm/70000001040757065"
+						onDoublegisChange={setDoublegis}
+						website="https://sekta.rest"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Секта
+					</Location> в Синара Центре на <OriginaledTitle modern="Верх-Исетском бульваре" original="Верх-Исетском бульваре" isOriginal={isOriginal} />, 15/4
+				</p>
+				<p className="mt-2">Шикосный винный бар, где всё написано на богатом. Очень изысканная кухня, очень профессиональный персонал.</p>
+				<p className="font-bold mt-8"><Link variant="yekaterinburg" href="http://new-bar.ru">Нью бар</Link> на <span className="modern">8 марта</span><span className="auth">Уктусской</span>, 8д</p>
+				<p>Самый старожильский бар из перечисленных. Много различных мероприятий: и лекции, и диджей-сеты, и киношка, и живые выступления. Но на некоторые ивенты приходит по паре человек, не угадаешь заранее будет ли тусовка.</p>
+				*/}
 				<Heading>Где отведать хрючева?</Heading>
 				<p className="font-bold mt-4">
 					<Location
@@ -438,22 +436,6 @@ export default function YePage() {
 					</Location>
 				</p>
 				<p className="mt-2">Легендарный городской продуктовый, из-за которого тут никак не может закрепиться «Вкусвилл». Обязательно посетите, оливье с говядиной там божественный. И онигири тоже. И блинчики с творогом. Ну вы поняли, да?</p>
-				{/* <p className="font-bold mt-8">
-					<Location
-						name="Уральская шаньга"
-						onNameChange={setName}
-						yandex="https://yandex.ru/maps/org/uralskaya_shanga/159624878755/"
-						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/firm/70000001093724725"
-						onDoublegisChange={setDoublegis}
-						website="https://shanga.pro"
-						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
-					>
-						Уральская шаньга
-					</Location> на <OriginaledTitle modern="Воеводина" original="Воеводина" isOriginal={isOriginal} />, 2
-				</p>
-				<p className="mt-2">Сергей Мирошников, ещё один из идеологов «Аутентичной Уральской Кухни», решил открыть не файн дайнинг, а настоящий уральский стритфуд. За основу взял шаньгу — блюдо очень понятное для местных и экзотичное для приезжих. И докрутил открытый пирожок до мишленовского уровня. С собой не берите, кушайте стоя прямо там пока горячая.</p> */}
 				<p className="font-bold mt-8">
 					<Location
 						name="Нигора"
@@ -501,6 +483,22 @@ export default function YePage() {
 					</Location>
 				</p>
 				<p className="mt-2">Их запах — это запах детства. Их вкус — это вкус первой влюблённости в детском саду. Их вид — это красота уральских гор с верхней Таганайской тропы. Заходите в «Кировский» и забирайте одноимённые свежие тёплые булочки с собой в дорогу.</p>
+				{/* <p className="font-bold mt-8">
+					<Location
+						name="Уральская шаньга"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/uralskaya_shanga/159624878755/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/firm/70000001093724725"
+						onDoublegisChange={setDoublegis}
+						website="https://shanga.pro"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Уральская шаньга
+					</Location> на <OriginaledTitle modern="Воеводина" original="Воеводина" isOriginal={isOriginal} />, 2
+				</p>
+				<p className="mt-2">Сергей Мирошников, ещё один из идеологов «Аутентичной Уральской Кухни», решил открыть не файн дайнинг, а настоящий уральский стритфуд. За основу взял шаньгу — блюдо очень понятное для местных и экзотичное для приезжих. И докрутил открытый пирожок до мишленовского уровня. С собой не берите, кушайте стоя прямо там пока горячая.</p> */}
 				<Heading>Где прогуляться? Где на пробежку выйти?</Heading>
 				<p className="font-bold mt-4">Набережная <Location
 						name="Городской пруд"
@@ -566,34 +564,6 @@ export default function YePage() {
 					</Location>
 				</p>
 				<p className="mt-2">Он же «Октябрьская площадь». Он же «на Драме». Он же «#сквернаш». Тот самый сквер, который отстояли горожане в противоборстве с крупнейшими промышленниками и областными властями. От этого зелень в парке ещё ценнее нашим сердечкам.</p>
-				{/* <p className="font-bold mt-8">
-					<Location
-						name="Дендропарк"
-						onNameChange={setName}
-						yandex="https://yandex.ru/maps/org/mbu_dendrologicheskiy_park_vystavka/25910174253/"
-						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/firm/1267165676194175"
-						onDoublegisChange={setDoublegis}
-						website="https://nashural.ru/dostoprimechatelnosti-urala/sverdlovskaya-oblast/dendropark-na-ulitse-pervomajskoj-v-ekaterinburge/"
-						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
-					>
-						Дендропарк
-					</Location> на <OriginaledTitle modern="Первомайской" original="Клубной" isOriginal={isOriginal} /> и <Location
-						name="Втузгородок"
-						onNameChange={setName}
-						yandex="https://yandex.ru/maps/54/yekaterinburg/geo/zhiloy_rayon_vtuzgorodok/53182856/"
-						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/geo/1267298820161544"
-						onDoublegisChange={setDoublegis}
-						website="https://ru.wikipedia.org/wiki/Втузгородок_(Екатеринбург)"
-						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
-					>
-						Втузгородок
-					</Location>
-				</p>
-				<p className="mt-2">Милый парк в стороне от центра с прудиками, утками и кучей дивных растений. Вокруг Втузгородок — уютный, старый и спокойный район при крупнейшем университете. Гулять там одно удовольствие.</p> */}
 				<p className="font-bold mt-8">
 					<Location
 						name="Парк на Верх-Исетском бульваре"
@@ -654,22 +624,6 @@ export default function YePage() {
 					</Location>
 				</p>
 				<p className="mt-2">Типичный парк культуры и отдыха. Несколько лет назад его причесала и привела в порядок команда <Link variant="yekaterinburg" href="https://keylman.ru">Кейльман</Link>, с тех пор сильно не плохел. Рядом <i>очень собянинская</i> набережная у Клевер Парка, там тоже стоит погулять.</p>
-				{/* <p className="font-bold mt-8">
-					<Location
-						name="Озеро Шарташ"
-						onNameChange={setName}
-						yandex="https://yandex.ru/maps/org/shartashskiy_lesopark/155882288890/"
-						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/geo/1267324622227847"
-						onDoublegisChange={setDoublegis}
-						website="http://shartash-park.ru"
-						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
-					>
-						Озеро Шарташ
-					</Location>
-				</p>
-				<p className="mt-2">Крупнейшее озеро в округе городской черты (<i>стон зависти в сторону челябинцев</i>). Хорошая инфраструктура, велосипедные дорожки почти опоясывают водоём, много беседок. Тупо кайф. Также недалеко от южной стороны есть Каменные палатки — небольшие скалы, по которым приятно полазать.</p> */}
 				<p className="font-bold mt-8">Набережная <Location
 						name="Верх-Исетский пруд"
 						onNameChange={setName}
@@ -686,6 +640,50 @@ export default function YePage() {
 				</p>
 				<p className="mt-2">Вид на пруд и мартеновские печи одного из крупнейших уральских заводов. Включайте в наушниках «<Link variant="yekaterinburg" href="https://www.youtube.com/watch?v=HrNmLWtlWtY">Екатеринбюргер</Link>» Курары и чувствуйте дух нашего сурового края.</p>
 				{/* <p className="font-bold mt-8">
+					<Location
+						name="Дендропарк"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/mbu_dendrologicheskiy_park_vystavka/25910174253/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/firm/1267165676194175"
+						onDoublegisChange={setDoublegis}
+						website="https://nashural.ru/dostoprimechatelnosti-urala/sverdlovskaya-oblast/dendropark-na-ulitse-pervomajskoj-v-ekaterinburge/"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Дендропарк
+					</Location> на <OriginaledTitle modern="Первомайской" original="Клубной" isOriginal={isOriginal} /> и <Location
+						name="Втузгородок"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/54/yekaterinburg/geo/zhiloy_rayon_vtuzgorodok/53182856/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/geo/1267298820161544"
+						onDoublegisChange={setDoublegis}
+						website="https://ru.wikipedia.org/wiki/Втузгородок_(Екатеринбург)"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Втузгородок
+					</Location>
+				</p>
+				<p className="mt-2">Милый парк в стороне от центра с прудиками, утками и кучей дивных растений. Вокруг Втузгородок — уютный, старый и спокойный район при крупнейшем университете. Гулять там одно удовольствие.</p>
+				<p className="font-bold mt-8">
+					<Location
+						name="Озеро Шарташ"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/shartashskiy_lesopark/155882288890/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/geo/1267324622227847"
+						onDoublegisChange={setDoublegis}
+						website="http://shartash-park.ru"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Озеро Шарташ
+					</Location>
+				</p>
+				<p className="mt-2">Крупнейшее озеро в округе городской черты (<i>стон зависти в сторону челябинцев</i>). Хорошая инфраструктура, велосипедные дорожки почти опоясывают водоём, много беседок. Тупо кайф. Также недалеко от южной стороны есть Каменные палатки — небольшие скалы, по которым приятно полазать.</p>
+				<p className="font-bold mt-8">
 					<Location
 						name="Уктусские горы"
 						onNameChange={setName}
@@ -1044,22 +1042,6 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Воеводина" original="Воеводина" isOriginal={isOriginal} />, 5
 				</p>
 				<p className="mt-2">Наш главный художественный музей. На Воеводина только русское искусство.</p>
-				{/* <p className="font-bold mt-8" id="gcsi">
-					<Location
-						name="Центр современного искусства"
-						onNameChange={setName}
-						yandex="https://yandex.ru/maps/org/uralskiy_filial_gosudarstvennogo_muzeya_izobrazitelnykh_iskusstv_im_a_s_pushkina/180431139925/"
-						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/firm/1267165676714406"
-						onDoublegisChange={setDoublegis}
-						website="https://ural.pushkinmuseum.art"
-						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
-					>
-						Центр современного искусства
-					</Location> (ГЦСИ) на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 50
-				</p>
-				<p className="mt-2">Здесь выставляется <i>то самое</i> современное искусство, которое не понимают твои родители. Культовая институция, которая одной из первых начала прокачивать в городе тему уличного искусства и приучать жителей к современному. Честь и хвала ребятам.</p> */}
 				<p className="font-bold mt-8">
 					<Location
 						name="Уральский геологический музей"
@@ -1076,14 +1058,29 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Куйбышева" original="Сибирском проспекте" isOriginal={isOriginal} />, 39
 				</p>
 				<p className="mt-2">Никита Корытин, директор музея ИЗО, однажды <Link variant="yekaterinburg" href="https://podcasts.apple.com/ru/podcast/%D0%BC%D0%B5%D1%81%D1%82%D0%BD%D1%8B%D0%B5/id1550641240?i=1000575333935">высказал мнение</Link>, что екатеринбуржцам в поискам самости не надо себя обманывать и притворяться теми, кем мы не являемся. Идентичность Екатеринубрга — это камень, геология и металлургия. И всё, не надо больше ничего выдумывать. Музей при Уральском горном университете — это 4 этажа кристаллизованной идентичности.</p>
-				{/*
-			<p>Карта объектов Тимы Ради</p>
-			<p></p>
-			<p className="font-bold mt-8"><Link variant="yekaterinburg" href="https://m-i-e.ru/mie-filial">Музей истории Екатеринбурга</Link> на <span className="modern">Карла Либкнехта</span><span className="auth">Вознесенском проспекте</span>, 26</p>
-			<p>Не самый впечатляющий музей, но хорошо разложит в голове по полочкам основную информацию о городе.</p>
-			<p className="font-bold mt-4"><Link variant="yekaterinburg" href="https://i-z-o.art/constitutor/centr-ermitazh-ural/">Эрмитаж-Урал</Link> на <span className="modern">Вайнера</span><span className="auth">Успенской</span>, 11</p>
-			<p>Продолжение музея изобразительных искусств, на Вайнера выставляют зарубежных авторов. На последнем этаже есть увлекательная экспозиция про хранение в этом здании в годы войны работ из Эрмитажа.</p>
-			*/}
+				{/* <p className="font-bold mt-8" id="gcsi">
+					<Location
+						name="Центр современного искусства"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/uralskiy_filial_gosudarstvennogo_muzeya_izobrazitelnykh_iskusstv_im_a_s_pushkina/180431139925/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/firm/1267165676714406"
+						onDoublegisChange={setDoublegis}
+						website="https://ural.pushkinmuseum.art"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Центр современного искусства
+					</Location> (ГЦСИ) на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 50
+				</p>
+				<p className="mt-2">Здесь выставляется <i>то самое</i> современное искусство, которое не понимают твои родители. Культовая институция, которая одной из первых начала прокачивать в городе тему уличного искусства и приучать жителей к современному. Честь и хвала ребятам.</p>
+				<p>Карта объектов Тимы Ради</p>
+				<p></p>
+				<p className="font-bold mt-8"><Link variant="yekaterinburg" href="https://m-i-e.ru/mie-filial">Музей истории Екатеринбурга</Link> на <span className="modern">Карла Либкнехта</span><span className="auth">Вознесенском проспекте</span>, 26</p>
+				<p>Не самый впечатляющий музей, но хорошо разложит в голове по полочкам основную информацию о городе.</p>
+				<p className="font-bold mt-4"><Link variant="yekaterinburg" href="https://i-z-o.art/constitutor/centr-ermitazh-ural/">Эрмитаж-Урал</Link> на <span className="modern">Вайнера</span><span className="auth">Успенской</span>, 11</p>
+				<p>Продолжение музея изобразительных искусств, на Вайнера выставляют зарубежных авторов. На последнем этаже есть увлекательная экспозиция про хранение в этом здании в годы войны работ из Эрмитажа.</p>
+				*/}
 				<Heading>Где развлечься?</Heading>
 				<p className="font-bold mt-4">Местный стрит-арт</p>
 				<p className="mt-2">Про бесчисленное количество работ в городе можно рассказывать бесконечно, просто сходите на одну из экскурсий <Link variant="yekaterinburg" href="https://www.instagram.com/shakhov_hell/">Лёши Шахова</Link> или прогуляйтесь по карте фестиваля «<Link variant="yekaterinburg" href="https://stenograffia.ru">Стенограффия</Link>».</p>
@@ -1151,14 +1148,14 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Карла Либкнехта" original="Вознесенском проспекте" isOriginal={isOriginal} />, 38а
 				</p>
 				<p className="mt-2">Филармония у нас классная, «питерские бабушки» в наличии.</p>
-			{/* 
-			<p className="font-bold mt-4">Сходить на женский баскетбол и поболеть на домашних матчах за «УГМК» в <Link variant="yekaterinburg" href="https://divsport.ru">ДИВСе</Link> на <span className="modern">Олимпийской набережной</span><span className="auth">Ключевской</span>, 3</p>
-			<p>Наша легендарная баскетбольная команда, взявшая кучу европейских клубных наград. Одно удовольствие наблюдать за их игрой.</p>
-			<p className="font-bold mt-4">Скалодром <Link variant="yekaterinburg" href="https://kraisveta.com">Край Света</Link> в «Силе Воли» на Толмачёва, 22</p>
-			<p>Вы же в горный регион приехали, а значит стоит посетить наш лучший боулдеринговый скалодром. Лучшие тренеры, приятное коммюнити. Антону привет 👋🏻</p>
-			<p><Link variant="yekaterinburg" href="https://tele-club.ru/fabrika">Фабрика ???</Link></p>
-			<p>Пошутить про Нирвану и Артхаус, про Свободу, про Кельман???</p>
-			*/}
+				{/* 
+				<p className="font-bold mt-4">Сходить на женский баскетбол и поболеть на домашних матчах за «УГМК» в <Link variant="yekaterinburg" href="https://divsport.ru">ДИВСе</Link> на <span className="modern">Олимпийской набережной</span><span className="auth">Ключевской</span>, 3</p>
+				<p>Наша легендарная баскетбольная команда, взявшая кучу европейских клубных наград. Одно удовольствие наблюдать за их игрой.</p>
+				<p className="font-bold mt-4">Скалодром <Link variant="yekaterinburg" href="https://kraisveta.com">Край Света</Link> в «Силе Воли» на Толмачёва, 22</p>
+				<p>Вы же в горный регион приехали, а значит стоит посетить наш лучший боулдеринговый скалодром. Лучшие тренеры, приятное коммюнити. Антону привет 👋🏻</p>
+				<p><Link variant="yekaterinburg" href="https://tele-club.ru/fabrika">Фабрика ???</Link></p>
+				<p>Пошутить про Нирвану и Артхаус, про Свободу, про Кельман???</p>
+				*/}
 				<Heading>Где пошопиться?</Heading>
 				<p className="font-bold mt-4">
 					<Location

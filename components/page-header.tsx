@@ -19,7 +19,7 @@ export function PageHeader({ title, description }: PageHeaderProps) {
 					alt="Аватарка автора"
 				/>
 			</Link>
-			<p className="text-xl">{title}</p>
+			<p className="text-3xl">{title}</p>
 			{description && (
 				<p><i>{description}</i></p>
 			)}
