@@ -1315,7 +1315,7 @@ export default function YePage() {
 				</p>
 				<p className="mt-2">Универмаг с кучей локальных брендов одежды. На первом этаже «Золотое яблоко» — тот самый магазин парфюмерии и косметики, что родом из Еката.</p>
 				<Heading>На прощание</Heading>
-				<p className="mt-2">Хотите побольше истории? Налейте чаю с жжёным «Свердловским» кексом и прочитайте «<Link variant="yekaterinburg" href="https://www.goodreads.com/book/show/22031637">Ёбург</Link>» Алексея Иванова.</p>
+				<p className="mt-2">Хотите побольше истории? Налейте чаю с жжёным «Свердловским» кексом и прочитайте «<Link variant="yekaterinburg" href="https://app.thestorygraph.com/books/2b348ad5-23c2-4917-a2e2-ed13cdfc0190">Ёбург</Link>» Алексея Иванова.</p>
 				<p className="mt-2">А вообще, расслабьтесь относительно ожиданий. Если вам слащаво и уютно, значит что-то идёт не так. Как говорила легендарная <Link variant="yekaterinburg" href="https://t.me/ekbprogulki">Васильева</Link>: «Урал — место не для жизни, а для работы».</p>
 				<p className="mt-2">За помощь в составлении путеводителя и редактуру спасибо Ане, Саше и Маше. За движ спасибо всему завтракашному чату.</p>
 				{/* <p className="mt-2">P.S. <Link variant="yekaterinburg" href="https://ura.news/news/1052201581">Роберт Куитта</Link>, иди нахуй.</p> */}
