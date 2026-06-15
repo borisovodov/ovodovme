@@ -1317,7 +1317,7 @@ export default function YePage() {
 				<Heading>На прощание</Heading>
 				<p className="mt-2">Хотите побольше истории? Налейте чаю с жжёным «Свердловским» кексом и прочитайте «<Link variant="yekaterinburg" href="https://www.goodreads.com/book/show/22031637">Ёбург</Link>» Алексея Иванова.</p>
 				<p className="mt-2">А вообще, расслабьтесь относительно ожиданий. Если вам слащаво и уютно, значит что-то идёт не так. Как говорила легендарная <Link variant="yekaterinburg" href="https://t.me/ekbprogulki">Васильева</Link>: «Урал — место не для жизни, а для работы».</p>
-				<p className="mt-2">За помощь в составлении путеводителя и редактуру спасибо Ане, Саше, Маше. За движ спасибо всему завтракашному чату.</p>
+				<p className="mt-2">За помощь в составлении путеводителя и редактуру спасибо Ане, Саше и Маше. За движ спасибо всему завтракашному чату.</p>
 				{/* <p className="mt-2">P.S. <Link variant="yekaterinburg" href="https://ura.news/news/1052201581">Роберт Куитта</Link>, иди нахуй.</p> */}
 				<Signature variant="yekaterinburg" />
 				<LocationModal
