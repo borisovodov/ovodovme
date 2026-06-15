@@ -105,6 +105,23 @@ export default function YePage() {
 				<p className="mt-2">Местная гордость: самая большая городская сетёвка кофеен местная, а не федеральная. Завтраки дешёвые и вкусные. Для завтраков запомните как мантру: 3-й, рисовая, малиновое, да, сметана, фильтр. Несмотря на то, что сетёвка, вполне себе спешалти-кофейня с лофтовым оформлением. Можно заходить в любую (благо они уже не только в центре), но каноничная — на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />. Рядом альма-матер автора этих строк, поэтому внутри дух студенчества.</p>
 				<p className="font-bold mt-8">
 					<Location
+						name="Горожане"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/gorozhane/8195413293/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/firm/70000001038526762"
+						onDoublegisChange={setDoublegis}
+						website="https://gorozhane.me"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Горожане
+					</Location> на <OriginaledTitle modern="Добролюбова" original="Госпитальной" isOriginal={isOriginal} />, 6
+				</p>
+				<p className="mt-2">Бистро работает с 8:30, что делает его идеальным местом для завтраков. Если на улице лето, то на десерт заказывайте «Митькину радость» — чувствами улетите в деревню к бабушке, как от <Link variant="yekaterinburg" href="https://ru.wikipedia.org/wiki/Мадлен_(печенье)#«Мадленка»_Пруста">«Мадленки» Пруста</Link>.</p>
+				<p className="mt-2">Внимание: так как место прекрасное, по утрам туда набивается толпа народа и бывает, что столики на завтраки забронированы на пару дней вперёд. Запаривайтесь заранее.</p>
+				<p className="font-bold mt-8">
+					<Location
 						name="Муру"
 						onNameChange={setName}
 						yandex="https://yandex.ru/maps/org/muru/205036364220/"
@@ -226,38 +243,6 @@ export default function YePage() {
 				<p className="mt-2">Представьте, что вы Владимир Познер в командировке в Екатеринбурге. Куда вы пойдёте на ужин? Конечно же в «Барборис»! Это тот самый ресторан, где ты развалившись в кресле и держа меню без картинок представляешь себя героем бондианы. Лучшая русская кухня в городе.</p>
 				<p className="font-bold mt-8">
 					<Location
-						name="Горожане"
-						onNameChange={setName}
-						yandex="https://yandex.ru/maps/org/gorozhane/8195413293/"
-						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/firm/70000001038526762"
-						onDoublegisChange={setDoublegis}
-						website="https://gorozhane.me"
-						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
-					>
-						Горожане
-					</Location> на <OriginaledTitle modern="Добролюбова" original="Госпитальной" isOriginal={isOriginal} />, 6
-				</p>
-				<p className="mt-2">Хорошая кухня и потрясающий маркетинг, из-за чего места надо бронить на обязаловке. Если на улице лето, то на десерт заказывайте «Митькину радость» — чувствами улетите в деревню к бабушке, как от <Link variant="yekaterinburg" href="https://ru.wikipedia.org/wiki/Мадлен_(печенье)#«Мадленка»_Пруста">«Мадленки» Пруста</Link>.</p>
-				<p className="font-bold mt-8">
-					<Location
-						name="Брэдвэй"
-						onNameChange={setName}
-						yandex="https://yandex.ru/maps/org/breadway/114337144368/"
-						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/firm/70000001040400946"
-						onDoublegisChange={setDoublegis}
-						website="https://breadway.rest/"
-						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
-					>
-						Брэдвэй
-					</Location> на <OriginaledTitle modern="Ельцина" original="Фетисовской" isOriginal={isOriginal} />, 6
-				</p>
-				<p className="mt-2">Еда отличная, выпечка вообще топ, интерьер в стиле «дорого-богато, но без приторности». Нормальный такой ресторан, инстаграмабельно.</p>
-				<p className="font-bold mt-8">
-					<Location
 						name="Чаща"
 						onNameChange={setName}
 						yandex="https://yandex.ru/maps/org/chashcha/63281193281/"
@@ -288,7 +273,24 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Боевых Дружин" original="Щипановском переулке" isOriginal={isOriginal} />, 20
 				</p>
 				<p className="mt-2">Единственный приличный гастромолл. Там нет посредственных заведений, сплошной восторг. Недельную командировку можно там провести не вылазя и пробуя всё время что-то новое. Всех резидентов перечислять не буду, выбирайте сердцем.</p>
-				{/* <p className="font-bold mt-4">
+				{/* 
+				<p className="font-bold mt-8">
+					<Location
+						name="Брэдвэй"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/breadway/114337144368/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/firm/70000001040400946"
+						onDoublegisChange={setDoublegis}
+						website="https://breadway.rest/"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Брэдвэй
+					</Location> на <OriginaledTitle modern="Ельцина" original="Фетисовской" isOriginal={isOriginal} />, 6
+				</p>
+				<p className="mt-2">Еда отличная, выпечка вообще топ, интерьер в стиле «дорого-богато, но без приторности». Нормальный такой ресторан, инстаграмабельно.</p>
+				<p className="font-bold mt-4">
 					<Location
 						name="Зверобой"
 						onNameChange={setName}
