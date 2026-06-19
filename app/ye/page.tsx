@@ -28,7 +28,7 @@ export default function YePage() {
 					<div className="max-w-3xl">
 						<PageHeader
 							title="Субъективный путеводитель по Екатеринбургу"
-							description="Последнее обновление: 17 июня 2025-го"
+							description="Последнее обновление: 19 июня 2026-го"
 						/>
 					</div>
 				</div>
@@ -69,7 +69,7 @@ export default function YePage() {
 						Эспрессо Сизон
 					</Location> на <OriginaledTitle modern="Горького" original="Тарасовской набережной" isOriginal={isOriginal} />, 29
 				</p>
-				<p className="mt-2">Гранджевая кофейня для задротов. Разные фильтры на выбор с бесплатным пополнением — купил чашку и дегустируешь все сорта. Приятная, необычная еда. Будете там, передавайте привет Лёне и Диме.</p>
+				<p className="mt-2">Гранджевая кофейня для задротов. Разные фильтры на выбор с бесплатным пополнением — купил чашку и дегустируешь все сорта. Приятная, необычная еда. Лёня, привет!</p>
 				<p className="mt-2">А ещё владелец кофейни однажды захотел создать самые крутые кофейные чашки в мире. На сысертском фарфоровом заводе (Сысерть — пригород Екатеринбурга) ему реально сделали такие. Прикупите себе в подарок, продаются в разных цветах.</p>
 				<p className="font-bold mt-8">
 					<Location
@@ -401,6 +401,22 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Малышева" original="Покровском проспекте" isOriginal={isOriginal} />, 21/4
 				</p>
 				<p className="mt-2">Самый задротский пивной бар. Для ценителей — сюда.</p>
+				<p className="font-bold mt-8">
+					<Location
+						name="Янки"
+						onNameChange={setName}
+						yandex="https://yandex.ru/maps/org/yanki_bar/1161030907/"
+						onYandexChange={setYandex}
+						doublegis="https://2gis.ru/ekaterinburg/firm/1267166676609349/"
+						onDoublegisChange={setDoublegis}
+						website="https://instagram.com/theyankeebar/"
+						onWebsiteChange={setWebsite}
+						onOpen={onOpen}
+					>
+						Янки
+					</Location> на <OriginaledTitle modern="Толмачёва" original="Ко́лобовской" isOriginal={isOriginal} />, 25
+				</p>
+				<p className="mt-2">Подубитый пивной бар с лучшими бургерами в городе.</p>
 				<p className="font-bold mt-8">
 					<Location
 						name="Джоуз Спот"
