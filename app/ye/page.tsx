@@ -28,7 +28,7 @@ export default function YePage() {
 					<div className="max-w-3xl">
 						<PageHeader
 							title="Субъективный путеводитель по Екатеринбургу"
-							description="Последнее обновление: 21 июня 2026-го"
+							description="Последнее обновление: 22 июня 2026-го"
 						/>
 					</div>
 				</div>
