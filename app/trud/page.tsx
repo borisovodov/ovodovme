@@ -179,7 +179,7 @@ export default function TrudPage() {
 				</Card>
 			</div>
 			<Heading>Мы в медиа</Heading>
-			<ul className="list-inside list-disc mt-2">
+			<ul className="mt-2 list-inside list-disc">
 				<li className="mb-2"><Link href="https://пск-нн.рф/projector">ПСК-НН</Link></li>
 				<li className="mb-2"><Link href="https://www.instagram.com/kova.tatya/reel/DVWHyrBja3_/">Татьяна | Financial analyst | Финансовый аналитик</Link></li>
 				<li className="mb-2"><Link href="https://mbk-lab.ru/производственный-календарь-в-формат/">Лаборатория МБК</Link></li>
