@@ -9,7 +9,7 @@ import {
 	ScrollShadow,
 } from "@heroui/react";
 
-import { Link, PageHeader, Signature } from "@/components";
+import { Heading, Link, PageHeader, Signature } from "@/components";
 
 export default function TrudPage() {
 	const [isCopied, setIsCopied] = useState(false);
@@ -66,7 +66,7 @@ export default function TrudPage() {
 			<p className="mb-2">В интернете полно производственных календарей. Бери и пользуйся! Все они предназначены для печати или же доступны на отдельном сайте.</p>
 			<p className="mb-2">Однако многие из нас пользуются приложениями-календарями (например Гугл Календарём или Аутлуком). Проблема в том, что для них не существует полноценного производственного календаря, а стандартные календари с праздниками путают нас событиями навроде «Масленицы» или «Дня смеха».</p>
 			<p className="mb-2">Теперь вы можете подписаться на производственный календарь в формате iCal (ics), который понимает каждое приложение-календарь и ежегодно обновляется.</p>
-			<p className="mt-6 mb-2">Подписаться на календарь:</p>
+			<p className="mb-2">Подписаться на календарь:</p>
 			<ScrollShadow className="mb-4">
 				<code className="inline-flex h-fit items-center rounded-sm bg-default/40 px-2 py-1 font-mono text-lg font-normal whitespace-nowrap text-default-foreground">
 					<span>https://ovodov.me/trud.ics</span>
@@ -75,8 +75,8 @@ export default function TrudPage() {
 					</Button>
 				</code>
 			</ScrollShadow>
-			<p className="mt-6 mb-2">Инструкция по добавлению подписки на календарь:</p>
-			<Accordion>
+			<Heading>Инструкция по добавлению подписки на календарь</Heading>
+			<Accordion className="mt-5">
 				<Accordion.Item id="gInstruction">
 					<Accordion.Heading>
 						<Accordion.Trigger>
@@ -139,7 +139,7 @@ export default function TrudPage() {
 					</Button>
 				</code>
 			</ScrollShadow>
-			<p className="mt-6 mb-2">Отзывы</p>
+			<Heading>Отзывы</Heading>
 			<div className="mt-5">
 				<Card className="mt-4">
 					<Card.Content>
@@ -178,12 +178,12 @@ export default function TrudPage() {
 					</Card.Content>
 				</Card>
 			</div>
-			<p className="mt-6 mb-2">Мы в медиа</p>
-			<ul className="list-inside list-disc">
+			<Heading>Мы в медиа</Heading>
+			<ul className="list-inside list-disc mt-2">
 				<li className="mb-2"><Link href="https://пск-нн.рф/projector">ПСК-НН</Link></li>
-				<li className="mb-2"><Link href="https://www.instagram.com/kova.tatya/reel/DVWHyrBja3_/">Instagram, рилс @kova.tatya</Link></li>
-				<li className="mb-2"><Link href="https://mbk-lab.ru/производственный-календарь-в-формат/">МБК-лаб</Link></li>
-				<li className="mb-2"><Link href="https://www.youtube.com/watch?v=hsCv6eSbSFs&t=584s">Ютуб</Link></li>
+				<li className="mb-2"><Link href="https://www.instagram.com/kova.tatya/reel/DVWHyrBja3_/">Татьяна | Financial analyst | Финансовый аналитик</Link></li>
+				<li className="mb-2"><Link href="https://mbk-lab.ru/производственный-календарь-в-формат/">Лаборатория МБК</Link></li>
+				<li className="mb-2"><Link href="https://www.youtube.com/watch?v=hsCv6eSbSFs&t=584s">Just Use</Link></li>
 				<li className="mb-2"><Link href="https://www.iphones.ru/iNotes/kakoy-segodnya-prazdnik-dobavlyaem-vse-rossiyskie-vyhodnye-i-prazdniki-v-kalendar-na-iphone">iPhones.ru</Link></li>
 			</ul>
 
