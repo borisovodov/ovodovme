@@ -31,7 +31,7 @@ export function TalkCard({
                                 alt={`${name} превью`}
                                 width={160}
                                 height={90}
-                                className="h-[90px] w-40 rounded-[14px] object-contain"
+                                className="h-22.5 w-40 rounded-[14px] object-contain"
                             />
                         </Link>
                     )}
