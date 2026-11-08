@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Code, ScrollShadow, Spinner } from "@heroui/react";
+import { Button, ScrollShadow, Spinner } from "@heroui/react";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -15,6 +15,10 @@ declare global {
 		TelegramWebview?: unknown;
 	}
 }
+
+// Одноразовая инициализация состояния из браузерного окружения (window/navigator),
+// которое недоступно во время статической пререндер-сборки.
+/* eslint-disable react-hooks/set-state-in-effect */
 
 export default function EventPage() {
 	const [mode, setMode] = useState<Mode>(Mode.EMPTY);
@@ -62,18 +66,18 @@ function MainPage() {
 			<PageHeader title="Генератор файлов с календарными событиями из URL" />
 			<p className="mb-2">Страничка пригодится, если нужно кинуть кому-нибудь ссылку на скачивание файла с событием для календаря (iCal, ics), а поднимать свой CalDAV-сервер для этого дофига делов.</p>
 			<p className="mt-8">Ссылка на скачивание формируется следующим образом:</p>
-			<p className="mt-2"><Code size="md">https://ovodov.me/event?summary=</Code> — название события в <Link href="https://en.wikipedia.org/wiki/Percent-encoding">URL-кодировке</Link>.</p>
-			<p className="mt-2"><Code size="md">&start=</Code> — дата и время начала события в формате <Link href="https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date-time-string-format">ISO 8601</Link> в <Link href="https://en.wikipedia.org/wiki/Percent-encoding">URL-кодировке</Link>. Если часовой пояс не указан, то используется UTC. Для событий на несколько дней указываем дату без времени и часового пояса.</p>
-			<p className="mt-2"><Code size="md">&end=</Code> — дата и время окончания события в формате <Link href="https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date-time-string-format">ISO 8601</Link> в <Link href="https://en.wikipedia.org/wiki/Percent-encoding">URL-кодировке</Link>. Если часовой пояс не указан, то используется UTC. Для событий на несколько дней указываем дату без времени и часового пояса.</p>
-			<p className="mt-2"><Code size="md">&location=</Code> — место проведения события в <Link href="https://en.wikipedia.org/wiki/Percent-encoding">URL-кодировке</Link>. Не обязательно указывать.</p>
-			<p className="mt-2"><Code size="md">&url=</Code> — URL события в <Link href="https://en.wikipedia.org/wiki/Percent-encoding">URL-кодировке</Link>. Не обязательно указывать.</p>
+			<p className="mt-2"><code className="px-2 py-1 h-fit font-mono font-normal inline-block whitespace-nowrap rounded-sm bg-default/40 text-default-foreground text-base">https://ovodov.me/event?summary=</code> — название события в <Link href="https://en.wikipedia.org/wiki/Percent-encoding">URL-кодировке</Link>.</p>
+			<p className="mt-2"><code className="px-2 py-1 h-fit font-mono font-normal inline-block whitespace-nowrap rounded-sm bg-default/40 text-default-foreground text-base">&start=</code> — дата и время начала события в формате <Link href="https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date-time-string-format">ISO 8601</Link> в <Link href="https://en.wikipedia.org/wiki/Percent-encoding">URL-кодировке</Link>. Если часовой пояс не указан, то используется UTC. Для событий на несколько дней указываем дату без времени и часового пояса.</p>
+			<p className="mt-2"><code className="px-2 py-1 h-fit font-mono font-normal inline-block whitespace-nowrap rounded-sm bg-default/40 text-default-foreground text-base">&end=</code> — дата и время окончания события в формате <Link href="https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date-time-string-format">ISO 8601</Link> в <Link href="https://en.wikipedia.org/wiki/Percent-encoding">URL-кодировке</Link>. Если часовой пояс не указан, то используется UTC. Для событий на несколько дней указываем дату без времени и часового пояса.</p>
+			<p className="mt-2"><code className="px-2 py-1 h-fit font-mono font-normal inline-block whitespace-nowrap rounded-sm bg-default/40 text-default-foreground text-base">&location=</code> — место проведения события в <Link href="https://en.wikipedia.org/wiki/Percent-encoding">URL-кодировке</Link>. Не обязательно указывать.</p>
+			<p className="mt-2"><code className="px-2 py-1 h-fit font-mono font-normal inline-block whitespace-nowrap rounded-sm bg-default/40 text-default-foreground text-base">&url=</code> — URL события в <Link href="https://en.wikipedia.org/wiki/Percent-encoding">URL-кодировке</Link>. Не обязательно указывать.</p>
 			<p className="mt-8">Например:</p>
 			<ScrollShadow className="w-full mt-2">
-				<Code size="md">https://ovodov.me/event?summary=Meeting%20with%20friends&location=Kollektiv%20bar&start=2025-08-13T20:00:00%2B05:00&end=2025-08-13T23:00:00%2B05:00&url=https://klktv91.ru</Code>
+				<code className="px-2 py-1 h-fit font-mono font-normal inline-block whitespace-nowrap rounded-sm bg-default/40 text-default-foreground text-base">https://ovodov.me/event?summary=Meeting%20with%20friends&location=Kollektiv%20bar&start=2025-08-13T20:00:00%2B05:00&end=2025-08-13T23:00:00%2B05:00&url=https://klktv91.ru</code>
 			</ScrollShadow>
 			<p className="mt-2">Или на несколько дней:</p>
 			<ScrollShadow className="w-full mt-2">
-				<Code size="md">https://ovodov.me/event?summary=Trekking&location=Taganay&start=2025-08-13&end=2025-08-16</Code>
+				<code className="px-2 py-1 h-fit font-mono font-normal inline-block whitespace-nowrap rounded-sm bg-default/40 text-default-foreground text-base">https://ovodov.me/event?summary=Trekking&location=Taganay&start=2025-08-13&end=2025-08-16</code>
 			</ScrollShadow>
 			<p className="mt-8">Переходите по ссылке и скачается файл с указанным наполнением в формате iCal.</p>
 			<Signature />

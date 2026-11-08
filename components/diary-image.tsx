@@ -22,7 +22,7 @@ export function DiaryImage({
                     className="p-1"
                 />
             </div>
-            <div className="text-sm text-default-600 mt-2">
+            <div className="text-sm text-muted mt-2">
                 {caption}
             </div>
         </div>

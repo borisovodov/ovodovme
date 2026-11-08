@@ -1,15 +1,10 @@
-import {
-    Modal,
-    ModalContent,
-    ModalHeader,
-    ModalBody
-} from "@heroui/modal";
+import { Modal, useOverlayState } from "@heroui/react";
 
 import { Link } from "@/components";
 
 type LocationModalProps = {
     isOpen: boolean;
-    onOpenChange: () => void;
+    onOpenChange: (isOpen: boolean) => void;
     name: string;
     yandex: string;
     doublegis: string;
@@ -24,18 +19,27 @@ export function LocationModal({
     doublegis,
     website
 }: LocationModalProps) {
+    const state = useOverlayState({ isOpen, onOpenChange });
+
     return (
-        <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
-            <ModalContent>
-                <ModalHeader>{name}</ModalHeader>
-                <ModalBody>
-                    <ul className="list-disc list-inside">
-                        <li className="mb-2"><Link className="text-[#006732]" href={website}>Сайт</Link></li>
-                        <li className="mb-2"><Link className="text-[#006732]" href={yandex}>Яндекс</Link></li>
-                        <li className="mb-2"><Link className="text-[#006732]" href={doublegis}>2ГИС</Link></li>
-                    </ul>
-                </ModalBody>
-            </ModalContent>
+        <Modal state={state}>
+            <Modal.Backdrop>
+                <Modal.Container>
+                    <Modal.Dialog>
+                        <Modal.CloseTrigger />
+                        <Modal.Header>
+                            <Modal.Heading>{name}</Modal.Heading>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <ul className="list-disc list-inside">
+                                <li className="mb-2"><Link className="text-[#006732]" href={website}>Сайт</Link></li>
+                                <li className="mb-2"><Link className="text-[#006732]" href={yandex}>Яндекс</Link></li>
+                                <li className="mb-2"><Link className="text-[#006732]" href={doublegis}>2ГИС</Link></li>
+                            </ul>
+                        </Modal.Body>
+                    </Modal.Dialog>
+                </Modal.Container>
+            </Modal.Backdrop>
         </Modal>
     );
 }

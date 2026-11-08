@@ -5,31 +5,43 @@ import {
     LinkProps as HeroUILinkProps
 } from "@heroui/react";
 
-interface LinkProps extends HeroUILinkProps {
+interface LinkProps extends Omit<HeroUILinkProps, "variant"> {
     variant?: "default" | "yekaterinburg" | "ref";
 }
 
 export function Link(props: LinkProps) {
-    let className = (props.className ?? "") + " cursor-pointer";
-    let underline: "always" | "none" = "always";
+    const { variant, ...rest } = props;
 
-    if (props.variant === "yekaterinburg") {
+    const callerClassName = typeof rest.className === "string" ? rest.className : "";
+    // text-* утилиты, которые НЕ задают цвет (размер, выравнивание, перенос)
+    const NON_COLOR_TEXT_CLASSES = new Set([
+        "text-xs", "text-sm", "text-base", "text-lg", "text-xl",
+        "text-2xl", "text-3xl", "text-4xl", "text-5xl", "text-6xl",
+        "text-7xl", "text-8xl", "text-9xl",
+        "text-left", "text-center", "text-right", "text-justify",
+        "text-start", "text-end",
+        "text-wrap", "text-nowrap", "text-balance", "text-pretty",
+        "text-ellipsis", "text-clip", "text-truncate",
+    ]);
+    const hasCustomColor = (callerClassName.match(/text-[^\s]+/g) ?? [])
+        .some((token) => !NON_COLOR_TEXT_CLASSES.has(token));
+
+    let className = callerClassName + " cursor-pointer";
+
+    if (variant === "yekaterinburg") {
         className += " text-[#D2E4D6]";
-        underline = "always";
+    } else if (!hasCustomColor) {
+        className += " text-accent";
     }
-    if (props.variant === "ref") {
-        className += " text-[0.75rem]";
-        underline = "none";
+    if (variant === "ref") {
+        className += " text-[0.75rem] no-underline";
+    } else {
+        className += " underline";
     }
-
-    const linkProps = {
-        ...props,
-        className,
-        underline
-    };
+    className += " decoration-current hover:opacity-80 dark:hover:opacity-90";
 
     return (
-        <HeroUILink {...linkProps}>
+        <HeroUILink {...rest} className={className}>
             {props.children}
         </HeroUILink>
     );

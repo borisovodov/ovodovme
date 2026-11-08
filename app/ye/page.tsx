@@ -1,6 +1,6 @@
 "use client";
 
-import { Switch, useDisclosure } from "@heroui/react";
+import { Switch, useOverlayState } from "@heroui/react";
 import { useState } from "react";
 
 import {
@@ -19,7 +19,7 @@ export default function YePage() {
 	const [yandex, setYandex] = useState("");
 	const [doublegis, setDoublegis] = useState("");
 	const [website, setWebsite] = useState("");
-	const { isOpen, onOpen, onOpenChange } = useDisclosure();
+	const { isOpen, open, setOpen } = useOverlayState();
 
 	return (
 		<>
@@ -33,13 +33,13 @@ export default function YePage() {
 					</div>
 				</div>
 				<div className="flex-[1] mt-8">
-					<Switch
-						isSelected={isOriginal}
-						onValueChange={setIsOriginal}
-						size="sm"
-						color="default"
-					>
-						<p className="text-white">Аутентичность</p>
+					<Switch isSelected={isOriginal} onChange={setIsOriginal} size="sm">
+						<Switch.Content>
+							<Switch.Control>
+								<Switch.Thumb />
+							</Switch.Control>
+							<p className="text-white">Аутентичность</p>
+						</Switch.Content>
 					</Switch>
 				</div>
 			</div>
@@ -64,7 +64,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://espressoseason.ru/"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Эспрессо Сизон
 					</Location> на <OriginaledTitle modern="Горького" original="Тарасовской набережной" isOriginal={isOriginal} />, 29
@@ -81,7 +81,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://engelscoffee.ru"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Энгельс
 					</Location> на <OriginaledTitle modern="Малышева" original="Покровском проспекте" isOriginal={isOriginal} />, 21/4
@@ -97,7 +97,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://simplecoffee.ru"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Симпл Кофи
 					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 46
@@ -113,7 +113,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://gorozhane.me"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Горожане
 					</Location> на <OriginaledTitle modern="Добролюбова" original="Госпитальной" isOriginal={isOriginal} />, 6
@@ -130,7 +130,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://murubakery.ru"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Муру
 					</Location> на <OriginaledTitle modern="Розы Люксембург" original="Златоустовской" isOriginal={isOriginal} />, 27
@@ -146,7 +146,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://frenchiecafe.ru"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Фрэнчи
 					</Location> на <OriginaledTitle modern="Попова" original="Сима́новской" isOriginal={isOriginal} />, 18
@@ -171,7 +171,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://гастролирест.рф/"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Гастроли
 					</Location> на <OriginaledTitle modern="8 марта" original="Уктусской" isOriginal={isOriginal} />, 4
@@ -187,7 +187,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://kitchen23.org"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Китчен
 					</Location> на <OriginaledTitle modern="Ткачей" original="Расторгуевской" isOriginal={isOriginal} />, 23
@@ -203,7 +203,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://momokitchen.ru/"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Момо
 					</Location> на <OriginaledTitle modern="Карла Либкнехта" original="Вознесенском проспекте" isOriginal={isOriginal} />, 38а
@@ -219,7 +219,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://cultabistronomic.ru"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Культа
 					</Location> на <OriginaledTitle modern="Радищева" original="Отрясихинской" isOriginal={isOriginal} />, 24
@@ -235,7 +235,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://barboris.info"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Барборис
 					</Location> в Ельцин Центре на <OriginaledTitle modern="Ельцина" original="Фетисовской" isOriginal={isOriginal} />, 3
@@ -251,7 +251,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://chsch-rest.ru"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Чаща
 					</Location> на <OriginaledTitle modern="Красноармейской" original="Солдатской" isOriginal={isOriginal} />, 68
@@ -267,7 +267,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://glavniy.com"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Главный
 					</Location> на <OriginaledTitle modern="Боевых Дружин" original="Щипановском переулке" isOriginal={isOriginal} />, 20
@@ -284,7 +284,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://breadway.rest/"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Брэдвэй
 					</Location> на <OriginaledTitle modern="Ельцина" original="Фетисовской" isOriginal={isOriginal} />, 6
@@ -300,7 +300,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://zveroboyrest.ru"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Зверобой
 					</Location> на <OriginaledTitle modern="Посадской" original="Посадской" isOriginal={isOriginal} />, 28а
@@ -331,7 +331,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="http://klktv91.ru"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Коллектив
 					</Location> на <OriginaledTitle modern="8 марта" original="Уктусской" isOriginal={isOriginal} />, 8г
@@ -347,7 +347,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://www.instagram.com/melody_ekb/"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Мелодия
 					</Location> на <OriginaledTitle modern="Первомайской" original="Клубной" isOriginal={isOriginal} />, 36
@@ -363,7 +363,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://taplink.cc/samocvet.bar"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Самоцвет
 					</Location> на <OriginaledTitle modern="Малышева" original="Покровском проспекте" isOriginal={isOriginal} />, 29а
@@ -379,7 +379,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://bioshmiobar.ru"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Био Шмио
 					</Location> на <OriginaledTitle modern="Малышева" original="Покровском проспекте" isOriginal={isOriginal} />, 61
@@ -395,7 +395,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="http://nelsonsauvin.ru"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Нельсон Совин
 					</Location> на <OriginaledTitle modern="Малышева" original="Покровском проспекте" isOriginal={isOriginal} />, 21/4
@@ -411,7 +411,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://instagram.com/theyankeebar/"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Янки
 					</Location> на <OriginaledTitle modern="Толмачёва" original="Ко́лобовской" isOriginal={isOriginal} />, 25
@@ -427,7 +427,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://jawsbeer.ru/spot"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Джоуз Спот
 					</Location> на <OriginaledTitle modern="Тургенева" original="Верхне-Вознесенской" isOriginal={isOriginal} />, 3
@@ -443,7 +443,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://sekta.rest"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Секта
 					</Location> в Синара Центре на <OriginaledTitle modern="Верх-Исетском бульваре" original="Верх-Исетском бульваре" isOriginal={isOriginal} />, 15/4
@@ -463,7 +463,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://lifemart.ru"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Жизньмарт
 					</Location>
@@ -479,7 +479,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://nigora.ru"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Нигора
 					</Location> на <OriginaledTitle modern="Куйбышева" original="Сибирском проспекте" isOriginal={isOriginal} />, 47
@@ -495,7 +495,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://www.п-шк.рф"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						ПШК
 					</Location> на <OriginaledTitle modern="Толмачёва" original="Ко́лобовской" isOriginal={isOriginal} />, 16
@@ -512,7 +512,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://pizzamia.ru"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Пицца Мия
 					</Location> на <OriginaledTitle modern="Карла Либкнехта" original="Вознесенском проспекте" isOriginal={isOriginal} />, 18
@@ -527,7 +527,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://kirmarket.ru"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Кировском
 					</Location>
@@ -543,7 +543,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://shanga.pro"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Уральская шаньга
 					</Location> на <OriginaledTitle modern="Воеводина" original="Воеводина" isOriginal={isOriginal} />, 2
@@ -559,7 +559,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://ru.wikipedia.org/wiki/Городской_пруд_(Екатеринбург)"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Городского пруда
 					</Location>
@@ -576,7 +576,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://ru.wikipedia.org/wiki/Улица_Максима_Горького_(Екатеринбург)"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						<OriginaledTitle modern="Улица Горького" original="Тарасовская набережная" isOriginal={isOriginal} />
 					</Location>
@@ -592,7 +592,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://ru.wikipedia.org/wiki/Харитоновский_сад"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Харитоновский сад
 					</Location>
@@ -608,7 +608,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://ru.wikipedia.org/wiki/Октябрьская_площадь_(Екатеринбург)"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Сквер у Драмы
 					</Location>
@@ -624,7 +624,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://ru.wikipedia.org/wiki/Екатеринбургский_ипподром"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Парк на Верх-Исетском бульваре
 					</Location>
@@ -640,7 +640,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://ru.wikipedia.org/wiki/Улица_Бажова_(Екатеринбург)"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						<OriginaledTitle modern="Улица Бажова" original="Обсерваторская улица" isOriginal={isOriginal} />
 					</Location> и <Location
@@ -652,7 +652,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://ru.wikipedia.org/wiki/Метеогорка"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						метеогорка
 					</Location>
@@ -668,7 +668,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://ецпкио.рф"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						<OriginaledTitle modern="Парк Маяковского" original="Мещанская роща" isOriginal={isOriginal} />
 					</Location>
@@ -683,7 +683,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://ru.wikipedia.org/wiki/Верх-Исетское_водохранилище"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Верх-Исетского пруда
 					</Location>
@@ -699,7 +699,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://nashural.ru/dostoprimechatelnosti-urala/sverdlovskaya-oblast/dendropark-na-ulitse-pervomajskoj-v-ekaterinburge/"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Дендропарк
 					</Location> на <OriginaledTitle modern="Первомайской" original="Клубной" isOriginal={isOriginal} /> и <Location
@@ -711,7 +711,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://ru.wikipedia.org/wiki/Втузгородок_(Екатеринбург)"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Втузгородок
 					</Location>
@@ -727,7 +727,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="http://shartash-park.ru"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Озеро Шарташ
 					</Location>
@@ -743,7 +743,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://ru.wikipedia.org/wiki/Уктусские_горы"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Уктусские горы
 					</Location>
@@ -760,7 +760,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://ru.wikipedia.org/wiki/Плотина_Городского_пруда_на_реке_Исеть"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Плотинка
 					</Location>
@@ -776,7 +776,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://ru.wikipedia.org/wiki/Дом_Севастьянова"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Дом Севастьянова
 					</Location>
@@ -792,7 +792,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://ru.wikipedia.org/wiki/Белый_дом_(Екатеринбург)"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Белый дом
 					</Location>
@@ -808,7 +808,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://ru.wikipedia.org/wiki/Исеть_(гостиница)"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Гостиница Исеть
 					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 69/1 и <Location
@@ -820,7 +820,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://ru.wikipedia.org/wiki/Городок_чекистов"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						городок чекистов
 					</Location>
@@ -836,7 +836,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://uralopera.ru"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Театр оперы и балета
 					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 46а
@@ -852,7 +852,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://ru.wikipedia.org/wiki/Динамо_(спорткомплекс,_Екатеринбург)"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Спорткомплекс Динамо
 					</Location> на <OriginaledTitle modern="Ерёмина" original="Ключевской" isOriginal={isOriginal} />, 12
@@ -868,7 +868,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://tower1929.ru"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Белая башня
 					</Location> на <OriginaledTitle modern="Бакинских комиссаров" original="Бакинских комиссаров" isOriginal={isOriginal} />, 2а
@@ -884,7 +884,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://ru.wikipedia.org/wiki/Екатеринбургская_телебашня"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						<s>Телевизионная башня</s>
 					</Location> <s>на <OriginaledTitle modern="Степана Разина" original="Спасской" isOriginal={isOriginal} />, 17</s>
@@ -900,7 +900,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://ru.wikipedia.org/wiki/Дом_связи_(Екатеринбург)"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Дом связи
 					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 39
@@ -916,7 +916,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://ru.wikipedia.org/wiki/Здание_Свердловского_городского_совета_народных_депутатов"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Городская администрация
 					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 24а
@@ -936,7 +936,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://yeltsin.ru"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Ельцин Центр
 					</Location> на <OriginaledTitle modern="Ельцина" original="Фетисовской" isOriginal={isOriginal} />, 3
@@ -952,7 +952,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://ekaterinburg.guide"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Музей Невьянской иконы
 					</Location> на <OriginaledTitle modern="Энгельса" original="Малаховской" isOriginal={isOriginal} />, 15
@@ -968,7 +968,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://i-z-o.art/constitutor/muzei-naivnogo-iskusstva/"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Музей наивного искусства
 					</Location> на <OriginaledTitle modern="Розы Люксембург" original="Златоустовской" isOriginal={isOriginal} />, 18
@@ -984,7 +984,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://uole-museum.ru/museums/hudozhestvennyj-muzej-ernsta-neizvestnogo/"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Музей Эрнста Неизвестного
 					</Location> на <OriginaledTitle modern="Добролюбова" original="Госпитальной" isOriginal={isOriginal} />, 14
@@ -1000,7 +1000,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://ugmuseum-ekb.ru"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Музей Андеграунда
 					</Location> на <OriginaledTitle modern="Добролюбова" original="Госпитальной" isOriginal={isOriginal} />, 4
@@ -1016,7 +1016,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://uole-museum.ru/museums/muzej-istorii-i-arheologii-urala/"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Музей истории и археологии Урала
 					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 69/10
@@ -1037,7 +1037,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://uole-museum.ru/museums/muzej-prirody-urala/"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Музей природы Урала
 					</Location> на <OriginaledTitle modern="Горького" original="Тарасовской набережной" isOriginal={isOriginal} />, 4
@@ -1053,7 +1053,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="http://dommetenkova.ru"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Дом Метенкова
 					</Location> на <OriginaledTitle modern="Карла Либкнехта" original="Вознесенском проспекте" isOriginal={isOriginal} />, 36
@@ -1069,7 +1069,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://museum-planeta.ru"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Минералогический музей «Планета»
 					</Location> на <OriginaledTitle modern="Чернышевского" original="Дубровинская" isOriginal={isOriginal} />, 7
@@ -1085,7 +1085,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://ursmu.ru/geologiceskii-muzei-uggu"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Уральский геологический музей
 					</Location> на <OriginaledTitle modern="Куйбышева" original="Сибирском проспекте" isOriginal={isOriginal} />, 39
@@ -1101,7 +1101,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://sinara-center.com"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Синара Центр
 					</Location> на <OriginaledTitle modern="Верх-Исетском бульваре" original="Верх-Исетском бульваре" isOriginal={isOriginal} />, 15/4
@@ -1117,7 +1117,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://i-z-o.art/constitutor/muzei-na-plotinke/"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Музей изобразительных искусств
 					</Location> на <OriginaledTitle modern="Воеводина" original="Воеводина" isOriginal={isOriginal} />, 5
@@ -1133,7 +1133,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://ural.pushkinmuseum.art"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Центр современного искусства
 					</Location> (ГЦСИ) на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 50
@@ -1159,7 +1159,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://www.kolyada-theatre.ru"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Коляда-Театр
 					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 97
@@ -1175,7 +1175,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://uralcsd.com"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Центр современной драматургии
 					</Location> на <OriginaledTitle modern="Малышева" original="Покровском проспекте" isOriginal={isOriginal} />, 145а, литера Ф
@@ -1191,7 +1191,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://provincialdances.ru"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Театр «Провинциальные танцы»
 					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 43
@@ -1207,7 +1207,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://www.everjazz.ru/"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Эвер Джаз
 					</Location> на <OriginaledTitle modern="Тургенева" original="Верхне-Вознесенской" isOriginal={isOriginal} />, 22
@@ -1223,7 +1223,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://sgaf.ru"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Филармония
 					</Location> на <OriginaledTitle modern="Карла Либкнехта" original="Вознесенском проспекте" isOriginal={isOriginal} />, 38а
@@ -1248,7 +1248,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://eeel.center"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Ель
 					</Location> в Ельцин Центре на <OriginaledTitle modern="Ельцина" original="Фетисовской" isOriginal={isOriginal} />, 3
@@ -1264,7 +1264,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://piotrovsky.store"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Пиотровский
 					</Location> в Ельцин Центре на <OriginaledTitle modern="Ельцина" original="Фетисовской" isOriginal={isOriginal} />, 3 и <Location
@@ -1276,7 +1276,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://taplink.cc/bookvalno.bookshop"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Буквально
 					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 50
@@ -1292,7 +1292,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://t.me/dvoeshop"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Двоеточие
 					</Location> на <OriginaledTitle modern="Пушкина" original="Пушкинская" isOriginal={isOriginal} />, 14
@@ -1308,7 +1308,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://www.instagram.com/ingir_ekb/"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Инжир
 					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 25
@@ -1324,7 +1324,7 @@ export default function YePage() {
 						onDoublegisChange={setDoublegis}
 						website="https://bolshoy.me"
 						onWebsiteChange={setWebsite}
-						onOpen={onOpen}
+						onOpen={open}
 					>
 						Большой
 					</Location> на <OriginaledTitle modern="Малышева" original="Покровском проспекте" isOriginal={isOriginal} />, 71
@@ -1338,7 +1338,7 @@ export default function YePage() {
 				<Signature variant="yekaterinburg" />
 				<LocationModal
 					isOpen={isOpen}
-					onOpenChange={onOpenChange}
+					onOpenChange={setOpen}
 					name={name}
 					yandex={yandex}
 					doublegis={doublegis}

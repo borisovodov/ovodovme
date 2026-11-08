@@ -2,10 +2,8 @@
 
 import {
 	Card,
-	CardBody,
-	Tab,
-	Tabs,
 	Switch,
+	Tabs,
 } from "@heroui/react"
 import { useState, useEffect } from "react"
 
@@ -26,14 +24,22 @@ export default function HomePage() {
 	return (
 		<div className="max-w-3xl">
 			<PageHeader title="Всем привет от Бориса Оводова 👋🏻" />
-			<Card shadow="sm">
-				<CardBody className="text-gray-400 text-sm">
+			<Card>
+				<Card.Content className="text-gray-400 text-sm">
 					<p>{data.current.city}<LocalTime /><LocalWeather /></p>
 					<p className="mt-1"><RemainingYears /></p>
-				</CardBody>
+				</Card.Content>
 			</Card>
-			<Tabs fullWidth aria-label="Сферы" size="lg" className="mt-8">
-				<Tab key="projects" title="Польза">
+			<Tabs aria-label="Сферы" className="mt-8">
+				<Tabs.List aria-label="Сферы">
+					<Tabs.Tab id="projects">Польза<Tabs.Indicator /></Tabs.Tab>
+					<Tabs.Tab id="media">Медийка<Tabs.Indicator /></Tabs.Tab>
+					<Tabs.Tab id="talks">Паблик токи<Tabs.Indicator /></Tabs.Tab>
+					<Tabs.Tab id="social">Соцсети<Tabs.Indicator /></Tabs.Tab>
+					<Tabs.Tab id="past">Позади<Tabs.Indicator /></Tabs.Tab>
+					<Tabs.Tab id="future">Впереди<Tabs.Indicator /></Tabs.Tab>
+				</Tabs.List>
+				<Tabs.Panel id="projects">
 					<ProjectCard
 						name="Hermann"
 						url="https://hermann.ovodov.me/"
@@ -80,8 +86,8 @@ export default function HomePage() {
 					>
 						Контрол SwiftUI для выбора элементов из древовидного списка. Как <Link href="https://developer.apple.com/documentation/swiftui/picker">Picker</Link>, но с иерархией.
 					</ProjectCard>
-				</Tab>
-				<Tab key="media" title="Медийка">
+				</Tabs.Panel>
+				<Tabs.Panel id="media">
 					<ProjectCard
 						name="Борины закладки в Сафари"
 						url="https://t.me/safariBookmarks"
@@ -131,15 +137,19 @@ export default function HomePage() {
 					>
 						Видео с секундными кусочками каждого дня в течение 2022–2023-го года. Полотно о жизни маленького человека за год, в который произошло всё: переезд в новый дом, запуск публичных проектов, бесконечный локдаун, хронический гастроэзофагеальный рефлюкс, смерть отца, защита на первую категорию, помолвка и открытие в себе новых страстей и талантов. Жизнь как перфоманс, ёпта.
 					</ProjectCard>
-				</Tab>
-				<Tab key="talks" title="Паблик токи">
+				</Tabs.Panel>
+				<Tabs.Panel id="talks">
 					<Switch
 						isSelected={isWork}
-						onValueChange={setIsWork}
+						onChange={setIsWork}
 						size="sm"
-						color="warning"
 					>
-						Болтовня по работе
+						<Switch.Content>
+							<Switch.Control>
+								<Switch.Thumb />
+							</Switch.Control>
+							Болтовня по работе
+						</Switch.Content>
 					</Switch>
 
 					<TalkCard
@@ -280,8 +290,8 @@ export default function HomePage() {
 					>
 						Милейше поболтали с Дашей и Антоном про преподавание, развитие системных аналитиков, как ими стать (привет Любовь Андреевне), где заканчиваются границы роли и профессиональное выгорание.
 					</TalkCard>
-				</Tab>
-				<Tab key="social" title="Соцсети">
+				</Tabs.Panel>
+				<Tabs.Panel id="social">
 					<p className="mt-4"><Link href="https://www.imdb.com/user/ur105749044/">АйЭмДиБи</Link></p>
 					<p className="mt-4"><Link href="https://vas3k.club/user/borisovodov/">Вастрик.Клуб</Link></p>
 					<p className="mt-4"><Link href="https://vk.com/borisovodov">ВК</Link></p>
@@ -294,8 +304,8 @@ export default function HomePage() {
 					<p className="mt-4"><Link href="https://t.me/safariBookmarks">Телеграм</Link></p>
 					{/* <p className="mt-4"><Link href="https://www.facebook.com/borisovodov">Фэйсбук</Link></p> */}
 					<p className="mt-4"><Link href="https://www.youtube.com/@ovodov">Ютуб</Link></p>
-				</Tab>
-				<Tab key="past" title="Позади">
+				</Tabs.Panel>
+				<Tabs.Panel id="past">
 					<ProjectCard
 						name="Papers Around"
 						url="https://papersaround.com/"
@@ -354,10 +364,10 @@ export default function HomePage() {
 					>
 						Снимали с Костей документальные фильмы про школу. Камера Джэй-Ви-Си, монтаж в Муви-мейкере, рисунки в Пэинте, пиратский саундтрек. Студию назвали в честь 28-й комнаты общежития интерната, где мы жили.
 					</ProjectCard>
-				</Tab>
-				<Tab key="future" title="Впереди">
+				</Tabs.Panel>
+				<Tabs.Panel id="future">
 					<p className="mt-4">Проживу жизнь, наполненную до краёв.</p>
-				</Tab>
+				</Tabs.Panel>
 			</Tabs>
 			<Signature />
 		</div>

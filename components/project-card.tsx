@@ -1,8 +1,5 @@
-import {
-    Card,
-    CardBody,
-    Image,
-} from "@heroui/react"
+import { Card } from "@heroui/react"
+import Image from "next/image";
 
 import { Link } from "@/components";
 
@@ -22,8 +19,8 @@ export function ProjectCard({
     children,
 }: ProjectCardProps) {
     return (
-        <Card shadow="sm" className="mt-4">
-            <CardBody>
+        <Card className="mt-4">
+            <Card.Content>
                 <div className="flex items-start">
                     {imageSrc && (
                         <Link href={url} className="mr-4 flex-shrink-0">
@@ -32,7 +29,7 @@ export function ProjectCard({
                                 alt={`${name} лого`}
                                 width={64}
                                 height={64}
-                                className="object-contain"
+                                className="object-contain rounded-[14px] w-16 h-16"
                             />
                         </Link>
                     )}
@@ -46,7 +43,7 @@ export function ProjectCard({
                         </div>
                     </div>
                 </div>
-            </CardBody>
+            </Card.Content>
         </Card>
     );
 }
