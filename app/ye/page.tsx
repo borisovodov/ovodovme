@@ -27,7 +27,7 @@ export default function YePage() {
 	return (
 		<>
 			<div className="flex flex-col lg:flex-row">
-				<div className="flex-[2]">
+				<div className="flex-2">
 					<div className="max-w-3xl">
 						<PageHeader
 							title="Субъективный путеводитель по Екатеринбургу"
@@ -35,7 +35,7 @@ export default function YePage() {
 						/>
 					</div>
 				</div>
-				<div className="mt-8 flex-[1]">
+				<div className="mt-8 flex-1">
 					<Switch isSelected={isOriginal} onChange={setIsOriginal} size="sm">
 						<Switch.Content>
 							<Switch.Control>

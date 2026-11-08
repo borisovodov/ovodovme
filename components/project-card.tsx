@@ -23,7 +23,7 @@ export function ProjectCard({
             <Card.Content>
                 <div className="flex items-start">
                     {imageSrc && (
-                        <Link href={url} className="mr-4 flex-shrink-0">
+                        <Link href={url} className="mr-4 shrink-0">
                             <Image
                                 src={imageSrc}
                                 alt={`${name} лого`}
@@ -35,7 +35,7 @@ export function ProjectCard({
                     )}
                     <div className="min-w-0 flex-1">
                         <Link href={url} className="font-semibold">{name}</Link>
-                        <div className="break-words">
+                        <div className="wrap-break-word">
                             {years && (
                                 <p className="mt-2 text-xs">{years}</p>
                             )}

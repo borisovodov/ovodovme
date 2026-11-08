@@ -13,7 +13,7 @@ export function DiaryImage({
 }: DiaryImageProps) {
     return (
         <div>
-            <div className="mt-4 rounded-md border-1 border-gray-200">
+            <div className="mt-4 rounded-md border border-gray-200">
                 <Image
                     width={800}
                     height={800}

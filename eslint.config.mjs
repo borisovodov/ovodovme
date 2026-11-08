@@ -37,6 +37,7 @@ const eslintConfig = defineConfig([
 		},
 		rules: {
 			"tailwindcss/classnames-order": "error",
+			"tailwindcss/enforces-canonical-classname": "error",
 			"tailwindcss/enforces-negative-arbitrary-values": "warn",
 			"tailwindcss/enforces-shorthand": "warn",
 			"tailwindcss/no-contradicting-classname": "error",
