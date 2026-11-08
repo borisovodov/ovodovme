@@ -184,6 +184,7 @@ export default function TrudPage() {
 				<li className="mb-2"><Link href="https://www.instagram.com/kova.tatya/reel/DVWHyrBja3_/">Татьяна | Financial analyst | Финансовый аналитик</Link></li>
 				<li className="mb-2"><Link href="https://mbk-lab.ru/производственный-календарь-в-формат/">Лаборатория МБК</Link></li>
 				<li className="mb-2"><Link href="https://www.youtube.com/watch?v=hsCv6eSbSFs&t=584s">Just Use</Link></li>
+				<li className="mb-2"><Link href="https://github.com/Anoncheg1/emacs-russian-calendar">emacs-russian-calendar</Link></li>
 				<li className="mb-2"><Link href="https://www.iphones.ru/iNotes/kakoy-segodnya-prazdnik-dobavlyaem-vse-rossiyskie-vyhodnye-i-prazdniki-v-kalendar-na-iphone">iPhones.ru</Link></li>
 			</ul>
 
