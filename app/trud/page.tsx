@@ -13,6 +13,7 @@ import { PageHeader, Signature } from "@/components";
 
 export default function TrudPage() {
 	const [isCopied, setIsCopied] = useState(false);
+	const [isArchiveCopied, setIsArchiveCopied] = useState(false);
 
 	async function addToClipboard() {
 		const url = "https://ovodov.me/trud.ics";
@@ -35,6 +36,27 @@ export default function TrudPage() {
 		setTimeout(() => { setIsCopied(false); }, 1500);
 	}
 
+	async function addArchiveToClipboard() {
+		const url = "https://ovodov.me/trud_archive.ics";
+		try {
+			await navigator.clipboard.writeText(url);
+		} catch {
+			// Фолбэк: clipboard API может быть недоступен (нет фокуса/разрешения)
+			const textarea = document.createElement("textarea");
+			textarea.value = url;
+			textarea.style.position = "fixed";
+			textarea.style.opacity = "0";
+			document.body.appendChild(textarea);
+			textarea.select();
+			// Единственный надёжный фолбэк копирования без clipboard API
+			// eslint-disable-next-line @typescript-eslint/no-deprecated
+			document.execCommand("copy");
+			textarea.remove();
+		}
+		setIsArchiveCopied(true);
+		setTimeout(() => { setIsArchiveCopied(false); }, 1500);
+	}
+
 	return (
 		<div className="max-w-3xl">
 			<PageHeader
@@ -44,7 +66,7 @@ export default function TrudPage() {
 			<p className="mb-2">В интернете полно производственных календарей. Бери и пользуйся! Все они предназначены для печати или же доступны на отдельном сайте.</p>
 			<p className="mb-2">Однако многие из нас пользуются приложениями-календарями (например Гугл Календарём или Аутлуком). Проблема в том, что для них не существует полноценного производственного календаря, а стандартные календари с праздниками путают нас событиями навроде «Масленицы» или «Дня смеха».</p>
 			<p className="mb-2">Теперь вы можете подписаться на производственный календарь в формате iCal (ics), который понимает каждое приложение-календарь и ежегодно обновляется.</p>
-			<p className="mb-2">Подписаться на календарь:</p>
+			<p className="mb-2 mt-6">Подписаться на календарь:</p>
 			<ScrollShadow className="mb-4">
 				<code className="inline-flex h-fit items-center rounded-sm bg-default/40 px-2 py-1 font-mono text-lg font-normal whitespace-nowrap text-default-foreground">
 					<span>https://ovodov.me/trud.ics</span>
@@ -53,7 +75,7 @@ export default function TrudPage() {
 					</Button>
 				</code>
 			</ScrollShadow>
-			<p className="mb-2">Инструкция по добавлению подписки на календарь:</p>
+			<p className="mb-2 mt-6">Инструкция по добавлению подписки на календарь:</p>
 			<Accordion>
 				<Accordion.Item id="gInstruction">
 					<Accordion.Heading>
@@ -108,6 +130,16 @@ export default function TrudPage() {
 					</Accordion.Panel>
 				</Accordion.Item>
 			</Accordion>
+			<p className="mb-2 mt-6">Есть ещё календарь со всеми событиями с 2010-го. С ним могут быть проблемы на айфонах.</p>
+			<ScrollShadow className="mb-4">
+				<code className="inline-flex h-fit items-center rounded-sm bg-default/40 px-2 py-1 font-mono text-lg font-normal whitespace-nowrap text-default-foreground">
+					<span>https://ovodov.me/trud_archive.ics</span>
+					<Button onPress={() => { void addArchiveToClipboard(); }} className="min-w-6" variant="ghost">
+						{isArchiveCopied ? <CheckIcon className="size-6" /> : <ClipboardDocumentIcon className="size-6" />}
+					</Button>
+				</code>
+			</ScrollShadow>
+			<p className="mb-2 mt-6">Отзывы</p>
 			<div className="mt-5">
 				<Card className="mt-4">
 					<Card.Content>
@@ -146,6 +178,8 @@ export default function TrudPage() {
 					</Card.Content>
 				</Card>
 			</div>
+			<p className="mb-2 mt-6">Мы в медиа</p>
+
 			<Signature />
 		</div>
 	);
