@@ -31,13 +31,13 @@ export default function HomePage() {
 				</Card.Content>
 			</Card>
 			<Tabs aria-label="Сферы" className="mt-8">
-				<Tabs.List aria-label="Сферы">
-					<Tabs.Tab id="projects">Польза<Tabs.Indicator /></Tabs.Tab>
-					<Tabs.Tab id="media">Медийка<Tabs.Indicator /></Tabs.Tab>
-					<Tabs.Tab id="talks">Паблик токи<Tabs.Indicator /></Tabs.Tab>
-					<Tabs.Tab id="social">Соцсети<Tabs.Indicator /></Tabs.Tab>
-					<Tabs.Tab id="past">Позади<Tabs.Indicator /></Tabs.Tab>
-					<Tabs.Tab id="future">Впереди<Tabs.Indicator /></Tabs.Tab>
+				<Tabs.List aria-label="Сферы" className="w-full overflow-x-auto">
+					<Tabs.Tab id="projects" className="basis-0 grow whitespace-nowrap">Польза<Tabs.Indicator /></Tabs.Tab>
+					<Tabs.Tab id="media" className="basis-0 grow whitespace-nowrap">Медийка<Tabs.Indicator /></Tabs.Tab>
+					<Tabs.Tab id="talks" className="basis-0 grow whitespace-nowrap">Паблик токи<Tabs.Indicator /></Tabs.Tab>
+					<Tabs.Tab id="social" className="basis-0 grow whitespace-nowrap">Соцсети<Tabs.Indicator /></Tabs.Tab>
+					<Tabs.Tab id="past" className="basis-0 grow whitespace-nowrap">Позади<Tabs.Indicator /></Tabs.Tab>
+					<Tabs.Tab id="future" className="basis-0 grow whitespace-nowrap">Впереди<Tabs.Indicator /></Tabs.Tab>
 				</Tabs.List>
 				<Tabs.Panel id="projects">
 					<ProjectCard
