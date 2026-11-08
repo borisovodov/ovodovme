@@ -36,7 +36,7 @@ export default function EventPage() {
 				downloadICS();
 				setMode(Mode.DOWNLOAD);
 			}
-		} catch(error) {
+		} catch (error) {
 			const message = error instanceof Error ? error.message : "Неизвестная ошибка";
 			setErrorMessage(message);
 			setMode(Mode.ERROR);
@@ -45,17 +45,17 @@ export default function EventPage() {
 
 	return (
 		<>
-			{ mode === Mode.MAIN ?
+			{mode === Mode.MAIN ?
 				<MainPage />
-			: mode === Mode.IOS_TELEGRAM_PREVIEW ?
-				<IOSPage />
-			: mode === Mode.ANDROID_TELEGRAM_PREVIEW ?
-				<AndroidPage />
-			: mode === Mode.DOWNLOAD ?
-				<DownloadPage />
-			: mode === Mode.ERROR ?
-				<ErrorPage message={errorMessage} setMode={setMode} />
-			: <Spinner />}
+				: mode === Mode.IOS_TELEGRAM_PREVIEW ?
+					<IOSPage />
+					: mode === Mode.ANDROID_TELEGRAM_PREVIEW ?
+						<AndroidPage />
+						: mode === Mode.DOWNLOAD ?
+							<DownloadPage />
+							: mode === Mode.ERROR ?
+								<ErrorPage message={errorMessage} setMode={setMode} />
+								: <Spinner />}
 		</>
 	);
 }

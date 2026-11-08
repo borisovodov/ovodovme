@@ -15,7 +15,7 @@ export function calculateRemainingTime(): RemainingTime {
 	const remainingMs = diff - (wholeYears * msPerYear);
 	// Добавляю одну секунду, чтобы результат коррелировал с часами выше
 	const remainingSeconds = Math.floor(remainingMs / 1000) + 1;
-	
+
 	let yearsNoun;
 	const mod100 = wholeYears % 100;
 	if (mod100 >= 11 && mod100 <= 14) {
@@ -26,7 +26,7 @@ export function calculateRemainingTime(): RemainingTime {
 		else if (mod10 >= 2 && mod10 <= 4) yearsNoun = "года";
 		else yearsNoun = "лет";
 	}
-	
+
 	let secondsNoun;
 	const secMod100 = remainingSeconds % 100;
 	if (secMod100 >= 11 && secMod100 <= 14) {
@@ -37,6 +37,6 @@ export function calculateRemainingTime(): RemainingTime {
 		else if (secMod10 >= 2 && secMod10 <= 4) secondsNoun = "секунды";
 		else secondsNoun = "секунд";
 	}
-	
+
 	return { wholeYears, remainingSeconds, yearsNoun, secondsNoun };
 }

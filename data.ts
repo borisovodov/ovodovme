@@ -1,10 +1,10 @@
 export const data = {
     current: {
-		city: "Екатеринбург",
-		latitude: 56.8519,
-		longitude: 60.6122,
-		timeZone: "Asia/Yekaterinburg",
-	},
+        city: "Екатеринбург",
+        latitude: 56.8519,
+        longitude: 60.6122,
+        timeZone: "Asia/Yekaterinburg",
+    },
     all: [
         {
             city: "Большеустьикинское",

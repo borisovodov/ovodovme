@@ -519,18 +519,18 @@ export default function YePage() {
 				</p>
 				<p className="mt-2">Пицца Мия (в девичестве «Фридей») открылась, когда в городе ещё не было ни одного Макдоналдса. И что же теперь — Макдоналдса <i>уже</i> нет, а Пицца Мия всё равно на месте. Если хотите вкусить настоящее уральское студенчество, закажите пиццу «Фридей», соус «Уральский» и Балтику тройку.</p>
 				<p className="font-bold mt-8">Кировские булочки с корицей в <Location
-						name="Кировский"
-						onNameChange={setName}
-						yandex="https://yandex.ru/maps/54/yekaterinburg/chain/kirovskiy/6001963/"
-						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/branches/1267174266116987"
-						onDoublegisChange={setDoublegis}
-						website="https://kirmarket.ru"
-						onWebsiteChange={setWebsite}
-						onOpen={open}
-					>
-						Кировском
-					</Location>
+					name="Кировский"
+					onNameChange={setName}
+					yandex="https://yandex.ru/maps/54/yekaterinburg/chain/kirovskiy/6001963/"
+					onYandexChange={setYandex}
+					doublegis="https://2gis.ru/ekaterinburg/branches/1267174266116987"
+					onDoublegisChange={setDoublegis}
+					website="https://kirmarket.ru"
+					onWebsiteChange={setWebsite}
+					onOpen={open}
+				>
+					Кировском
+				</Location>
 				</p>
 				<p className="mt-2">Их запах — это запах детства. Их вкус — это вкус первой влюблённости в детском саду. Их вид — это красота уральских гор с верхней Таганайской тропы. Заходите в «Кировский» и забирайте одноимённые свежие тёплые булочки с собой в дорогу.</p>
 				{/* <p className="font-bold mt-8">
@@ -551,18 +551,18 @@ export default function YePage() {
 				<p className="mt-2">Сергей Мирошников, ещё один из идеологов «Аутентичной Уральской Кухни», решил открыть не файн дайнинг, а настоящий уральский стритфуд. За основу взял шаньгу — блюдо очень понятное для местных и экзотичное для приезжих. И докрутил открытый пирожок до мишленовского уровня. С собой не берите, кушайте стоя прямо там пока горячая.</p> */}
 				<Heading>Где прогуляться? Где на пробежку выйти?</Heading>
 				<p className="font-bold mt-4">Набережная <Location
-						name="Городской пруд"
-						onNameChange={setName}
-						yandex="https://yandex.ru/maps/54/yekaterinburg/geo/gorodskoy_prud/171389452/"
-						onYandexChange={setYandex}
-						doublegis="https://2gis.ru/ekaterinburg/geo/1267324612195313"
-						onDoublegisChange={setDoublegis}
-						website="https://ru.wikipedia.org/wiki/Городской_пруд_(Екатеринбург)"
-						onWebsiteChange={setWebsite}
-						onOpen={open}
-					>
-						Городского пруда
-					</Location>
+					name="Городской пруд"
+					onNameChange={setName}
+					yandex="https://yandex.ru/maps/54/yekaterinburg/geo/gorodskoy_prud/171389452/"
+					onYandexChange={setYandex}
+					doublegis="https://2gis.ru/ekaterinburg/geo/1267324612195313"
+					onDoublegisChange={setDoublegis}
+					website="https://ru.wikipedia.org/wiki/Городской_пруд_(Екатеринбург)"
+					onWebsiteChange={setWebsite}
+					onOpen={open}
+				>
+					Городского пруда
+				</Location>
 				</p>
 				<p className="mt-2">Квинтэссенция Екатеринбурга, обязательно погуляйте там. Летом стоит прокатиться на катере по пруду (<i>лучше на закате, лучше без планов после, лучше быть пьяным, молодым и влюблённым</i>).</p>
 				<p className="mt-2">У бегунов там есть любимый маршрут под названием «Подкова»: от <OriginaledTitle modern="Макаровского" original="Кривцовского" isOriginal={isOriginal} /> моста (<OriginaledTitle modern="улица Челюскинцев" original="улица Северная" isOriginal={isOriginal} />) со стороны спорткомплекса «Динамо», через ротонды на Плотинке и потом обратно к <OriginaledTitle modern="Макаровскому" original="Кривцовскому" isOriginal={isOriginal} /> мосту, но уже у Ельцин Центра. Собственно по этому маршруту бегали ребята по <Link variant="yekaterinburg" href="https://www.e1.ru/text/gorod/2023/06/16/72404033/">субботам с Ройзманом</Link>.</p>

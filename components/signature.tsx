@@ -1,6 +1,6 @@
 import { Link } from "@/components";
 
-export function Signature({variant}: {variant?: "default" | "yekaterinburg"}) {
+export function Signature({ variant }: { variant?: "default" | "yekaterinburg" }) {
     return (
         <div className="mt-8">
             <p>-- </p>

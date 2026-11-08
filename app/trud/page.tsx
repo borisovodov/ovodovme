@@ -32,7 +32,7 @@ export default function TrudPage() {
 		setIsCopied(true);
 		setTimeout(() => setIsCopied(false), 1500);
 	}
-	
+
 	return (
 		<div className="max-w-3xl">
 			<PageHeader
