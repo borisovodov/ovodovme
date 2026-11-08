@@ -44,13 +44,17 @@ export async function fetchWeather(latitude: number, longitude: number, onChange
     };
     const url = "https://api.open-meteo.com/v1/forecast";
     const responses = await fetchWeatherApi(url, params);
-    const current = responses[0].current();
+    const response = responses[0];
+    if (!response) {
+        return;
+    }
+    const current = response.current();
     if (current) {
         const condition = weatherEmoji[current.variables(0)?.value() ?? 0] || "❓";
         const temperature = Math.round(current.variables(1)?.value() ?? 0);
         const tempDisplay = temperature < 0
-            ? `−${Math.abs(temperature)}`
-            : `${temperature}`;
+            ? `−${String(Math.abs(temperature))}`
+            : String(temperature);
         onChange({ condition, temperature: tempDisplay });
     }
 }

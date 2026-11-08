@@ -26,11 +26,13 @@ export default function TrudPage() {
 			textarea.style.opacity = "0";
 			document.body.appendChild(textarea);
 			textarea.select();
+			// Единственный надёжный фолбэк копирования без clipboard API
+			// eslint-disable-next-line @typescript-eslint/no-deprecated
 			document.execCommand("copy");
 			textarea.remove();
 		}
 		setIsCopied(true);
-		setTimeout(() => setIsCopied(false), 1500);
+		setTimeout(() => { setIsCopied(false); }, 1500);
 	}
 
 	return (
@@ -44,9 +46,9 @@ export default function TrudPage() {
 			<p className="mb-2">Теперь вы можете подписаться на производственный календарь в формате iCal (ics), который понимает каждое приложение-календарь и ежегодно обновляется.</p>
 			<p className="mb-2">Подписаться на календарь:</p>
 			<ScrollShadow className="mb-4">
-				<code className="px-2 py-1 h-fit font-mono font-normal inline-flex items-center whitespace-nowrap rounded-sm bg-default/40 text-default-foreground text-lg">
+				<code className="inline-flex h-fit items-center rounded-sm bg-default/40 px-2 py-1 font-mono text-lg font-normal whitespace-nowrap text-default-foreground">
 					<span>https://ovodov.me/trud.ics</span>
-					<Button onPress={addToClipboard} className="min-w-6" variant="ghost">
+					<Button onPress={() => { void addToClipboard(); }} className="min-w-6" variant="ghost">
 						{isCopied ? <CheckIcon className="size-6" /> : <ClipboardDocumentIcon className="size-6" />}
 					</Button>
 				</code>

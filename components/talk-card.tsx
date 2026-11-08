@@ -25,19 +25,19 @@ export function TalkCard({
             <Card.Content>
                 <div className="flex flex-col sm:flex-row sm:items-start">
                     {imageSrc && (
-                        <Link href={url} className="mb-3 sm:mb-0 sm:mr-4 flex-shrink-0">
+                        <Link href={url} className="mb-3 flex-shrink-0 sm:mr-4 sm:mb-0">
                             <Image
                                 src={imageSrc}
                                 alt={`${name} превью`}
                                 width={160}
                                 height={90}
-                                className="object-contain rounded-[14px] w-40 h-[90px]"
+                                className="h-[90px] w-40 rounded-[14px] object-contain"
                             />
                         </Link>
                     )}
-                    <div className="flex-1 min-w-0">
+                    <div className="min-w-0 flex-1">
                         <Link href={url} className="font-semibold">{name}</Link>
-                        <div className="break-words mt-2">
+                        <div className="mt-2 break-words">
                             <p className="text-xs">{year} • {duration}</p>
                             <div className="mt-1">{children}</div>
                         </div>

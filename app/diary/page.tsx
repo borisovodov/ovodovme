@@ -125,7 +125,7 @@ export default function DiaryPage() {
 			<p className="mt-4">Первый раз письмо публиковалось в 2017-м году. В 2022-м подготовлена вторая редакция: переписана вводная от составителя, уточнены и дополнены примечания, уточнён текст письма, а также добавлено больше фотографий.</p>
 			<p className="mt-4">Для обратной связи пишите письма на <Link href="mailto:boris@ovodov.me">boris@ovodov.me</Link>.</p>
 			<Heading>Примечания составителя</Heading>
-			<ol className="list-decimal list-inside mt-4">
+			<ol className="mt-4 list-inside list-decimal">
 				<li id="cite_note-polikarpindahouse"><Link href="#cite_ref-polikarpindahouse">↑</Link> В историко-географическом и статистическом <Link href="https://rodnaya-vyatka.ru/churches/ve1912/blag/84">описании вятской епархии</Link> за 1912-й год при описании Троицкой церкви села Воскресенского в частности приводится следующая информация: «квартиры для причта казенныя, кромѣ свящ. Васнецова, имѣющаго свой домъ, и діакона Нѣганова, проживающаго въ домѣ вдовы Веселицкой».</li>
 				<li id="cite_note-gulag"><Link href="#cite_ref-gulag">↑</Link> Согласно <Link href="https://ru.openlist.wiki/Неганов_Поликарп_Петрович_(1880)">сведениям из Открытого списка</Link> Поликарп был осуждён особой тройкой при ПП ОГПУ Горьковского края 13 апреля 1933 по статье 58 п. 10 УК РСФСР. Приговор содержал заключение в концлагерь на 5 лет.</li>
 				<li id="cite_note-agniya"><Link href="#cite_ref-agniya">↑</Link> Агния Ильинична Неганова (1888–1960), мать Николая.</li>

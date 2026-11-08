@@ -6,8 +6,8 @@ import {
 
 export default function PisaninaPage() {
 	return (
-		<div className="min-h-screen flex justify-center px-8 md:px-16 lg:px-32 xl:px-48 2xl:px-64 py-16">
-			<div className="max-w-md w-full">
+		<div className="flex min-h-screen justify-center px-8 py-16 md:px-16 lg:px-32 xl:px-48 2xl:px-64">
+			<div className="w-full max-w-md">
 				<PageHeader
 					title="Писанина"
 				/>

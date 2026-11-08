@@ -102,7 +102,7 @@ function formatICSTimestamp(date: Date): string {
     const minutes = String(date.getUTCMinutes()).padStart(2, "0");
     const seconds = String(date.getUTCSeconds()).padStart(2, "0");
 
-    return `${year}${month}${day}T${hours}${minutes}${seconds}Z`;
+    return `${String(year)}${month}${day}T${hours}${minutes}${seconds}Z`;
 }
 
 function formatICSDate(str: string, isEndDate: boolean = false) {
@@ -127,7 +127,7 @@ function formatICSDate(str: string, isEndDate: boolean = false) {
             const seconds = String(date.getSeconds()).padStart(2, "0");
             const tz = getTZ(dateStr);
 
-            return `TZID=${tz.id}:${year}${month}${day}T${hours}${minutes}${seconds}`;
+            return `TZID=${tz.id}:${String(year)}${month}${day}T${hours}${minutes}${seconds}`;
         } else {
             if (isEndDate) {
                 const nextDate = new Date(date);
@@ -135,9 +135,9 @@ function formatICSDate(str: string, isEndDate: boolean = false) {
                 const nextYear = nextDate.getFullYear();
                 const nextMonth = String(nextDate.getMonth() + 1).padStart(2, "0");
                 const nextDay = String(nextDate.getDate()).padStart(2, "0");
-                return `VALUE=DATE:${nextYear}${nextMonth}${nextDay}`;
+                return `VALUE=DATE:${String(nextYear)}${nextMonth}${nextDay}`;
             } else {
-                return `VALUE=DATE:${year}${month}${day}`;
+                return `VALUE=DATE:${String(year)}${month}${day}`;
             }
         }
     } catch {
@@ -149,7 +149,11 @@ function getTZ(str: string): TZ {
     const tzRegex = /(Z|[+-]\d{2}:?\d{2})$/;
     const tzMatch = str.match(tzRegex);
     if (tzMatch) {
-        let tz = tzMatch[1];
+        const rawTz = tzMatch[1];
+        if (rawTz === undefined) {
+            return defaultTimeZone;
+        }
+        let tz = rawTz;
         // Нормализуем формат: добавляем двоеточие, если его нет
         if (tz !== 'Z' && !tz.includes(':')) {
             tz = tz.slice(0, 3) + ':' + tz.slice(3);

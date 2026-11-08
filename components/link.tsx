@@ -6,7 +6,7 @@ import {
 } from "@heroui/react";
 
 interface LinkProps extends Omit<HeroUILinkProps, "variant"> {
-    variant?: "default" | "yekaterinburg" | "ref";
+    variant?: "default" | "yekaterinburg" | "ref" | undefined;
 }
 
 export function Link(props: LinkProps) {

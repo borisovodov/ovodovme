@@ -19,7 +19,10 @@ export default function YePage() {
 	const [yandex, setYandex] = useState("");
 	const [doublegis, setDoublegis] = useState("");
 	const [website, setWebsite] = useState("");
-	const { isOpen, open, setOpen } = useOverlayState();
+	const state = useOverlayState();
+	const isOpen = state.isOpen;
+	const open = () => { state.open(); };
+	const setOpen = (value: boolean) => { state.setOpen(value); };
 
 	return (
 		<>
@@ -32,7 +35,7 @@ export default function YePage() {
 						/>
 					</div>
 				</div>
-				<div className="flex-[1] mt-8">
+				<div className="mt-8 flex-[1]">
 					<Switch isSelected={isOriginal} onChange={setIsOriginal} size="sm">
 						<Switch.Content>
 							<Switch.Control>
@@ -54,7 +57,7 @@ export default function YePage() {
 				<p>Тут карта районов и где тусич, а где нет. https://hoodmaps.com/yekaterinburg-neighborhood-map</p>
 				*/}
 				<Heading>Где позавтракать? Где выпить спешалти кофе?</Heading>
-				<p className="font-bold mt-4" id="es">
+				<p className="mt-4 font-bold" id="es">
 					<Location
 						name="Эспрессо Сизон"
 						onNameChange={setName}
@@ -71,7 +74,7 @@ export default function YePage() {
 				</p>
 				<p className="mt-2">Гранджевая кофейня для задротов. Разные фильтры на выбор с бесплатным пополнением — купил чашку и дегустируешь все сорта. Приятная, необычная еда. Лёня, привет!</p>
 				<p className="mt-2">А ещё владелец кофейни однажды захотел создать самые крутые кофейные чашки в мире. На сысертском фарфоровом заводе (Сысерть — пригород Екатеринбурга) ему реально сделали такие. Прикупите себе в подарок, продаются в разных цветах.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Энгельс"
 						onNameChange={setName}
@@ -87,7 +90,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Малышева" original="Покровском проспекте" isOriginal={isOriginal} />, 21/4
 				</p>
 				<p className="mt-2">Первое место, открывшееся с прицелом на завтраки. Правильно произносить не «Энджелс», а «Энгельс», потому что первое кафе бренда находилось на улице <OriginaledTitle modern="Энгельса" original="Малаховской (позже Энгельса)" isOriginal={isOriginal} />. Но его там уже нет, зато есть куча точек в центре. Самая тихая из них на <OriginaledTitle modern="Малышева" original="Покровском проспекте" isOriginal={isOriginal} />. Основа меню — вафли — правда кайфовые.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Симпл Кофи"
 						onNameChange={setName}
@@ -103,7 +106,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 46
 				</p>
 				<p className="mt-2">Местная гордость: самая большая городская сетёвка кофеен местная, а не федеральная. Завтраки дешёвые и вкусные. Для завтраков запомните как мантру: 3-й, рисовая, малиновое, да, сметана, фильтр. Несмотря на то, что сетёвка, вполне себе спешалти-кофейня с лофтовым оформлением. Можно заходить в любую (благо они уже не только в центре), но каноничная — на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />. Рядом альма-матер автора этих строк, поэтому внутри дух студенчества.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Горожане"
 						onNameChange={setName}
@@ -120,7 +123,7 @@ export default function YePage() {
 				</p>
 				<p className="mt-2">Бистро работает с 8:30, что делает его идеальным местом для завтраков. Если на улице лето, то на десерт заказывайте «Митькину радость» — чувствами улетите в деревню к бабушке, как от <Link variant="yekaterinburg" href="https://ru.wikipedia.org/wiki/Мадлен_(печенье)#«Мадленка»_Пруста">«Мадленки» Пруста</Link>.</p>
 				<p className="mt-2">Внимание: так как место прекрасное, по утрам туда набивается толпа народа и бывает, что столики на завтраки забронированы на пару дней вперёд. Запаривайтесь заранее.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Муру"
 						onNameChange={setName}
@@ -136,7 +139,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Розы Люксембург" original="Златоустовской" isOriginal={isOriginal} />, 27
 				</p>
 				<p className="mt-2">Прекрасные десерты, знаменитые на весь город. Многие закупают у них на перепродажу. Но мест очень мало, редко так везёт, что удастся в выходные посидеть (если ты не Евгений Вадимович, конечно). Можете попытать счастья и приехать пораньше.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Фрэнчи"
 						onNameChange={setName}
@@ -161,7 +164,7 @@ export default function YePage() {
 				<p>Самая недооценённая екатеринбуржцами кафешка. Про неё всегда забывают, но когда в других центровых местах полная посадка — там тебя ждут с распростёртыми объятиями. Заведение делает та же команда, что и «Барборис», поэтому кухня на высоком уровне.</p>
 				*/}
 				<Heading>Где <i>файн дайнинг</i>? В каких ресторанах поужинать?</Heading>
-				<p className="font-bold mt-4">
+				<p className="mt-4 font-bold">
 					<Location
 						name="Гастроли"
 						onNameChange={setName}
@@ -177,7 +180,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="8 марта" original="Уктусской" isOriginal={isOriginal} />, 4
 				</p>
 				<p className="mt-2">Это основа. Это, так сказать, база. Приехали в Екатеринбург и не знаете где поужинать? Идите в «Гастроли»! Это одно из самых титулованных заведений в городе.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Китчен"
 						onNameChange={setName}
@@ -193,7 +196,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Ткачей" original="Расторгуевской" isOriginal={isOriginal} />, 23
 				</p>
 				<p className="mt-2">Фешенебельная уральская кухня; коктейли, названные в честь местных городов; вид на город, как в московском «Уайт рэббите». Шеф ресторана, Сергей Мирошников — один из создателей объединения «<Link variant="yekaterinburg" href="http://auc.rest">Аутентичная Уральская Кухня</Link>». Это легендарные ребята, которые продвигают любовь к местной кухне. В общем, тупо да.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Момо"
 						onNameChange={setName}
@@ -209,7 +212,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Карла Либкнехта" original="Вознесенском проспекте" isOriginal={isOriginal} />, 38а
 				</p>
 				<p className="mt-2">Вечный конкурент «Гастролей» за право самого награждённого екатеринбургского ресторана. Прекрасная пан-азиатская кухня. Но самое главное... местные вагаси моти. Обязательно возьмите их на десерт. И с собой ещё захватите порцию.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Культа"
 						onNameChange={setName}
@@ -225,7 +228,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Радищева" original="Отрясихинской" isOriginal={isOriginal} />, 24
 				</p>
 				<p className="mt-2">Средиземноморский ресторан с заявкой на одну звезду Мишлена. Души мало, но выебонисто и претенциозно. Если вы москвич, что не выходит за границы Садового кольца, — вам только сюда.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Барборис"
 						onNameChange={setName}
@@ -241,7 +244,7 @@ export default function YePage() {
 					</Location> в Ельцин Центре на <OriginaledTitle modern="Ельцина" original="Фетисовской" isOriginal={isOriginal} />, 3
 				</p>
 				<p className="mt-2">Представьте, что вы Владимир Познер в командировке в Екатеринбурге. Куда вы пойдёте на ужин? Конечно же в «Барборис»! Это тот самый ресторан, где ты развалившись в кресле и держа меню без картинок представляешь себя героем бондианы. Лучшая русская кухня в городе.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Чаща"
 						onNameChange={setName}
@@ -257,7 +260,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Красноармейской" original="Солдатской" isOriginal={isOriginal} />, 68
 				</p>
 				<p className="mt-2">Хорошая русская кухня, приятный интерьер. Про него мало знают местные, поэтому всегда есть места. На завтраках подают шампанское. Кутёж!</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Главный"
 						onNameChange={setName}
@@ -321,7 +324,7 @@ export default function YePage() {
 				<p></p>
 				*/}
 				<Heading>Где выпить? Какие барчики культовые?</Heading>
-				<p className="font-bold mt-4">
+				<p className="mt-4 font-bold">
 					<Location
 						name="Коллектив"
 						onNameChange={setName}
@@ -337,7 +340,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="8 марта" original="Уктусской" isOriginal={isOriginal} />, 8г
 				</p>
 				<p className="mt-2">Легендарный спикизи бар, вход в который хрен найдёшь. Просто кружитесь вокруг «Мытного двора» и спрашивайте случайных прохожих: «где тут „Коллектив“?» Лучшие коктейли в городе, самые крутые ребята за стойкой. Если вы любитель барной культуры — обязательно для посещения. Арина и Илья мудро советуют начинать вечер с дитер смэша; могу только присоединиться.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Мелодия"
 						onNameChange={setName}
@@ -353,7 +356,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Первомайской" original="Клубной" isOriginal={isOriginal} />, 36
 				</p>
 				<p className="mt-2">В баре так мало места, что быстро вырабатывается навык проноса наливочек через локти, спины и ключицы других людей. Внутри долбят известные в городе диджеи, а 90% посетителей тусят на улице, потому что внутри уже нет свободного миллиметра. Легенда, не иначе. Берите сразу сет наливок, не прогадаете.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Самоцвет"
 						onNameChange={setName}
@@ -369,7 +372,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Малышева" original="Покровском проспекте" isOriginal={isOriginal} />, 29а
 				</p>
 				<p className="mt-2">Очень атмосферное и популярное заведение. Всё время всякие движухи проходят. ЧГК пизже, чем по Первому. Когда идёте по святой тропинке «Самоцвет» → «Коллектив» → «Мелодия» по традиции начинать нужно именно с «Самоцвета».</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Био Шмио"
 						onNameChange={setName}
@@ -385,7 +388,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Малышева" original="Покровском проспекте" isOriginal={isOriginal} />, 61
 				</p>
 				<p className="mt-2">Винный бар здорового человека. Иногда официанты снобы, иногда лапушки, это как повезёт. А с вином повезёт в любом случае.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Нельсон Совин"
 						onNameChange={setName}
@@ -401,7 +404,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Малышева" original="Покровском проспекте" isOriginal={isOriginal} />, 21/4
 				</p>
 				<p className="mt-2">Самый задротский пивной бар. Для ценителей — сюда.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Янки"
 						onNameChange={setName}
@@ -417,7 +420,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Толмачёва" original="Ко́лобовской" isOriginal={isOriginal} />, 25
 				</p>
 				<p className="mt-2">Подубитый пивной бар с лучшими бургерами в городе.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Джоуз Спот"
 						onNameChange={setName}
@@ -453,7 +456,7 @@ export default function YePage() {
 				<p>Самый старожильский бар из перечисленных. Много различных мероприятий: и лекции, и диджей-сеты, и киношка, и живые выступления. Но на некоторые ивенты приходит по паре человек, не угадаешь заранее будет ли тусовка.</p>
 				*/}
 				<Heading>Где отведать хрючева?</Heading>
-				<p className="font-bold mt-4">
+				<p className="mt-4 font-bold">
 					<Location
 						name="Жизньмарт"
 						onNameChange={setName}
@@ -469,7 +472,7 @@ export default function YePage() {
 					</Location>
 				</p>
 				<p className="mt-2">Легендарный городской продуктовый, из-за которого тут никак не может закрепиться «Вкусвилл». Обязательно посетите, оливье с говядиной там божественный. И онигири тоже. И блинчики с творогом. Ну вы поняли, да?</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Нигора"
 						onNameChange={setName}
@@ -485,7 +488,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Куйбышева" original="Сибирском проспекте" isOriginal={isOriginal} />, 47
 				</p>
 				<p className="mt-2">Узбечка, про которую наслышаны даже москвичи. Порции размером с голову, жир плавает в жире, меню не менялось с момента открытия (и слава богу). Узбечка же, ну.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="ПШК"
 						onNameChange={setName}
@@ -502,7 +505,7 @@ export default function YePage() {
 				</p>
 				<p className="mt-2">Изумительные пышки от которых будет измазюкано всё лицо. Кофе лучше у них не брать, берите в «Скворечнике» напротив. И вперёд гулять вдоль набережной.</p>
 				<p className="mt-2">Хочется отдельно проговорить огромное спасибо Буркову за всё, что он сделал для ресторанной сферы Еката. Автор снимает шляпу.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Пицца Мия"
 						onNameChange={setName}
@@ -518,7 +521,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Карла Либкнехта" original="Вознесенском проспекте" isOriginal={isOriginal} />, 18
 				</p>
 				<p className="mt-2">Пицца Мия (в девичестве «Фридей») открылась, когда в городе ещё не было ни одного Макдоналдса. И что же теперь — Макдоналдса <i>уже</i> нет, а Пицца Мия всё равно на месте. Если хотите вкусить настоящее уральское студенчество, закажите пиццу «Фридей», соус «Уральский» и Балтику тройку.</p>
-				<p className="font-bold mt-8">Кировские булочки с корицей в <Location
+				<p className="mt-8 font-bold">Кировские булочки с корицей в <Location
 					name="Кировский"
 					onNameChange={setName}
 					yandex="https://yandex.ru/maps/54/yekaterinburg/chain/kirovskiy/6001963/"
@@ -550,7 +553,7 @@ export default function YePage() {
 				</p>
 				<p className="mt-2">Сергей Мирошников, ещё один из идеологов «Аутентичной Уральской Кухни», решил открыть не файн дайнинг, а настоящий уральский стритфуд. За основу взял шаньгу — блюдо очень понятное для местных и экзотичное для приезжих. И докрутил открытый пирожок до мишленовского уровня. С собой не берите, кушайте стоя прямо там пока горячая.</p> */}
 				<Heading>Где прогуляться? Где на пробежку выйти?</Heading>
-				<p className="font-bold mt-4">Набережная <Location
+				<p className="mt-4 font-bold">Набережная <Location
 					name="Городской пруд"
 					onNameChange={setName}
 					yandex="https://yandex.ru/maps/54/yekaterinburg/geo/gorodskoy_prud/171389452/"
@@ -566,7 +569,7 @@ export default function YePage() {
 				</p>
 				<p className="mt-2">Квинтэссенция Екатеринбурга, обязательно погуляйте там. Летом стоит прокатиться на катере по пруду (<i>лучше на закате, лучше без планов после, лучше быть пьяным, молодым и влюблённым</i>).</p>
 				<p className="mt-2">У бегунов там есть любимый маршрут под названием «Подкова»: от <OriginaledTitle modern="Макаровского" original="Кривцовского" isOriginal={isOriginal} /> моста (<OriginaledTitle modern="улица Челюскинцев" original="улица Северная" isOriginal={isOriginal} />) со стороны спорткомплекса «Динамо», через ротонды на Плотинке и потом обратно к <OriginaledTitle modern="Макаровскому" original="Кривцовскому" isOriginal={isOriginal} /> мосту, но уже у Ельцин Центра. Собственно по этому маршруту бегали ребята по <Link variant="yekaterinburg" href="https://www.e1.ru/text/gorod/2023/06/16/72404033/">субботам с Ройзманом</Link>.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Улица Горького"
 						onNameChange={setName}
@@ -582,7 +585,7 @@ export default function YePage() {
 					</Location>
 				</p>
 				<p className="mt-2">Ребята из «Русской медной компании» сначала построили здесь свою штаб-квартиру по проекту Нормана Фостера, а потом причесали и всю улицу вокруг. Теперь это любимое место для прогулок многих горожан. Стоит пройтись по ней от <s>Бивиса и Баттхеда</s> Татищева и де Генина до <Link variant="yekaterinburg" href="https://ru.wikipedia.org/wiki/Сплавной_мост">сплавного моста</Link> или дальше до парка вокруг «УГМК-Арены».</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Харитоновский сад"
 						onNameChange={setName}
@@ -598,7 +601,7 @@ export default function YePage() {
 					</Location>
 				</p>
 				<p className="mt-2">Хиреющий год от года парк с прекрасной ротондой. Главные открыточные виды города.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Сквер у Драмы"
 						onNameChange={setName}
@@ -614,7 +617,7 @@ export default function YePage() {
 					</Location>
 				</p>
 				<p className="mt-2">Он же «Октябрьская площадь». Он же «на Драме». Он же «#сквернаш». Тот самый сквер, который <Link variant="yekaterinburg" href="https://ru.wikipedia.org/wiki/Протесты_в_сквере_Екатеринбурга_(2019)">отстояли горожане</Link> в противоборстве с крупнейшими промышленниками и областными властями. От этого зелень в парке ещё ценнее нашим сердечкам.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Парк на Верх-Исетском бульваре"
 						onNameChange={setName}
@@ -630,7 +633,7 @@ export default function YePage() {
 					</Location>
 				</p>
 				<p className="mt-2">Приятный парк на месте бывшего ипподрома. Сотни лет назад это место соединяло два отдельных населённых пункта / завода. Сейчас это даже не бросается в глаза.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Улица Бажова"
 						onNameChange={setName}
@@ -658,7 +661,7 @@ export default function YePage() {
 					</Location>
 				</p>
 				<p className="mt-2">Самая недооценённая горожанами прогулочная улица — <OriginaledTitle modern="Бажова" original="Обсерваторская" isOriginal={isOriginal} />. Тенистые деревья, провинциальная тишина и никакой суеты. Улица начинается из центра города, а заканчивается упираясь в метеогорку — одну из самых высоких точек. С метеогорки открывается отличный вид на центр (хотя сама обзорная площадку убита более, чем полностью). Туда за лучшими восходами, но пусть в наушниках играет «<Link variant="yekaterinburg" href="https://www.youtube.com/watch?v=HrNmLWtlWtY">Екатеринбюргер</Link>» Курары.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Парк Маяковского"
 						onNameChange={setName}
@@ -750,7 +753,7 @@ export default function YePage() {
 				</p>
 				<p className="mt-2">Зимой здесь единственное место в городе, где можно покататься на сноубордах. Летом — очень приятный лесной массив в глуши. Для длительных прогулок, если свободен весь день.</p> */}
 				<Heading>Что посмотреть?</Heading>
-				<p className="font-bold mt-4">
+				<p className="mt-4 font-bold">
 					<Location
 						name="Плотинка"
 						onNameChange={setName}
@@ -766,7 +769,7 @@ export default function YePage() {
 					</Location>
 				</p>
 				<p className="mt-2">Самый центр, вокруг которого вырос сначала Екатеринский завод, а потом и весь город. Все дороги ведут сюда, так что даже если не будете планировать тут оказаться — всё равно появитесь. Здесь всегда джемят музыканты, а дедульки играют в шахматы у <Link variant="yekaterinburg" href="https://www.instagram.com/reels/DBqis3LgdYL/">перехода</Link>. Екатеринбург как он есть.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Дом Севастьянова"
 						onNameChange={setName}
@@ -782,7 +785,7 @@ export default function YePage() {
 					</Location>
 				</p>
 				<p className="mt-2">Эклектичный, очень нарядный дом в самом центре. Инстаграмабельно.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Белый дом"
 						onNameChange={setName}
@@ -798,7 +801,7 @@ export default function YePage() {
 					</Location>
 				</p>
 				<p className="mt-2">Икона позднесоветского модернизма. В народе здание называется «член партии», <i>сами поймёте почему</i>.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Гостиница Исеть"
 						onNameChange={setName}
@@ -826,7 +829,7 @@ export default function YePage() {
 					</Location>
 				</p>
 				<p className="mt-2">Когда говорят про екатеринбургский конструктивизм, то первым делом вспоминают про эту группу зданий. Десять Ле Корбюзье из десяти. Уже только ради этого архитектурного ансамбля стоит приехать в город. В идеале сходите на <Link variant="yekaterinburg" href="https://gorodokchekistov.tilda.ws">экскурсию</Link> с Игорем Янковым.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Театр оперы и балета"
 						onNameChange={setName}
@@ -842,7 +845,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 46а
 				</p>
 				<p className="mt-2">Шикосное здание оперного. Можно погулять в небольшом парке за ним (студенты обычно алкашат там после пар).</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Спорткомплекс Динамо"
 						onNameChange={setName}
@@ -858,7 +861,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Ерёмина" original="Ключевской" isOriginal={isOriginal} />, 12
 				</p>
 				<p className="mt-2">Уже упоминался в рамках прогулки по набережной. Обратите внимание на главное здание — то ли детище конструктивизма 30-х, то ли не существовавшего тогда капрома 90-х. Красота неземная.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Белая башня"
 						onNameChange={setName}
@@ -874,7 +877,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Бакинских комиссаров" original="Бакинских комиссаров" isOriginal={isOriginal} />, 2а
 				</p>
 				<p className="mt-2">Самое потрясающее конструктивистское здание города, <i>ин май хамбл опинион</i>. Зерно, из которого вырос дух Уралмаша. Ах да, обязательно запишитесь на <Link variant="yekaterinburg" href="https://tower1929.ru/#rec107922777">экскурсию</Link>.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Телевизионная башня"
 						onNameChange={setName}
@@ -926,7 +929,7 @@ export default function YePage() {
 				<p></p>
 				*/}
 				<Heading>Куда сходить?</Heading>
-				<p className="font-bold mt-4">
+				<p className="mt-4 font-bold">
 					<Location
 						name="Ельцин Центр"
 						onNameChange={setName}
@@ -942,7 +945,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Ельцина" original="Фетисовской" isOriginal={isOriginal} />, 3
 				</p>
 				<p className="mt-2">Самое известное в стране (в основном скандалами) екатеринбургское учреждение. На деле же для екатеринбуржцев это: одна из лучших городских арт-галерей; место где проходит добрая половина всех приличных ивентов; самый изысканный кинотеатр; самый стильный и современный городской музей (конечно он будет выставлять Ельцина в хорошем свете, это же музей персонально про него, просто делите на два) и прочее, прочее, прочее. В общем, это наше место силы. Федералы — руки прочь от него.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Музей Невьянской иконы"
 						onNameChange={setName}
@@ -958,7 +961,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Энгельса" original="Малаховской" isOriginal={isOriginal} />, 15
 				</p>
 				<p className="mt-2">Лучший частный музей города. Большое собрание Ройзмана уникальных икон нашей области. Невероятная атмосфера, будто вот-вот и запахнет ладаном.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Музей наивного искусства"
 						onNameChange={setName}
@@ -974,7 +977,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Розы Люксембург" original="Златоустовской" isOriginal={isOriginal} />, 18
 				</p>
 				<p className="mt-2">Ещё одна коллекция Ройзмана, которую он передал городским властям. Уютный приятный музей близкого нам с вами искусства.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Музей Эрнста Неизвестного"
 						onNameChange={setName}
@@ -990,7 +993,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Добролюбова" original="Госпитальной" isOriginal={isOriginal} />, 14
 				</p>
 				<p className="mt-2">Кстати, Неизвестный тоже родом из Екатеринбурга. Всем ценителям брутализма посвящается.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Музей Андеграунда"
 						onNameChange={setName}
@@ -1006,7 +1009,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Добролюбова" original="Госпитальной" isOriginal={isOriginal} />, 4
 				</p>
 				<p className="mt-2">Отличный частный музей с богатым собранием московского, питерского и екатеринбургского андеграундного искусства. В наличии даже Пригов, Кабаков и Новиков.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Музей истории и археологии Урала"
 						onNameChange={setName}
@@ -1022,12 +1025,12 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 69/10
 				</p>
 				<p className="mt-2">В целом посредственный краеведческий музей, хоть и крупнейший в городе, если бы не три но.</p>
-				<ol className="list-decimal list-inside">
+				<ol className="list-inside list-decimal">
 					<li>Там находится <Link variant="yekaterinburg" href="https://ru.wikipedia.org/wiki/Шигирский_идол">Шигирский идол</Link> — самая древняя в мире деревянная скульптура. 12 000 лет деревяшке.</li>
 					<li>Классный последний этаж с экспозицией, рассказывающей про археологические поиски тел семьи Романовых, расстрелянных в Екатеринбурге.</li>
 					<li>Само здание времён конструктивистских построек с невероятной красоты винтовой лестницей. То самое место для вашей новой аватарки.</li>
 				</ol>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Музей природы Урала"
 						onNameChange={setName}
@@ -1043,7 +1046,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Горького" original="Тарасовской набережной" isOriginal={isOriginal} />, 4
 				</p>
 				<p className="mt-2">Казалось бы очередной краеведческий музей, который однако умудряется через устаревшие подходы к музейным нарративам невероятно иммерсивно погрузить в эстетику уральских гор и окружающей природы. Хотите побывать на Конжаковском камне не взбираясь на него — сходите сюда.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Дом Метенкова"
 						onNameChange={setName}
@@ -1059,7 +1062,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Карла Либкнехта" original="Вознесенском проспекте" isOriginal={isOriginal} />, 36
 				</p>
 				<p className="mt-2">Фотографический музей в котором всегда отличные выставки.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Минералогический музей «Планета»"
 						onNameChange={setName}
@@ -1147,9 +1150,9 @@ export default function YePage() {
 				<p>Продолжение музея изобразительных искусств, на Вайнера выставляют зарубежных авторов. На последнем этаже есть увлекательная экспозиция про хранение в этом здании в годы войны работ из Эрмитажа.</p>
 				*/}
 				<Heading>Где развлечься?</Heading>
-				<p className="font-bold mt-4">Местный стрит-арт</p>
+				<p className="mt-4 font-bold">Местный стрит-арт</p>
 				<p className="mt-2">Про бесчисленное количество работ в городе можно рассказывать бесконечно, просто сходите на одну из экскурсий <Link variant="yekaterinburg" href="https://www.instagram.com/shakhov_hell/">Лёши Шахова</Link> или прогуляйтесь по карте фестиваля «<Link variant="yekaterinburg" href="https://stenograffia.ru">Стенограффия</Link>».</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Коляда-Театр"
 						onNameChange={setName}
@@ -1165,7 +1168,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 97
 				</p>
 				<p className="mt-2">Знаменитый эксцентричный театр, безумная уральская цыганщина. Это одна из тех вещей, которые либо безумно нравятся, либо совсем нет. Автору знакомы обе категории людей.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Центр современной драматургии"
 						onNameChange={setName}
@@ -1181,7 +1184,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Малышева" original="Покровском проспекте" isOriginal={isOriginal} />, 145а, литера Ф
 				</p>
 				<p className="mt-2">Очень андеграундные ребята. Находятся в пикулях и чтобы понять где на этой промзоне театр, у них на сайте есть большая инструкция. Но этот поиск стоит того, постановки прекрасные.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Театр «Провинциальные танцы»"
 						onNameChange={setName}
@@ -1197,7 +1200,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 43
 				</p>
 				<p className="mt-2">В здании самого старого кинотеатра города — «Колизее» — располагается один из лучших в России театров современной хореографии. Ребята могут до слёз доводить своими постановками. Без шуток, вы вот были когда-нибудь на балете, который вас растрогал?</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Эвер Джаз"
 						onNameChange={setName}
@@ -1213,7 +1216,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Тургенева" original="Верхне-Вознесенской" isOriginal={isOriginal} />, 22
 				</p>
 				<p className="mt-2">Приятный джазовый клуб. Почти каждый день какие-нибудь выступления. Очень спокойная <i>своя</i> атмосфера.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Филармония"
 						onNameChange={setName}
@@ -1238,7 +1241,7 @@ export default function YePage() {
 				<p>Пошутить про Нирвану и Артхаус, про Свободу, про Кельман???</p>
 				*/}
 				<Heading>Где пошопиться?</Heading>
-				<p className="font-bold mt-4">
+				<p className="mt-4 font-bold">
 					<Location
 						name="Ель"
 						onNameChange={setName}
@@ -1254,7 +1257,7 @@ export default function YePage() {
 					</Location> в Ельцин Центре на <OriginaledTitle modern="Ельцина" original="Фетисовской" isOriginal={isOriginal} />, 3
 				</p>
 				<p className="mt-2">За сувенирами с Урала сюда. Куча приятных памятных штучек, особенно ценно варенье из кедровых шишек.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Пиотровский"
 						onNameChange={setName}
@@ -1282,7 +1285,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 50
 				</p>
 				<p className="mt-2">Наши независимые книжные. Есть всё, что нужно.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Двоеточие"
 						onNameChange={setName}
@@ -1298,7 +1301,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Пушкина" original="Пушкинская" isOriginal={isOriginal} />, 14
 				</p>
 				<p className="mt-2">Крутейший магазин кофе и чая. Из последнего много «Нитки», а за кофе в основном отвечает местный обжарщик «Фолк».</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Инжир"
 						onNameChange={setName}
@@ -1314,7 +1317,7 @@ export default function YePage() {
 					</Location> на <OriginaledTitle modern="Ленина" original="Главном проспекте" isOriginal={isOriginal} />, 25
 				</p>
 				<p className="mt-2">Лучший в городе цветочный магазин. То самое место, чтобы порадовать дорогих сердцу людей.</p>
-				<p className="font-bold mt-8">
+				<p className="mt-8 font-bold">
 					<Location
 						name="Большой"
 						onNameChange={setName}

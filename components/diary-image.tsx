@@ -13,16 +13,16 @@ export function DiaryImage({
 }: DiaryImageProps) {
     return (
         <div>
-            <div className="rounded-md border-1 border-gray-200 mt-4">
+            <div className="mt-4 rounded-md border-1 border-gray-200">
                 <Image
                     width={800}
                     height={800}
                     src={src}
-                    alt={alt || String(caption)}
+                    alt={alt || (typeof caption === "string" ? caption : "")}
                     className="p-1"
                 />
             </div>
-            <div className="text-sm text-muted mt-2">
+            <div className="mt-2 text-sm text-muted">
                 {caption}
             </div>
         </div>

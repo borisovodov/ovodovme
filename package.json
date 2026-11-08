@@ -5,7 +5,8 @@
 		"dev": "next dev --turbopack",
 		"build": "next build",
 		"start": "next start",
-		"lint": "eslint ."
+		"lint": "eslint .",
+		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
 		"@heroicons/react": "^2.2.0",
@@ -24,7 +25,9 @@
 		"@types/react-dom": "^19.3.0",
 		"eslint": "^10",
 		"eslint-config-next": "16.4.5",
+		"eslint-plugin-tailwindcss": "^4.4.0",
 		"tailwindcss": "^4.3.5",
-		"typescript": "^6.0.3"
+		"typescript": "^6.0.3",
+		"typescript-eslint": "^8.72.1"
 	}
 }

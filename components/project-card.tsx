@@ -29,15 +29,15 @@ export function ProjectCard({
                                 alt={`${name} лого`}
                                 width={64}
                                 height={64}
-                                className="object-contain rounded-[14px] w-16 h-16"
+                                className="size-16 rounded-[14px] object-contain"
                             />
                         </Link>
                     )}
-                    <div className="flex-1 min-w-0">
+                    <div className="min-w-0 flex-1">
                         <Link href={url} className="font-semibold">{name}</Link>
                         <div className="break-words">
                             {years && (
-                                <p className="text-xs mt-2">{years}</p>
+                                <p className="mt-2 text-xs">{years}</p>
                             )}
                             <div className="mt-2">{children}</div>
                         </div>

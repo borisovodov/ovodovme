@@ -31,7 +31,7 @@ export function LocationModal({
                             <Modal.Heading>{name}</Modal.Heading>
                         </Modal.Header>
                         <Modal.Body>
-                            <ul className="list-disc list-inside">
+                            <ul className="list-inside list-disc">
                                 <li className="mb-2"><Link className="text-[#006732]" href={website}>Сайт</Link></li>
                                 <li className="mb-2"><Link className="text-[#006732]" href={yandex}>Яндекс</Link></li>
                                 <li className="mb-2"><Link className="text-[#006732]" href={doublegis}>2ГИС</Link></li>

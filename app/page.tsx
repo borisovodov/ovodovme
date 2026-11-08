@@ -25,19 +25,19 @@ export default function HomePage() {
 		<div className="max-w-3xl">
 			<PageHeader title="Всем привет от Бориса Оводова 👋🏻" />
 			<Card>
-				<Card.Content className="text-gray-400 text-sm">
+				<Card.Content className="text-sm text-gray-400">
 					<p>{data.current.city}<LocalTime /><LocalWeather /></p>
 					<p className="mt-1"><RemainingYears /></p>
 				</Card.Content>
 			</Card>
 			<Tabs aria-label="Сферы" className="mt-8">
 				<Tabs.List aria-label="Сферы" className="w-full overflow-x-auto">
-					<Tabs.Tab id="projects" className="basis-0 grow whitespace-nowrap">Польза<Tabs.Indicator /></Tabs.Tab>
-					<Tabs.Tab id="media" className="basis-0 grow whitespace-nowrap">Медийка<Tabs.Indicator /></Tabs.Tab>
-					<Tabs.Tab id="talks" className="basis-0 grow whitespace-nowrap">Паблик токи<Tabs.Indicator /></Tabs.Tab>
-					<Tabs.Tab id="social" className="basis-0 grow whitespace-nowrap">Соцсети<Tabs.Indicator /></Tabs.Tab>
-					<Tabs.Tab id="past" className="basis-0 grow whitespace-nowrap">Позади<Tabs.Indicator /></Tabs.Tab>
-					<Tabs.Tab id="future" className="basis-0 grow whitespace-nowrap">Впереди<Tabs.Indicator /></Tabs.Tab>
+					<Tabs.Tab id="projects" className="grow basis-0 whitespace-nowrap">Польза<Tabs.Indicator /></Tabs.Tab>
+					<Tabs.Tab id="media" className="grow basis-0 whitespace-nowrap">Медийка<Tabs.Indicator /></Tabs.Tab>
+					<Tabs.Tab id="talks" className="grow basis-0 whitespace-nowrap">Паблик токи<Tabs.Indicator /></Tabs.Tab>
+					<Tabs.Tab id="social" className="grow basis-0 whitespace-nowrap">Соцсети<Tabs.Indicator /></Tabs.Tab>
+					<Tabs.Tab id="past" className="grow basis-0 whitespace-nowrap">Позади<Tabs.Indicator /></Tabs.Tab>
+					<Tabs.Tab id="future" className="grow basis-0 whitespace-nowrap">Впереди<Tabs.Indicator /></Tabs.Tab>
 				</Tabs.List>
 				<Tabs.Panel id="projects">
 					<ProjectCard
@@ -379,8 +379,8 @@ function LocalTime() {
 	const [time, setTime] = useState<Date | null>(null)
 
 	useEffect(() => {
-		const interval = setInterval(() => setTime(new Date()), 1000)
-		return () => clearInterval(interval)
+		const interval = setInterval(() => { setTime(new Date()); }, 1000)
+		return () => { clearInterval(interval); }
 	}, [])
 
 	if (!time) {
@@ -401,7 +401,7 @@ function LocalWeather() {
 	const [weather, setWeather] = useState<Weather | null>(null);
 
 	useEffect(() => {
-		fetchWeather(data.current.latitude, data.current.longitude, setWeather);
+		void fetchWeather(data.current.latitude, data.current.longitude, setWeather);
 	}, []);
 
 	if (!weather) {
@@ -417,8 +417,8 @@ function RemainingYears() {
 	const [remainingTime, setRemainingTime] = useState<RemainingTime | null>(null);
 
 	useEffect(() => {
-		const interval = setInterval(() => setRemainingTime(calculateRemainingTime()), 1000);
-		return () => clearInterval(interval);
+		const interval = setInterval(() => { setRemainingTime(calculateRemainingTime()); }, 1000);
+		return () => { clearInterval(interval); };
 	}, []);
 
 	if (!remainingTime) {
